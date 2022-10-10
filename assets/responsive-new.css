@@ -167,7 +167,8 @@ div.rc_block__type {
     font-size: 12px;
 }
 div.rc_popup__block {
-    left: -123px;
+    left: -300px;
+    top: 60px;
 }  
 .right-fix .quantity_box {
     max-width: 108px;
