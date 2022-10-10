@@ -33,7 +33,8 @@
             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
             data-sizes="auto"
            data-expand="-20"
-            alt="{{ product.featured_image.alt }}">      
+            alt="{{ product.featured_image.alt }}"
+            loading="lazy">      
       {% endunless %}
       {% unless collection.title != "Bundles" %}
       <img class="grid-view-item__image lazyload product_img product_img--second" 
@@ -41,14 +42,15 @@
             data-widths="[180, 300, 360, 400, 540, 720]"
             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
             data-sizes="auto"data-expand="-20"
-           alt="{{ product.title | escape }}">
+           alt="{{ product.title | escape }}"
+           loading="lazy">
       {% endunless %}
     </div>
   </div>
 
   <noscript>
     {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
-    <img class="grid-view-item__image" src="{{ product.featured_image.src | img_url: image_size, scale: 2 }}" alt="{{ product.featured_image.alt }}" style="max-width: {{ max_height | times: product.featured_image.aspect_ratio }}px;">
+    <img class="grid-view-item__image" src="{{ product.featured_image.src | img_url: image_size, scale: 2 }}" alt="{{ product.featured_image.alt }}" style="max-width: {{ max_height | times: product.featured_image.aspect_ratio }}px;" loading="lazy">
   </noscript>
 
   <div class="title_price" style="border-color:{{ product.metafields.product_color.product_color }};">

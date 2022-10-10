@@ -7,7 +7,7 @@
   {% if product.metafields.desktop_background_i.desktop_background_i != blank %}
   <div class="desktop_product_bg">
     <div class="gradient-div">
-    <img src="{{ product.metafields.desktop_background_i.desktop_background_i }}" alt="">
+    <img src="{{ product.metafields.desktop_background_i.desktop_background_i }}" alt="" loading="lazy">
     </div>
     </div>
   {% endif %}
@@ -53,14 +53,14 @@
     
     {% if product.metafields.accentuate.gif_image != blank %}
     <div class="single_gif">
-      <img src="{{ product.metafields.accentuate.gif_image }}" alt ="" />
+      <img src="{{ product.metafields.accentuate.gif_image }}" alt ="" loading="lazy" />
     </div>
     {% endif %}
     
     <div class="mobile_product_bg">
       
       <div class="mobile_gradient-div">
-    <img src="{{ product.metafields.mobile_background_i.mobile_background_image }}" alt="">
+    <img src="{{ product.metafields.mobile_background_i.mobile_background_image }}" alt="" loading="lazy">
       </div>
     </div>
     <div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
@@ -97,7 +97,8 @@
                  data-aspectratio="{{ image.aspect_ratio }}"
                  data-sizes="auto"
                  tabindex="-1"
-                 alt="{{ image.alt | escape }}">
+                 alt="{{ image.alt | escape }}"
+                 loading="lazy">
           </div>
         </div>
           </div>
@@ -136,7 +137,8 @@
                  data-aspectratio="{{ image.aspect_ratio }}"
                  data-sizes="auto"
                  tabindex="-1"
-                 alt="{{ image.alt | escape }}">
+                 alt="{{ image.alt | escape }}"
+                 loading="lazy">
           </div>
         </div>
           </div>
@@ -163,7 +165,8 @@
       
       <noscript>
         {% capture product_image_size %}{{ height }}x{% endcapture %}
-        <img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;">
+        <img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;"
+        loading="lazy">
       </noscript>
 
       {% if product.images.size > 1 %}
@@ -185,7 +188,7 @@
                    class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
                    data-thumbnail-id="{{ image.id }}"
                    {% if enable_zoom %}data-zoom="{{ image.src | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-                     <img class="product-single__thumbnail-image" src="{{ image.src | img_url: '110x110', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}">
+                     <img class="product-single__thumbnail-image" src="{{ image.src | img_url: '110x110', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}" loading="lazy">
                 </a>
               </li>
             {% endfor %}
@@ -242,8 +245,9 @@ background-color:#fff;
                  src="{{product.metafields.image_name.image_name}}"
                  data-src="{{product.metafields.image_name.image_name}}"
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                
-                 data-sizes="auto"data-expand="-20"
+                 loading="lazy"
+                 data-sizes="auto"
+                 data-expand="-20"
                  >
            {% else %}{{ product.title }}{% if product.metafields.product_label_text.product_label_text != blank %}
         <div class="newpro_tag" style="float:right;{% if product.metafields.label_text.label_text != blank %}
@@ -490,7 +494,8 @@ background-color:#fff;
             data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
             data-sizes="auto"
-            alt="{{ product.featured_image.alt }}">
+            alt="{{ product.featured_image.alt }}"
+            loading="lazy">
     </div>
   </div>
             </div>
@@ -726,7 +731,8 @@ background-color:#fff;
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.ho_image.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.ho_image.alt | escape }}">
+                 alt="{{ section.settings.ho_image.alt | escape }}"
+                 loading="lazy">
   </div>
   <div class="home_merch_mo large--hide">
   {%- assign mo_merch = section.settings.ho_image_mo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
@@ -738,7 +744,8 @@ background-color:#fff;
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.ho_image_mo.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.ho_image_mo.alt | escape }}">
+                 alt="{{ section.settings.ho_image_mo.alt | escape }}"
+                 loading="lazy">
     
   </div>
   <div class="home_merchinfo">
@@ -756,7 +763,8 @@ background-color:#fff;
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.merch_image_title.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.merch_image_title.alt | escape }}"> 
+                 alt="{{ section.settings.merch_image_title.alt | escape }}"
+                 loading="lazy"> 
       
       <img style="margin: auto;"id=""
                  class="lazyload large--hide"
@@ -765,7 +773,8 @@ background-color:#fff;
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.merch_image_title.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.merch_image_title.alt | escape }}"> 
+                 alt="{{ section.settings.merch_image_title.alt | escape }}"
+                 loading="lazy"> 
       <br>
       {% endif %}  
        {% if section.settings.ho_info != blank %}
@@ -840,7 +849,8 @@ background-color:#fff;
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.image.aspect_ratio }}"
                  data-sizes="auto"
-                 alt="{{ section.settings.image.alt | escape }}">
+                 alt="{{ section.settings.image.alt | escape }}"
+                 loading="lazy">
             </a>
           </div>
         </div>

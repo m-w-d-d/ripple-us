@@ -55,14 +55,15 @@
     
      {% if product.metafields.accentuate.gif_image != blank %}
     <div class="single_gif">
-      <img src="{{ product.metafields.accentuate.gif_image }}" alt ="" />
+      <img src="{{ product.metafields.accentuate.gif_image }}" alt =""
+        loading="lazy" />
     </div>
     {% endif %}
     
     <div class="mobile_product_bg">
       
       <div class="mobile_gradient-div">
-    <img src="{{ product.metafields.mobile_background_i.mobile_background_image }}" alt="">
+    <img src="{{ product.metafields.mobile_background_i.mobile_background_image }}" alt="" loading="lazy">
       </div>
     </div>
     
@@ -101,7 +102,8 @@
                  data-aspectratio="{{ image.aspect_ratio }}"
                  data-sizes="auto"
                  tabindex="-1"
-                 alt="{{ image.alt | escape }}">
+                 alt="{{ image.alt | escape }}"
+                 loading="lazy">
           </div>
         </div>
           </div>
@@ -126,7 +128,7 @@
       
       <noscript>
         {% capture product_image_size %}{{ height }}x{% endcapture %}
-        <img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;">
+        <img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;" loading="lazy">
       </noscript>
 
       {% if product.images.size > 1 %}
@@ -148,7 +150,7 @@
                    class="text-link product-single__thumbnail product-single__thumbnail--{{ section.id }}"
                    data-thumbnail-id="{{ image.id }}"
                    {% if enable_zoom %}data-zoom="{{ image.src | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-                     <img class="product-single__thumbnail-image" src="{{ image.src | img_url: '110x110', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}">
+                     <img class="product-single__thumbnail-image" src="{{ image.src | img_url: '110x110', scale: 2 }}" alt="{{ 'sections.featured_product.gallery_thumbnail_alt' | t: imageAlt: image.alt | escape }}" loading="lazy">
                 </a>
               </li>
             {% endfor %}
@@ -471,7 +473,8 @@ background-color:#fff;
             data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
             data-sizes="auto"
-            alt="{{ product.featured_image.alt }}">
+            alt="{{ product.featured_image.alt }}"
+            loading="lazy">
     </div>
   </div>
             </div>

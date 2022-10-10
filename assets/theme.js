@@ -4047,9 +4047,9 @@ $(theme.init);
 
 
 // body load
-$(window).load(function() {
-	// $('body').animate({ opacity:1 },500);	
-});
+// $(window).load(function() {
+// 	// $('body').animate({ opacity:1 },500);	
+// });
 
 
 

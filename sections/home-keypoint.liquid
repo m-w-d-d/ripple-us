@@ -6,7 +6,7 @@
         <li class="keypoint-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}" {{ block.shopify_attributes }}>
           {% if block.settings.image != blank %}
           <div class="icon_box">
-                          <img data-sizes="auto"data-src="{{ block.settings.image | img_url: '50x', scale: 2}}" alt="{{block.settings.image.alt}}" class="logo-bar__image lazyload">
+             <img data-sizes="auto"data-src="{{ block.settings.image | img_url: '50x', scale: 2}}" alt="{{block.settings.image.alt}}" class="logo-bar__image lazyload" loading="lazy">
 
           
           </div>

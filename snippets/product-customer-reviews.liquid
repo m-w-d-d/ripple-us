@@ -34,7 +34,7 @@
   {% for value in product.metafields.accentuate.customer_name %} 
       <div class="review_product"> 
         <img class="lazyload"style="    border-radius: 7px 7px 0 0;width:100%;    box-shadow: 0 0 20px #fff!important;
-    -webkit-box-shadow: 0 0 20px #ffff!important;"src=""data-src={{ product.metafields.accentuate.customer_image[forloop.index0] }}>
+    -webkit-box-shadow: 0 0 20px #ffff!important;"src=""data-src={{ product.metafields.accentuate.customer_image[forloop.index0] }} loading="lazy">
     <div style="    border-radius: 0 0 7px 7px ;"class="review_box">
       <div class="star_rating">
         <div class="star_box star_{{ product.metafields.accentuate.star_rating[forloop.index0] }}">

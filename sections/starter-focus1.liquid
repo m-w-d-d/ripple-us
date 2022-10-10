@@ -11,7 +11,8 @@
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.ho_image.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.ho_image.alt | escape }}">
+                 alt="{{ section.settings.ho_image.alt | escape }}"
+                 loading="lazy">
   </div>
   <div class="home_merch_mo large--hide">
   {%- assign mo_merch = section.settings.ho_image_mo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
@@ -23,7 +24,8 @@
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.ho_image_mo.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.ho_image_mo.alt | escape }}">
+                 alt="{{ section.settings.ho_image_mo.alt | escape }}"
+                 loading="lazy">
     
   </div>
   <div class="home_merchinfo">
@@ -41,7 +43,8 @@
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.merch_image_title.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.merch_image_title.alt | escape }}"> 
+                 alt="{{ section.settings.merch_image_title.alt | escape }}"
+                 loading="lazy"> 
       
       <img style="margin: auto;"id=""
                  class="lazyload large--hide"
@@ -50,7 +53,8 @@
                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
                  data-aspectratio="{{ section.settings.merch_image_title.aspect_ratio }}"
                  data-sizes="auto"data-expand="-20"
-                 alt="{{ section.settings.merch_image_title.alt | escape }}"> 
+                 alt="{{ section.settings.merch_image_title.alt | escape }}"
+                 loading="lazy"> 
       <br>
       {% endif %}  
        {% if section.settings.ho_info != blank %}
@@ -64,7 +68,8 @@
         <img data-sizes="auto" 
              data-src="{{ section.settings.ho_image_0 | img_url: '200x' }}" alt="" class="logo-bar__image lazyautosizes  lazyload" 
              sizes="100px" 
-             src="{{ section.settings.ho_image_0 | img_url: '40x' }}">
+             src="{{ section.settings.ho_image_0 | img_url: '40x' }}"
+             loading="lazy">
 
           {{ section.settings.ho_info | replace: "+", "<sup>+</sup>" }}
           </div>
@@ -72,7 +77,8 @@
         <img data-sizes="auto" 
              data-src="{{ section.settings.ho_image_1 | img_url: '200x' }}" alt="" class="logo-bar__image lazyautosizes  lazyload" 
              sizes="100px" 
-             src="{{ section.settings.ho_image_1 | img_url: '40x' }}">
+             src="{{ section.settings.ho_image_1 | img_url: '40x' }}"
+             loading="lazy">
 
           {{ section.settings.ho_info1 | replace: "+", "<sup>+</sup>" }}
           </div>
@@ -81,7 +87,8 @@
         <img data-sizes="auto" 
              data-src="{{ section.settings.ho_image_2 | img_url: '200x' }}" alt="" class="logo-bar__image lazyautosizes  lazyload" 
              sizes="100px" 
-             src="{{ section.settings.ho_image_2 | img_url: '40x' }}">
+             src="{{ section.settings.ho_image_2 | img_url: '40x' }}"
+             loading="lazy">
 
           {{ section.settings.ho_info2 | replace: "+", "<sup>+</sup>" }}
           </div>

@@ -22,7 +22,7 @@
           {% endif %}
           {% if block.settings.image != blank %}
               
-              <img data-sizes="auto"data-src="{{ block.settings.image | img_url: '160x', scale: 2}}" alt="{{block.settings.image.alt}}" class="logo-bar__image lazyload">
+              <img data-sizes="auto"data-src="{{ block.settings.image | img_url: '160x', scale: 2}}" alt="{{block.settings.image.alt}}" class="logo-bar__image lazyload" loading="lazy">
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
           {% endif %}
