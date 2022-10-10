@@ -1,0 +1,79 @@
+
+<form action="/cart/add" method="post" id="add-to-cart" class="product_form {% unless product.available %}sold-out-pro{% else %} {% endunless %}">
+<select name="id" class="quick-variants" style="display:none;">
+{% for variant in product.variants %}
+{% if variant.available == true %}
+<option value="{{variant.id}}"> {{ variant.title }} for {{ variant.price | money_with_currency }}</option>
+{% else %}
+<option disabled="disabled"> {{ variant.title }} - sold out!</option>
+{% endif %}
+{% endfor %}
+</select>
+  
+  {% if product.variants.size > 1 %}
+  <a class="single_btn_link" href="{{ product.url | within: collection }}">Select Shade</a>
+  {% for option in product.options_with_values %}
+  <div class="single_btn">Select {{ option.name }}</div>
+  {% endfor %}
+  
+  
+  
+  
+{% else %}
+  {% unless product.available %}
+
+  {% comment %}
+  <div class="sold_div desktop_sold">
+  <button disabled type="submit" class="formAdd pro_{{product.id}} shopnow_btn btn singleaddcart product-form__cart-submit btn--secondary-accent cartbutton  {% if hide_default_title %} btn-full{% endif %}" id="add-{{ product.id}}" name="add" >
+   {%comment%}
+    <i style="background-image: linear-gradient(270deg, {{ product.metafields.button_gradient1.button_gradient_color_first }}, {{ product.metafields.button_gradient2.button_gradient_color_second }} 50%, {{ product.metafields.button_gradient1.button_gradient_color_first }})"></i>
+    
+    <strong style="background-color:{{ product.metafields.button_color.button_color }};">Sold Out{% if product.compare_at_price_max > 0 %} <del>{{ product.compare_at_price_max | money }}</del> {{ product.price | money }} {% else %} {{ product.price | money }} {% endif %}</strong>
+    {%endcomment%}
+    
+      <div class="sold_out_text" style="background:{{ product.metafields.button_color.button_color }}; background-image: linear-gradient(0deg, {{ product.metafields.button_color.button_color }}, {{ product.metafields.button_gradient1.button_gradient_color_first }} 51%, {{ product.metafields.button_gradient2.button_gradient_color_second }} 100%);">Sold Out</div>
+ 
+  </button>
+    </div>
+  {% endcomment %}
+  <button disabled type="submit" class="formAdd pro_{{product.id}} shopnow_btn btn singleaddcart product-form__cart-submit btn--secondary-accent cartbutton  {% if hide_default_title %} btn-full{% endif %}" id="add-{{ product.id}}" name="add" >
+    <i style="background-image: linear-gradient(270deg, {{ product.metafields.button_gradient1.button_gradient_color_first }}, {{ product.metafields.button_gradient2.button_gradient_color_second }} 50%, {{ product.metafields.button_gradient1.button_gradient_color_first }})"></i>
+    
+    <strong style="background-color:{{ product.metafields.button_color.button_color }};">{% if product.tags contains 'soon' %}COMING SOON{% else %}Sold Out {% endif %}</strong>
+   
+  </button>
+  
+  {% else %}
+  
+   {% if product.compare_at_price_max > 0 %}
+              <input type="hidden" id="compare_price" name="properties[{{ product.compare_at_price }}]" /> 
+          {% endif %}
+  
+  
+  
+  <button onclick="dataLayer.push({ 'ecommerce': null });dataLayer.push({
+'event': 'add_to_cart',
+'ecommerce': {
+        'items': [{
+        'item_id': '{{ product.id }}',
+        'item_name': '{{ product.title | remove: "'" | remove: '"' }}',
+        'item_brand': '{{ product.vendor | remove: "'" | remove: '"' }}',
+        'item_category': '{{ product.collections[0].title | remove: "'" | remove: '"' }}',
+        'item_variant': '{{ product.selected_variant.sku }}',
+        'currency': '{{ shop.currency }}',
+        'price': '{{ product.price  | times: 0.01}}'
+        }]
+    }
+});" type="submit" class="formAdd pro_{{product.id}} shopnow_btn btn singleaddcart product-form__cart-submit btn--secondary-accent cartbutton {% if hide_default_title %} btn-full{% endif %}" id="add-{{ product.id}}" name="add" >
+    <i style="background-image: linear-gradient(270deg, {{ product.metafields.button_gradient1.button_gradient_color_first }}, {{ product.metafields.button_gradient2.button_gradient_color_second }} 50%, {{ product.metafields.button_gradient1.button_gradient_color_first }})"></i>
+    <strong style="background-color:{{ product.metafields.button_color.button_color }};">Add to Bag &nbsp;|&nbsp;{% if product.compare_at_price_max > 0 %} <del>{{ product.compare_at_price_max | money }}</del> {{ product.price | money }} {% else %} {{ product.price | money }} {% endif %}</strong>
+  </button> 
+  
+  
+  
+  {% endunless %}
+{% endif %}
+  
+
+  
+</form> 

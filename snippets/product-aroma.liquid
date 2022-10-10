@@ -1,0 +1,84 @@
+  {% assign my_aroma_1 = product.metafields.aroma_heading.aroma_heading %}
+  {% assign my_aroma_4 = product.metafields.aroma_image.aroma_image %}
+  {% assign my_aroma_2 = product.metafields.heading.heading %}
+  {% assign my_aroma_3 = product.metafields.aroma_info.aroma_info %}
+  {% assign my_ingredients_1 = product.metafields.ingredients_heading.ingredients_heading %}
+  {% assign my_ingredients_2 = product.metafields.ingredients_image_1.ingredients_image_1 %}
+  {% assign my_ingredients_3 = product.metafields.ingredients_title_1.ingredients_title_1 %}
+  {% assign my_ingredients_4 = product.metafields.ingredients_info_1.ingredients_info_1 %}
+  {% assign my_ingredients_5 = product.metafields.ingredients_image_2.ingredients_image_2 %}
+  {% assign my_ingredients_6 = product.metafields.ingredients_title_2.ingredients_title_2 %}
+  {% assign my_ingredients_7 = product.metafields.ingredients_info_2.ingredients_info_2 %}
+{% if my_aroma_1 %}
+<section class="product-aroma black_border_bottom">
+  {% if my_aroma_2 %}
+  <div class="medium-up--one-third grid__item__left">
+    
+   
+    <div class="medium-up--one-full grid__item__left">
+    <div class="aroma__itam">
+      <div class="aroma__left">
+        {% if my_aroma_4 %}
+      <img src="{{ my_aroma_4 }}" />
+        {% endif %}
+      </div>
+      <div class="aroma__right">
+        {% if my_aroma_2 %}
+        <h3>{{ my_aroma_2 }}</h3>
+        {% endif %}
+        {% if my_aroma_3 %}
+        {{ my_aroma_3 }}
+        {% endif %}
+      </div>
+      </div>
+    </div>
+    
+  </div>
+  {% endif %} 
+  
+  {% if my_ingredients_3 %}
+  <div class="medium-up--one-third grid__item__left">
+    
+      <div class="aroma__itam">
+      <div class="aroma__left">
+        {% if my_ingredients_2 %}
+      <img src="{{ my_ingredients_2 }}" />
+        {% endif %}  
+      </div>
+      <div class="aroma__right">
+        {% if my_ingredients_3 %}
+        <h3>{{ my_ingredients_3 }}</h3>
+        {% endif %}
+        {% if my_ingredients_4 %}
+        {{ my_ingredients_4 }}
+        {% endif %}
+      </div>
+    </div>
+      
+      
+    
+    </div>
+  {% endif %} 
+  {% if my_ingredients_6 %}  
+  <div class="medium-up--one-third grid__item__left">
+    <div class="aroma__itam">
+      <div class="aroma__left">
+        {% if my_ingredients_5 %}
+      <img src="{{ my_ingredients_5 }}" />
+        {% endif %} 
+        </div>
+      <div class="aroma__right">
+        {% if my_ingredients_6 %}
+        <h3>{{ my_ingredients_6 }}</h3>
+        {% endif %}
+        {% if my_ingredients_7 %}
+        {{ my_ingredients_7 }}
+        {% endif %}
+      </div>
+    </div>
+    </div>
+  {% endif %} 
+  
+  
+</section>
+{% endif %}

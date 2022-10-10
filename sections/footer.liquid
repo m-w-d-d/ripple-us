@@ -1,0 +1,801 @@
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+{%- assign social_icons = false -%}
+{%- assign inline_list = false -%}
+
+{%- if
+  settings.social_twitter_link != blank
+  or settings.social_facebook_link != blank
+  or settings.social_pinterest_link != blank
+  or settings.social_instagram_link != blank
+  or settings.social_tumblr_link != blank
+  or settings.social_snapchat_link != blank
+  or settings.social_youtube_link != blank
+  or settings.social_vimeo_link != blank
+  or template.name == 'article'
+  or template.name == 'blog'
+-%}
+  {%- assign social_icons = true -%}
+{%- endif -%}
+
+{%- case section.blocks.size -%}
+  {%- when 1 -%}
+    {%- assign footer_item = 'site-footer__item--full-width' -%}
+    {%- assign inline_list = true -%}
+  {%- when 2 -%}
+    {%- assign footer_item = 'site-footer__item--one-half' -%}
+    {%- assign inline_list = true -%}
+  {%- when 3 -%}
+    {%- assign footer_item = 'site-footer__item--one-third' -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'newsletter' -%}
+        {%- assign footer_item = 'site-footer__item--one-quarter' -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- when 4 -%}
+    {%- assign footer_item = 'site-footer__item--one-quarter' -%}
+  {%- when 5 -%}
+    {%- assign footer_item = 'site-footer__item--one-fifth' -%}
+{%- endcase -%}
+
+{% comment %} Create an appropriate hover color based on text color and brightness {% endcomment %}
+{%- assign footer_text_color = section.settings.color_footer_text -%}
+{%- assign footer_text_color_brightness = section.settings.color_footer_text | color_brightness -%}
+{%- if footer_text_color_brightness <= 26 -%}
+  {%- assign footer_text_color_hover = footer_text_color | color_lighten: 25 -%}
+{%- elsif footer_text_color_brightness <= 65 -%}
+  {%- assign footer_text_color_hover = footer_text_color | color_lighten: 15 -%}
+{%- else -%}
+  {%- assign footer_text_color_hover = footer_text_color | color_darken: 10 -%}
+{%- endif -%}
+
+<style>
+  
+  .site-footer__hr {
+    border-bottom: 1px solid {{ section.settings.color_footer_bg | color_darken: 10 }};
+  }
+
+  .site-footer p,
+  .site-footer h4,
+  .site-footer small {
+    color: {{ section.settings.color_footer_text }};
+  }
+
+  .site-footer {
+    background-color: {{ section.settings.color_footer_bg }};
+  }
+
+  .site-footer a:hover {
+    color: {{ footer_text_color_hover }};
+  }
+</style>
+
+
+
+
+
+{%- if template == 'index' -%}
+{%- if section.settings.freedelivery_show != blank -%}
+<div class="free_msg">
+<img src="{{ 'plain_icon.png' | asset_url }}" alt="" />
+  <span>{{ section.settings.freedelivery }}</span>
+  <a href="javascript:void(0)" class="cls_free">x</a>
+</div>
+{%- endif -%}
+{%- endif -%}
+
+<footer class="site-footer" role="contentinfo">
+  <div class="page-width">
+    
+      {% include 'newsletter-form' %}
+    
+    
+    <div id="footer_right">
+      
+    
+    <div class="site-footer__content">
+      {%- for block in section.blocks -%}
+
+        <div >
+          <div class="site-footer__item-inner site-footer__item-inner--{{ block.type }}">
+
+            
+
+            
+            {%- case block.type -%}
+            <div class="site-footer__social fullbox">
+           {%- when 'social' -%}               
+             {% include 'social-links' %} 
+                <div class="footer_logo">
+      <a href="/">{% include 'logo-pod' %}</a>
+    </div>
+            </div>
+            
+            
+            
+
+              {%- when 'text' -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="site-footer__rte
+                              {% if section.blocks.size == 1 %} site-footer__single-block--centered{% endif %}">
+                      {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+
+              {%- when 'link_list' -%}
+                {%- assign footer_linklist = block.settings.menu -%}
+                  <ul class="site-footer__linklist
+                           "><div style="color:#fff;{%- if block.settings.title == 'shop' -%} border-top: transparent; {% else %} border-top: 2px solid #ffffff6b;{% endif %} padding: 10px 0 10px 0" class="accordion_n accordion-close_n" id="newsection_4">{%- if block.settings.title -%}
+              {{ block.settings.title | escape }}
+            {%- endif -%}<span></span></div> 
+      
+                   
+                      
+      <li style=" display: none;"class="site-footer__linklist-item foot_ripples content_n"> {%- for link in linklists[footer_linklist].links -%}
+             <a href="{{ link.url }}"
+                        >
+                          {{ link.title | escape }}
+                        </a>
+      {%- endfor -%}
+                      </li>
+           
+                    
+                    
+                  </ul>
+
+            {%- endcase -%}
+
+          </div>
+        </div>
+      {%- endfor -%}
+    
+      {% if section.settings.footer_note != blank %}
+      <div class="footer_note">
+        <div>{{ section.settings.footer_note | remove:'<p>' | remove:'</p>' }}</div>
+      </div>
+       {%- endif -%}
+      
+      </div>
+      
+     
+      
+    </div>
+
+<div class="page-width" id="copyright">
+    <div class="grid grid--no-gutters small--text-center">
+      <div class="grid__item small--one-whole">      
+            <small class="site-footer__copyright-content one-half">&copy; {{ 'now' | date: "%Y" }} ripple+</small>
+            <small class="site-footer__copyright-content one-half site-footer__copyright-content-powered-by">site by <a href="https://dashcreative.co/" target="_blank">dash</a></small>
+          
+      </div>
+
+      <div class="grid__item one-half small--one-whole">
+        {% if section.settings.show_payment_icons %}
+          <div class="grid__item site-footer__payment-icons">
+            {% unless shop.enabled_payment_types == empty %}
+              <span class="visually-hidden">{{ 'general.payment.method' | t }}</span>
+              <ul class="payment-icons list--inline site-footer__icon-list">
+                {% for type in shop.enabled_payment_types %}
+                  <li class="payment-icon">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endunless %}
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+    
+   {% include 'popup-newsletter' %} 
+    
+    
+</div>
+  
+  
+<style>  
+  ul.site-footer__linklist .accordion_n span {
+
+    top: 8px;float:right;
+
+}
+  ul.site-footer__linklist .accordion_n span:after {
+
+   width: 28px;
+    height: 31px;
+    content: "+";
+
+}
+ul.site-footer__linklist .accordion_n.accordion-open_n span:after {
+    content: "-";
+}
+  .site-footer__linklist a{
+  display:block;
+padding: 0 0 7px;
+
+  }
+div#footer_news h3,
+div#footer_news .width-440 p,
+#foo_email input[type="email"],
+#foo_tel input[type="tel"],
+div#footer_news label[for]{
+  color:{{ section.settings.color_n_text }}!important;
+  }
+div#footer_news #top-mc-form ::placeholder {    
+    color:{{ section.settings.color_n_text }};  
+}
+div#footer_news #top-mc-form ::-moz-placeholder {
+    color:{{ section.settings.color_n_text }};
+}
+div#footer_news #top-mc-form ::-webkit-input-placeholder {
+   color:{{ section.settings.color_n_text }};
+}
+  div#footer_news {
+   background:{{ section.settings.bg_n_text }};
+}
+  
+div#popup h3,
+div#popup .width-440 p,
+#pop_email input[type="email"],
+#pop_tel input[type="tel"],
+div#popup label[for],
+  #pop_tel input.needsclick[aria-autocomplete="list"] + svg{
+  color:{{ section.settings.color_n_text }}!important;
+  }
+div#popup ::placeholder {    
+    color:{{ section.settings.color_n_text }};  
+}
+div#popup ::-moz-placeholder {
+    color:{{ section.settings.color_n_text }};
+}
+div#popup ::-webkit-input-placeholder {
+   color:{{ section.settings.color_n_text }};
+}
+  div#popup {
+   background:{{ section.settings.bg_n_text }};
+}
+.n_footer p{
+    font-size: 11px;
+    color:{{ section.settings.color_n_text }};
+    line-height: 16px;
+    text-align: center;
+    margin-top: 10px;
+  margin-bottom:5px;
+}
+.n_footer p a{
+    color: {{ section.settings.color_n_text }};
+    border-bottom: 1px solid {{ section.settings.color_n_text }};
+    padding-bottom: 3px;
+} 
+  .n_footer p a:hover{
+  	color: {{ section.settings.color_n_text }}!important;
+    border-bottom: 1px solid transparent;
+    opacity:1;
+  }  
+  .accordion_n {
+    margin: 0;
+    padding: 20px 0 20px 0;
+    padding-left: 0px;
+    border-bottom: 0px solid #ebebeb;
+    border-top: 2px solid #446c6a;
+    text-decoration: none;
+    position: relative;
+    padding-left: 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-family: 'Swiss721BT-Bold';
+    cursor: pointer;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+}
+</style>
+</footer>
+<script defer src="{{ 'jquery_accordion.js' | asset_url }}" ></script>
+
+<script defer>
+
+$(document).ready(function() {
+  
+  $('.accordion_n').accordion({
+      cookieName: 'accordion_nav1',
+      defaultOpen: '',	
+      cssClose: 'accordion-close_n', //class you want to assign to a closed accordion header
+        cssOpen: 'accordion-open_n', //class you want to assign an opened accordion header
+        cookieName: 'accordion_n'
+    });
+});
+  </script>
+<script>
+  $(document).ready(function(){
+    setTimeout(function(){
+      
+      
+       $('#inline-form .klaviyo-form input[type="email"]').parent().attr('id', 'pop_email');
+        $('#inline-form .klaviyo-form input[type="tel"]').parent().parent().parent().attr('id', 'pop_tel');
+         $('#inline-form .klaviyo-form button').parent().attr('id', 'pop_btn');
+    $('#inline-form .klaviyo-form input[type="tel"]').prev('.needsclick').attr('id', 'pop_teldrop');
+
+      
+        $('#top-mc-form .klaviyo-form input[type="email"]').parent().attr('id', 'foo_email');
+        $('#top-mc-form .klaviyo-form input[type="tel"]').parent().parent().parent().attr('id', 'foo_tel');
+      $('#top-mc-form .klaviyo-form button').parent().attr('id', 'foo_btn');
+          $('#top-mc-form .klaviyo-form input[type="tel"]').prev('.needsclick').attr('id', 'foo_teldrop');
+
+
+    /*  
+      $('#top-mc-form input[type="email"], #top-mc-form input[type="tel"]').focus(function () {
+        $('#top-mc-form').addClass('active_note');        
+     }).blur(function () {
+        $('#top-mc-form').removeClass('active_note');
+      });*/
+      
+      
+      var inptxt1 = $('#top-mc-form input[type="email"], #top-mc-form input[type="tel"]');
+      $(inptxt1).on('focusin', 
+                   function(){
+        $('#top-mc-form').addClass('active_note');
+        $("#top-mc-form .needsclick button[type='button']").css('display','block');
+      }).on('focusout', function(){
+        
+       /*  setTimeout(function(){
+        $('#popup').removeClass('active_note_p');
+           }, 100);*/
+        $("#top-mc-form .needsclick button[type='button']").css('display','block');
+
+
+      });
+      
+      
+      
+     $('#inline-form button').click(function () {
+       setTimeout(function(){
+       if($('#klaviyo_ariaid_5').length > 0)
+       {
+       $('#popup').addClass('active_note_p');
+       }
+       else
+       {
+          $('#popup').removeClass('active_note_p');
+       }
+           }, 400);
+       
+     });
+      
+      
+      $('#top-mc-form button').click(function () {
+       setTimeout(function(){
+       if($('#klaviyo_ariaid_2').length > 0)
+       {
+       $('#top-mc-form').addClass('active_note');
+           
+           
+         
+         
+       }
+       else
+       {
+          $('#top-mc-form').removeClass('active_note');
+        
+         
+       }
+           }, 400);
+       
+     });
+
+
+
+      
+   
+      var inptxt = $('#inline-form input[type="email"], #inline-form input[type="tel"]');
+      $(inptxt).on('focusin', 
+                   function(){
+        $('#popup').addClass('active_note_p');
+      }).on('focusout', function(){
+       /*  setTimeout(function(){
+        $('#popup').removeClass('active_note_p');
+           }, 100);*/
+        $("#inline-form .needsclick  button[type='button']").css('display','block');
+
+
+      });
+      
+ /*    $('#inline-form input[type="email"], #inline-form input[type="tel"]').focus(function () {
+       console.log("hhg");
+        $('#popup').addClass('active_note_p');
+      }).blur(function () {
+         setTimeout(function(){
+        $('#popup').removeClass('active_note_p');
+           }, 200);
+        $("#inline-form .needsclick  button[type='button']").css('display','block');
+      }); 
+      */
+
+   
+      
+      
+      
+    }, 3200);
+    });
+  
+  {% assign second = section.settings.second %}
+  
+//cookie code
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}      
+function _fnaccept() {
+    setCookie('isvisited','yes',365);    
+  	$("#popup").fadeOut();  	
+}
+      
+function getCookie(cname) {
+var name = cname + "=";
+var ca = document.cookie.split(';');
+for(var i=0; i<ca.length; i++) {
+   var c = ca[i];
+   while (c.charAt(0)==' ') c = c.substring(1);
+   if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+}
+  return "";
+}
+$(function(){
+  
+  var isvisited = getCookie("isvisited");
+  var isvisitedpopup = getCookie("isvisitedpopup");
+
+  
+        
+    
+  if (isvisitedpopup == null || isvisitedpopup=='')  { 
+     $(window).on('load', function() {
+       setTimeout(function() { 
+           $("#popup").delay(1000).fadeIn();
+         }, {{ second }}000);
+      });
+  }
+    
+
+ $("#popup .popup_close").click(function() {
+     setCookie('isvisitedpopup','yes',365);
+     $("#popup").fadeOut();
+  });
+  
+});
+  
+</script>
+
+{% schema %}
+{
+  "name": {
+    "de": "Fußzeile",
+    "en": "Footer",
+    "es": "Pie de página",
+    "fr": "Pied de page",
+    "it": "Footer",
+    "ja": "フッター",
+    "nl": "Voettekst",
+    "pt-BR": "Rodapé",
+    "zh-CN": "页脚",
+    "zh-TW": "頁尾"
+  },
+  "max_blocks": 4,
+  "settings": [
+{
+      "type": "header",
+      "content": "Pop-up Newsletter"
+},
+{
+      "type": "checkbox",
+      "id": "show_popup",
+      "label": {
+        "en": "Show Popup Newsletter?"
+      },
+      "default": true
+    },
+	{
+      "type": "range",
+      "id": "second",
+      "label": "Popup Newsletter Show Time",
+      "default": 3,
+      "min": 2,
+      "max": 10,
+	  "step": 1,
+	  "info":"(Second Time)"	
+    },
+	{
+      "type": "header",
+      "content": "Newsletter"
+},
+{
+      "type": "text",
+      "id": "n_title",
+	  "label": "Heading"
+},
+{
+      "type": "richtext",
+      "id": "n_info",
+	  "label": "Text"
+},
+{
+      "type": "richtext",
+      "id": "n_footer",
+	  "label": "Text Message"
+},
+{
+      "type": "color",
+      "id": "bg_n_text",
+      "label": "Background color",
+      "default": "#f7fbfd"
+    },
+{
+      "type": "color",
+      "id": "color_n_text",
+      "label": "Text",
+      "default": "#54678e"
+    },
+
+    {
+      "type": "header",
+      "content": {
+        "de": "Zahlungsarten",
+        "en": "Payment methods",
+        "es": "Métodos de pago",
+        "fr": "Moyens de paiement",
+        "it": "Metodi di pagamento",
+        "ja": "お支払い方法",
+        "nl": "Betaalmethoden",
+        "pt-BR": "Formas de pagamento",
+        "zh-CN": "支付方式",
+        "zh-TW": "付款方式"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": {
+        "de": "Zahlungs-Buttons anzeigen",
+        "en": "Show payment icons",
+        "es": "Mostrar iconos de pago",
+        "fr": "Afficher les icônes de paiement",
+        "it": "Mostra le icone di pagamento",
+        "ja": "支払いアイコンを表示する",
+        "nl": "Betalingspictogrammen weergeven",
+        "pt-BR": "Exibir ícones de pagamento",
+        "zh-CN": "显示付款图标",
+        "zh-TW": "顯示付款圖示"
+      },
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": {
+        "de": "Farbe",
+        "en": "Color",
+        "es": "Color",
+        "fr": "Couleur",
+        "it": "Colore",
+        "ja": "色",
+        "nl": "Kleur",
+        "pt-BR": "Cor",
+        "zh-CN": "颜色",
+        "zh-TW": "顏色"
+      }
+    },
+    {
+      "type": "color",
+      "id": "color_footer_bg",
+      "label": {
+        "de": "Schriftfarbe",
+        "en": "Background",
+        "es": "Fondo",
+        "fr": "Couleur de fond",
+        "it": "Sfondo",
+        "ja": "背景",
+        "nl": "Achtergrond",
+        "pt-BR": "Plano de fundo",
+        "zh-CN": "背景",
+        "zh-TW": "背景"
+      },
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "color",
+      "id": "color_footer_text",
+      "label": {
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "nl": "Tekst",
+        "pt-BR": "Texto",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      },
+      "default": "#3d4246"
+    },
+
+{
+      "type": "header",
+      "content": "Free delivery"
+},
+{
+      "type": "checkbox",
+      "id": "freedelivery_show",
+	  "label": "Show?",
+	   "default": true
+},
+{
+      "type": "text",
+      "id": "freedelivery",
+	  "label": "Messages"
+},
+{
+      "type": "header",
+      "content": "Footer text"
+},
+{
+      "type": "richtext",
+      "id": "footer_note",
+	  "label": "Text"
+}
+  ],
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": {
+        "de": "Menü",
+        "en": "Menu",
+        "es": "Menú",
+        "fr": "Menu",
+        "it": "Menu",
+        "ja": "メニュー",
+        "nl": "Menu",
+        "pt-BR": "Menu",
+        "zh-CN": "菜单",
+        "zh-TW": "選單"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "de": "Überschrift",
+            "en": "Heading",
+            "es": "Título",
+            "fr": "Titre",
+            "it": "Heading",
+            "ja": "見出し",
+            "nl": "Kop",
+            "pt-BR": "Título",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "de": "Quick-Links",
+            "en": "Quick links",
+            "es": "Enlaces rápidos",
+            "fr": "Liens rapides",
+            "it": "Link rapidi",
+            "ja": "クイックリンク",
+            "nl": "Snelle links",
+            "pt-BR": "Links rápidos",
+            "zh-CN": "快速链接",
+            "zh-TW": "快速連結"
+          }
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": {
+            "de": "Menü",
+            "en": "Menu",
+            "es": "Menú",
+            "fr": "Menu",
+            "it": "Menu",
+            "ja": "メニュー",
+            "nl": "Menu",
+            "pt-BR": "Menu",
+            "zh-CN": "菜单",
+            "zh-TW": "選單"
+          },
+          "default": "footer"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": {
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "nl": "Tekst",
+        "pt-BR": "Texto",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": {
+            "de": "Überschrift",
+            "en": "Heading",
+            "es": "Título",
+            "fr": "Titre",
+            "it": "Heading",
+            "ja": "見出し",
+            "nl": "Kop",
+            "pt-BR": "Título",
+            "zh-CN": "标题",
+            "zh-TW": "標題"
+          },
+          "default": {
+            "de": "Reden Sie über Ihr Unternehmen",
+            "en": "Talk about your business",
+            "es": "Habla sobre tu negocio",
+            "fr": "Parlez de votre entreprise",
+            "it": "Parla della tua attività commerciale",
+            "ja": "あなたのビジネスについて語る",
+            "nl": "Vertel over uw bedrijf",
+            "pt-BR": "Fale sobre o seu negócio",
+            "zh-CN": "谈论您的业务",
+            "zh-TW": "描述您的商家"
+          }
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": {
+            "de": "Text",
+            "en": "Text",
+            "es": "Texto",
+            "fr": "Texte",
+            "it": "Testo",
+            "ja": "テキスト",
+            "nl": "Tekst",
+            "pt-BR": "Texto",
+            "zh-CN": "文本",
+            "zh-TW": "文字"
+          },
+          "default": {
+            "de": "<p>Teilen Sie Ihre Shop-Details, Werbeaktionen oder Markeninhalte mit Ihren Kunden.</p>",
+            "en": "<p>Share store details, promotions, or brand content with your customers.</p>",
+            "es": "<p>Comparte detalles de la tienda, promociones o contenido de la marca con tus clientes.</p>",
+            "fr": "<p>Partagez les détails de la boutique, les promotions ou le contenu de la marque avec vos clients.</p>",
+            "it": "<p>Condividi dettagli del negozio, promozioni o contenuti del brand con i clienti.</p>",
+            "ja": "<p>ストア詳細、プロモーション、ブランドのコンテンツをお客様と共有する。</p>",
+            "nl": "<p>Deel winkeldetails, promoties of merkinhoud met uw klanten.</p>",
+            "pt-BR": "<p>Compartilhe detalhes da loja, promoções ou conteúdo da marca com seus clientes.</p>",
+            "zh-CN": "<p>与您的客户共享商店详细信息、促销信息或品牌内容。</p>",
+            "zh-TW": "<p>與客戶分享商店的詳細資訊、宣傳活動或品牌內容。</p>"
+          }
+        }
+      ]
+    },
+   
+{
+      "type": "social",
+		"limit": 1,
+      "name": "Social links",
+      "settings": [
+        {
+          "type": "header",
+		  "content": "Add social links",
+		"info": "Theme settings > Social media > Social accounts"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

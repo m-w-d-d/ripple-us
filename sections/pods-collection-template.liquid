@@ -1,0 +1,791 @@
+      <style>
+.page-container {
+
+    overflow: inherit!important;
+}
+      .sticky{
+position: sticky!important ;
+  position: -webkit-sticky;
+  top: 0; /* required */
+      }
+
+
+      @media only screen and (max-width: 750px){
+.page-container {
+ overflow: hidden!important;
+
+            .sticky{
+position: relative;
+
+
+      }
+}
+
+      }
+      </style>
+{% case section.settings.grid %}
+  {% when 2 %}
+    {%- assign max_height = 530 -%}
+  {% when 3 %}
+    {%- assign max_height = 345 -%}
+  {% when 4 %}
+    {%- assign max_height = 250 -%}
+  {% when 5 %}
+    {%- assign max_height = 195 -%}
+{% endcase %}
+
+{% if section.settings.layout == 'grid' %}
+  {%- assign limit = section.settings.grid | times: section.settings.rows -%}
+{% else %}
+  {%- assign limit = 16 -%}
+{% endif %}
+
+{% paginate collection.products by limit %}
+
+<div data-section-id="{{ section.id }}" data-section-type="collection-template">
+  <header class="collection-header">
+    {%- assign is_filter_by_available = false -%}
+    {%- if section.settings.tags_enable and collection.all_tags.size > 0 -%}
+      {%- assign is_filter_by_available = true -%}
+    {%- endif -%}
+
+    {%- assign is_vendor_or_type_collection = false -%}
+    {%- if collection.current_type != blank or collection.current_vendor != blank -%}
+      {%- assign is_vendor_or_type_collection = true -%}
+    {%- endif -%}
+
+    {% if section.settings.show_collection_image %}
+      <div class="collection-hero">
+        <div class="collection-hero__image ratio-container lazyload js"
+             data-bgset="{% include 'bgset', image: collection.image %}"
+             data-sizes="auto"
+             data-parent-fit="cover"
+             style="background-image: url('{{ collection.image | img_url: '300x300' }});"></div>
+        <noscript>
+          <div class="collection-hero__image" style="background-image: url({{ collection.image | img_url: '2048x600', crop: 'top' }});"></div>
+        </noscript>
+        
+      </div>
+    
+    
+    
+      {% if collection.description != blank %}
+        <div class="rte collection-description page-width">
+          {{ collection.description }}
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="page-width">
+        <div class="section-header text-center">
+          <h1>
+            <span role="text" class="{{ section.settings.font_chnage }}">
+              <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
+              {{ section.settings.col_title }}
+            </span>
+          </h1>
+
+        </div>
+      </div>
+    {% endif %}
+
+    {% if is_filter_by_available or section.settings.sort_enable %}
+      <div class="filters-toolbar-wrapper{% if is_filter_by_available %} filters-toolbar--has-filter{% endif %}">
+        <div class="page-width">
+          <div class="filters-toolbar">
+            <div class="filters-toolbar__item-wrapper">
+              {% if section.settings.tags_enable and is_vendor_or_type_collection == false %}
+                {% unless collection.all_tags.size == 0 %}
+                  <div class="filters-toolbar__item-child">
+                    <label class="filters-toolbar__label select-label" for="FilterTags">{{ 'collections.filters.title_tags' | t }}</label>
+                    <div class="filters-toolbar__input-wrapper select-group">
+                      <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
+                        {% if current_tags %}
+                          {% if collection.handle %}
+                            <option value="/collections/{{ collection.handle }}">{{ 'collections.filters.all_tags' | t }}</option>
+                          {% elsif collection.current_type %}
+                            <option value="{{ collection.current_type | url_for_type }}">{{ 'collections.filters.all_tags' | t }}</option>
+                          {% elsif collection.current_vendor %}
+                            <option value="{{ collection.current_vendor | url_for_vendor }}">{{ 'collections.filters.all_tags' | t }}</option>
+                          {% endif %}
+                        {% else %}
+                          <option value="">{{ 'collections.filters.all_tags' | t }}</option>
+                        {% endif %}
+                        {% for tag in collection.all_tags %}
+                          <option value="/collections/{% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}/{{ tag | handleize }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</option>
+                        {% endfor %}
+                      </select>
+                      {% include 'icon-chevron-down' %}
+                    </div>
+                  </div>
+                {% endunless %}
+              {% endif %}
+
+              {% if section.settings.sort_enable %}
+                <div class="filters-toolbar__item-child">
+                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                  <label class="filters-toolbar__label select-label" for="SortBy">{{ 'collections.sorting.title' | t }}</label>
+                  <div class="filters-toolbar__input-wrapper select-group">
+                    <select name="sort_by" id="SortBy"
+                      class="filters-toolbar__input hidden"
+                      aria-describedby="a11y-refresh-page-message a11y-selection-message"
+                      data-default-sortby="{{ collection.default_sort_by }}"
+                    >
+                      {%- for option in collection.sort_options -%}
+                        <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name }}</option>
+                      {%- endfor -%}
+                    </select>
+                    {% include 'icon-chevron-down' %}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="filters-toolbar__item filters-toolbar__item--count">
+              <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  </header>
+
+  <div id="Collection">
+    {% if section.settings.layout == 'grid' %}
+      {% case section.settings.grid %}
+      {% when 2 %}
+        {%- assign grid_item_width = 'medium-up--one-half pro_box' -%}
+      {% when 3 %}
+        {%- assign grid_item_width = 'small--one-half medium-up--one-third pro_box' -%}
+      {% when 4 %}
+        {%- assign grid_item_width = 'small--one-half medium-up--one-quarter pro_box' -%}
+      {% when 5 %}
+        {%- assign grid_item_width = 'small--one-half medium-up--one-fifth pro_box' -%}
+      {% endcase %}
+
+
+
+  <div class="pod-grid grid grid--uniform">
+        {% for product in collection.products %}{% if forloop.index == 1 %}
+         <div class="sticky grid__item grid__item--{{section.id}}{{ grid_item_width }} {% if product.tags contains 'bundle_product' %}bundle_grid{% endif %}">
+          {% include 'pods-product-card-grid', max_height: max_height %}  
+                 {% include 'pod-quick-view' %}
+
+        </div>
+
+        {% continue %}{% endif %}
+        {% else %}
+          {% comment %}
+          Add default products to help with onboarding for collections/all only.
+
+          The onboarding styles and products are only loaded if the
+          store has no products.
+          {% endcomment %}
+          {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+            <div class="grid__item">
+              <div class="grid grid--uniform">
+                {% for i in (1..limit) %}
+                  <div class="grid__item {{ grid_item_width }}">
+                    <div class="grid-view-item">
+                      <a href="#" class="grid-view-item__link">
+                        <div class="grid-view-item__image">
+                          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                        <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
+                        <div class="grid-view-item__meta">
+                          <span class="product-price__price">$19.99</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            {%- assign is_empty_collection = true -%}
+          {% endif %}
+        {% endfor %}
+        
+        
+        {% for product in collections.products %}
+        {% unless product.tags contains 'full_set' %} 
+        {% else %}
+        <div class="pod-grid grid__item grid__item--{{section.id}} {{ grid_item_width }}" id="fullset_pro">
+          {% include 'product-card-list', max_height: max_height %}   
+          {% include 'pod-quick-view' %}
+        </div>
+        
+        {% endunless %}  
+        {% endfor %}
+        
+        
+      </div>
+    
+    
+    
+      <div class="pod-grid grid grid--uniform">
+        {% for product in collection.products %}
+        {% unless product.tags contains 'full_set' %} {% if forloop.index != 1 %}
+         <div class=" grid__item grid__item--{{section.id}} {{ grid_item_width }} {% if product.tags contains 'bundle_product' %}bundle_grid{% endif %}">
+          {% include 'pods-product-card-grid', max_height: max_height %}  
+          {% include 'pod-quick-view' %}
+        </div>{% continue %}{% endif %}
+
+        {% else %}
+        {% endunless %}
+        {% else %}
+          {% comment %}
+          Add default products to help with onboarding for collections/all only.
+
+          The onboarding styles and products are only loaded if the
+          store has no products.
+          {% endcomment %}
+          {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
+            <div class="grid__item">
+              <div class="grid grid--uniform">
+                {% for i in (1..limit) %}
+                  <div class="grid__item {{ grid_item_width }}">
+                    <div class="grid-view-item">
+                      <a href="#" class="grid-view-item__link">
+                        <div class="grid-view-item__image">
+                          {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                          {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                        <div class="h4 grid-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
+                        <div class="grid-view-item__meta">
+                          <span class="product-price__price">$19.99</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            {%- assign is_empty_collection = true -%}
+          {% endif %}
+        {% endfor %}
+        
+        
+        {% for product in collections.products %}
+        {% unless product.tags contains 'full_set' %} 
+        {% else %}
+        <div class="grid__item grid__item--{{section.id}} {{ grid_item_width }}" id="fullset_pro">
+          {% include 'product-card-list', max_height: max_height %}   
+          {% include 'quick-view' %}
+        </div>
+        
+        {% endunless %}  
+        {% endfor %}
+        
+        
+      </div>
+     
+    
+
+
+   
+    
+    
+    {% else %}
+      <div class="list-view-items">
+        {% for product in collection.products %}
+          <div class="list-view-item pro_box">
+            {% include 'product-card-list', product: product %}
+            {% include 'quick-view' %}
+          </div>
+        {% else %}
+
+          {% comment %}
+          Add default products to help with onboarding for collections/all only.
+
+          The onboarding styles and products are only loaded if the
+          store has no products.
+          {% endcomment %}
+          {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0%}
+            {% for i in (1..4) %}
+              <div class="list-view-item pro_box">
+                <a href="#" class="list-view-item__link">
+                  <div class="list-view-item__image-column">
+                    <div class="list-view-item__image-wrapper">
+                      <div class="list-view-item__image">
+                        {% capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture %}
+                        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="list-view-item__title-column">
+                    <div class="list-view-item__title">{{ 'homepage.onboarding.product_title' | t }}</div>
+                  </div>
+
+                  <div class="list-view-item__price-column">
+                    <span class="product-price__price">$19.99</span>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          {% else %}
+            {%- assign is_empty_collection = true -%}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %} 
+
+   
+    
+    
+    {% if is_empty_collection %}
+      <div class="grid__item small--text-center">
+        <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+      </div>
+    {% endif %}
+
+    {% if paginate.pages > 1 %}
+      {% include 'pagination' %}
+    {% endif %}
+  </div>
+  
+
+</div>
+
+{% endpaginate %}
+
+<style>
+  body.template-collection{
+    background-color:{{ section.settings.bg_color }}
+      
+  }
+  {% if shop.metafields.globals.collection_new_products_bg != blank %}
+
+ #shopify-section-pods-collection-template #Collection {
+    background-image:url('{{ shop.metafields.globals.collection_new_products_bg}}')!important;
+      width: 100%;
+   display: flex;
+   background-size: contain;
+      }
+  
+    .grid-view-item.product-card {
+
+    background-color: transparent!important;
+}
+  
+  .collection-item__bg-hover{
+  background-image:none!important;
+  }
+  .pod-grid{
+  width:50%;
+  }
+  @media only screen and (max-width: 749px){
+ .pod-grid{
+  width:100%;
+  }
+    #shopify-section-pods-collection-template #Collection {
+    background-image:url('{{ shop.metafields.globals.collection_new_products_bg}}')!important;
+
+   display: block;
+      }
+  
+}
+  .pro_box {
+    padding-left: 0;
+    background: none!important;
+    position: relative;
+}
+  {% endif %}
+  
+</style>
+
+<style>
+  .btn.colpagebtn i{
+ 	background-image: linear-gradient(270deg, {{ section.settings.background_c }}, {{ section.settings.background_c }} 50%, {{ section.settings.background_c }});
+  }
+  .btn.colpagebtn{
+    background-color: {{ section.settings.background_c }};
+  }
+  .btn.colpagebtn:hover i{
+  	background-image: linear-gradient(270deg, {{ section.settings.background_first_c }}, {{ section.settings.background_second_c }} 50%, {{ section.settings.background_third_c }});
+  }
+</style>
+{% schema %}
+{
+  "name": {
+    
+    "en": "pod Collection page"
+    
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": {
+        "de": "Layout",
+        "en": "Layout",
+        "es": "Diseño",
+        "fr": "Mise en page",
+        "it": "Layout",
+        "ja": "レイアウト",
+        "nl": "Indeling",
+        "pt-BR": "Layout",
+        "zh-CN": "布局",
+        "zh-TW": "版面配置"
+      },
+      "default": "grid",
+      "options": [
+        {
+          "value": "grid",
+          "label": {
+            "de": "Raster",
+            "en": "Grid",
+            "es": "Cuadrícula",
+            "fr": "Grille",
+            "it": "Griglia",
+            "ja": "グリッド",
+            "nl": "Raster",
+            "pt-BR": "Grade",
+            "zh-CN": "网格",
+            "zh-TW": "網格"
+          }
+        },
+        {
+          "value": "list",
+          "label": {
+            "de": "Liste",
+            "en": "List",
+            "es": "Lista",
+            "fr": "Liste",
+            "it": "Elenco",
+            "ja": "リスト",
+            "nl": "Lijst",
+            "pt-BR": "Lista",
+            "zh-CN": "列表",
+            "zh-TW": "清單"
+          }
+        }
+      ]
+    },
+	
+    {
+      "type": "range",
+      "id": "grid",
+      "label": {
+        "de": "Produkte per Reihe (nur Raster)",
+        "en": "Products per row (grid only)",
+        "es": "Productos por fila (solo cuadrícula)",
+        "fr": "Produits par rangée (grille uniquement)",
+        "it": "Prodotti per riga (solo griglia)",
+        "ja": "行あたりの商品数（グリッドのみ）",
+        "nl": "Producten per rij (alleen raster)",
+        "pt-BR": "Produtos por linha (somente grade)",
+        "zh-CN": "每行产品数（仅限网格）",
+        "zh-TW": "每列產品數 (僅限網格)"
+      },
+      "default": 4,
+      "min": 2,
+      "max": 5,
+      "step": 1
+    },
+	
+    {
+      "type": "range",
+      "id": "rows",
+      "label": {
+        "de": "Reihen per Seite (nur Raster)",
+        "en": "Rows per page (grid only)",
+        "es": "Filas por página (solo cuadrícula)",
+        "fr": "Rangées par page (grille uniquement)",
+        "it": "Righe per pagina (solo griglia)",
+        "ja": "ページあたりの行数（グリッドのみ）",
+        "nl": "Rijen per pagina (alleen raster)",
+        "pt-BR": "Linhas por página (somente grade)",
+        "zh-CN": "每行产品数（仅限网格）",
+        "zh-TW": "每頁列數 (僅限網格)"
+      },
+      "default": 2,
+      "min": 2,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "label": {
+        "de": "Kategorie-Foto anzeigen",
+        "en": "Show collection image",
+        "es": "Mostrar imagen de la colección",
+        "fr": "Afficher l'image de la collection",
+        "it": "Mostra immagine collezione",
+        "ja": "コレクションの画像を表示する",
+        "nl": "Collectieafbeelding weergeven",
+        "pt-BR": "Exibir imagem da coleção",
+        "zh-CN": "显示产品系列图片",
+        "zh-TW": "顯示商品系列圖片"
+      },
+      "default": true
+    },
+	{
+      "type": "select",
+      "id": "font_chnage",
+      "label": "Text Font",
+      "default": "bold-font",
+      "options": [
+        {
+          "label": "Bold",
+          "value": "bold-font"
+        },
+        {
+          "label": "Heavy Weight",
+          "value": "heavy-font"
+        }
+      ]
+    },	 
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "de": "Produkt-Lieferanten anzeigen",
+        "en": "Show product vendors",
+        "es": "Mostrar proveedores del producto",
+        "fr": "Afficher les vendeurs",
+        "it": "Mostra fornitori prodotto",
+        "ja": "商品の販売元を表示する",
+        "nl": "Productleveranciers weergeven",
+        "pt-BR": "Exibir fornecedores do produto",
+        "zh-CN": "显示产品厂商",
+        "zh-TW": "顯示產品廠商"
+      },
+      "default": false
+    },
+    
+	{
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+       "type": "color",
+		"id": "bg_color",
+       "label": "Select color",
+		"default": "#f2eeea"
+    },
+	{
+       "type": "header",
+       "content": "Collection info"
+    },
+	{
+       "type": "richtext",
+		"id": "col_title",
+       "label": "Title"
+    },
+	{
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+          "type": "color",
+          "id": "background_first",
+          "label": "Background gradient color first",
+		  "default":"#ad99c3"
+     },
+	 {
+          "type": "color",
+          "id": "background_second",
+          "label": "Background gradient color second",
+		  "default":"#f7dddd"
+     },
+     {
+       "type": "header",
+       "content": "Title Color"
+    },
+    {
+          "type": "color",
+          "id": "title_first",
+          "label": "Title gradient color first",
+		  "default":"#445e83"
+     },
+	 {
+          "type": "color",
+          "id": "title_second",
+          "label": "Title gradient color second",
+		  "default":"#f8aeae"
+     },
+	 {
+       "type": "header",
+       "content": "Text color"
+    },
+	{
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+		  "default":"#373736"
+     },
+	{
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+"info":"Size 900x700"
+    },
+    {
+      "type": "select",
+      "id": "layout_two",
+      "label": {
+        "de": "Fotoausrichtung",
+        "en": "Image alignment",
+        "es": "Alineación de imagen",
+        "fr": "Alignement de l'image",
+        "it": "Allineamento immagine",
+        "ja": "画像アラインメント",
+        "nl": "Afbeelding uitlijnen",
+        "pt-BR": "Alinhamento da imagem",
+        "zh-CN": "图片对齐方式",
+        "zh-TW": "圖片對齊"
+      },
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": {
+            "de": "Links",
+            "en": "Left",
+            "es": "Izquierda",
+            "fr": "Gauche",
+            "it": "Sinistra",
+            "ja": "左",
+            "nl": "Links",
+            "pt-BR": "Esquerda",
+            "zh-CN": "左侧",
+            "zh-TW": "左方"
+          }
+        },
+        {
+          "value": "right",
+          "label": {
+            "de": "Rechts",
+            "en": "Right",
+            "es": "Derecha",
+            "fr": "Droite",
+            "it": "Destra",
+            "ja": "右",
+            "nl": "Rechts",
+            "pt-BR": "Direita",
+            "zh-CN": "右侧",
+            "zh-TW": "右方"
+          }
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": {
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": {
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "nl": "Tekst",
+        "pt-BR": "Texto",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      }
+    },
+	{
+      "type": "text",
+      "id": "tag_title",
+      "label": "Tag text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": {
+        "de": "Button-Etikett",
+        "en": "Button label",
+        "es": "Etiqueta de botón",
+        "fr": "Texte du bouton",
+        "it": "Etichetta pulsante",
+        "ja": "ボタンラベル",
+        "nl": "Knoplabel",
+        "pt-BR": "Etiqueta do botão",
+        "zh-CN": "按钮标签",
+        "zh-TW": "按鈕標籤"
+      }
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": {
+        "de": "Button-Link",
+        "en": "Button link",
+        "es": "Enlace de botón",
+        "fr": "Lien du bouton",
+        "it": "Link pulsante",
+        "ja": "ボタンリンク",
+        "nl": "Knoplink",
+        "pt-BR": "Link do botão",
+        "zh-CN": "按钮链接",
+        "zh-TW": "按鈕連結"
+      }
+    },
+{
+             "type": "header",
+             "content": "Button color"
+          },
+		  {
+                "type": "color",
+                "id": "background_c",
+                "label": "Button Background color",
+                "default":"#654489"
+           },
+           {
+             "type": "header",
+             "content": "Button Hover color"
+          },
+
+          {
+                "type": "color",
+                "id": "background_first_c",
+                "label": "Background gradient color first",
+                "default":"#825aa4"
+           },
+           {
+                "type": "color",
+                "id": "background_second_c",
+                "label": "Background gradient color second",
+                "default":"#9c7dbe"
+           }, 
+			{
+                "type": "color",
+                "id": "background_third_c",
+                "label": "Background gradient color third",
+                "default":"#825aa4"
+           }
+  ]
+}
+{% endschema %}

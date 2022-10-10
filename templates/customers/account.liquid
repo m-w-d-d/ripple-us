@@ -1,0 +1,141 @@
+{{ 'account.css' | asset_url | stylesheet_tag }}
+
+
+<div class="full_width">
+  <div class="white_bg"></div>
+<div class="container">  
+
+  <div class="account_sidebar">
+    <h5>Welcome {% if customer %}{{ customer.first_name }}{% endif %}</h5>
+    <ul>
+      <li class="active"><a href="/account">Order history</a></li>
+      <li><a href="/account/addresses">Address book</a></li>
+      <p><a href="/tools/recurring/login/">Manage Subscriptions</a></p>
+      <li>{{ 'layout.customer.log_out' | t | customer_logout_link }}</li>
+    </ul>
+  </div>
+
+  <div class="grid myaccount account_content">
+    <div class="grid__item myaccount__order-history order_history">
+      
+      {% comment %}
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+	  {% endcomment %}
+      
+      {% paginate customer.orders by 20 %}
+        {% if customer.orders.size != 0 %}
+{% comment %}
+      <div class="order_scroll">
+<div class="orders-bg">
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                <th width="30%" scope="col">{{ 'customer.orders.order_number' | t }}</th>
+                <th width="30%" scope="col">{{ 'customer.orders.date' | t }}</th>
+                <th width="25%">Items</th>
+                {% comment %}
+                <th scope="col">{{ 'customer.orders.payment_status' | t }}</th>
+                <th scope="col">{{ 'customer.orders.fulfillment_status' | t }}</th>
+                {% endcomment %}
+                <th width="15%" scope="col">{{ 'customer.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in customer.orders %}
+                <tr>
+                  <td data-label="{{ 'customer.orders.order_number' | t }}" scope="row">
+                    <a href="{{ order.customer_url }}" class="btn btn--secondary btn--small" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">{{ order.order_number }}</a>
+                  </td>
+                  <td>{{ order.created_at | date: "%d / %m / %Y" }}</td>
+                  <td>{{ order.item_count }}</td>
+                  {% comment %}
+                  <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                  <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                  {% endcomment %}
+                  <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {% endcomment %}
+      
+      <div id="customer_orders">
+
+
+<div class="order_scroll">
+<div class="orders-bg">
+<div class="row m-0">
+{% if customer.orders.size != 0 %}
+
+
+<div class="col-md-4 col-sm-4 title-wrapper order-number">
+<div class="row">
+<strong>Order number</strong>
+{% for order in customer.orders %}
+<p><span>{{ order.name | link_to: order.customer_url }}</span></p>
+{% endfor %}
+</div>
+</div>
+
+<div class="orders-info col-md-8 col-sm-8"> 
+<div class="row">
+<div class="col-md-5 col-sm-5 title-wrapper date"><div class="row">
+<strong>Order Date</strong>
+{% for order in customer.orders %}
+<p><span>{{ order.created_at |  date: "%d / %m / %Y" }}</span></p>
+{% endfor %}
+</div>
+</div>   
+
+<div class="col-md-5 col-sm-5 title-wrapper date"><div class="row">
+<strong>Items</strong>
+{% for order in customer.orders %}
+<p><span>{{ order.item_count }} {{ order.item_count | pluralize: '', '' }}</span></p>
+{% endfor %}
+</div></div>  
+
+<div class="col-md-2 col-sm-2 title-wrapper total"><div class="row">
+<strong>{{ 'customer.orders.total' | t }}</strong>
+{% for order in customer.orders %}
+<p><span>{{ order.total_price | money }}</span></p>
+{% endfor %}
+</div></div>  
+</div>
+</div>
+
+{% else %}
+<p style="text-align:left;">{{ 'customer.orders.none' | t }}</p>
+{% endif %}   
+</div>
+</div>  
+
+</div>
+
+</div>
+        {% else %}
+
+          <p>{{ 'customer.orders.none' | t }}</p>
+
+        {% endif %}
+        {% if paginate.pages > 1 %}
+          {% include 'pagination' %}
+        {% endif %}
+      {% endpaginate %}
+    </div>
+    
+    {% comment %}
+    <div class="grid__item myaccount__account-details">
+      <h2>{{ 'customer.account.details' | t }}</h2>
+<p><a href="/tools/checkout/front_end/login" class="text-link">Manage Subscription</a></p>
+
+      {{ customer.default_address | format_address }}
+
+      <p><a href="/account/addresses" class="btn btn--small">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></p>
+    </div>
+    {% endcomment %}
+  </div>
+
+  </div>
+</div>

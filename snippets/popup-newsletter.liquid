@@ -1,0 +1,57 @@
+{%- if section.settings.show_popup != blank -%}
+<div id="popup" style="display: none;">
+  <div class="popup_border">
+        
+        {%- if section.settings.n_title != blank -%}
+        <h3 class="text-center hide">{{ section.settings.n_title }}</h3>    
+     {%- endif -%}        
+          
+        {%- if section.settings.n_info != blank -%}
+        <div class="width-440 text-center">
+          {{ section.settings.n_info | replace: "+", "<sup>+</sup>" }}
+        </div>    
+         {%- endif -%}   
+    
+    {%- if section.settings.n_footer != blank -%}
+      <div class="n_footer">
+      {{ section.settings.n_footer }}
+      </div>  
+      {%- endif -%}
+    
+         
+    <div class="popup_wrapper">
+      <a href="#" class="popup_close">X</a>
+      
+       {%- comment -%}   
+      <form id="inline-form">
+        <div class="news-input">
+          <div class="mc_box">
+            <i>📞</i>
+            <input id="mc-phone" type="tel" placeholder="phone number" name="PHONE"> 
+          </div>
+          <div class="mc_box">
+            <i>📬</i>
+            <input id="mc-email" type="email" placeholder="Email">
+          </div>
+          <button type="submit" class="Form__Submit Button Button--primary btn" id="go">
+            <i></i>
+            <span>sign up</span>
+          </button>
+          <label for="mc-email"></label>
+        </div>    
+      </form>
+      {%- endcomment -%} 
+      
+      <div id="inline-form">
+       <div class="klaviyo-form-SjMY3b"></div>
+     </div>
+      
+      
+      
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+
+

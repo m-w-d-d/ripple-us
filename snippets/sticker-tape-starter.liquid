@@ -1,0 +1,107 @@
+<div class="sticker-tape ">
+  
+    
+    <div class="tape social__marquee">
+<!--       <h2 class="visually-hidden">Follow Us @chachamatcha&nbsp;</h2> -->
+<div aria-hidden="true" class="animation--marquee">
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+  	  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span> 
+  	  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+  	  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span> 
+  	  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+  	  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span> 
+  	  <span class="{{ section.settings.font_chnage1 }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first1 }} 10%, {{ section.settings.title_second1 }} 63%);">{{ section.settings.title1 }} &nbsp;</span>
+</div>
+
+      
+
+
+
+
+
+    </div>
+</div>  
+
+<style>
+  .social {
+    padding:80px 0 100px;
+}
+.social__marquee {
+    position: relative;
+    z-index: 1;
+    width: calc(100% + 10px);
+    margin-left: -10px;
+}
+.animation--marquee {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+
+}
+.social__marquee span {
+	font-family:'Swiss721BT-Heavy';
+    font-size:48px;
+    line-height: normal;
+	color:#3a557c;
+}
+.animation--marquee {
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-align:center;
+	align-items:center;
+	-ms-flex-pack:start;
+	justify-content:flex-start
+}
+.animation--marquee span {
+	will-change:transform;
+	transform:translateX(0);
+	white-space:nowrap;
+	animation:marquee 14s linear infinite;
+  	-webkit-background-clip: text;
+-webkit-text-fill-color:transparent;
+}
+
+.animation--marquee span {
+  animation:marqueeReverse 14s linear infinite
+}
+
+@keyframes marquee {
+0% {
+transform:translateX(0)
+}
+to {
+	transform:translateX(-100%)
+}
+}
+@keyframes marqueeReverse {
+0% {
+transform:translateX(-100%)
+}
+to {
+	transform:translateX(0)
+}
+}
+  
+  .sticker-tape  .social__marquee span{
+  font-size:18px!important;
+    margin: 0 25px;
+  }
+  .sticker-tape{
+  padding: 10px 0;
+  }
+</style>
+

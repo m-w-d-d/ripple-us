@@ -1,0 +1,201 @@
+.template-page{
+ /* background:#f2eeea;*/
+  padding-top:0;
+}
+.full_width {
+  padding-top: 89px;
+  float: left;
+  width: 100%;
+  padding-bottom: 60px;
+}
+.white_bg {
+    position: fixed;
+    width: 69.5%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    border-left: 1px solid #373736;
+    z-index: -1;
+  	display:none;
+}
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+.account_sidebar {
+    float: left;
+    height: 100%;
+    width: 23.8%;
+}
+.account_sidebar h5 {
+    font-size: 20px;
+    line-height: normal;
+    color: #373736;
+    margin: 0 0 39px;
+}
+.account_sidebar li {
+    margin-bottom: 7px;
+}
+.static_right_info {
+    float: right;
+    width: 75%;
+    padding-left: 54px;
+}
+.right_info_wrapper{
+    padding-left: 15px;
+}
+.account_sidebar li a:hover, .account_sidebar li.active a {
+    border-bottom: 1px solid #373736;
+}
+.static_right_info h4{
+  font-size:20px;
+  line-height:normal;
+  text-transform:capitalize;
+  margin-bottom:41px;
+}
+.right_info_wrapper h3{
+  font-family: 'Swiss721BT-Bold';
+  font-weight: normal;
+  font-size:15px;
+  line-height:normal;
+  margin:10px 0 20px;
+  color:#373736;
+  float: left;
+width: 100%;
+}
+.right_info_wrapper h3::nth-child(2){
+  margin-top:0;
+}
+.right_info_wrapper p{
+  margin-bottom:30px;
+  line-height: 25px;
+}
+.right_info_wrapper ul{
+  margin:0 -15px;
+}
+.right_info_wrapper li{
+  width:33.33%;
+  float:left;
+  padding:0 15px;
+}
+
+
+@media(min-width:1601px){
+.white_bg {
+    width: 66.5%;
+}
+}
+
+@media(min-width:1899px){
+.white_bg {
+    width: 64.5%;
+}
+}
+
+@media(min-width:2399px){
+.white_bg {
+    width: 62.5%;
+}
+}
+
+@media(min-width:3199px){
+.white_bg {
+    width: 59.5%;
+}
+}
+
+@media(min-width:5299px){
+.white_bg {
+    width: 55.5%;
+}
+}
+
+
+
+
+/*============Recycling Form===================*/
+
+.recycling_wrapper{
+  max-width:532px;
+  width:100%;
+}
+.recycling_form{
+  margin:40px 0 60px;
+}
+.right_info_wrapper div.recycling_form input{
+  border-top:none;
+}
+.right_info_wrapper div.recycling_form input:first-child{
+  border-top:1px solid #373736;
+}
+.recycling_form input[type="tel"], .recycling_form input[type="email"]{
+  padding: 0 16px;
+  float:left;
+  width:100%;
+  border: 1px solid #373736;
+  border-bottom-color: rgb(55, 55, 54);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 13px;
+  color: #373736;
+  background: none;
+  border-radius: 0;
+}
+.right_info_wrapper div.recycling_form input[type="submit"]{
+  background:#373736;
+  color:#fff;
+  text-align:center;
+  width:100%;
+  max-width:inherit;
+  margin-top:34px;
+  border:1px solid #373736;
+}
+.right_info_wrapper div.recycling_form input[type="submit"]:hover{
+  background:none;
+  color:#373736;
+}
+.right_info_wrapper div.recycling_form input::placeholder{
+  color:#373736;
+  opacity:1;
+}
+
+/*============Recycling Form===================*/
+
+
+.stockists-list a {
+    clear: both;
+    float: left;
+}
+.stockists-list p{
+  	max-width:195px;
+}
+.stockists-list li {
+    margin-bottom: 50px;
+  min-height: 155px;
+}
+.recycling_wrapper iframe{
+    height: 330px;
+  float: left;
+width: 100%;
+margin: 15px 0 0;
+}
+.account_sidebar li a{
+  text-transform:capitalize;
+}
+.right_info_wrapper h3:empty{
+  display:none;
+}
+
+.static_right_info h1 {
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.right_info_wrapper .stockists-list li:nth-child(3n+1) {
+	clear:both;
+}

@@ -1,0 +1,89 @@
+<div class="recycle_ripple" style="background: {{ section.settings.recycle_bg_one }}; 
+background: -moz-linear-gradient(top,  {{ section.settings.recycle_bg_one }} 0%, {{ section.settings.recycle_bg_two }} 100%); 
+background: -webkit-linear-gradient(top,  {{ section.settings.recycle_bg_one }} 0%,{{ section.settings.recycle_bg_two }} 100%); 
+background: linear-gradient(to bottom,  {{ section.settings.recycle_bg_one }} 0%,{{ section.settings.recycle_bg_two }} 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{{ section.settings.recycle_bg_one }}', endColorstr='{{ section.settings.recycle_bg_two }}',GradientType=0 );
+">
+<div class="recycle_ripple_wrapper">
+    <div class="half_grid">
+      {% if section.settings.section_img != blank %}
+      {{ section.settings.section_img | img_url: 'x650', scale: 2 | img_tag: block.settings.client_logo_image.alt, '' }}
+      {% endif %}
+    </div>
+    <div class="half_grid">
+      <div class="section_info_wrapper">
+        {% if section.settings.section_title != blank %}
+        <h2 class="size35" style="color:{{ section.settings.text_color }};">{{ section.settings.section_title }}</h2>
+        {% endif %}
+        {% if section.settings.section_sub_title != blank %}
+        <h4 style="color:{{ section.settings.text_color }};">{{ section.settings.section_sub_title }}</h4>
+        {% endif %}
+        {% if section.settings.section_info != blank %}
+        <p style="color:{{ section.settings.text_color }}">{{ section.settings.section_info | remove: "<p>" | remove: "</p>" }}</p>
+        {% endif %}
+        
+        <iframe id="frame" class="iframe" src="//dashcreativeshopifyscripts.co/ripple/v2/index-form1.php" width="100%" height="278px"  frameborder="0"></iframe>
+        
+    </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Recycle your ripple",
+    "settings": [
+		{
+        "type": "color",
+        "id": "recycle_bg_one",
+        "label": "Background color",
+	    "default": "#000"
+        },
+		{
+        "type": "color",
+        "id": "recycle_bg_two",
+        "label": "Background color",
+	    "default": "#000"
+        },
+		{
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+	    "default": "#000"
+        },
+		{
+        "type": "image_picker",
+        "id": "section_img",
+        "label": "Image",
+        "info":"Size 650 x 650px"
+        },
+        {
+        "type": "text",
+        "id": "section_title",
+        "label": "Title"
+        },
+		{
+        "type": "text",
+        "id": "section_sub_title",
+        "label": "Title"
+        },
+		{
+        "type": "richtext",
+        "id": "section_info",
+        "label": "Info"
+        }
+
+],
+	"presets": [
+    {
+      "name": "Recycle your ripple"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

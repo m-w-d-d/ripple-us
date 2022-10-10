@@ -1,0 +1,87 @@
+<style>
+.recycle_image_text_wrapper img {
+    float: none!important;
+    width: 53px!important;
+}
+  .merch--starter-focus1 .home_merch_wrap p,.starter-focus1 .title-pod {
+    color: {{ product.metafields.accentuate.text_color }};
+    padding: 0 20px 24px;
+}
+  .happy-pod.home_merch_wrap.merch_left {
+    text-align: left;
+    float: none!important; 
+    margin: auto;
+}
+.text-icon {
+    display: inline-flex;
+}
+  @media (max-width: 767px){
+.home-merch-icons.happy-pod.home_merch_wrap {
+    padding: 40px 15px;
+    background: none!important;
+     position: relative; 
+    top: 33%!important;
+}
+ .text-icon {
+    display: block; 
+} }
+</style>
+
+<div class="recycle_image_text" style="background-color:{{ product.metafields.accentuate.background_color }};">
+  <div class="recycle_image_text_wrapper sec_align_right">
+    <div class="half_grid">
+      {{product.metafields.accentuate.pod_x_vimeo}}
+    </div>
+    <div style="padding: 15px;"class="half_grid">
+<div class="home-merch-icons home-merch-icons home_merch merch--starter-focus1 ">
+  
+  
+
+  <div class="home_merchinfo">
+  <div class="page-width p-0 w_1053">
+    <div class="happy-pod home_merch_wrap merch_left home-merch-icons">
+      
+      
+      
+      <h3 style="color:{{ product.metafields.accentuate.text_color }} " class=" starter-focus1 title-pod">{% if product.metafields.accentuate.spinning_pod_title != blank %}{{ product.metafields.accentuate.spinning_pod_title }}
+{% else %}Fill Metafield in backend{% endif %}</h3>
+        
+       
+      
+      
+      
+      
+      <div style=" " class="home_merchrte title--starter-focus1">
+        
+        <div class="text-icon">
+        <img data-sizes="auto" data-src="{{ product.metafields.accentuate.happy_icon_1 }}" alt="" class="logo-bar__image lazyautosizes  lazyload" sizes="53px" src="{{ product.metafields.accentuate.happy_icon_1 }}">
+
+          <p>{{ product.metafields.accentuate.happy_text_1 }}</p>
+          </div>
+         <div class="text-icon">
+        <img data-sizes="auto" data-src="{{ product.metafields.accentuate.happy_icon_2 }}" alt="" class="logo-bar__image lazyautosizes  lazyload" sizes="53px" src="{{ product.metafields.accentuate.happy_icon_2 }}">
+
+          <p>{{ product.metafields.accentuate.happy_text_2 }}</p>
+          </div>
+        
+         <div class="text-icon">
+        <img data-sizes="auto" data-src="{{ product.metafields.accentuate.happy_icon_3 }}" alt="" class="logo-bar__image lazyautosizes  lazyloaded" sizes="53px" src="{{ product.metafields.accentuate.happy_icon_3 }}">
+
+          <p>{{ product.metafields.accentuate.happy_text_3 }}</p>
+          </div>
+        
+        
+      </div>
+      
+      
+  
+        
+      
+    </div>
+  </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,92 @@
+<div class="how_to_recycle" style="background-color:{{ section.settings.recycle_ripple_bg }};">
+  <div class="how_to_recycle_wrapper">
+   
+{% if section.settings.select_option == 'image' %}
+  
+    
+    {% if section.settings.image != blank %}
+    <div class="how_to_recycle_info">
+      {{ section.settings.image | img_url: '567x102', scale: 2 | img_tag: section.settings.image.alt, '' }}
+      <h6>{{ section.settings.recycle_info }}</h6>
+    </div>
+    {% endif %}
+
+
+{%- endif -%}
+
+
+
+{% if section.settings.select_option == 'text' %}
+    
+    {% if section.settings.text != blank %}
+    <div class="how_to_recycle_info">
+      {{ section.settings.text }}
+      <h6>{{ section.settings.recycle_info }}</h6>
+    </div>
+    {% endif %}
+
+{%- endif -%}
+
+    
+</div>   
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "How to recycle",
+    "settings": [
+		{
+        "type": "color",
+        "id": "recycle_ripple_bg",
+        "label": "Background color",
+	    "default": "#fff"
+        },
+	{
+      "type": "select",
+      "id": "select_option",
+      "label": "Choose option",
+      "default": "image",
+      "options": [
+	
+        {
+          "label": "Image",
+          "value": "image"
+    	},    
+       {
+          "label": "Text",
+          "value": "text"
+        }
+      ]
+    },
+	{
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+	{
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+	  "info": "SIze 572 X 85"
+    },
+	{
+      "type": "text",
+      "id": "recycle_info",
+      "label": "Info"
+    }
+
+],	"presets": [
+    {
+      "name": "How to recycle"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

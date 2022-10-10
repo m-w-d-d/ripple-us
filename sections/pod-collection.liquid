@@ -1,0 +1,276 @@
+<div class="pod-collection">
+  <div class=" product-slider homecollection_{{ section.settings.collection | remove:'-with-a-mission' }}">
+    
+     {% comment %}
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+     {% endcomment %}
+
+  {%- assign collection = collections[section.settings.collection] -%}
+
+  {% case section.settings.grid %}
+    {% when 2 %}
+      {%- assign max_height = 530 -%}
+      {%- assign grid_item_width = 'medium-up--one-half pro_box' -%}
+    {% when 3 %}
+      {%- assign max_height = 345 -%}
+      {%- assign grid_item_width = 'small--one-half medium-up--one-third pro_box' -%}
+    {% when 4 %}
+      {%- assign max_height = 250 -%}
+      {%- assign grid_item_width = 'small--one-half medium-up--one-quarter pro_box' -%}
+    {% when 5 %}
+      {%- assign max_height = 195 -%}
+      {%- assign grid_item_width = 'small--one-half medium-up--one-quarter pro_box' -%}
+  {% endcase %}
+
+  {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
+
+   
+    
+   <div id="home-sliders_{{ section.id }}"> 
+  <div class="grid grid--uniform grid--view-items home_proslider" id="home_proslider_{{ section.id }}">
+    {% for product in collection.products %}
+      <div class="background--{{ product.handle }}_pro grid__item grid__item--{{section.id}} {{ grid_item_width }} pro_box {% if product.tags contains 'bundle_product' %}bundle_grid{% endif %}" data-color="background--{{ product.handle }}">
+        {% include 'pods-product-card-grid', max_height: max_height %}
+        {% include 'pod-quick-view' %}
+      </div>
+    {% else %}
+
+      {% for i in (1..product_limit) %}
+        <div class="grid__item grid__item--{{section.id}} {{ grid_item_width }} pro_box">
+          <div class="grid-view-item product-card">
+            <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="#">
+              <span class="visually-hidden">{{ 'homepage.onboarding.product_title' | t }}</span>
+            </a>
+            <div class="grid-view-item__image-wrapper">
+              {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+              {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            <div class="h4 grid-view-item__title" aria-hidden="true">{{ 'homepage.onboarding.product_title' | t }}</div>
+            {% include 'product-price' %}
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+     <div class="paginator-center text-color text-center" id="slide_arrow">
+          <ul>
+            <li class="prev prev_{{ section.id }}">{% include 'prev-arrow' %}</li>
+            <li class="next next_{{ section.id }}">{% include 'next-arrow' %}</li>
+          </ul>
+        </div> 
+     
+    </div>
+  {% if section.settings.show_view_all %}
+    <hr class="hr--invisible" aria-hidden="true" />
+    <div class="text-center">
+      <a href="{{ collection.url }}" class="btn" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+        {{ 'collections.general.view_all' | t }}
+      </a>
+    </div>
+  {% endif %}
+  </div>
+</div>
+
+<style>
+  
+   div.pod-collection .h4.grid-view-item__title.product-card__title,  div.pod-collection .productvendor {
+   
+    color: white!important;
+}
+  div.pod-collection .pro_box  {
+  
+   background-image: url('{{ section.settings.bg_image | img_url: '2000x' }}')
+}
+div.pod-collection .grid-view-item.product-card{
+    background-size:cover;
+  	
+}
+ div.pod-collection .collection-item__bg-hover {
+
+background-image: none!important;
+ }
+  
+ div.pod-collection .grid-view-item.product-card {
+
+    background-color: transparent!important;
+}
+  
+  div.pod-collection .shopnow_btn strong {
+
+        box-shadow: 0 0 20px #ffff!important;
+}
+@media(max-width:1024px){
+  
+}
+  
+  
+  
+  </style>
+
+
+{% schema %}
+{
+  "name": {
+    
+    "en": "Featured pod collection"
+  },
+  "class": "index-section home_collection",
+  "settings": [
+{
+          "type": "image_picker",
+          "id": "bg_image",
+		  "label": "Image",
+			"info":"Size 1600x"
+        },
+    
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": {
+        "de": "Kategorie",
+        "en": "Collection",
+        "es": "Colección",
+        "fr": "Collection",
+        "it": "Collezione",
+        "ja": "コレクション",
+        "nl": "Collectie",
+        "pt-BR": "Coleção",
+        "zh-CN": "收藏",
+        "zh-TW": "商品系列"
+      }
+    }
+    
+    
+    
+  ],
+  "presets": [
+    {
+      "name": {
+        
+        "en": "Pod Featured collection"
+        
+      },
+      "category": {
+        "de": "Kategorie",
+        "en": "Collection",
+        "es": "Colección",
+        "fr": "Collection",
+        "it": "Collezione",
+        "ja": "コレクション",
+        "nl": "Collectie",
+        "pt-BR": "Coleção",
+        "zh-CN": "收藏",
+        "zh-TW": "商品系列"
+      }
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+$(document).ready(function() { 
+
+  $('#home_proslider_{{ section.id }}').slick({
+  dots: false,
+  infinite: true,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  prevArrow: $('.prev_{{ section.id }}'),
+  nextArrow: $('.next_{{ section.id }}'),  
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '0',
+    	adaptiveHeight: true,
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '25%',
+    	adaptiveHeight: true,
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        centerMode: true,
+        centerPadding: '30%',
+        focusOnSelect: true
+      }
+    },	
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '15%',
+    	adaptiveHeight: true,
+        focusOnSelect: true
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+  
+  
+  
+  var current_slide_class=($('#home_proslider_{{ section.id }} .pro_box.slick-center').attr("data-color"));
+  $("#home-sliders_{{ section.id }}").addClass(current_slide_class);
+  
+  $('#home_proslider_{{ section.id }}').on('afterChange', function(event, slick, currentSlide, nextSlide){   
+    var current_slide_class=($('#home_proslider_{{ section.id }} .pro_box.slick-center').attr("data-color"));
+    //alert(current_slide_class);
+   $("#home-sliders_{{ section.id }}").removeClass();
+   $("#home-sliders_{{ section.id }}").addClass(current_slide_class);
+  //alert(currentSlide);
+});
+
+});  
+  
+  
+$(window).on('load resize', function () {
+  var slickheight = $('#home-sliders_{{ section.id }} .slick-track').height(); 
+  $('#home-sliders_{{ section.id }} .pro_box').css('height', slickheight);
+  var titleheight = $('#home-sliders_{{ section.id }} .background--the-ripple_pro .full-product-table').height(); 
+  
+                      
+                      
+  if($(window).width() < 1024){
+    
+    //alert(titleheight);
+    $('#home-sliders_{{ section.id }} .full-product-table').css('min-height', titleheight + 20 );
+  }
+   
+    
+    
+              
+                      
+                      
+});
+
+  
+  
+</script>

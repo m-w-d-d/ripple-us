@@ -1,0 +1,75 @@
+<div id="pro_feature_row" class="full__width home_about" style="background-image: linear-gradient({{ product.metafields.accentuate.background_gradient_position }}deg, {{ product.metafields.accentuate.background_gradient_color_firs }} 0%, {{ product.metafields.accentuate.background_gradient_color_seco }} 100%)">
+<div class="page-width feature-row">
+  {% capture image_layout %}
+    <div class="feature-row__item feature-row__item_image">
+      {% if product.metafields.feature-image.feature-image != blank %}
+        {%- assign img_url = product.metafields.feature-image.feature-image -%}
+      {% include 'image-style' with image: product.metafields.feature-image.feature-image, width: 665, height: 519, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+        <div id="" class="feature-row__image-wrapper js">
+          <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;;">
+            <a href="{{ product.metafields.feature_button_link.feature_button_link }}" class="imglink">
+            <img id=""
+                 class="feature-row__image lazyload"
+                 src="{{ img_url }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ product.metafields.feature-image.feature-image.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ product.metafields.feature-image.feature-image.alt | escape }}">
+            </a>
+          </div>
+        </div>
+
+        <noscript>
+          {{ product.metafields.feature-image.feature-image.image | img_url: '600x600', scale: 2 | img_tag: product.metafields.feature-image.feature-image.alt, 'feature-row__image' }}
+        </noscript>
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+  {% endcapture %}
+
+  <div class="feature-row black_border {{ section.settings.layout }}_align_box">
+      {{ image_layout }}
+    
+
+    <div class="feature-row__item feature-row__item_text feature-row__text feature-row__text--{{ section.settings.layout }}">
+      {% if product.metafields.feature-heading.feature-heading %}
+        <h2 class="h3" style="background-image:linear-gradient(100deg,{{ product.metafields.accentuate.title_gradient_color_first }} 10%, {{ product.metafields.accentuate.title_gradient_color_second }} 63%);">{{ product.metafields.feature-heading.feature-heading }}</h2>
+      {% endif %}
+      {% if product.metafields.feature-text.feature-text != blank %}
+        <div class="rte rte-setting featured-row__subtext"><p style="color:{{ product.metafields.feature_text_color.feature_text_color }};">{{ product.metafields.feature-text.feature-text }}</p></div>
+      {% endif %}
+      {% if product.metafields.tag_text.tag_text != blank %}     
+      <div class="haveit_tag" style="color:{{ product.metafields.tag_text_color.tag_text_color }};background-color:{{ product.metafields.tag_background_color.tag_background_color }};">
+        {{ product.metafields.tag_text.tag_text  }}
+      </div>
+      {% endif %}
+      {% if product.metafields.feature_button_label.feature_button_label != blank and product.metafields.feature_button_link.feature_button_link != blank %}
+        <a href="{{ product.metafields.feature_button_link.feature_button_link }}" class="btn productbtn">
+          <i></i>
+          <span>{{ product.metafields.feature_button_label.feature_button_label | escape }}</span>       
+        </a>
+      {% endif %}
+    </div>
+
+    
+
+    
+    
+  </div>
+</div>
+</div>
+<style>
+#pro_feature_row .btn.productbtn i{
+ 	background-image: linear-gradient(270deg, {{ product.metafields.accentuate.button_background_color }}, {{ product.metafields.accentuate.button_background_color }} 50%, {{ product.metafields.accentuate.button_background_color }});
+  }
+#pro_feature_row .btn.productbtn{
+    background-color: {{ product.metafields.accentuate.button_background_color }};
+  }
+#pro_feature_row .btn.productbtn:hover i{
+  	background-image: linear-gradient(270deg, {{ product.metafields.accentuate.hover_background_gradient_colo }}, 
+      {{ product.metafields.accentuate.hover_background_gradient_seco }} 50%, 
+      {{ product.metafields.accentuate.hover_background_gradient_thir }});
+  }
+</style>

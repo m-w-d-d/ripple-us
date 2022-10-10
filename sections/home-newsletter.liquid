@@ -1,0 +1,132 @@
+<div class="newsletter">
+  <div class="wrapper">
+    {% if section.settings.title != blank %}
+   <div class="page-width">
+        <h2 class="text-center large-up--hide {{ section.settings.font_chnage }}">{{ section.settings.title }}</h2>
+    </div>  
+     {% endif %}
+      <div class="width-75 text-center">
+        
+		{% include 'newsletter-form' %}
+
+        
+        
+    </div>
+    {% if section.settings.title != blank %}
+    <div class="page-width">
+        <div class="width-440 text-center">
+        {{ section.settings.text }}
+        </div>
+    </div>
+        {% endif %}
+  </div>
+</div>
+
+<style>
+  form#top-mc-form #go i{
+ 	background-image: linear-gradient(270deg, {{ section.settings.background_n }}, {{ section.settings.background_n }} 50%, {{ section.settings.background_n }});
+  }
+  form#top-mc-form #go{
+    background-color: {{ section.settings.background_n }};
+  }
+  form#top-mc-form #go:hover i{
+  	background-image: linear-gradient(270deg, {{ section.settings.background_first_n }}, {{ section.settings.background_second_n }} 50%, {{ section.settings.background_third_n }});
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Home Newsletter",
+  "class": "index-section home-newsletter",
+  "settings": [
+	{
+      "type": "select",
+      "id": "font_chnage",
+      "label": "Text Font",
+      "default": "heavy-font",
+      "options": [
+        {
+          "label": "Bold",
+          "value": "bold-font"
+        },
+        {
+          "label": "Heavy Weight",
+          "value": "heavy-font"
+        }
+      ]
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": {
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    },
+	
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": {
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "nl": "Tekst",
+        "pt-BR": "Texto",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      }
+    },
+{
+             "type": "header",
+             "content": "Button color"
+          },
+		  {
+                "type": "color",
+                "id": "background_n",
+                "label": "Button Background color",
+                "default":"#654489"
+           },
+           {
+             "type": "header",
+             "content": "Button Hover color"
+          },
+
+          {
+                "type": "color",
+                "id": "background_first_n",
+                "label": "Background gradient color first",
+                "default":"#825aa4"
+           },
+           {
+                "type": "color",
+                "id": "background_second_n",
+                "label": "Background gradient color second",
+                "default":"#9c7dbe"
+           }, 
+			{
+                "type": "color",
+                "id": "background_third_n",
+                "label": "Background gradient color third",
+                "default":"#825aa4"
+           }
+  ],
+  "presets": [
+    {
+      "name":"Home Newsletter",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

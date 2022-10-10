@@ -1,0 +1,230 @@
+<div class="full__width" style="background-image: linear-gradient(90deg, {{ section.settings.background_first }} 0%, {{ section.settings.background_second }} 100%)">
+<div class="page-width feature-row">
+  {% capture image_layout %}
+    <div class="feature-row__item feature-row__item_image">
+      {% if section.settings.image != blank %}
+        {% capture img_id %}FeatureRowImage-{{ section.id }}{% endcapture %}
+        {% capture wrapper_id %}FeatureRowImageWrapper-{{ section.id }}{% endcapture %}
+        {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        {% include 'image-style' with image: section.settings.image, width: 665, height: 519, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+        <div id="" class="feature-row__image-wrapper js">
+          <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
+           <a href="collections/shop{{ section.settings.button_link }}" class="imglink">
+            <img id=""
+                 class="feature-row__image lazyload"
+                 src="{{ section.settings.image | img_url: '200x200' }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ section.settings.image.alt | escape }}">
+            </a>
+          </div>
+        </div>
+
+        <noscript>
+          {{ section.settings.image | img_url: '600x600', scale: 2 | img_tag: section.settings.image.alt, 'feature-row__image' }}
+        </noscript>
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+  {% endcapture %}
+
+  <div class="feature-row black_border {{ section.settings.layout }}_align_box">
+    {% if section.settings.layout == 'left' %}
+      {{ image_layout }}
+    {% endif %}
+
+    <div class="feature-row__item feature-row__item_text feature-row__text feature-row__text--{{ section.settings.layout }}">
+      <div class="what_ripple_is_info">
+      {% if section.settings.ho_title != blank %}
+        <h3 class="{{ section.settings.font_chnage }}" style="color:{{ section.settings.what_ripple_title_color }}">{{ section.settings.ho_title  }}</h3>
+      {% endif %}
+      {% if section.settings.text != blank %}
+      <div class="rte rte-setting featured-row__subtext"><p style="color:{{ section.settings.text_color }};">{{ section.settings.text | replace: "+", "<sup>+</sup>" }}</p></div>
+      {% endif %}
+      
+      {% if section.settings.tag_title != blank %}     
+      <div class="haveit_tag" style="color:{{ section.settings.text_color }};">
+        {{ section.settings.tag_title  }}
+      </div>
+      {% endif %}
+      
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <a href="collections/shop{{ section.settings.button_link }}" class="btn howitallbtn">
+          <i></i>
+          <span>{{ section.settings.button_label | escape }}</span>
+        </a>
+      {% endif %}
+      </div>
+    </div>
+
+    {% if section.settings.layout == 'right' %}
+      {{ image_layout }}
+    {% endif %}
+  </div>
+</div>
+</div>
+
+
+<style>
+  .btn.howitallbtn i{
+ 	background-image: linear-gradient(270deg, {{ section.settings.background_h }}, {{ section.settings.background_h }} 50%, {{ section.settings.background_h }});
+  }
+  .btn.howitallbtn{
+    background-color: {{ section.settings.background_h }};
+  }
+  .btn.howitallbtn:hover i{
+  	background-image: linear-gradient(270deg, {{ section.settings.background_first_h }}, {{ section.settings.background_second_h }} 50%, {{ section.settings.background_third_h }});
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": {
+    "en": "Wholesale what ripple is"
+  },
+  "class": "what_ripple_is",
+  "settings": [
+	{
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+          "type": "color",
+          "id": "background_first",
+          "label": "Background gradient color first",
+		  "default":"#ad99c3"
+     },
+	 {
+          "type": "color",
+          "id": "background_second",
+          "label": "Background gradient color second",
+		  "default":"#f7dddd"
+     },
+	 {
+       "type": "header",
+       "content": "Text color"
+    },
+	{
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+		  "default":"#373736"
+     },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "en": "Image"
+      },
+"info":"Size 900x700"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": {
+        "en": "Image alignment"
+      },
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": {
+            "en": "Left"
+          }
+        },
+        {
+          "value": "right",
+          "label": {
+            "en": "Right"
+          }
+        }
+      ]
+    },
+    {
+        "type": "text",
+        "id": "ho_title",
+        "label": "Heading"
+        },
+	{
+          "type": "color",
+          "id": "what_ripple_title_color",
+          "label": "Text color",
+		  "default":"#373736"
+     },
+	
+	{
+        "type": "select",
+        "id": "font_chnage",
+        "label": "Heading Font",
+        "default": "black_extended",
+        "options": [
+        {
+        "label": "Bold",
+        "value": "bold-font"
+        },
+        {
+        "label": "Heavy Weight",
+        "value": "heavy-font"
+        },
+        {
+        "label": "Black Extended",
+        "value": "black_extended"
+        }
+        ]
+        },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": {
+        "en": "Text"
+      }
+    },
+{
+             "type": "header",
+             "content": "Button color"
+          },
+		  {
+                "type": "color",
+                "id": "background_h",
+                "label": "Button Background color",
+                "default":"#654489"
+           },
+           {
+             "type": "header",
+             "content": "Button Hover color"
+          },
+
+          {
+                "type": "color",
+                "id": "background_first_h",
+                "label": "Background gradient color first",
+                "default":"#825aa4"
+           },
+           {
+                "type": "color",
+                "id": "background_second_h",
+                "label": "Background gradient color second",
+                "default":"#9c7dbe"
+           }, 
+			{
+                "type": "color",
+                "id": "background_third_h",
+                "label": "Background gradient color third",
+                "default":"#825aa4"
+           }
+
+
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Wholesale what ripple is"
+      }
+    }
+  ]
+}
+{% endschema %}

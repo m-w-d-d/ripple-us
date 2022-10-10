@@ -1,0 +1,185 @@
+{% comment %}
+<div class="page-width" data-section-id="{{ section.id }}" data-section-type="quotes">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h2>{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size > 0 %}
+    <div class="quotes-wrapper">
+      <div class="" id="" >
+        {% for block in section.blocks %}
+          <div class="quotes-slide--{{ block.id }}" {{ block.shopify_attributes }}>
+            <blockquote class="quotes-slider__text text-center">
+              <span class="quote-icon">{% include 'icon-quote' %}</span>
+              {% if block.settings.quote != blank %}
+                <div class="rte-setting rte">{{ block.settings.quote }}</div>
+              {% endif %}
+              {% if block.settings.author != blank %}
+                <cite>{{ block.settings.author | escape }}</cite>
+              {% endif %}
+            </blockquote>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+{% endcomment %}
+
+
+<div class="testimonials-section">
+<div class="testimonials__bubbles">
+  {% for block in section.blocks %}
+<div class="testimonials__bubble bubble {% cycle 'bubble--1', 'bubble--2', 'bubble--3', 'bubble--4', 'bubble--5', 'bubble--6', 'bubble--7' %} bubble--right aos-init" data-aos="fade-zoom-in" data-aos-delay="{{ block.settings.fade-delay }}" data-aos-duration="750">
+    <div class="bubble__message">
+      {{ block.settings.quote }}
+    </div>
+</div>
+  {% endfor %}	
+  </div>
+</div>
+
+<style>
+.testimonials-section {
+  background-image: linear-gradient(180deg, {{ section.settings.background_first }} 40%, {{ section.settings.background_second }} 100%);
+}
+</style>
+
+{% comment %}
+<script>
+ 
+// You can also pass an optional settings object
+// below listed default settings
+AOS.init({
+  // Global settings:
+  once: true, // whether animation should happen only once - while scrolling down
+  
+});
+</script>
+{% endcomment %}
+
+{% schema %}
+{
+  "name": {
+    "de": "Testimonials",
+    "en": "Testimonials",
+    "es": "Testimonios",
+    "fr": "Témoignages",
+    "it": "Testimonial",
+    "ja": "お客様の声",
+    "nl": "Getuigenissen",
+    "pt-BR": "Depoimentos",
+    "zh-CN": "感言",
+    "zh-TW": "推薦文"
+  },
+  "class": "index-section quotes-section",
+  "max_blocks": 7,
+  "settings": [
+   {
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+          "type": "color",
+          "id": "background_first",
+          "label": "Background gradient color first",
+		  "default":"#fff"
+     },
+	 {
+          "type": "color",
+          "id": "background_second",
+          "label": "Background gradient color second",
+		  "default":"#d9eae3"
+     } 
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": {
+        "de": "Testimonial",
+        "en": "Testimonial",
+        "es": "Testimonio",
+        "fr": "Témoignages",
+        "it": "Testimonial",
+        "ja": "お客様の声",
+        "nl": "Testimonial",
+        "pt-BR": "Depoimento",
+        "zh-CN": "感言",
+        "zh-TW": "推薦文"
+      },
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": {
+            "de": "Text",
+            "en": "Text",
+            "es": "Texto",
+            "fr": "Texte",
+            "it": "Testo",
+            "ja": "テキスト",
+            "nl": "Tekst",
+            "pt-BR": "Texto",
+            "zh-CN": "文本",
+            "zh-TW": "文字"
+          }
+        },
+		{
+            "type": "range",
+            "id": "fade-delay",
+            "label": "Fade in Delay",
+            "default": 500,
+            "min": 100,
+            "max": 3000,
+            "step": 50
+       }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "de": "Testimonials",
+        "en": "Testimonials",
+        "es": "Testimonios",
+        "fr": "Témoignages",
+        "it": "Testimonial",
+        "ja": "お客様の声",
+        "nl": "Getuigenissen",
+        "pt-BR": "Depoimentos",
+        "zh-CN": "感言",
+        "zh-TW": "推薦文"
+      },
+      "category": {
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "テキスト",
+        "nl": "Tekst",
+        "pt-BR": "Texto",
+        "zh-CN": "文本",
+        "zh-TW": "文字"
+      },
+      "blocks": [
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

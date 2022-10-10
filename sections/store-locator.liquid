@@ -1,0 +1,84 @@
+<div class="page-width store-locator-pages" style="opacity:0;">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <div class="section-header text-center store-locator-left">
+        <div class="store-img-left">
+        {% if section.settings.image != blank %}
+           {% capture img_id %}FeatureRowImage-{{ section.id }}{% endcapture %}
+        {% capture wrapper_id %}FeatureRowImageWrapper-{{ section.id }}{% endcapture %}
+        {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        {% include 'image-style' with image: section.settings.image, width: 665, height: 519, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+        <div id="" class="feature-row__image-wrapper js">
+          <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
+            <img id=""
+                 class="feature-row__image lazyload"
+                 src="{{ section.settings.image | img_url: '300x300' }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ section.settings.image.alt | escape }}">
+          </div>
+        </div>
+
+        <noscript>
+          {{ section.settings.image | img_url: '600x600', scale: 2 | img_tag: section.settings.image.alt, 'feature-row__image' }}
+        </noscript>
+      {% endif %}
+        </div>
+        
+        
+        <h1 class="pagetitle">{{ page.title }}</h1>
+      </div>
+
+      <div class="rte">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function () {
+  
+  setTimeout(function(){
+ 	$(".store-locator-left").insertBefore(".stockist-search-form");
+    $(".store-locator-pages").animate({ opacity:1 },500);	
+    
+}, 3000);//wait 2 seconds
+  
+
+});
+  </script>    
+
+
+{% schema %}
+  {
+    "name": "Store Locator",
+    "settings": [
+	{
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+	"info":"Size 600x400"
+    }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

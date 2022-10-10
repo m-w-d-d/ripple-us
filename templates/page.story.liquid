@@ -1,0 +1,98 @@
+{{ 'slick.js' | asset_url | script_tag }} 
+<div id="mission_page" class="story-page-section">
+  
+  <div class="mission_header">
+    <div class="page-width p-0 w_1218"> 
+      {% section 'story_header-logo' %}
+    </div>
+  </div>
+
+<div class="missiontab_box">
+    {% section 'our_story-template' %}
+</div>
+      {% section 'pod-collection' %}
+
+</div>
+
+
+<script>
+    $(document).ready(function(){
+      var someData = $(".head_text").html();
+      $(".m_header_text h3").html(someData);
+    });
+</script>
+<script>
+$(document).ready(function() { 
+
+  $('.home_proslider').slick({
+  dots: false,
+  infinite: false,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),  
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        centerMode: true,
+        centerPadding: '30%',
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        centerMode: true,
+        centerPadding: '15%',
+        focusOnSelect: true
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+  
+  var current_slide_class=($('.pro_box.slick-center').attr("data-color"));
+  $("#home-sliders").addClass(current_slide_class);
+  
+  $('.home_proslider').on('afterChange', function(event, slick, currentSlide, nextSlide){   
+    var current_slide_class=($('.pro_box.slick-center').attr("data-color"));
+    //alert(current_slide_class);
+   $("#home-sliders").removeClass();
+   $("#home-sliders").addClass(current_slide_class);
+  //alert(currentSlide);
+});
+
+});  
+</script>

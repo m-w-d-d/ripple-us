@@ -1,0 +1,192 @@
+{
+  "sections": {
+    "1646300763b32231a0": {
+      "type": "wholesale-stand-out",
+      "settings": {
+        "stand-out-bg": "#ffffff",
+        "ho_image": "shopify:\/\/shop_images\/img-05.png",
+        "ho_image_mo": "shopify:\/\/shop_images\/img-06.png",
+        "ho_title": "stand out",
+        "font_chnage": "heavy-font",
+        "ho_info": "<p>Join the community of leading wellness + lifestyle retailers who stock our curated selection of <br\/>plant-powered puffs <\/p>",
+        "ho_text_color": "#373736",
+        "ho_button": "Register to ripple+",
+        "ho_button_link": "#wholesale-form",
+        "ho_background": "#3e4245",
+        "ho_background_text": "#ffffff",
+        "ho_background_first": "#3e4245",
+        "ho_background_second": "#3e4245",
+        "ho_background_third": "#3e4245",
+        "ho_background_text_hover": "#ffffff",
+        "mo_background_info": "#ffffff",
+        "title_first": "#445e83",
+        "title_second": "#f8aeae",
+        "mo_text_info": "#516791"
+      }
+    },
+    "1647859034d9174777": {
+      "type": "wholesale-logo",
+      "blocks": {
+        "f85acfe5-3324-42d0-9923-2eb3f964a7cf": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/John_Bell_Croyden.png"
+          }
+        },
+        "5ba4d989-a0c5-477c-b191-7c6284e16996": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-02.png"
+          }
+        },
+        "abf9ce7e-e7dc-484d-a0ab-71911f5900c0": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-09.png"
+          }
+        },
+        "30f7373a-8eb7-4a25-898e-4e37d8036877": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-10.png"
+          }
+        },
+        "66bbb25b-328f-4b81-9c80-fa9652bee990": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-08.png"
+          }
+        },
+        "b2c71887-ecc0-4de1-8467-0184be90e174": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-03.png"
+          }
+        },
+        "71645ed0-dd20-4191-b210-404881fca6c7": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-04.png"
+          }
+        },
+        "5ee55311-a0b9-4132-b355-b938175a6631": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-05.png"
+          }
+        },
+        "a959ae6f-4866-4c7c-a82a-7cd34b35ddc4": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-07.png"
+          }
+        },
+        "f19a9f9c-041e-449e-8364-9493fb04161d": {
+          "type": "logo_image",
+          "settings": {
+            "client_logo_image": "shopify:\/\/shop_images\/Retails_Logo-06.png"
+          }
+        }
+      },
+      "block_order": [
+        "f85acfe5-3324-42d0-9923-2eb3f964a7cf",
+        "5ba4d989-a0c5-477c-b191-7c6284e16996",
+        "abf9ce7e-e7dc-484d-a0ab-71911f5900c0",
+        "30f7373a-8eb7-4a25-898e-4e37d8036877",
+        "66bbb25b-328f-4b81-9c80-fa9652bee990",
+        "b2c71887-ecc0-4de1-8467-0184be90e174",
+        "71645ed0-dd20-4191-b210-404881fca6c7",
+        "5ee55311-a0b9-4132-b355-b938175a6631",
+        "a959ae6f-4866-4c7c-a82a-7cd34b35ddc4",
+        "f19a9f9c-041e-449e-8364-9493fb04161d"
+      ],
+      "settings": {
+        "wholesale_logo_bg": "#f4f5f7"
+      }
+    },
+    "16478593337ba6b155": {
+      "type": "what-ripple-is",
+      "settings": {
+        "background_first": "#ffffff",
+        "background_second": "#ffffff",
+        "text_color": "#373736",
+        "image": "shopify:\/\/shop_images\/img-07.png",
+        "layout": "left",
+        "ho_title": "one sentence on  what ripple is",
+        "what_ripple_title_color": "#373736",
+        "font_chnage": "bold-font",
+        "text": "ripple+ is a first-of-its kind wellness innovation, offering an \narray of zero nicotine, non-addictive, plant-powered diffusers \ncreated with every mood in mind. Our devices have become \nan aromatherapy must-have and have a cult following of health \n+ wellbeing enthusiasts. From refreshing peppermint to tropical \nmango, our selection of carefully curated aromas caters to \nevery taste.",
+        "background_h": "#654489",
+        "background_first_h": "#825aa4",
+        "background_second_h": "#9c7dbe",
+        "background_third_h": "#825aa4"
+      }
+    },
+    "1647859368ba91ebab": {
+      "type": "wholesale-text-slider",
+      "blocks": {
+        "5dc8be9a-350b-4d76-bb68-de8a4c71b7f3": {
+          "type": "logo_image",
+          "settings": {
+            "slide_text": "<p>\"Working with Ripple has been an absolute pleasure. <br\/>They are fast, efficient, and responsive - the time between <br\/>placing an order and receiving inventory is always shorter than expected. Their customer-first thinking team is constantly thinking of ways to develop new products and partner with our team in innovative ways.\"<\/p>",
+            "slide_author": "Patrick Tie – Partnership Director at FastAF"
+          }
+        },
+        "947990be-6cd0-43c0-91aa-22428e0654cf": {
+          "type": "logo_image",
+          "settings": {
+            "slide_text": "<p>\"002 Working with Ripple has been an absolute pleasure. <br\/>They are fast, efficient, and responsive - the time between <br\/>placing an order and receiving inventory is always shorter than expected. Their customer-first thinking team is constantly thinking of ways to develop new products and partner with our team in innovative ways.\"<\/p>",
+            "slide_author": "Patrick Tie – Partnership Director at FastAF"
+          }
+        },
+        "3d55c688-b993-43a0-90c4-2632d0cacb43": {
+          "type": "logo_image",
+          "settings": {
+            "slide_text": "<p>\"Working with Ripple has been an absolute pleasure. <br\/>They are fast, efficient, and responsive - the time between <br\/>placing an order and receiving inventory is always shorter than expected. Their customer-first thinking team is constantly thinking of ways to develop new products and partner with our team in innovative ways.\"<\/p>",
+            "slide_author": "Patrick Tie – Partnership Director at FastAF"
+          }
+        },
+        "2bc3e3f2-d2f4-4cff-afa3-7cf3d611db79": {
+          "type": "logo_image",
+          "settings": {
+            "slide_text": "<p>\"Working with Ripple has been an absolute pleasure. <br\/>They are fast, efficient, and responsive - the time between <br\/>placing an order and receiving inventory is always shorter than expected. Their customer-first thinking team is constantly thinking of ways to develop new products and partner with our team in innovative ways.\"<\/p>",
+            "slide_author": "Patrick Tie – Partnership Director at FastAF"
+          }
+        }
+      },
+      "block_order": [
+        "5dc8be9a-350b-4d76-bb68-de8a4c71b7f3",
+        "947990be-6cd0-43c0-91aa-22428e0654cf",
+        "3d55c688-b993-43a0-90c4-2632d0cacb43",
+        "2bc3e3f2-d2f4-4cff-afa3-7cf3d611db79"
+      ],
+      "settings": {
+        "wholesale_text_slider_bg": "#edf6fa"
+      }
+    },
+    "164785984372d7aa8c": {
+      "type": "wholesale-single-image",
+      "settings": {
+        "single_image_bg": "#edf6fa",
+        "wholesale_single_image": "shopify:\/\/shop_images\/img-08.jpg"
+      }
+    },
+    "164785939190da4460": {
+      "type": "wholesale-form",
+      "settings": {
+        "wholesale_form_bg": "#ffffff",
+        "wholesale_form_title": "work with us 👇",
+        "section_one_form_title": "",
+        "section_two_form_title": ""
+      }
+    }
+  },
+  "order": [
+    "1646300763b32231a0",
+    "1647859034d9174777",
+    "16478593337ba6b155",
+    "1647859368ba91ebab",
+    "164785984372d7aa8c",
+    "164785939190da4460"
+  ]
+}

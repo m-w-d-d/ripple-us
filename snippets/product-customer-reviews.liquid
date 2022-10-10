@@ -1,0 +1,164 @@
+<style>
+  {% if product.metafields.desktop_background_i.cr_background_image != blank %}
+
+  .product-customer-reviews{
+    background-image:url('{{ product.metafields.desktop_background_i.cr_background_image}}')!important;
+      
+      }.product-customer-reviews h2{
+      color:#fff;
+      } 
+  {% endif %}
+  
+  .review_product {
+    
+    padding: 10px 30px;
+
+}
+  @media (max-width: 767px){
+.review_product {
+    width: 100%!important;
+    padding: 20px 30px;
+    float: left;
+    margin-bottom: 20px;
+}
+  }
+</style>
+{% if product.metafields.title_review.title_review != blank %}
+<div class="product-customer-reviews">
+  <h2>{{ product.metafields.title_review.title_review }}</h2>
+<div class="customerreviews_slider">
+  
+<div class="page-width page-w-1140">
+  <div class="row-10">
+    <div class="pro-customer-reviews">
+  {% for value in product.metafields.accentuate.customer_name %} 
+      <div class="review_product"> 
+        <img class="lazyload"style="    border-radius: 7px 7px 0 0;width:100%;    box-shadow: 0 0 20px #fff!important;
+    -webkit-box-shadow: 0 0 20px #ffff!important;"src=""data-src={{ product.metafields.accentuate.customer_image[forloop.index0] }}>
+    <div style="    border-radius: 0 0 7px 7px ;"class="review_box">
+      <div class="star_rating">
+        <div class="star_box star_{{ product.metafields.accentuate.star_rating[forloop.index0] }}">
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>        
+        </div>        
+      </div> 
+      
+      
+      
+      {% if product.metafields.accentuate.customer_name[forloop.index0] != blank %}
+      <h5>{{ product.metafields.accentuate.customer_name[forloop.index0] }}</h5>
+      {% endif %}
+      
+      <div class="review_rte addReadMore showlesscontent">
+        {{ product.metafields.accentuate.customer_text[forloop.index0] | replace: "+", "<sup>+</sup>" }}
+      </div>      
+    </div>   
+  </div>
+  {% endfor %}
+    </div>
+    <div class="paginator-center text-color text-center" id="slide_arrow">
+          <ul>
+            <li class="prev_3">{% include 'prev-arrow' %}</li>
+            <li class="next_3">{% include 'next-arrow' %}</li>
+          </ul>
+        </div> 
+  </div>
+  
+  
+  
+  </div>   
+  </div>
+  <!--
+  <div class="all-reviews">
+    <a href="#" class="btn"><i></i><span>read all reviews</span></a>
+  </div>-->
+</div>
+
+<script>
+  $(document).ready(function(){
+    
+      $('.pro-customer-reviews').slick({
+  dots: false,
+  infinite: true,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  prevArrow: $('.prev_3'),
+  nextArrow: $('.next_3'),      
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1
+       }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll:1
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 100,
+        vertical: true,
+		verticalSwiping: true,
+        slidesToScroll:1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    
+  $(".all-reviews .btn").click(function(){
+$('html,body').animate({
+      scrollTop: $(".product-other-section").offset().top + 50 } ,
+  'slow');
+}); 
+});
+
+function AddReadMore() {
+    //This limit you can set after how much characters you want to show Read More.
+    var carLmt = 230;
+    // Text to show when text is collapsed
+    var readMoreTxt = "<i>...</i> Read more";
+    // Text to show when text is expanded
+    var readLessTxt = "Read Less";
+
+
+    //Traverse all selectors with this class and manupulate HTML part to show Read More
+    $(".addReadMore").each(function() {
+        if ($(this).find(".firstSec").length)
+            return;
+
+        var allstr = $(this).text();
+        if (allstr.length > carLmt) {
+            var firstSet = allstr.substring(0, carLmt);
+            var secdHalf = allstr.substring(carLmt, allstr.length);
+            var strtoadd = firstSet + "<span class='SecSec'>" + secdHalf + "</span><span class='readMore'  title='Click to Show More'>" + readMoreTxt + "</span><span class='readLess' title='Click to Show Less'>" + readLessTxt + "</span>";
+            $(this).html(strtoadd);
+        }
+
+    });
+    //Read More and Read Less Click Event binding
+    $(document).on("click", ".readMore,.readLess", function() {
+        $(this).closest(".addReadMore").toggleClass("showlesscontent showmorecontent");
+    });
+}
+$(function() {
+    //Calling function after Page Load
+    AddReadMore();
+});
+
+</script>
+
+{% endif %}

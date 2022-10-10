@@ -1,0 +1,113 @@
+<div class="sticker-tape ">
+  
+    
+    <div class="tape social__marquee">
+<!--       <h2 class="visually-hidden">Follow Us @chachamatcha&nbsp;</h2> -->
+<div aria-hidden="true" class="animation--marquee">
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+  	  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span> 
+  	  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+  	  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span> 
+  	  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+  	  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+      <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span> 
+  	  <span class="{{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.title }} &nbsp;</span>
+</div>
+
+      
+
+
+
+
+
+    </div>
+</div>  
+
+<style>
+  .sticker-tape  .social__marquee span{
+  font-size:18px!important;
+    margin: 0 25px;
+  }
+  .sticker-tape{
+  padding: 10px 0;
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": "sticker tape",
+  "class": "index-section instagram-section",
+  "settings": [
+	{
+      "type": "select",
+      "id": "font_chnage",
+      "label": "Text Font",
+      "default": "heavy-font",
+	  	
+      "options": [
+        {
+          "label": "Bold",
+          "value": "bold-font"
+        },
+        {
+          "label": "Heavy Weight",
+          "value": "heavy-font"
+        }
+      ]
+    },
+	{
+       "type": "header",
+       "content": "Title Color"
+    },
+    {
+          "type": "color",
+          "id": "title_first",
+          "label": "Title gradient color first",
+		  "default":"#445e83"
+     },
+	 {
+          "type": "color",
+          "id": "title_second",
+          "label": "Title gradient color second",
+		  "default":"#f8aeae"
+     },
+	{
+      "type": "text",
+      "id": "title",
+      "label": {
+        "de": "Titel",
+        "en": "Heading",
+        "es": "Título",
+        "fr": "En-tête",
+        "it": "Heading",
+        "ja": "見出し",
+        "nl": "Kop",
+        "pt-BR": "Título",
+        "zh-CN": "标题",
+        "zh-TW": "標題"
+      }
+    }
+  ],
+
+	
+  "presets": [
+    {
+      "name":"Sticker tape",
+      "category": "Images"
+    }
+  ]
+}
+{% endschema %}
+
+

@@ -1,0 +1,142 @@
+<div class="keypoint-section">
+<div class="page-width">
+  {% if section.blocks.size > 0 %}
+    <ul class="keypoint-bar{% if section.settings.title_enable %} icon-bar--large{% endif %}">
+      {% for block in section.blocks %}
+        <li class="keypoint-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+          <div class="icon_box">
+                          <img data-sizes="auto"data-src="{{ block.settings.image | img_url: '50x', scale: 2}}" alt="{{block.settings.image.alt}}" class="logo-bar__image lazyload">
+
+          
+          </div>
+          {% endif %}
+      		{% if block.settings.title != blank %}
+          <h3>{{ block.settings.title }}</h3>
+          {% endif %}
+              
+      </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+</div>
+
+<style>
+  
+
+.keypoint-section{
+  background-image: linear-gradient(180deg, {{ section.settings.background_first }} 50%, {{ section.settings.background_second }} 100%);
+}
+  .keypoint-bar__item h3{
+  
+  color:{{ section.settings.text_info }}!important;
+  }
+  @media (max-width: 767px){
+  .keypoint-section {
+
+    overflow-x: auto!important;
+  }
+            .keypoint-section::-webkit-scrollbar {
+  display: none;
+}
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "keypoint list",
+  "class": "index-section keypoint_icon",
+  "max_blocks": 6,
+  "settings": [
+   {
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+          "type": "color",
+          "id": "background_first",
+          "label": "Background gradient color first",
+		  "default":"#fff"
+     },
+	 {
+          "type": "color",
+          "id": "background_second",
+          "label": "Background gradient color second",
+		  "default":"#cfe3ec"
+     },
+{
+      "type": "color",
+      "id": "text_info",
+      "label": "Info color",
+      "default": "#54678e"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_image",
+      "name": "icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fr": "Image",
+            "it": "Immagine",
+            "ja": "画像",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+ 
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "keypoint list",
+      "category": {
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "blocks": [
+        {
+          "type": "icon_image"
+        },
+        {
+          "type": "icon_image"
+        },
+        {
+          "type": "icon_image"
+        },
+        {
+          "type": "icon_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

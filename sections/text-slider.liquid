@@ -1,0 +1,40 @@
+{% if section.settings.text_slide != blank %}
+<div class="str3-2 text_slider_wrapper">{{ section.settings.text_slide }}&nbsp;</div>
+{% endif %}
+
+{{ 'liMarquee.css' | asset_url | stylesheet_tag }}
+{{ 'jquery.liMarquee.js' | asset_url | script_tag }}
+<script>
+$(window).load(function() { 
+		$('.str3-2').liMarquee({
+			direction: 'left',	
+			loop:-1,			
+			scrolldelay: 0,		
+			scrollamount:80,	
+			circular: true,		
+			drag: false,
+			hoverstop: false			
+		});
+		
+    })
+</script>
+{% schema %}
+{
+  "name": "Text slider",
+  "class": "index-section text_slider",
+  "settings": [    
+	{
+          "type": "textarea",
+          "id": "text_slide",
+          "label": "Text"
+    }  
+  ],
+  "presets": [
+    {
+      "name": "Text-slide",
+      "category": "text"
+      
+    }
+  ]
+}
+{% endschema %}

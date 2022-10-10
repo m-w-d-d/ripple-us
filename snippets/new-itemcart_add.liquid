@@ -1,0 +1,94 @@
+<div id="cart_addpro"{% if cart.item_count == 0 %} style="display:none;" {% endif %}> 
+  <h2>Top up your bag for free delivery:</h2>
+  <div id="cartbox_main"> 
+    <div id="cartbox_wrap" class="addslider"> 
+      {% for item in collections.upsell.products %}
+      {% if item.available %}
+      <div>
+      <div class="cartbox  product_{{ item.id }}">  
+        <div class="cartitem_img">
+          {% for image in item.images %}
+          {% if forloop.index == 1 %}
+          <img class="product_img product_img--first" src="{{ image.src | img_url: 'x400' }}" alt="{{ item.title | escape }}">
+          {% endif %}
+          {% endfor %}
+        </div>
+        <div class="cart_infobox">  
+          <div class="test" style="{% if item.metafields.background_color_tag.background_color_tag != blank %}
+color:{{ item.metafields.background_color_tag.background_color_tag }};
+{% else %}
+color:{{ item.metafields.text_color.text_color }};
+{% endif %}">{{ item.title }}</div>
+         
+          <form action="/cart/add" method="post" id="add-to-cart" class="no_bold_options product_form">   
+            {% unless item.has_only_default_variant %}
+            {% for option in item.options_with_values %}
+            <div class="selector-wrapper js product-form__item">
+              <label {% if option.name == 'default' %}class="label--hidden" {% endif %}for="SingleOptionSelector-{{ forloop.index0 }}">
+                {{ option.name }}
+              </label>
+              <select class="single-option-selector single-option-selector-{{ section.id }} product-form__input" id="SingleOptionSelector-{{ forloop.index0 }}" data-index="option{{ forloop.index }}">
+                {% for value in option.values %}
+                <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            {% endfor %}
+            {% endunless %}
+
+
+            <select name="id" id="productSelect" class="product-single__variants" style="display:none;">
+              <option selected="selected">Select size</option>
+              {% for variant in item.variants %}
+
+              <option {% unless variant.available %} disabled="disabled" {% endunless %} 
+                      {% if forloop.length <= 1 %}
+                      {% if variant == item.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }}</option>
+              {% endif %}
+              data-sku="{{ variant.sku }}" 
+              value="{{ variant.id }}">
+              {{ variant.title }} 
+              </option>
+            {% endfor %}
+            </select>
+
+
+          <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
+            {% for variant in item.variants %}
+            {% if variant.available %}
+            <option {% if variant == item.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
+              {{ variant.title }}
+            </option>
+            {% else %}
+            <option disabled="disabled">{{ variant.title }} - {{ 'products.product.sold_out' | t }}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+
+          {% if section.settings.show_quantity_selector %}
+          <div class="product-form__item product-form__item--quantity">
+            <label for="Quantity-{{ section.id }}">{{ 'products.product.quantity' | t }}</label>
+            <input type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
+          </div>
+          {% endif %}
+
+
+          <div class="two_btn">     
+            <button class="more_btn addtocart cartbutton" type="submit" name="add" id="add"  style="{% if item.metafields.background_color_tag.background_color_tag != blank %}
+border-color:{{ item.metafields.background_color_tag.background_color_tag }};color:{{ item.metafields.background_color_tag.background_color_tag }};
+{% else %}
+border-color:{{ item.metafields.text_color.text_color }};color:{{ item.metafields.text_color.text_color }};
+{% endif %}">
+              add <i>|</i> {{ item.price | money }}
+            </button>
+          </div>
+
+          </form>
+      </div>
+    </div>
+      </div>
+    {% endif %}
+    {% endfor %} 
+  </div>
+</div>
+</div>

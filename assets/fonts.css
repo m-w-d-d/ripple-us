@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Swiss721BT-Regular';
+  src: url('Swiss721BT-Regular.eot?#iefix') format('embedded-opentype'),  url('Swiss721BT-Regular.woff') format('woff'), url('Swiss721BT-Regular.ttf')  format('truetype'), url('Swiss721BT-Regular.svg#Swiss721BT-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Swiss721BT-Bold';
+  src: url('Swiss721BT-Bold.eot?#iefix') format('embedded-opentype'),  url('Swiss721BT-Bold.woff') format('woff'), url('Swiss721BT-Bold.ttf')  format('truetype'), url('Swiss721BT-Bold.svg#Swiss721BT-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+    font-family: 'Swiss721 Md BT';
+    src: url('Swiss721BT-Medium.woff2') format('woff2'),
+        url('Swiss721BT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Swiss721BT-Heavy';
+  src: url('Swiss721BT-Heavy.eot?#iefix') format('embedded-opentype'),  url('Swiss721BT-Heavy.woff') format('woff'), url('Swiss721BT-Heavy.ttf')  format('truetype'), url('Swiss721BT-Heavy.svg#Swiss721BT-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Swis721 Md BT W03 Medium Italic";
+  src: url("//cdn.shopify.com/s/files/1/0235/6658/1806/files/d0970daeb21bea15df3d88f72644571d.eot"); /* IE9*/
+  src: url("//cdn.shopify.com/s/files/1/0235/6658/1806/files/d0970daeb21bea15df3d88f72644571d.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("//cdn.shopify.com/s/files/1/0235/6658/1806/files/d0970daeb21bea15df3d88f72644571d.woff2") format("woff2"), /* chrome、firefox */
+        url("//cdn.shopify.com/s/files/1/0235/6658/1806/files/d0970daeb21bea15df3d88f72644571d.woff") format("woff"), /* chrome、firefox */
+       url("//cdn.shopify.com/s/files/1/0235/6658/1806/files/d0970daeb21bea15df3d88f72644571d.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+       url("//cdn.shopify.com/s/files/1/0235/6658/1806/files/d0970daeb21bea15df3d88f72644571d.svg#Swis721 Md BT W03 Medium Italic") format("svg"); /* iOS 4.1- */
+}
+@font-face {
+    font-family: 'Swiss721 BlkEx BT';
+    src: url('//cdn.shopify.com/s/files/1/0223/3493/1024/files/Swiss721BT-BlackExtended.eot');
+    src: url('//cdn.shopify.com/s/files/1/0223/3493/1024/files/Swiss721BT-BlackExtended.eot?#iefix') format('embedded-opentype'),
+        url('//cdn.shopify.com/s/files/1/0223/3493/1024/files/Swiss721BT-BlackExtended.woff2') format('woff2'),
+        url('//cdn.shopify.com/s/files/1/0223/3493/1024/files/Swiss721BT-BlackExtended.woff') format('woff'),
+        url('//cdn.shopify.com/s/files/1/0223/3493/1024/files/Swiss721BT-BlackExtended.ttf') format('truetype'),
+        url('//cdn.shopify.com/s/files/1/0223/3493/1024/files/Swiss721BT-BlackExtended.svg#Swiss721BT-BlackExtended') format('svg');
+    font-weight: 900;
+    font-style: normal; 
+  font-display: swap;
+}
+
+
+.bold-font, .collection-header .bold-font p{
+  	font-family:'Swiss721BT-Bold'!important;
+}
+.heavy-font, .collection-header .heavy-font p{
+  font-family: 'Swiss721BT-Heavy'!important;	
+}
+
+
+
+a:not([disabled]):hover, a:focus {
+    border-color:transparent;
+}
+.btn{
+    max-width: 140px;
+    display: inline-block;
+    word-wrap: break-word;
+    /*background-color: #f8aeae;*/
+     background-color:#654489;
+    color: #fff;
+    min-height: inherit;
+    line-height: normal;
+    float: left;
+    width: 100%;
+    border: 0px solid #654489;
+    border-radius: 0;
+   /* padding: 18px 15px;*/
+  padding: 0;
+    font-weight: normal;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    font-family: 'Swiss721BT-Bold';
+    border-radius: 3px;
+   /* -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;*/
+  transition: all .4s cubic-bezier(.46,.01,.32,1);
+  -moz-transition: all .4s cubic-bezier(.46,.01,.32,1);
+  -webkit-transition: all .4s cubic-bezier(.46,.01,.32,1);
+  position:relative;
+}
+.btn span{
+  float:left;
+  width:100%;
+  padding: 15px 15px;
+transition: all .4s cubic-bezier(.46,.01,.32,1);
+  position: relative;
+  z-index: 9;
+}
+.btn i{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image: linear-gradient(270deg, #825aa4, #9c7dbe 50%, #825aa4);
+  background-size: 200% 100%;
+border-radius: 3px;
+animation: promobarAnimation 4s linear infinite;
+transition: all .4s cubic-bezier(.46,.01,.32,1);
+  content:'';
+  opacity: 0;
+  z-index:1;
+}
+.btn:hover > span {
+    background-color: rgba(98,172,254,0) !important;
+}
+
+.btn:hover,
+.btn:focus{
+  border:0px solid #654489!important;
+  background:#654489;
+}
+.btn:hover i{
+  opacity:1;
+}
+
+.btn_input {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    font-family: 'Swiss721BT-Bold';
+  margin: 0 auto;
+display: table;
+  padding: 19px 15px;
+  width:100%;
+  text-align:center;
+}
+.input_submit {
+    float: left;
+    width: 100%;
+    margin: 35px 0 0;
+    position: relative;
+   background-color: #654489;
+}
+.input_submit span{
+  float:left;
+  width:100%;  
+  position:relative;
+  z-index:2;
+}
+
+.input_submit i{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image: linear-gradient(270deg, #825aa4, #9c7dbe 50%, #825aa4);
+  background-size: 200% 100%;
+border-radius: 3px;
+animation: promobarAnimation 4s linear infinite;
+transition: all .4s cubic-bezier(.46,.01,.32,1);
+  content:'';
+  opacity: 0;
+  z-index:1;
+}
+.input_submit:hover i{
+  opacity:1;
+}
+
+
+
+
+.btn svg {
+    width: 10px;
+    height: auto;
+    position: absolute;
+    right: 12px;
+    top: 18px;
+}
+.btn:hover svg {
+    fill: #fff;
+}
+.btn:hover span{
+  position:relative;
+  z-index:1;
+}
+.rte.rte-setting.featured-row__subtext {
+    clear: both;
+    margin: 0 0 50px;
+}
+
+.template-index .site-footer {
+    margin-top: 0;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+  font-family: 'Swiss721BT-Bold';	
+  font-weight:normal;
+}
+a{
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+b, strong {
+    font-weight: normal;
+}

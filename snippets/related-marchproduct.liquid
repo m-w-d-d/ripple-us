@@ -1,0 +1,116 @@
+ {% assign current_product = product %}
+<div class="marchproduct related-march" id="home-sliderss">
+<div class="page-width max-width-none">
+  <div class="product-slider">
+
+    
+   <div id="home-sliders" class="22323"> 
+  <div class="grid grid--uniform grid--view-items home_proslider">
+    {% for product in collections.merch.products %}
+     {% unless product.handle == current_product.handle %}
+      <div class="grid__item grid__item--{{section.id}} {{ grid_item_width }} pro_box" data-color="background--{{ product.handle }}">
+        {% include 'product-card-grid', max_height: max_height %}
+      </div>
+     {% endunless %}
+    {% else %}
+
+      {% for i in (1..product_limit) %}
+        <div class="grid__item grid__item--{{section.id}} {{ grid_item_width }} pro_box">
+          <div class="grid-view-item product-card">
+            <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="#">
+              <span class="visually-hidden">{{ 'homepage.onboarding.product_title' | t }}</span>
+            </a>
+            <div class="grid-view-item__image-wrapper">
+              {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+              {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+            <div class="h4 grid-view-item__title" aria-hidden="true">{{ 'homepage.onboarding.product_title' | t }}</div>
+            {% include 'product-price' %}
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
+  </div>
+     <div class="paginator-center text-color text-center" id="slide_arrow">
+          <ul>
+            <li class="prev">{% include 'prev-arrow' %}</li>
+            <li class="next">{% include 'next-arrow' %}</li>
+          </ul>
+        </div> 
+     
+    </div>
+  {% if section.settings.show_view_all %}
+    <hr class="hr--invisible" aria-hidden="true" />
+    <div class="text-center">
+      <a href="{{ collection.url }}" class="btn" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
+        {{ 'collections.general.view_all' | t }}
+      </a>
+    </div>
+  {% endif %}
+  </div>
+</div>
+</div>
+
+<script>
+$(document).ready(function() { 
+
+  $('.home_proslider').slick({
+  dots: false,
+  infinite: true,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),  
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '10%',
+        focusOnSelect: true
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+  
+  var current_slide_class=($('.pro_box.slick-center').attr("data-color"));
+  $("#home-sliders").addClass(current_slide_class);
+  
+  $('.home_proslider').on('afterChange', function(event, slick, currentSlide, nextSlide){   
+    var current_slide_class=($('.pro_box.slick-center').attr("data-color"));
+    //alert(current_slide_class);
+   $("#home-sliders").removeClass();
+   $("#home-sliders").addClass(current_slide_class);
+  //alert(currentSlide);
+});
+
+});  
+</script>

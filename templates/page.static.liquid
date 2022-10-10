@@ -1,0 +1,44 @@
+{{ 'static.css' | asset_url | stylesheet_tag }}
+
+
+<div class="full_width">
+  <div class="white_bg"></div>
+<div class="container">
+  <div class="account_sidebar page_sidebar">
+<h5 class="hide--mobile">Customer care </h5>
+ <h5 class="mobile-show" style="display:none;">Customer care {% include 'icon-chevron-down' %}</h5>   
+<ul>
+      {% for link in linklists.customer-care.links %}
+      <li class="{% if link.active %}active{% endif %}">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>            	
+      {% endfor %}
+
+    </ul>
+</div>
+  
+  <div class="static_right_info">
+      <div class="right_info_wrapper">
+        <h1 class="pagetitle">{{ page.title }}</h1>
+        {{ page.content }}
+      </div>
+  </div>
+</div>
+  
+</div>
+
+
+<script>
+  
+$(document).ready(function(){
+	
+ 
+  $(".account_sidebar h5.mobile-show").click(function(){
+    $(".account_sidebar ul").slideToggle('show');
+  });
+  
+  
+});  
+  
+  
+</script>

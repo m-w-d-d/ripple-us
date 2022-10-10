@@ -1,0 +1,143 @@
+<div class="home_stockists">
+<div class="page-width p-0">
+  {% if section.settings.sto_title != blank %}
+<h2 class="h3 heavy-font" style="background-image:linear-gradient(100deg,#445e83 10%, #f8aeae 63%);">{{ section.settings.sto_title }}</h2>
+ {% endif %}
+  {% if section.settings.sto_info != blank %}
+  <div class="rte rte-setting">
+  {{ section.settings.sto_info }}
+</div> 
+  {% endif %}
+  
+  
+{% if section.blocks.size > 0 %}
+    <div class="stockist_wrapper">
+      <div class="stockist_slider" id="" >
+        {% for block in section.blocks %}
+        {% if block.settings.stockist_text != blank %}
+        <div>
+          <div class="stockist_box">
+            {{ block.settings.stockist_text }}
+          </div>          
+        </div> 
+        {% endif %} 
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}  
+  
+  
+</div>  
+</div>
+
+<style>
+.home_stockists {
+  background-image: linear-gradient(180deg, {{ section.settings.background_first }} 40%, {{ section.settings.background_second }} 100%);
+}
+</style>
+
+<script>
+  $(document).ready(function(){
+  $('.stockist_slider').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    });
+</script>
+
+
+{% schema %}
+  {
+    "name": "Stockists",
+	"class": "index-section homestockist",
+    "settings": [
+{
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+          "type": "color",
+          "id": "background_first",
+          "label": "Background gradient color first",
+		  "default":"#fff"
+     },
+	 {
+          "type": "color",
+          "id": "background_second",
+          "label": "Background gradient color second",
+		  "default":"#d9eae3"
+     }, 
+		 {
+       "type": "header",
+       "content": "Key Stockists"
+    },
+  {
+          "type": "text",
+          "id": "sto_title",
+          "label": "Title"
+   },
+	{
+          "type": "richtext",
+          "id": "sto_info",
+          "label": "Info"
+   }
+],
+"blocks": [
+    {
+      "type": "text",
+      "name": "Stockist",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "stockist_text",
+          "label": "Add text"
+        }
+		
+      ]
+    }
+  ],
+"presets": [
+    {
+      "name": "Stockists",
+      "category": "Text"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

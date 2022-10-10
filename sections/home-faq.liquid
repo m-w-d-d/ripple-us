@@ -1,0 +1,197 @@
+
+
+{% if shop.metafields.globals.title_q != blank %}
+<section id="product_des" style="background-color:{{ shop.metafields.globals.background_color_q }}">
+  <div class="width-605">
+    
+    <h2 style="color:{{ shop.metafields.globals.text_color_acc.text_color_acc }};">{{ shop.metafields.globals.title_q }}</h2>
+    <div class="accordion-tab1">  
+       
+      {% for value in shop.metafields.globals.questions_title %}
+      {% if shop.metafields.globals.questions_title[forloop.index0] != blank %}
+      <div class="accordion_n" id="newsection_{{ forloop.index }}">{{ shop.metafields.globals.questions_title[forloop.index0] }}<span></span></div> 
+      {% endif %}
+      {% if shop.metafields.globals.answers_info[forloop.index0] != blank %}
+      <div class="content_n">
+        {{ shop.metafields.globals.answers_info[forloop.index0] }}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{% endif %}
+
+
+<style>
+    @media (max-width: 767px){
+      .accordion_n {
+    padding: 15px 0 15px 0!important;
+    font-size: 14px!important;
+}
+#product_des {
+    padding: 40px 15px!important;
+}
+    #product_des h2 {
+
+     margin: 0 !important 
+
+}
+  }
+  .accordion_n span::after {
+    position: absolute;
+    width: 28px;
+    height: 31px;
+     content: '+';
+    top: 0px;
+    text-align: right;
+    line-height: 31px;
+    right: 0;
+  transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+}
+.accordion_n span {
+    display: block;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    top: 18px;
+    height: auto;
+    width: 20px;
+}
+.accordion_n.accordion-open_n span::after {
+    content: '-';
+}
+.accordion-tab1 {
+    clear: both;
+    float: left;
+    width: 100%;
+    border-bottom: 2px solid transparent;
+}
+.content_n p, .content_n ul li {
+    color: #0a0607;
+    font-size: 14px;
+    line-height: 23px;
+    position: relative;
+}
+ .accordion_n {
+    margin: 0;
+    padding: 20px 0;
+    padding-left: 0px;
+    border-bottom: 0px solid #ebebeb;
+    border-top: 2px solid #446c6a;
+    text-decoration: none;
+    position: relative;
+    padding-left: 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-family: 'Swiss721BT-Bold';
+    cursor: pointer;
+    font-weight: 400;
+    float: left;
+    width: 100%;
+}
+#product_des {
+    float: left;
+    width: 100%;
+    clear: both;
+    padding: 70px 50px 88px;
+}
+#product_des .content_n {
+    clear: both;
+    float: left;
+    width: 100%;
+    padding: 0px 0px 25px;
+    margin: 0;
+}
+
+.full__width {
+    clear: both;
+}
+.width-605 {
+    max-width: 610px;
+    width: 100%;
+    margin: 0 auto;
+}
+#product_des h2 {
+    font-size: 34px;
+    font-family: 'Swiss721BT-Bold';
+    letter-spacing: 0;
+    margin: 0 0 30px;
+    line-height: normal;
+   text-transform: uppercase!important;
+    float: left;
+    width: 100%;
+    text-align: center;
+  padding: 0!important;
+}
+  #newsection_1 {
+    border-top: transparent;
+}
+div.accordion-tab1{
+  border-color:{{ shop.metafields.globals.text_color_acc }};
+}
+section#product_des h2, div.accordion_n {
+    color: {{ shop.metafields.globals.text_color_acc }};
+}
+  div.accordion_n{
+    border-top: 2px solid {{ shop.metafields.globals.text_color_acc }};
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": "home faq",
+
+  "class": "index-section faq_section",
+  "max_blocks": 12,
+  "settings": [
+
+	{
+      "type": "color",
+      "id": "logo_slider_info",
+      "label": "Info color",
+      "default": "#54678e"
+    }
+ 
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Press logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+		"info": "size: 160 x auto"
+        },
+       
+		{
+      "type": "textarea",
+      "id": "info",
+      "label":"Content"
+    }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "home faq",
+      "category": "Image"
+      
+    }
+  ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

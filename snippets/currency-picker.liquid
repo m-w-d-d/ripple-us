@@ -1,0 +1,33 @@
+
+<script>
+  $(document).ready(function() {
+$("#loction_link").change(function()
+{
+    document.location.href = $(this).val();
+});
+    
+ $("#loction_link_mobile").change(function()
+{
+    document.location.href = $(this).val();
+});   
+    
+   }); 
+
+</script>
+
+<div class="desktop-currency">
+<select class="currency-picker" id="loction_link">
+    <option selected="selected" value="javascript:void(0);">&#36;</option>
+    <option value="https://theripplecoeu.myshopify.com">&euro;</option>
+  	<option value="https://therippleco.myshopify.com/">&#163;</option>
+</select>
+</div>
+<div class="mobile-currency" style="display:none;">
+<select class="currency-picker" id="loction_link_mobile">
+    <option selected="selected" value="javascript:void(0);">&#36;</option>
+  <option value="https://theripplecoeu.myshopify.com">&euro;</option>
+  	<option value="https://therippleco.myshopify.com/">&#163;</option>
+</select>
+</div>
+
+

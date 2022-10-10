@@ -1,0 +1,64 @@
+<div class="wholesale_logo_sec" style="background-color:{{ section.settings.wholesale_logo_bg }}">
+  <div class="wholesale_logo_wrapper">
+{% if section.blocks.size > 0 %}
+    <ul class="wholesale_logo">
+      {% for block in section.blocks %}
+        <li class="logo_li">
+
+          {% if block.settings.client_logo_image != blank %}
+            {{ block.settings.client_logo_image | img_url: 'x34', scale: 2 | img_tag: block.settings.client_logo_image.alt, 'logo-bar__image' }}
+          {% else %}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Wholesale Logo",
+    "settings": [
+	{
+          "type": "color",
+          "id": "wholesale_logo_bg",
+          "label": "Background One",
+		  "default": "#f4f5f7"
+   	}
+
+],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": {
+        "en": "Logo"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "client_logo_image",
+		  "info": "Size 169 X 34",
+          "label": {
+            "en": "Client Logo Image"
+          }
+        }
+      ]
+    }
+  ],
+	"presets": [
+    {
+      "name": "Wholesale Logo"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

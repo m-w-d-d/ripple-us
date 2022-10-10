@@ -1,0 +1,35 @@
+{% if product.metafields.title_q.title_q != blank %}
+<section id="product_des" style="background-color:{{ product.metafields.background_color_q.background_color_q }}">
+  <div class="width-605">
+    
+    <h2 style="color:{{ product.metafields.text_color_acc.text_color_acc }};">{{ product.metafields.title_q.title_q }}</h2>
+    <div class="accordion-tab1">  
+       
+      {% for value in product.metafields.questions_title.questions_title %}
+      {% if product.metafields.questions_title.questions_title[forloop.index0] != blank %}
+      <div class="accordion_n" id="newsection_{{ forloop.index }}">{{ product.metafields.questions_title.questions_title[forloop.index0] }}<span></span></div> 
+      {% endif %}
+      {% if product.metafields.answers_info.answers_info[forloop.index0] != blank %}
+      <div class="content_n">
+        {{ product.metafields.answers_info.answers_info[forloop.index0] }}
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{% endif %}
+
+<style>
+div.accordion-tab1{
+  border-color:{{ product.metafields.text_color_acc.text_color_acc }};
+}
+section#product_des h2, div.accordion_n {
+    color: {{ product.metafields.text_color_acc.text_color_acc }};
+}
+  div.accordion_n{
+    border-top: 2px solid {{ product.metafields.text_color_acc.text_color_acc }};
+  }
+</style>

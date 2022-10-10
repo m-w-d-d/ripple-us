@@ -1,0 +1,306 @@
+.power_color{
+  background-color:#d9eae3;
+}
+.power_color .shopnow_btn span{
+  background-color:#008759;
+}
+
+.relax_color{
+  background-color:#cfe3ec;
+}
+.relax_color .shopnow_btn span{
+  background-color:#436cae;
+}
+
+.dream_color{
+  background-color:#d8cde6;
+}
+.dream_color .shopnow_btn span{
+  background-color:#825aa4;
+}
+
+.boost_color{
+  background-color:#f7dddd;
+}
+.boost_color .shopnow_btn span{
+  background-color:#d84465;
+}
+
+.the-sampler_color{
+  background-color:#adc1de;
+}
+.the-sampler_color .shopnow_btn span{
+  background-color:#f8aeae;
+}
+
+
+.collection-item__bg-hover, .collection-item__bg-leaf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.collection-item__bg-hover {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s cubic-bezier(0,0,0,1);
+  -moz-transition: all .4s cubic-bezier(0,0,0,1);
+  -webkit-transition: all .4s cubic-bezier(0,0,0,1);
+}
+
+.pro_box:focus .collection-item__bg-hover, 
+.pro_box:hover .collection-item__bg-hover {
+    visibility: visible;
+    opacity: 1;
+  transition: all .4s cubic-bezier(0,0,0,1);
+  -moz-transition: all .4s cubic-bezier(0,0,0,1);
+  -webkit-transition: all .4s cubic-bezier(0,0,0,1);
+}
+.power_color .collection-item__bg-hover {
+    background-image: linear-gradient(130.77deg, #d9eae3 15.57%, #88bfa9 92.9%);
+}
+.dream_color .collection-item__bg-hover {
+    background-image: linear-gradient(130.77deg, #dcd1e9 15.57%, #795c99 92.9%);
+}
+.relax_color .collection-item__bg-hover {
+    background-image: linear-gradient(130.77deg, #cfe3ec 15.57%, #78aec6 92.9%);
+}
+.boost_color .collection-item__bg-hover {
+    background-image: linear-gradient(130.77deg, #f7dddd 15.57%, #e29494 92.9%);
+}
+
+.the-sampler_color .collection-item__bg-hover {
+    background-image: linear-gradient(130.77deg, #adc1de 15.57%, #f8aeae 92.9%);
+}
+
+
+
+.relax_color .shopnow_btn i {
+    background-image: linear-gradient(270deg, #89abe1, #436cae 50%, #89abe1);
+}
+.dream_color .shopnow_btn i { 
+  background-image: linear-gradient(270deg, #825aa4, #9c7dbe 50%, #825aa4);
+}
+.power_color .shopnow_btn i {
+    background-image: linear-gradient(270deg, #346d6b, #5c9795 50%, #346d6b);
+}
+.boost_color .shopnow_btn i {
+    background-image: linear-gradient(270deg, #d84465, #dd8080 50%, #d84465);
+}
+.the-sampler_color .shopnow_btn i {
+    background-image: linear-gradient(270deg, #d84465, #dd8080 50%, #d84465);
+}
+
+
+
+
+.pro_box:hover .shopnow_btn{
+  opacity:1!important;
+}
+.product-card__title{
+  opacity:1;
+  transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+.pro_box:hover .product-card__title{
+  opacity:0;
+}
+.fullwidth-link .product-card__image-wrapper {
+    max-width: 187px;
+    margin: 0 auto;
+    width: 100%;
+  float:none;
+}
+.fullwidth-link{
+  width: 100%;
+  float:left;
+  padding: 38px 0 14px;
+  position: relative; 
+  z-index:1	;
+}
+.h4.grid-view-item__title.product-card__title {
+    float: none;
+    width: auto;
+    margin: 0 auto;
+    display: table;
+  font-size:24px;
+  text-transform:uppercase;
+}
+.full-product-table {
+    float: left;
+    width: 100%;
+    padding: 60px 0 0;
+  position:relative;
+}
+.shopnow_btn {
+    margin: 0 auto;
+    display: table;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    -webkit-transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);    
+    background: transparent;
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+   font-family: 'Swiss721BT-Bold';
+   font-weight: normal;  
+   opacity:0;
+   transition: all .4s cubic-bezier(.46,.01,.32,1);
+}
+.shopnow_btn i {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 200% 100%;
+    border-radius: 3px;
+    animation: promobarAnimation 4s linear infinite;
+  transition: all .4s cubic-bezier(.46,.01,.32,1);
+}
+.shopnow_btn > span {
+  position: relative;
+  transition: all .4s cubic-bezier(.46,.01,.32,1);
+  background-color: #ff99be;
+  width:150px;
+   padding: 12.5px 30px;
+  font-size: 14px;
+   letter-spacing:0.5px;
+   border-radius:3px;
+  font-family: 'Swiss721BT-Bold';
+  display: inherit;
+}
+
+
+
+@media(min-width:1024px){
+.shopnow_btn:hover > span {
+    background-color: rgba(98,172,254,0)!important;
+}
+}
+/*
+
+.boost_color .shopnow_btn::before {
+    background-image: linear-gradient(270deg, #d84465, #dd8080 50%, #d84465);
+}
+.dream_color .shopnow_btn::before {
+    background-image: linear-gradient(270deg, #825aa4, #9c7dbe 50%, #825aa4);
+}
+.relax_color .shopnow_btn::before {
+    background-image: linear-gradient(270deg, #436cae, #7c96bd 50%, #436cae);
+}
+.power_color .shopnow_btn::before {
+    background-image: linear-gradient(270deg, #008759, #3bb38a 50%, #008759);
+}
+
+
+*/
+
+
+
+
+@keyframes promobarAnimation {
+ 0% {
+  background-position:0 50%
+ }
+ to {
+  background-position:200% 50%
+ }
+}
+.collection-item__shadow-container {
+    position: absolute;
+    top: 10px;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+  opacity:0;
+}
+.pro_box:hover .collection-item__shadow-container {
+  opacity:1;
+}
+.collection-item__shadow {
+    position: relative;
+    top: 68%;
+    display: none;
+    margin: 0 auto;
+    opacity: .1;
+    background: #000;
+    width: 180px;
+    height: 6px;
+    filter: blur(8px);
+    transition: all .4s cubic-bezier(.46,.01,.32,1);
+}
+.collection-item__shadow {
+    top: 72%;
+    width: 120px;
+    height: 4px;
+    display: block;
+    background: #000;
+    opacity: .9;
+    filter: blur(10px);
+    transition: all 0s;
+}
+.collection-item__shadow {
+    top: 75%;
+    width: 160px;
+}
+.collection-item__shadow {
+    top: calc(70% - 4px);
+    width: 180px;
+}
+.product-card__image-wrapper {
+    top: 16px;
+    transition: all 0s;
+  position:relative;
+}
+.product-card:hover .collection-item__shadow {
+    animation: shadow 1.6s ease-in-out infinite;
+}
+.product-card:hover .product-card__image-wrapper {
+    animation: floating 1.6s ease-in-out infinite;
+}
+
+.grid-view-item.product-card {
+    float: left;
+    width: 100%;
+}
+@keyframes floating {
+ 0% {
+  top:16px
+ }
+ 50% {
+  top:0
+ }
+ to {
+  top:16px
+ }
+}
+@keyframes shadow {
+ 0% {
+  width:128px;
+  height:4px;
+  opacity:.5;
+  background:#000;
+  filter:blur(18px)
+ }
+ 50% {
+  width:180px;
+  height:16px;
+  background-color:#747474;
+  opacity:1;
+  filter:blur(10px)
+ }
+ to {
+  width:128px;
+  height:4px;
+  opacity:.5;
+  background:#000;
+  filter:blur(18px)
+ }
+}

@@ -1,0 +1,74 @@
+{% assign my_enable = product.metafields.enable_tab.enable_tab %}
+
+{% assign my_image = product.metafields.additional_image.additional_image %}
+
+{% assign my_title = product.metafields.icon_one_title.icon_one_title %}
+{% assign my_icon_1 = product.metafields.icon_image_one.icon_image_one %}      
+
+{% assign my_title_2 = product.metafields.icon_two_title.icon_two_title %}
+{% assign my_icon_2 = product.metafields.icon_image_two.icon_image_two %}    
+
+{% assign my_title_3 = product.metafields.icon_three_title.icon_three_title %}
+{% assign my_icon_3 = product.metafields.icon_image_three.icon_image_three %}    
+
+{% assign my_title_4 = product.metafields.icon_four_title.icon_four_title %}
+{% assign my_icon_4 = product.metafields.icon_image_four.icon_image_four %}    
+
+
+{% if my_enable %}
+{% if my_image %}
+<div class="product-other-info">
+	<div class="page-width">
+
+  {% if my_image %}
+    <div class="product-other-img">
+      <img src="{{ my_image }}" alt="">
+    </div>
+    {% endif %}
+  
+      {% if my_title %}
+  <div class="icon-one product-icon">
+    <div class="keypoint-bar__item">
+  	<div class="icon_box"><img src="{{ my_icon_1 }}" alt=""></div>
+    <h3>{{ my_title }}</h3>
+    </div>  
+  </div>
+      {% endif %}
+     
+      {% if my_title_2 %}
+   <div class="icon-two product-icon">
+    <div class="keypoint-bar__item">
+  	<div class="icon_box"><img src="{{ my_icon_2 }}" alt=""></div>
+    <h3>{{ my_title_2 }}</h3>
+    </div>  
+  </div>  
+      {% endif %}
+      
+      
+      {% if my_title_3 %}
+   <div class="icon-three product-icon">
+    <div class="keypoint-bar__item">
+  	<div class="icon_box"><img src="{{ my_icon_3 }}" alt=""></div>
+    <h3>{{ my_title_3 }}</h3>
+    </div>  
+  </div>  
+      {% endif %}
+      
+      
+      {% if my_title_4 %}
+   <div class="icon-four product-icon">
+    <div class="keypoint-bar__item">
+  	<div class="icon_box"><img src="{{ my_icon_4 }}" alt=""></div>
+    <h3>{{ my_title_4 }}</h3>
+    </div>  
+  </div>  
+      {% endif %}
+      
+      
+      
+  </div>
+  
+  
+</div>
+{% endif %}
+{% endif %}

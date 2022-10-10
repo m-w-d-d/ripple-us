@@ -1,0 +1,259 @@
+<div class="home_merch">
+<div class="wholesale_home_merch" style="background-color:{{ section.settings.stand-out-bg }};">
+  <div class="home_merchinfo">
+  <div class="stand-out-info">
+    <div class="home_merch_wrap merch_{{ section.settings.merch_align }}">
+      {% if section.settings.ho_title != blank %}
+      <h3 class="size_39 gradient_text {{ section.settings.font_chnage }}" style="background-image:linear-gradient(100deg,{{ section.settings.title_first }} 10%, {{ section.settings.title_second }} 63%);">{{ section.settings.ho_title  }}</h3>
+      {% endif %}  
+       {% if section.settings.ho_info != blank %}
+      <div class="home_merchrte">
+        {{ section.settings.ho_info | replace: "+", "<sup>+</sup>" }}
+      </div>
+        {% endif %}  
+      {% if section.settings.ho_button != blank %}
+      <div class="stand-out-info_btn">
+       <a href="{{ section.settings.ho_button_link }}" class="btn" style="background-color:{{ section.settings.ho_background }}; color:{{ section.settings.ho_background_text }}">
+        <i></i>
+        <span>{{ section.settings.ho_button }}</span>
+      </a>
+      </div>
+      {% endif %}  
+      
+    </div>
+  </div>
+  </div>
+  <div class="home_merch_desk small--hide">
+  {%- assign merch = section.settings.ho_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {% include 'image-style' with image: section.settings.ho_image %}
+  <img id=""
+                 class="lazyload"
+                 src="{{ section.settings.ho_image | img_url: '1600x' }}"
+                 data-src="{{ merch }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.ho_image.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ section.settings.ho_image.alt | escape }}">
+  </div>
+  <div class="home_merch_mo large--hide">
+  {%- assign mo_merch = section.settings.ho_image_mo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {% include 'image-style' with image: section.settings.ho_image_mo %}
+  <img id=""
+                 class="lazyload"
+                 src="{{ section.settings.ho_image_mo | img_url: '200x200' }}"
+                 data-src="{{ mo_merch }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.ho_image_mo.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ section.settings.ho_image_mo.alt | escape }}">
+  </div>
+  </div>
+</div>
+
+<style>
+.home_merch_wrap h3,
+  .home_merch_wrap p{
+    color:{{ section.settings.ho_text_color}};
+  }
+  
+
+  /*
+  div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background }}, {{ section.settings.ho_background }} 50%, {{ section.settings.ho_background }});
+  }*/
+  div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background }};
+    color:{{ section.settings.ho_background_text }};
+  }
+  div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background_first }}, {{ section.settings.ho_background_second }} 50%, {{ section.settings.ho_background_third }});
+  }
+
+ /* div.home_merch_wrap .btn:hover{    
+    color:{{ section.settings.ho_background_text_hover}};
+     background-color: {{ section.settings.ho_background_text }}!important;
+  }*/
+  
+ @media(max-width:767px){
+  /* .home_merch{
+   background-image:none!important;
+ } 
+   div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background_text }};
+    color:{{ section.settings.ho_background }};
+  }*/
+   
+ }
+ @media(max-width:767px){  
+ .home_merch_wrap {
+    background: {{ section.settings.mo_background_info }}!important;
+} 
+   .home_merch_wrap h3, .home_merch_wrap p {
+    color: {{ section.settings.mo_text_info }}!important;
+}
+ }
+  
+</style>
+
+
+{% schema %}
+  {
+    "name": "Wholesale Stand Out",
+	"class": "stand-out",
+    "settings": [
+		{
+        "type": "color",
+        "id": "stand-out-bg",
+        "label": "Background color",
+		"default": "#fff"
+        },
+        {
+        "type": "image_picker",
+        "id": "ho_image",
+        "label": "Image",
+        "info":"Size 1600 x 568px"
+        },
+        {
+        "type": "image_picker",
+        "id": "ho_image_mo",
+        "label": "Mobile image",
+        "info":"Size 800 x 568px"
+        },
+        {
+        "type": "text",
+        "id": "ho_title",
+        "label": "Heading"
+        },
+        {
+        "type": "select",
+        "id": "font_chnage",
+        "label": "Heading Font",
+        "default": "black_extended",
+        "options": [
+        {
+        "label": "Bold",
+        "value": "bold-font"
+        },
+        {
+        "label": "Heavy Weight",
+        "value": "heavy-font"
+        },
+        {
+        "label": "Black Extended",
+        "value": "black_extended"
+        }
+        ]
+        },
+        {
+        "type": "richtext",
+        "id": "ho_info",
+        "label": "Info"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_text_color",
+        "label": "Text color"
+        },
+        {
+        "type": "header",
+        "content": "button section"
+        },
+        {
+        "type": "text",
+        "id": "ho_button",
+        "label": "Button label"
+        },
+        {
+        "type": "url",
+        "id": "ho_button_link",
+        "label": "Button link"
+        },
+
+
+        {
+        "type": "header",
+        "content": "Button color"
+        },
+        {
+        "type": "color",
+        "id": "ho_background",
+        "label": "Button Background color",
+        "default":"#000"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text",
+        "label": "Button text color",
+        "default":"#fff"
+        },
+        {
+        "type": "header",
+        "content": "Button Hover color"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_background_first",
+        "label": "Background gradient color first",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_second",
+        "label": "Background gradient color second",
+        "default":"#758bb5"
+        }, 
+        {
+        "type": "color",
+        "id": "ho_background_third",
+        "label": "Background gradient color third",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text_hover",
+        "label": "Hover button text color",
+        "default":"#fff"
+        },
+        {
+        "type": "header",
+        "content": "Mobile info background color"
+        },
+        {
+        "type": "color",
+        "id": "mo_background_info",
+        "label": "Background color",
+        "default":"#f0f0f0"
+        },
+	{
+       "type": "header",
+       "content": "Title Color"
+    },
+    {
+          "type": "color",
+          "id": "title_first",
+          "label": "Title gradient color first",
+		  "default":"#445e83"
+     },
+	 {
+          "type": "color",
+          "id": "title_second",
+          "label": "Title gradient color second",
+		  "default":"#f8aeae"
+     },
+        {
+        "type": "color",
+        "id": "mo_text_info",
+        "label": "Text color",
+        "default":"#516791"
+        }
+      ],
+	"presets": [
+    {
+      "name": "Wholesale Stand Out"
+    }
+  ]
+  }
+{% endschema %}
+

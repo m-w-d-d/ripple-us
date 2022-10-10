@@ -1,0 +1,170 @@
+<div class="customerreviews_section">
+<div class="customerreviews_slider">
+  {% for block in section.blocks %}  
+  <div>    
+    <div class="review_box">
+      <div style="margin-bottom:0;"class="star_rating">
+        <div class="star_box star_{{ block.settings.star_rat }}">
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>
+          <i>{% include 'icon-star_tr' %}{% include 'icon-star' %}</i>        
+        </div>        
+      </div> 
+      
+           {% if block.settings.title != blank %}
+      <h5 style="width: 100%;">{{ block.settings.title }}<div class="countrybox">
+        {{ block.settings.country }}
+      </div></h5>
+      {% endif %} 
+      <div class="review_rte">
+        {{ block.settings.info | replace: "+", "<sup>+</sup>" }}
+      </div>      
+    </div>   
+  </div>
+  {% endfor %}	
+  </div>
+</div>
+
+<style>
+.cr-section {
+     background-image: url('{{ section.settings.bg_image | img_url: '2000x' }}')
+/*
+  background: {{ section.settings.background_first }};*/
+}
+</style>
+
+<script>
+  $(document).ready(function(){
+  $('.customerreviews_slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 10000,
+    centerMode: true,
+    variableWidth: true,
+    centerPadding: '40px',
+    slidesToShow:5,
+    slidesToScroll: 1,
+    cssEase: 'linear',
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    autoplay: true,
+    autoplaySpeed: 0,
+    initialSlide: 1,
+    responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        cssEase: 'ease',
+        centerPadding: '40px',
+        speed: 1000,    
+        autoplaySpeed: 3000,
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        cssEase: 'ease',
+        centerMode: true,
+        centerPadding: '25%',
+        speed: 700,
+        autoplaySpeed: 3000,
+        focusOnSelect: true
+      } 
+    }  
+  ]
+
+});
+    });
+</script>
+
+
+{% schema %}
+{
+  "name": "Customer reviews",
+  "class": "index-section cr-section",
+  "settings": [
+ {
+          "type": "image_picker",
+          "id": "bg_image",
+		  "label": "Image",
+			"info":"Size 1600x"
+        },
+   {
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+          "type": "color",
+          "id": "background_first",
+          "label": "Background color",
+		  "default":"#fff"
+     }
+	 
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Reviews",
+      "settings": [
+		{
+          "type": "text",
+          "id": "title",
+          "label": "Customer name",
+		  "default":"John Doe"
+        },
+		{
+          "type": "text",
+          "id": "country",
+          "label": "Country",
+		  "default":"London, UK"	
+        },
+        {
+          "type": "richtext",
+          "id": "info",
+          "label": "Customer text"
+        },
+		{
+          "type": "text",
+          "id": "star_rat",
+          "label": "Star rating",
+		  "default": "5"	
+        },
+		{
+          "type": "color",
+          "id": "stars_first",
+          "label": "Stars color",
+		  "default":"#000000"
+     }
+		
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customer Reviews",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

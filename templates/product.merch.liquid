@@ -1,0 +1,136 @@
+{%- include 'bold-ro' -%}
+{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
+{% comment %}
+{{ 'product.css' | asset_url | stylesheet_tag }}
+
+  The contents of the product.liquid template can be found in /sections/product-template.liquid
+{% endcomment %}
+
+
+{% section 'product_merch-template' %}
+{% unless product.handle contains "andre" %}
+{% include 'related-marchproduct' %}
+{% endunless %}
+
+
+
+<script>
+  // Override default values of shop.strings for each template.
+  // Alternate product templates can change values of
+  // add to cart button, sold out, and unavailable states here.
+  theme.productStrings = {
+    addToCart: {{ 'products.product.add_to_cart' | t | json }},
+    soldOut: {{ 'products.product.sold_out' | t | json }},
+    unavailable: {{ 'products.product.unavailable' | t | json }}
+  }
+</script>
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": {{ shop.url | append: product.url | json }},
+  {%- if product.featured_image -%}
+    {%- assign image_size = product.featured_image.width | append: 'x' -%}
+    "image": [
+      {{ product.featured_image.src | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {%- endif -%}
+  "description": {{ product.description | strip_html | json }},
+  {%- if current_variant.sku != blank -%}
+    "sku": {{ current_variant.sku | json }},
+  {%- endif -%}
+  "brand": {
+    "@type": "Thing",
+    "name": {{ product.vendor | json }}
+  },
+  "offers": [
+    {%- for variant in product.variants -%}
+      {
+        "@type" : "Offer",
+        {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+        {%- endif -%}
+        "availability" : "http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}",
+        "price" : {{ variant.price | divided_by: 100.00 | json }},
+        "priceCurrency" : {{ cart.currency.iso_code | json }},
+        "url" : {{ shop.url | append: variant.url | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+  {% if product.metafields.okendo.summaryData.reviewCount > 0 %}
+  ,"aggregateRating": {
+    "@type": "AggregateRating",
+    "description": "Okendo Reviews",
+    "ratingValue": "{{ product.metafields.okendo.summaryData.reviewAverageValue }}",
+    "ratingCount": "{{ product.metafields.okendo.summaryData.reviewCount }}"
+  }
+  {% elsif product.metafields.okendo.ReviewCount > 0 %}
+  ,"aggregateRating": {
+    "@type": "AggregateRating",
+    "description": "Okendo Reviews",
+    "ratingValue": "{{ product.metafields.okendo.ReviewAverageValue }}",
+    "ratingCount": "{{ product.metafields.okendo.ReviewCount }}"
+  }
+  {% endif %}
+}
+</script>
+
+<!-- Datalayer -->
+
+<script>
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "view_item",
+  'ecommerce': {
+        'items': [{
+        'item_id': '{{ product.id }}',
+        'item_name': '{{ product.title | remove: "'" | remove: '"' }}',
+        'item_brand': '{{ product.vendor | remove: "'" | remove: '"' }}',
+        'item_category': '{{ product.collections[0].title | remove: "'" | remove: '"' }}',
+        'item_variant': '{{ product.selected_variant.sku }}',
+        'currency': '{{ shop.currency }}',
+        'price': '{{ product.price  | times: 0.01}}'
+        }]
+}
+});
+
+    </script>
+<!-- end Datalayer -->
+
+<!-- Integrate Klaviyo on your website.  -->
+
+<script type="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+
+<!-- End Klaviyo code -->
+

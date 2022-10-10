@@ -1,0 +1,177 @@
+<div class="how_to_recycle cool_recycle" style="background-color:{{ section.settings.recycle_ripple_bg }};">
+  <div class="how_to_recycle_wrapper">
+   
+{% if section.settings.select_option == 'image' %}
+  
+    {% if section.settings.image != blank %}
+    <div class="how_to_recycle_info">
+      {{ section.settings.image | img_url: '960 x', scale: 2 | img_tag: section.settings.image.alt, '' }}
+      <h6>{{ section.settings.recycle_info }}</h6>
+    </div>
+    {% endif %}
+
+
+{%- endif -%}
+
+{% if section.settings.select_option == 'text' %}
+    
+    {% if section.settings.text != blank %}
+    <div class="how_to_recycle_info">
+      {{ section.settings.text }}
+    </div>
+    {% endif %}
+
+{%- endif -%}
+    
+    <div class="recycle_to_cool_slider">
+      <div class="to_cool_slider">
+        {% for block in section.blocks %}
+        <div class="slide_img">
+          
+            {% if block.settings.slide_image != blank %}
+            {{ block.settings.slide_image | img_url: '780x780', scale: 2 | img_tag: block.settings.slide_image.alt, '' }}
+            {% endif %}
+          {% if block.settings.username != blank %}
+            <span><a href="https://www.instagram.com/{{ block.settings.username | remove: "@" }}" target="_blank">@{{ block.settings.username | remove: "@" }}</a></span>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    
+</div>   
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    $('.to_cool_slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 10000,
+      centerMode: true,
+      variableWidth: false,
+      centerPadding: '40px',
+      slidesToShow:4,
+      slidesToScroll: 1,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 0,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            dots: false,
+            infinite: true,
+            speed: 10000,
+            centerMode: true,
+            variableWidth: false,
+            centerPadding: '40px',
+            slidesToShow:2,
+            slidesToScroll: 1,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 0
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            dots: false,
+            infinite: true,
+            speed: 10000,
+            centerMode: true,
+            variableWidth: false,
+            centerPadding: '40px',
+            slidesToShow:1,
+            slidesToScroll: 1,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 0
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "It's Cool To Be Kind",
+    "settings": [
+		{
+        "type": "color",
+        "id": "recycle_ripple_bg",
+        "label": "Background color",
+	    "default": "#fff"
+        },
+	{
+      "type": "select",
+      "id": "select_option",
+      "label": "Choose option",
+      "default": "image",
+      "options": [
+	
+        {
+          "label": "Image",
+          "value": "image"
+    	},    
+       {
+          "label": "Text",
+          "value": "text"
+        }
+      ]
+    },
+	{
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+	{
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+	  "info": "SIze 490 X 44"
+    }
+
+],
+  "blocks": [
+    {
+      "type": "slide_image",
+      "name": {
+        "en": "Insta Slider"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "slide_image",
+		 "info": "SIze 346 X 346",
+          "label": {
+            "en": "Slide Image"
+          }
+        },
+		{
+          "type": "text",
+          "id": "username",
+			"info": "instagram user id only",
+          "label": {
+            "en": "Username"
+          }
+        }
+      ]
+    }
+  ],
+	"presets": [
+    {
+      "name": "It's Cool To Be Kind"
+    }
+  ]
+  }
+{% endschema %}
+
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+

@@ -1,0 +1,135 @@
+<div class="page-width p-0 w_701">
+  <h3 class="head_text hide">{{ section.settings.m_head_text | remove:'<p>' | remove:'</p>' }}</h3>
+
+  <div class="m_tablinks">
+    <a href="/pages/our-mission" class="active">our mission</a>
+    <a href="/pages/our-story">Our story</a>
+  </div>
+
+  <div class="m_tab_wrap">
+    <div class="m_tabionfo ">
+      {{ page.content }}
+      
+      {% if section.settings.founderimg != blank %}
+      <div class="sig_img text-center">
+        <img src="{{ section.settings.founderimg | img_url:'137x' }}" alt="" />
+         {% if section.settings.foundertext != blank %}
+        <span>{{ section.settings.foundertext }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</div>
+  
+<div id="page_roducts">
+  {%- assign collection = collections[section.settings.f_collection] -%}
+  <div class="about-section-three related-march">
+    <div class="product-slider">
+
+      <div id="home-sliders"> 
+        <div class="grid grid--uniform home_proslider">
+          {% for product in collection.products  %}
+          <div class="grid__item grid__item--{{section.id}} {{ grid_item_width }} pro_box" data-color="background--{{ product.handle }}">
+            {% include 'product-card-grid', max_height: max_height %}
+            
+          </div>
+          {% endfor %}
+        </div>
+        <div class="paginator-center text-color text-center" id="slide_arrow">
+          <ul>
+            <li class="prev">{% include 'prev-arrow' %}</li>
+            <li class="next">{% include 'next-arrow' %}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+ #MainContent{
+    background-image: linear-gradient(180deg, {{ section.settings.background_first }} 0%, {{ section.settings.background_second }} 80%);
+}
+ div.m_tabionfo h4,  div.m_tablinks a, div.m_header_text h3{
+  	color:{{ section.settings.f_head_color }};
+  }
+  div.m_tabionfo p, div.m_tabionfo{
+    color:{{ section.settings.f_text_color }};
+  }
+  div.m_tablinks a.active, div.m_tablinks {
+    background: {{ section.settings.f_head_color }};
+}
+</style>
+
+
+{% schema %}
+  {
+    "name": "Our mission",
+    "settings": [
+	   {
+          "type": "richtext",
+          "id": "m_head_text",
+          "label": "Header text"
+        },
+		{
+          "type": "header",
+          "content": "founders"
+        },
+		{
+          "type": "text",
+          "id": "foundertext",
+          "label": "ripple founders"
+        },
+		{
+          "type": "image_picker",
+          "id": "founderimg",
+          "label": "Sig image",
+	      "info": "Size: 137 x 95px"
+        },
+   {
+          "type": "header",
+          "content": "color section"
+        },
+{
+          "type": "color",
+          "id": "f_head_color",
+          "label": "Heading color"
+        },
+    {
+          "type": "color",
+          "id": "f_text_color",
+          "label": "Text color"
+        },
+    {
+       "type": "header",
+       "content": "Background color"
+    },
+	{
+          "type": "color",
+          "id": "background_first",
+          "label": "Background gradient color first",
+		  "default":"#fff"
+     },
+	 {
+          "type": "color",
+          "id": "background_second",
+          "label": "Background gradient color second",
+		  "default":"#d9eae3"
+     },
+
+     {
+          "type": "header",
+          "content": "product section"
+        },
+    {
+          "type": "collection",
+          "id": "f_collection",
+          "label": "Select collection"
+        }
+		
+]
+  }
+{% endschema %}
+

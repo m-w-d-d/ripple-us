@@ -1,0 +1,80 @@
+<div class="wholesale_text_slider_sec" style="background-color:{{ section.settings.wholesale_text_slider_bg }}">
+  <div class="wholesale_text_slider_wrapper">
+	{% if section.blocks.size > 0 %}
+    <div class="wholesale_text_slider">
+      {% for block in section.blocks %}
+        <div>
+
+          {% if block.settings.slide_text != blank %}
+          {{ block.settings.slide_text }}
+          <h5>{{ block.settings.slide_author }}</h5>
+          {% endif %}
+
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Wholesale Text Slider",
+    "settings": [
+	{
+          "type": "color",
+          "id": "wholesale_text_slider_bg",
+          "label": "Background One",
+		  "default": "#edf6fa"
+   	}
+
+],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": {
+        "en": "Text"
+      },
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "slide_text",
+          "label": {
+            "en": "Text"
+          }
+        },
+	{
+          "type": "text",
+          "id": "slide_author",
+          "label": {
+            "en": "Author Text"
+          }
+        }
+      ]
+    }
+  ],
+	"presets": [
+    {
+      "name": "Wholesale Text Slider"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+
+
+<script>
+  $(document).ready(function(){
+    $('.wholesale_text_slider').slick({
+      dots: true,
+      infinite: true,
+      arrows: false,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+});
+});
+</script>

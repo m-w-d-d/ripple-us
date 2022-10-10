@@ -1,0 +1,189 @@
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card {{ product.handle }}_color"
+     style="{% if product.metafields.desktop_background_i.desktop_background_i != blank %}
+            background-image: url({{ product.metafields.product_background_i.product_background_i }});">
+            {% else %}
+            background-color:{{ product.metafields.background_color.background_color }};">
+  {% endif %}
+  {% if product.metafields.desktop_background_i.desktop_background_i == blank %}
+ <span class="collection-item__bg-hover" style="background-image: linear-gradient(130.77deg, {{ product.metafields.background_gradient1.background_gradient_color_firs }} 15.57%, {{ product.metafields.background_gradient2.background_gradient_color_seco }} 92.9%);"></span> 
+ {% endif %}
+  <a class="grid-view-item__link grid-view-item__image-container fullwidth-link" href="{{ product.url | within: collection }}">
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {%- assign img_url_2 = product.image[1] | img_url_2: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless product.featured_image == blank %}
+    {% include 'image-style' with image: product.featured_image, width: 305, height: 460, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+
+    
+    
+    
+  <div id="" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+   
+    <div style="padding-top:{% unless product.featured_image == blank %}{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
+      {% unless product.images[0].alt == "pdp-only" %}
+      <img id=""
+            class="grid-view-item__image lazyload {% unless collection.title != "Bundles" %}product_img--first{% endunless %}"
+            src="{{ product.images[0]  | img_url: '400x400' }}"
+            data-src="{{ img_url }}"
+            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+            data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+            data-sizes="auto"
+            alt="{{ product.featured_image.alt }}">      
+      {% endunless %}
+      {% unless collection.title != "Bundles" %}
+      <img class="grid-view-item__image lazyload product_img product_img--second" 
+           src="{{ product.images[1] | product_img_url: '400x400' }}"
+           data-src="{{ img_url_2 }}"
+            data-widths="[180, 300, 360, 400, 540, 720]"
+            data-aspectratio="{{ product.featured_image.aspect_ratio }}"
+            data-sizes="auto"
+           alt="{{ product.title | escape }}">
+      {% endunless %}
+    </div>
+  </div>
+
+  <noscript>
+    {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+    <img class="grid-view-item__image" src="{{ product.featured_image.src | img_url: image_size, scale: 2 }}" alt="{{ product.featured_image.alt }}" style="max-width: {{ max_height | times: product.featured_image.aspect_ratio }}px;">
+  </noscript>
+
+  <div class="title_price" style="border-color:{{ product.metafields.product_color.product_color }};">
+  <div class="full-product-table">
+   
+    
+    <div class="h4 grid-view-item__title product-card__title" aria-hidden="true"  style="color:{{ product.metafields.text_color.text_color }};">{{ product.title }}</div>
+   
+     
+    
+     {% if product.metafields.label_text_b.label_text_b != blank %}  
+    <div class="productvendor" style="color:{{ product.metafields.text_color.text_color }};">
+          {{ product.metafields.label_text_b.label_text_b }}
+        </div>
+    {% endif %}
+
+    
+ {% if settings.black_friday_enable != blank %}
+    
+    <div class="black_fridat_tag newpro_tag large--hide" style="background-color:{{ settings.all_tag_bg }};
+color:{{ settings.all_tag_text_color }};">
+{{ settings.black_friday_text }}
+</div>
+    
+ {% else %}   
+    
+    {% if product.metafields.accentuate.black_friday_label_text != blank %}
+<div class="black_fridat_tag newpro_tag large--hide" style="{% if product.metafields.accentuate.black_friday_background_color_ != blank %}
+background-color:{{ product.metafields.accentuate.black_friday_background_color_ }};
+{% else %}
+background-color:#fff;
+{% endif %} color:{{ product.metafields.accentuate.black_friday_label_text_color }};">
+{{ product.metafields.accentuate.black_friday_label_text }}
+</div>
+  
+   {%else%} 
+    
+    {% if product.metafields.label_text.label_text != blank %}
+  <div class="newpro_tag large--hide" style="{% if product.metafields.background_color_tag.background_color_tag != blank %}
+background-color:{{ product.metafields.background_color_tag.background_color_tag }};
+{% else %}
+background-color:#fff;
+{% endif %}color:{{ product.metafields.text_color.text_color }};">
+    {{ product.metafields.label_text.label_text }}
+  </div>
+    {% else %}
+    
+    <div class="newpro_tag_blank" style="display:none;"></div>
+  {% endif %}
+    
+   {% endif %} 
+    
+ {% endif %} 
+    
+    <div href="{{ product.url | within: collection }}" class="shopnow_btn">
+      <i style="background-image: linear-gradient(270deg, {{ product.metafields.button_gradient1.button_gradient_color_first }}, {{ product.metafields.button_gradient2.button_gradient_color_second }} 50%, {{ product.metafields.button_gradient1.button_gradient_color_first }})"></i>
+      
+     {% if product.variants.size > 1 %}
+      
+      {% if product.metafields.button_label.button_label != blank %}
+      <span style="background-color:{{ product.metafields.button_color.button_color }};">{{ product.metafields.button_label.button_label }}</span>
+      {% else %}
+      <span style="background-color:{{ product.metafields.button_color.button_color }};">Shop now</span>
+      {% endif %}
+                  {% else %}
+                  {% unless product.available %}
+    
+                  
+    			<span style="background-color:{{ product.metafields.button_color.button_color }};">Coming soon</span>
+      		{% else %}
+      
+      {% if product.metafields.button_label.button_label != blank %}
+      <span style="background-color:{{ product.metafields.button_color.button_color }};">{{ product.metafields.button_label.button_label }}</span>
+      {% else %}
+      <span style="background-color:{{ product.metafields.button_color.button_color }};">Shop now</span>
+      {% endif %}
+      
+                  {% endunless %}
+                  {% endif %}
+    </div>
+    </div>
+  </div>
+    
+    {% if product.variants.size > 1 %}
+                  {% else %}
+                  {% unless product.available %}
+                  <div class="sold_blank" style="{% if product.metafields.desktop_background_i.desktop_background_i != blank %}
+            background-image: url({{ product.metafields.product_background_i.product_background_i }});">
+            {% else %}
+            background-color:{{ product.metafields.background_color.background_color }};">
+  {% endif %}</div>
+    <div class="sold_div mobile_sold">
+  <button disabled type="submit" class="formAdd pro_{{product.id}} shopnow_btn btn singleaddcart product-form__cart-submit btn--secondary-accent cartbutton  {% if hide_default_title %} btn-full{% endif %}" id="add-{{ product.id}}" name="add" >
+      <div class="sold_out_text" style="background:{{ product.metafields.button_color.button_color }}; background-image: linear-gradient(0deg, {{ product.metafields.button_color.button_color }}, {{ product.metafields.button_gradient1.button_gradient_color_first }} 51%, {{ product.metafields.button_gradient2.button_gradient_color_second }} 100%);">Coming <br>soon</div>
+ 
+  </button>
+    </div>
+                  {% endunless %}
+                  {% endif %}
+     </a>
+  
+  <div class="collection-item__shadow-container">
+    <span class="collection-item__shadow" data-collection-item-shadow=""></span>
+  </div>
+
+  {% if settings.black_friday_enable != blank %}
+    
+    <div class="black_fridat_tag newpro_tag small--hide" style="background-color:{{ settings.all_tag_bg }};
+color:{{ settings.all_tag_text_color }};">
+{{ settings.black_friday_text }}
+</div>
+    
+ {% else %} 
+  
+  {% if product.metafields.accentuate.black_friday_label_text != blank %}
+<div class="black_fridat_tag newpro_tag small--hide" style="{% if product.metafields.accentuate.black_friday_background_color_ != blank %}
+background-color:{{ product.metafields.accentuate.black_friday_background_color_ }};
+{% else %}
+background-color:#fff;
+{% endif %} color:{{ product.metafields.accentuate.black_friday_label_text_color }};">
+{{ product.metafields.accentuate.black_friday_label_text }}
+</div>
+  
+   {%else%} 
+ 
+  {% if product.metafields.label_text.label_text != blank %}
+  <div class="newpro_tag small--hide" style="{% if product.metafields.background_color_tag.background_color_tag != blank %}
+background-color:{{ product.metafields.background_color_tag.background_color_tag }};
+{% else %}
+background-color:#fff;
+{% endif %} color:{{ product.metafields.text_color.text_color }};">
+    {{ product.metafields.label_text.label_text }}
+  </div>
+  {% endif %}
+  
+{% endif %}
+ {% endif %}
+  
+</div>

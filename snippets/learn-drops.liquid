@@ -1,0 +1,594 @@
+<style>
+  .nicotine-box {
+    width: 33%;
+    float: left;
+  	font-size:40px;
+  	font-family: 'Swiss721 Md BT';
+  	font-weight: 500;
+    color:#fff;
+    display:inline-grid;
+}
+.nicotine-box span{
+  	font-family: 'Swiss721BT-Regular';
+  	font-weight:normal;
+  	font-size:17px;
+}
+.nicotine-section {
+    width: 100%;
+    float: left;
+  	line-height:normal;
+    clear: both;
+    margin-bottom: 20px;
+}
+  .accordion_n span::after {
+    position: absolute;
+    width: 28px;
+    height: 31px;
+     content: '+';
+    top: 0px;
+    text-align: right;
+    line-height: 31px;
+    right: 0;
+  transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+}
+.accordion_n span {
+    display: block;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    top: 18px;
+    height: auto;
+    width: 20px;
+}
+.accordion_n.accordion-open_n span::after {
+    content: '-';
+}
+.accordion-tab1 {
+    clear: both;
+    float: left;
+    width: 100%;
+    border-bottom: 2px solid transparent;
+}
+
+ .accordion_n {
+    margin: 0;
+    padding: 20px 0 20px 0;
+    padding-left: 0px;
+    border-bottom: 0px solid #ebebeb;
+    border-top: 2px solid #446c6a;
+    text-decoration: none;
+    position: relative;
+    padding-left: 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-family: 'Swiss721BT-Bold';
+    cursor: pointer;
+    font-weight: normal;
+    float: left;
+    width: 100%;
+}
+#product_des {
+    float: left;
+    width: 100%;
+    clear: both;
+    padding: 70px 50px 88px;
+}
+#product_des .content_n {
+    clear: both;
+    float: left;
+    width: 100%;
+    padding: 0px 0px 25px;
+    margin: 0;
+}
+
+   .kit .half_grid {
+    width: 50%;
+  }
+
+  @media (max-width: 767px) {
+   .accordion_n {
+    padding: 15px 0 15px 0!important;
+    font-size: 14px!important;
+}
+    .kit .half_grid {
+      width: 100%;
+    }
+    .recycle_image_text_wrapper {
+      flex-direction: column-reverse;
+    }
+    .keypoint-bar {
+      margin: 0 2px !important;
+    }
+  }
+
+  .flavour-pick li {
+    padding: 15px 5px;
+  }
+  .learn-gen .starter-home-pod {
+         background-image:url('{{ shop.metafields.globals.starter_kit_bg}}');
+
+    padding: 60px;
+    background-size: auto;
+    
+    background-position: top!important;
+  }
+  .starter-home-pod {
+         background-image:url('{{ shop.metafields.globals.starter_kit_bg}}');
+
+    padding: 60px;
+    background-size: auto;
+    
+    background-position: bottom;
+  }
+
+  .starter-home-pod .half_grid .starter-box {
+    float: none;
+    width: 400px;
+    background: #fff;
+    padding: 15px 0px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: 0 0 20px #fff !important;
+    -webkit-box-shadow: 0 0 20px #ffff !important;
+    min-height: 100px;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+
+
+  }
+
+  .starter-home-pod .half_grid .starter-box img {
+    height: 92px !important;
+    border-radius: 7px;
+    margin: 0px 20px 0px;
+  }
+
+  .starter-home-pod .half_grid .starter-box {
+
+    display: flex;
+  }
+
+  .starter-home-pod .half_grid {
+    float: none;
+    width: auto;
+    margin: 20px;
+  }
+.learn-gen.starter-home-pod .starter-contain{
+display:inline-flex!important;
+  
+}
+  .starter-home-pod .starter-contain {
+
+    display: flex;
+  }
+
+  @media(max-width:767px) {
+.home_about .btn {
+    clear: both;
+    float: none!important;
+}
+    .learn-gen.starter-home-pod .starter-contain{
+display:block!important;
+  
+}
+    .learn-gen div.review_box {
+    margin: auto!important;
+    
+}
+    .starter-home-pod .half_grid .starter-box {
+
+      display: block;
+      margin: auto;
+      width: 100%;
+    }
+
+    .starter-home-pod .starter-contain {
+
+      display: block;
+    }
+    .starter-home-pod .half_grid {
+      float: none;
+      width: auto;
+      margin: 10px 0;
+    }
+    .starter-home-pod .half_grid .starter-box img {
+      height: 92px !important;
+      border-radius: 7px;
+      margin: 0px 12px 0px;
+    }
+    .starter-home-pod {
+      background-image:url('{{ shop.metafields.globals.starter_kit_bg}}');
+      padding-top: 60px;
+      background-size: cover;
+      min-height: 1200px;
+      padding: 15px;
+    }
+
+  }
+</style>
+
+<div class="starter-home-pod  home_about feature-row">
+  <div style="  text-align: center;
+    width: 100%;
+    margin: auto; max-width: 900px;" class="page-width">
+
+<div>
+    <h3 class="small--hide pod-response" style="margin:auto;max-width: 600px;color:#fff; font-size:30px!important;padding-bottom: 15px;">YOU’LL ALWAYS KNOW WHERE OUR INGREDIENTS COME FROM</h3>
+    <h3 class="large--hide pod-response" style="color:#fff; font-size:23px!important;margin-top: 30px;">YOU’LL ALWAYS KNOW WHERE OUR INGREDIENTS COME FROM</h3>
+
+    <div style=" color:#fff;  margin:auto;" class="home_merchrte">
+      <p style="color:#fff;">Travel the world with every plant-powered puff and
+discover the origins of our POD pack formulas.</p>
+    </div>
+</div>
+
+
+
+    <!----start -->
+
+
+    <div>
+      <div class="recycle_image_text">
+        <div class=" starter-contain ">
+          <div class=" half_grid">
+            <div class="starter-box">
+
+
+              <div style="display:flex" class="text-icon">
+                <img style=" " data-sizes="auto" data-src="
+          https://cdn.accentuate.io/22334931024/-1658197337273/STARTER-KIT-ASSETS-POD-v1658461740077.jpeg?416x356" alt="" class="lazyautosizes   ls-is-cached lazyloaded" sizes="108px" src="
+          https://cdn.accentuate.io/22334931024/-1658197337273/STARTER-KIT-ASSETS-POD-v1658461740077.jpeg?416x356">
+
+                <div style="text-align:left" class="">
+
+                  <h5 style="font-size:14px">ripple<sup>+</sup> device</h5>
+                  <div style="font-size:12px;padding:2px" class="">
+                    A next-gen rechargeable device, our POD seamlessly connects with all our signature formulas. Infinite puffs unlocked!</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" half_grid">
+            <div class="starter-box">
+
+
+              <div style="display:flex" class="text-icon">
+                <img style=" " data-sizes="auto" data-src="
+          https://cdn.accentuate.io/22334931024/-1658197337620/LEARN-MORE-POWER-v1660650599132.jpeg?416x356" alt="" class="lazyautosizes   ls-is-cached lazyloaded" sizes="108px" src="
+          https://cdn.accentuate.io/22334931024/-1658197337620/LEARN-MORE-POWER-v1660650599132.jpeg?416x356">
+
+                <div style="text-align:left" class="">
+
+                  <h5 style="font-size:14px">POWER Pod</h5>
+                  <div style="font-size:12px;padding:2px" class="">
+                    Your favourite minty-fresh aroma, with a crisp flavour that’s designed to revitalise. </div>
+
+                </div>
+              </div>
+
+            </div>
+            <section style="padding:0;   " id="product_des">
+              <div>
+
+                <div style="border-color:#ffffff6b!important; box-shadow: 0 0 20px #fff!important;    border-radius: 0 0 4px 4px;    background: #fff;
+    -webkit-box-shadow: 0 0 20px #ffff!important;" class="accordion-tab1">
+
+
+
+
+
+                  <div style="color:#ffffff6b;padding:0!important;border-bottom:none!important;border-top:none!important" class="accordion_n accordion-close_n" id="newsection_4">
+                    <span style="color:#000;top:-119px;right:10px"></span>
+                  </div>
+
+
+                  <div class="content_n" style="display: none;">
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613184643/POWER---INGREDIETNS--PEPPERMINT-v1660650829773.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">peppermint aroma</h5>
+                        <p style="font-size:12px;color: #000">Focuses energy, improves vitality</p>
+                      </div>
+                    </div>
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613185804/POWER---INGREDIETNS--GINSENG-v1660650851574.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ ginseng</h5>
+                        <p style="font-size:12px;color: #000">Fights tiredness, boosts energy</p>
+                      </div>
+                    </div>
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613186959/POWER---INGREDIETNS--GINGKO-BILOBA-v1660650868705.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ gingko biloba</h5>
+
+                        <p style="font-size:12px;color: #000">Supports brain function</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <div class="recycle_image_text">
+        <div class=" starter-contain ">
+       <div class=" half_grid">
+            <div class="starter-box">
+
+
+              <div style="display:flex" class="text-icon">
+                <img style=" " data-sizes="auto" data-src="
+          https://cdn.accentuate.io/22334931024/-1658197337963/LEARN-MORE-RELAX-v1660650604010.jpeg?416x356" alt="" class="lazyautosizes   ls-is-cached lazyloaded" sizes="108px" src="
+          https://cdn.accentuate.io/22334931024/-1658197337963/LEARN-MORE-RELAX-v1660650604010.jpeg?416x356">
+
+                <div style="text-align:left" class="">
+
+                  <h5 style="font-size:14px">RELAX Pod</h5>
+                  <div style="font-size:12px;padding:2px" class="">
+                    Unwind with this dreamy jasmine flavour that delivers the chillest of vibes. </div>
+
+                </div>
+              </div>
+
+            </div>
+            <section style="padding:0;   " id="product_des">
+              <div>
+
+                <div style="border-color:#ffffff6b!important; box-shadow: 0 0 20px #fff!important;    border-radius: 0 0 4px 4px;    background: #fff;
+    -webkit-box-shadow: 0 0 20px #ffff!important;" class="accordion-tab1">
+
+
+
+
+
+                  <div style="color:#ffffff6b;padding:0!important;border-bottom:none!important;border-top:none!important" class="accordion_n accordion-close_n" id="newsection_4">
+                    <span style="color:#000;top:-119px;right:10px"></span>
+                  </div>
+
+
+                  <div class="content_n" style="display: none;">
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613188223/RELAX---INGREDIETNS--JASMINE-v1660650901744.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">jasmine aroma</h5>
+                        <p style="font-size:12px;color: #000">Lightens mood, reduces stress</p>
+                      </div>
+                    </div>
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613189305/RELAX---INGREDIETNS--CHAMOMILE-v1660650918078.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ chamomile</h5>
+                        <p style="font-size:12px;color: #000">Relieves anxiety, calms the mind</p>
+                      </div>
+                    </div>
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613190478/RELAX---INGREDIETNS--LEMON-BALM-v1660650933388.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ lemon balm</h5>
+
+                        <p style="font-size:12px;color: #000">Soothes the brain, helps restlessness</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+
+       <div class=" half_grid">
+            <div class="starter-box">
+
+
+              <div style="display:flex" class="text-icon">
+                <img style=" " data-sizes="auto" data-src="
+          https://cdn.accentuate.io/22334931024/-1658197338309/LEARN-MORE-DREAM-v1660650608405.jpeg?416x356" alt="" class="lazyautosizes   ls-is-cached lazyloaded" sizes="108px" src="
+          https://cdn.accentuate.io/22334931024/-1658197338309/LEARN-MORE-DREAM-v1660650608405.jpeg?416x356">
+
+                <div style="text-align:left" class="">
+
+                  <h5 style="font-size:14px">DREAM Pod</h5>
+                  <div style="font-size:12px;padding:2px" class="">
+                    Sweet dreams are made of this peaceful blend, which encourages you to slow down. </div>
+
+                </div>
+              </div>
+
+            </div>
+            <section style="padding:0;   " id="product_des">
+              <div>
+
+                <div style="border-color:#ffffff6b!important; box-shadow: 0 0 20px #fff!important;    border-radius: 0 0 4px 4px;    background: #fff;
+    -webkit-box-shadow: 0 0 20px #ffff!important;" class="accordion-tab1">
+
+
+
+
+
+                  <div style="color:#ffffff6b;padding:0!important;border-bottom:none!important;border-top:none!important" class="accordion_n accordion-close_n" id="newsection_4">
+                    <span style="color:#000;top:-119px;right:10px"></span>
+                  </div>
+
+
+                  <div class="content_n" style="display: none;">
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613193040/DREAM---INGREDIETNS--LAVENDER-v1660651009954.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">lavender aroma</h5>
+                        <p style="font-size:12px;color: #000">Soothes the mind, reduces stress</p>
+                      </div>
+                    </div>
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613194566/DREAM---INGREDIETNS--VALERIAN-v1660651022029.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ valerian</h5>
+                        <p style="font-size:12px;color: #000">Eases insomnia, relaxes the body</p>
+                      </div>
+                    </div>
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660613195736/DREAM---INGREDIETNS--JUJUBE-SEED-v1660651034627.png?538x538" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ jujube seed</h5>
+
+                        <p style="font-size:12px;color: #000">Promotes sleep, calms anxiety</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+            </section>
+
+         
+
+
+        </div>
+
+
+
+
+      </div>
+
+    </div><div class="recycle_image_text">
+      <div class=" starter-contain ">
+       <div class=" half_grid">
+            <div class="starter-box">
+
+
+              <div style="display:flex" class="text-icon">
+                <img style=" " data-sizes="auto" data-src="
+          https://cdn.accentuate.io/22334931024/-1658197338647/LEARN-MORE-BOOST-v1660650611669.jpeg?416x356" alt="" class="lazyautosizes   ls-is-cached lazyloaded" sizes="108px" src="
+          https://cdn.accentuate.io/22334931024/-1658197338647/LEARN-MORE-BOOST-v1660650611669.jpeg?416x356">
+
+                <div style="text-align:left" class="">
+
+                  <h5 style="font-size:14px">BOOST Pod</h5>
+                  <div style="font-size:12px;padding:2px" class="">
+                    A natural pop of lychee zing for those moments when your energy is running low. </div>
+
+                </div>
+              </div>
+
+            </div>
+            <section style="padding:0;   " id="product_des">
+              <div>
+
+                <div style="border-color:#ffffff6b!important; box-shadow: 0 0 20px #fff!important;    border-radius: 0 0 4px 4px;    background: #fff;
+    -webkit-box-shadow: 0 0 20px #ffff!important;" class="accordion-tab1">
+
+
+
+
+
+                  <div style="color:#ffffff6b;padding:0!important;border-bottom:none!important;border-top:none!important" class="accordion_n accordion-close_n" id="newsection_4">
+                    <span style="color:#000;top:-119px;right:10px"></span>
+                  </div>
+
+
+                  <div class="content_n" style="display: none;">
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660615247151/LEARN-MORE-BOOST-LYCHEE-v1660651077240.png?258x258" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0"></h5>
+                        <p style="font-size:12px;color: #000">Raises stamina, centers the mind</p>
+                      </div>
+                    </div>
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660615248951/LEARN-MORE-BOOST-GREENTEA-v1660651106139.png?258x258" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ green tea</h5>
+                        <p style="font-size:12px;color: #000">Relieves inflammation, helps immunity</p>
+                      </div>
+                    </div>
+
+                    <div style="display:flex;text-align:left" class="text-icon">
+                      <img style="    margin: 0px 20px 20px;" data-sizes="auto" data-src="https://cdn.accentuate.io/22334931024/-1660615250743/LEARN-MORE-BOOST-MACA-v1660651124489.png?258x258" alt="" class="logo-bar__image lazyautosizes   lazyload" sizes="497px" src="">
+                      <div style="block!important">
+                        <h5 style="color: #000;margin:0">+ maca</h5>
+
+                        <p style="font-size:12px;color: #000">Increases strength, boosts energy</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+
+        <div class=" half_grid">
+          <div class="starter-box">
+
+
+            <div style="display:flex" class="text-icon">
+              <img style=" " data-sizes="auto" data-src="
+          https://cdn.accentuate.io/22334931024/-1658197338987/STARTER-KIT-ASSETS-CABLE-v1658461778854.jpeg?416x356" alt="" class="lazyautosizes   ls-is-cached lazyloaded" sizes="108px" src="
+          https://cdn.accentuate.io/22334931024/-1658197338987/STARTER-KIT-ASSETS-CABLE-v1658461778854.jpeg?416x356">
+
+              <div style="text-align:left" class="">
+
+                <h5 style="font-size:14px">POD charging cable</h5>
+                <div style="font-size:12px; padding:2px" class="">
+                  The POD device has eight glorious hours of battery life before you’ll even need to use this baby to charge it up again. </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+
+    </div></div>
+
+
+
+    
+  </div>
+</div>

@@ -1,0 +1,140 @@
+{{ 'static.css' | asset_url | stylesheet_tag }}
+
+	 {% comment %}
+      <div class="contact-form form-vertical">
+        {%- assign formId = 'ContactForm' -%}
+        {% form 'contact', id: formId %}
+          {% include 'form-status', form_id: formId %}
+
+          <div class="grid grid--half-gutters">
+            <div class="grid__item medium-up--one-half">
+              <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
+              <input type="text" id="{{ formId }}-name" name="contact[name]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+            </div>
+            <div class="grid__item medium-up--one-half">
+              <label for="{{ formId }}-email">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="{{ formId }}-email"
+                name="contact[email]"
+                autocorrect="off"
+                autocapitalize="off"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+                >
+              {%- if form.errors contains 'email' -%}
+                <span id="{{ formId}}-email-error" class="input-error-message">{% include 'icon-error' %} {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+              {%- endif -%}
+            </div>
+          </div>
+
+          <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
+          <input type="tel" id="{{ formId }}-phone" name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+
+          <label for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label>
+          <textarea rows="10" id="{{ formId }}-message" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+          <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}">
+
+        {% endform %}
+      </div>
+      {% endcomment %}
+
+<div class="full_width">
+  <div class="white_bg"></div>
+<div class="container">
+  <div class="account_sidebar page_sidebar">
+<h5 class="hide--mobile">Customer care</h5>
+ <h5 class="mobile-show" style="display:none;">Customer care {% include 'icon-chevron-down' %}</h5>   
+<ul>
+      {% for link in linklists.customer-care.links %}
+      <li class="{% if link.active %}active{% endif %}">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </li>            	
+      {% endfor %}
+
+    </ul>
+</div>
+  
+    <div class="static_right_info">
+      <div class="right_info_wrapper">
+        <h1 class="pagetitle">{{ page.title }}</h1>
+        <ul>
+          <li>
+        	<h3>{{ section.settings.enquiries_title_one }}</h3>
+            {{ section.settings.enquiries_info_one }}
+          </li>
+          <li>
+            <h3>{{ section.settings.enquiries_title_two }}</h3>
+            {{ section.settings.enquiries_info_two }}
+          </li>
+          <li>
+            <h3>{{ section.settings.enquiries_title_three }}</h3>
+            {{ section.settings.enquiries_info_three }}
+          </li>
+      </div>
+  </div>
+</div>
+  
+</div>
+
+
+{% schema %}
+  {
+    "name": "Contact",
+    "settings": [
+
+  {
+  "type": "text",
+  "id": "enquiries_title_one",
+  "label": "Enquiries Title One"
+  },
+  {
+  "type": "richtext",
+  "id": "enquiries_info_one",
+  "label": "Enquiries Info One"
+  },
+  {
+  "type": "text",
+  "id": "enquiries_title_two",
+  "label": "Enquiries Title Two"
+  },
+  {
+  "type": "richtext",
+  "id": "enquiries_info_two",
+  "label": "Enquiries Info Two"
+  },
+  {
+  "type": "text",
+  "id": "enquiries_title_three",
+  "label": "Enquiries Title Three"
+  },
+  {
+  "type": "richtext",
+  "id": "enquiries_info_three",
+  "label": "Enquiries Info Three"
+  }
+
+]
+  }
+{% endschema %}
+
+<script>
+  
+$(document).ready(function(){
+	
+ 
+  $(".account_sidebar h5.mobile-show").click(function(){
+    $(".account_sidebar ul").slideToggle('show');
+  });
+  
+  
+});  
+  
+  
+</script>

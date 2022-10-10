@@ -1,0 +1,183 @@
+<div class="mission_logos">
+  
+  <div class="m_logo m_logo_1">
+    {%- assign mimgurl_1 = section.settings.logo_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% include 'image-style' with image: section.settings.logo_1 %}
+    <img id=""
+         class="lazyload"
+         src="{{ section.settings.logo_1 | img_url: '200x200' }}"
+         data-src="{{ mimgurl_1 }}"
+         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+         data-aspectratio="{{ section.settings.logo_1.aspect_ratio }}"
+         data-sizes="auto"
+         alt="{{ section.settings.logo_1.alt | escape }}">
+  </div>
+  
+  <div class="m_logo m_logo_2">
+    {%- assign mimgurl_2 = section.settings.logo_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% include 'image-style' with image: section.settings.logo_2 %}
+    <img id=""
+         class="lazyload"
+         src="{{ section.settings.logo_2 | img_url: '200x200' }}"
+         data-src="{{ mimgurl_2 }}"
+         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+         data-aspectratio="{{ section.settings.logo_2.aspect_ratio }}"
+         data-sizes="auto"
+         alt="{{ section.settings.logo_2.alt | escape }}">
+  </div>
+  
+  <div class="m_logo m_logo_3">
+    {%- assign mimgurl_3 = section.settings.logo_3 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% include 'image-style' with image: section.settings.logo_3 %}
+    <img id=""
+         class="lazyload"
+         src="{{ section.settings.logo_3 | img_url: '200x200' }}"
+         data-src="{{ mimgurl_3 }}"
+         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+         data-aspectratio="{{ section.settings.logo_3.aspect_ratio }}"
+         data-sizes="auto"
+         alt="{{ section.settings.logo_3.alt | escape }}">
+  </div>
+  
+  <div class="m_logo m_logo_4">
+    {%- assign mimgurl_4 = section.settings.logo_4 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% include 'image-style' with image: section.settings.logo_4 %}
+    <img id=""
+         class="lazyload"
+         src="{{ section.settings.logo_4 | img_url: '200x200' }}"
+         data-src="{{ mimgurl_4 }}"
+         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+         data-aspectratio="{{ section.settings.logo_4.aspect_ratio }}"
+         data-sizes="auto"
+         alt="{{ section.settings.logo_4.alt | escape }}">
+  </div>
+  
+  <div class="m_logo m_logo_5">
+    {%- assign mimgurl_5 = section.settings.logo_5 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% include 'image-style' with image: section.settings.logo_5 %}
+    <img id=""
+         class="lazyload"
+         src="{{ section.settings.logo_5 | img_url: '200x200' }}"
+         data-src="{{ mimgurl_5 }}"
+         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+         data-aspectratio="{{ section.settings.logo_5.aspect_ratio }}"
+         data-sizes="auto"
+         alt="{{ section.settings.logo_5.alt | escape }}">
+  </div>
+  
+   <div class="m_logo m_logo_6">
+    {%- assign mimgurl_6 = section.settings.logo_6 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% include 'image-style' with image: section.settings.logo_6 %}
+    <img id=""
+         class="lazyload"
+         src="{{ section.settings.logo_6 | img_url: '200x200' }}"
+         data-src="{{ mimgurl_6 }}"
+         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+         data-aspectratio="{{ section.settings.logo_6.aspect_ratio }}"
+         data-sizes="auto"
+         alt="{{ section.settings.logo_6.alt | escape }}">
+  </div>
+  
+  <div class="m_logo m_logo_7">
+    {%- assign mimgurl_7 = section.settings.logo_7 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {% include 'image-style' with image: section.settings.logo_7 %}
+    <img id=""
+         class="lazyload"
+         src="{{ section.settings.logo_7 | img_url: '200x200' }}"
+         data-src="{{ mimgurl_7 }}"
+         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+         data-aspectratio="{{ section.settings.logo_7.aspect_ratio }}"
+         data-sizes="auto"
+         alt="{{ section.settings.logo_7.alt | escape }}">
+  </div>
+  
+  <div class="m_header_text">
+  <h3> </h3>
+  </div>
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Header logos",
+   "settings": [
+	  {
+          "type": "header",
+          "content": "1. First logo *"
+        },
+     {
+          "type": "image_picker",
+          "id": "logo_1",
+          "label": "Upload image[jpg/gif]",
+		   "info": "size: 615 x 490px"
+        },
+{
+          "type": "header",
+          "content": "2. second logo *"
+        },
+     {
+          "type": "image_picker",
+          "id": "logo_2",
+          "label": "Upload image[jpg/gif]",
+		   "info": "size: 632 x 432px"
+        },
+   {
+          "type": "header",
+          "content": "3. third logo *"
+        },
+     {
+          "type": "image_picker",
+          "id": "logo_3",
+          "label": "Upload image[jpg/gif]",
+		   "info": "size: 552 x 522px"
+        },
+{
+          "type": "header",
+          "content": "4. fourth logo *"
+        },
+     {
+          "type": "image_picker",
+          "id": "logo_4",
+          "label": "Upload image[jpg/gif]",
+		   "info": "size: 480 x 480px"
+        },
+{
+          "type": "header",
+          "content": "5. fifth logo *"
+        },
+     {
+          "type": "image_picker",
+          "id": "logo_5",
+          "label": "Upload image[jpg/gif]",
+		   "info": "size: 575 x 448px"
+        },
+{
+          "type": "header",
+          "content": "6. sixth logo *"
+        },
+     {
+          "type": "image_picker",
+          "id": "logo_6",
+          "label": "Upload image[jpg/gif]",
+		   "info": "size: 599 x 422px"
+        },
+{
+          "type": "header",
+          "content": "7. seventh logo *"
+        },
+     {
+          "type": "image_picker",
+          "id": "logo_7",
+          "label": "Upload image[jpg/gif]",
+		   "info": "size: 402 x 587px"
+        }
+
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

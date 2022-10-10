@@ -1,0 +1,30 @@
+
+{% if product.metafields.accentuate.title_pack != blank %}
+<div class="save-with-packs">
+<div class="page-width page-w-1140">
+  
+  <h2>{{ product.metafields.accentuate.title_pack }}</h2>
+  
+  
+{% assign selected_handles = product.metafields.accentuate.select_save_pack_one | split: '|' %}
+  {% assign product_handle = product.metafields.accentuate.select_save_pack_one | split: '|' %}
+	
+  {% if product.metafields.accentuate.select_save_pack_one != blank %}
+  <div class="row-10">
+ 		{% for product_handle in selected_handles %}
+			{%- if product_handle != product.handle -%}
+			{% assign products = all_products[product_handle]  %}
+			
+    	<div class="grid__item grid__item--{{section.id}} pack_product">
+        {% include 'product-packs-box', max_height: max_height %}
+   
+      </div>
+			{%- endif -%}
+		{% endfor %}
+  </div>
+  {%- endif -%}
+</div>
+</div>
+{%- endif -%}
+
+

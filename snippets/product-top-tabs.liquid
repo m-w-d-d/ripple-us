@@ -1,0 +1,89 @@
+{% if product.metafields.accentuate.ingredients_section_title != blank %}
+<section style="padding:0;"id="product_des" >
+  <div >
+    
+    <div style="border-color:{{ product.metafields.text_color.text_color }}!important;"class="accordion-tab1">  
+      <div style="color:{{ product.metafields.text_color.text_color }};"class="accordion_n" id="newsection_1">{{product.metafields.accentuate.ingredients_section_title}}<span></span></div> 
+      <div style="color:#00;" class="content_n">
+      
+      
+      
+              
+        <div style="display:flex"class="text-icon">
+        <img style="    margin: 0px 20px 20px;"data-sizes="auto" 
+             data-src="{{product.metafields.ingredients_image_1.ingredients_image_1}}" 
+             alt="" 
+             class="logo-bar__image lazyautosizes   lazyload" 
+             sizes="56px" 
+             src="">
+  <div style="block!important">
+<div style="color: {{ product.metafields.text_color.text_color }}">{{ product.metafields.ingredients_title_1.ingredients_title_1}}</div>
+
+        <p style="color: #000">{{ product.metafields.ingredients_info_1.ingredients_info_1 }}</p>
+          </div>
+        </div>
+                <div style="display:flex"class="text-icon">
+        <img style="    margin: 0px 20px 20px;"data-sizes="auto" 
+             data-src="{{product.metafields.ingredients_image_2.ingredients_image_2}}" 
+             alt="" 
+             class="logo-bar__image lazyautosizes   lazyload" 
+             sizes="56px" 
+             src="">
+<div style="block!important">
+          <div style="color: {{ product.metafields.text_color.text_color }}">{{ product.metafields.ingredients_title_2.ingredients_title_2 }}</div>
+
+        <p style="color: #000">{{ product.metafields.ingredients_info_2.ingredients_info_2 }}</p>
+          </div>
+                </div>
+                <div style="display:flex"class="text-icon">
+        <img style="    margin: 0px 20px 20px;"data-sizes="auto" 
+             data-src="{{product.metafields.ingredients_image_3.ingredients_image_3}}" 
+             alt="" 
+             class="logo-bar__image lazyautosizes   lazyload" 
+             sizes="56px" 
+             src="">
+<div style="block!important">
+         <div style="color: {{ product.metafields.text_color.text_color }}">{{ product.metafields.ingredients_title_1.ingredients_title_three }}</div>
+
+        <p style="color: #000">{{ product.metafields.ingredients_info_3.ingredients_info_3 }}</p>
+     
+          </div>
+                </div>
+        
+      </div>
+      
+      
+
+    </div>
+    
+        <div style="border-color:{{ product.metafields.text_color.text_color }}!important;"class="accordion-tab1">  
+      <div style="color:{{ product.metafields.text_color.text_color }};border-top: none;"class="accordion_n" id="newsection_3">{{product.metafields.accentuate.tab_section_title2}}<span></span></div> 
+      <div style="color:#000;" class="content_n">
+
+                <p style=" color:#000;">{{product.metafields.accentuate.tab_section_2_info}}</p>
+
+      
+
+    </div>
+    
+    
+   
+  </div>
+    
+    <div style="border-color:#{{ product.metafields.text_color.text_color }}!important" class="accordion-tab1">  
+      <div style="color:#{{ product.metafields.text_color.text_color }};border-top: none;"class="accordion_n" id="newsection_3">{{product.metafields.accentuate.tab_section_title3}}<span></span></div> 
+      <div style="color:#000;" class="content_n">
+
+      
+                <p style=" color:#000;">{{product.metafields.accentuate.tab_section_3_info}}</p>
+
+
+    </div>
+    
+    
+   
+  </div>
+</section>
+
+
+{% endif %}

@@ -1,0 +1,32 @@
+
+<div class="home_merch merch--{{ section.id }}">
+  
+
+
+  <div class="home_merch_desk small--hide">
+  {%- assign merch = section.settings.ho_image1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {% include 'image-style' with image: section.settings.ho_image %}
+  <img id=""
+                 class="lazyload"
+                 src="{{ section.settings.ho_image1 | img_url: '1600x' }}"
+                 data-src="{{ merch }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.ho_image.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.ho_image.alt | escape }}">
+  </div>
+  <div class="home_merch_mo large--hide">
+  {%- assign mo_merch = section.settings.ho_image_mo1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {% include 'image-style' with image: section.settings.ho_image_mo %}
+  <img id=""
+                 class="lazyload"
+                 src="{{ section.settings.ho_image_mo1 | img_url: '200x200' }}"
+                 data-src="{{ mo_merch }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.ho_image_mo.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.ho_image_mo.alt | escape }}">
+    
+  </div>
+
+</div>

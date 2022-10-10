@@ -1,0 +1,190 @@
+{% assign my_enable = product.metafields.enable_tab.enable_tab %}
+
+{% assign my_image = product.metafields.one_image.one_image %}
+      {% assign my_color = product.metafields.product_color.product_color %}
+      
+
+
+      
+  {% assign my_title_1 = product.metafields.accordion_one_title.accordion_one_title %}
+  {% assign my_description_1 = product.metafields.one_description.one_description %}
+
+  {% assign my_title_2 = product.metafields.accordion_two_title.accordion_two_title %}
+  {% assign my_description_2 = product.metafields.two_description.two_description %}
+      
+  {% assign my_title_3 = product.metafields.accordion_three_titl.accordion_three_title %}
+  {% assign my_description_3 = product.metafields.three_description.three_description %} 
+      
+  {% assign my_title_4 = product.metafields.accordion_four_title.accordion_four_title %}
+  {% assign my_description_4 = product.metafields.four_description.four_description %}    
+
+{% if my_enable %}
+<section class="product__tab">
+  
+  <div class="feature-row black_border_bottom">
+    <div class="feature-row__item feature-row__text">
+    
+      
+      <h2>Additional information</h2>
+     <div class="accordion-tab"> 
+      
+      
+  
+      
+      
+{% if my_title_1 %}
+<div class="accordion" id="section1">{{ my_title_1 }}<span></span></div>
+  <div class="content">
+    {{ my_description_1 }}
+  </div>    
+{% endif %}      
+  
+ 
+{% if my_title_2 %}      
+  <div class="accordion" id="section2">{{ my_title_2 }}<span></span></div>
+  <div class="content">
+    {{ my_description_2 }}
+  </div>
+{% endif %}
+      
+      
+{% if my_title_3 %}      
+  <div class="accordion" id="section3">{{ my_title_3 }}<span></span></div>
+  <div class="content">
+    {{ my_description_3 }}
+  </div>
+{% endif %}      
+ 
+      
+{% if my_title_4 %}      
+  <div class="accordion" id="section4">{{ my_title_4 }}<span></span></div>
+  <div class="content">
+    {{ my_description_4 }}
+  </div>
+{% endif %}       
+ 
+ 
+
+  
+
+</div>
+    </div>
+    
+    {% if my_image %}
+    
+    <div class="feature-row__item text-center feature-row__img" style="background:{{ my_color }} url({{ my_image }})">
+      <img style=display:none; src="{{ my_image }}" alt="">
+    </div>
+    {% endif %}
+    </div>
+</section>
+{% endif %}
+
+<style>
+.content {
+    padding: 0 0 25px;
+}
+  .accordion-tab{
+  	width:100%;
+    float:left;	
+  } 
+.accordion p:last-child {
+    margin-bottom:20px;
+}  
+.accordion {
+  margin: 0;
+  padding:7px 0;
+  border-bottom:none;
+  text-decoration:none;
+  border-top:none;
+  position:relative;
+  font-family: 'Swiss721BT-Bold';
+  font-weight: normal;
+  padding-left: 0;
+  text-transform: none;
+  cursor: pointer;	
+  font-size: 15px;
+  letter-spacing:0;  
+}
+  #section3{
+  
+  }  
+.accordion-open {
+color: #000;
+}
+.accordion-open span {
+  display:block;
+  position:absolute;
+  right:0;
+  top:20%;
+  padding:7px 4px;
+}
+.accordion-open span {
+  background:url('{{ 'arrow-d.png' | asset_url }}') 10px 8px no-repeat;
+  background-size:5px;
+ 
+}
+  .accordion-open span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    padding: 0;
+    height: 40px;
+    width: 18px;
+  }  
+.accordion-close span {
+  display:block;
+  position:absolute;
+  right:0;
+  top:0;
+  background:url('{{ 'plus.png' | asset_url }}') center center no-repeat;
+  background-size:10px;  
+   height: 35px;
+    width:11px;
+}
+.faqpage div.container {
+  padding:0;
+  margin:0;
+}
+.faqpage div.container {
+  max-width:100%;
+  padding:5px 0;
+}
+.faqpage div.content {
+  background:#f0f0f0;
+  margin: 0;
+  padding:10px;
+  font-size:.9em;
+  line-height:1.5em;
+}
+.faqpage div.content ul {
+  padding:0;
+  margin:0;
+  padding:3px;
+}
+.faqpage div.content p {
+  padding:0;
+  margin:3px 0 10px;
+  padding:3px;
+}
+.faqpage div.content ul li {
+  list-style-position:inside;
+  line-height:25px;
+}
+</style>
+
+<script type="text/javascript" src="{{ 'jquery_accordion.js' | asset_url }}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('.accordion').accordion({
+cookieName: 'accordion_nav'
+});
+
+  
+
+  
+});
+  
+ 
+</script>

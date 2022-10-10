@@ -1,0 +1,615 @@
+<script type="text/javascript">
+var cartCount = {{ cart.item_count }};
+$(document).ready(function(){
+  {% if cart.item_count != 0 %}  
+     $('#cart-number').replaceWith("<a href='javascript:void(0);' id='cart-number' class='cart-button itemincart'>" + cartCount + "</a>");
+  {% endif %}
+  
+  
+ 
+  
+});
+
+
+/*============================================================================
+Start of cart-related functionality
+==============================================================================*/
+function ajaxSubmitCart() { 
+$cart = $("#cart");
+$.ajax({
+  url: '/cart.js',
+  dataType: 'json',
+  type: 'post',
+  data: $cart.serialize(),
+  success: function (data) { 
+	refreshCart(data);
+  }
+});}
+
+function refreshCart(cart) { 
+  if(typeof window.BOLD !== 'undefined'
+     && typeof window.BOLD.common !== 'undefined'
+     && typeof window.BOLD.common.cartDoctor !== 'undefined') {
+    // NOTE: "cart" should be the variable containing the cart json data
+    cart = window.BOLD.common.cartDoctor.fix(cart);
+  }
+
+ // alert("hii");
+    $cartBtn = $("#CartCount");
+   
+    if ($cartBtn && $cartBtn.size()) {  
+      var value = $cartBtn.text() || '0';
+      var cart_items_html = "";
+      var $cart = $("#cart ul");
+      
+      //alert(shopCurrency);
+      
+      $cartBtn.text(value.replace(/[0-9]+/,cart.item_count));
+      $cart.find('li:not(:first)').remove();
+      
+      if (cart.item_count <= 0) { 
+        
+        $cart.html('');
+        
+        $cart.append("<li class='empty_cart'>Your bag is empty.</li>");                                         
+                             
+        $(".cart-button").removeClass('itemincart');             
+                     
+        $(".cart-button").html('<a href="javascript:void(0);" id="cart-number" class="cart-button itemincart">' + cart.item_count + '</a>');
+          
+        $('.new-total-price').html(Shopify.formatMoney(cart.total_price, $cart.data('money-format')));    
+        
+        $("#CartCount").addClass('count_0');
+        $("#added-box").addClass('count_no'); 
+        // $(".addbag_count").hide();
+        
+        $("#cart_addpro").hide();
+        $(".total_fix, .additional-checkout-buttons").hide();
+        
+        $('#added-box h5').html("");
+          $('#added-box .progress').hide();  
+         
+
+        //   $('#added-box .progress').hide();    
+     //   $('#added-box h5').hide();
+
+
+        
+      } else { 
+        
+        console.log(cart.items);
+        
+       var check_com=$('#product_compare_price').html();
+
+        
+        
+        
+        $.each(cart.items, function(index, item) {
+          var recurring_desc = "";
+          
+             if(item.properties!="null")
+          {
+             var item_prop= (JSON.stringify(item.properties));
+        //    alert(item_prop);
+            
+            // var check_com_only='<div class="compare_price">' + item.properties + '</div>';
+           // console.log(check_com_only);
+
+          // recurring_desc = "<span> Delivered Every " + item.properties_all.frequency_num + " " + item.properties_all.frequency_type_text + " " + item.properties_all.discounted_price + " each" + "</span>"; 
+          }
+          
+          
+          
+          if(item.properties_all  && item.properties_all .frequency_num){
+           recurring_desc = "<span> Delivered Every " + item.properties_all.frequency_num + " " + item.properties_all.frequency_type_text + " " + item.properties_all.discounted_price + " each" + "</span>"; 
+          }
+        // alert("i m else part");
+          cart_items_html += '';
+          cart_items_html += '<li class="cart_item last_cart_item">' +
+		     
+			 '<div class="cart_image">' +
+             '<img src="' + item.image.replace(/(\.[^.]*)$/, "_medium$1").replace('http:', '') + '" alt="' + htmlEncode(item.title) + '" style="width:100%" />' +
+             '</div>' +
+			 '<div class="cart_item_right">' +
+            '<div class="item_title">' + item.product_title + '</div>' + 
+            '<div class="bold_recurring_desc">' + recurring_desc + '</div>' + 
+            '<div class="cartmeta-text">' +            
+            '<div class="Size_sec">'+ item.variant_options[0] + '</div>' + 
+            '<div class="Color_sec">'+ item.variant_options[1] + '</div>' + 
+            '<div class="Color_sec">'+ item.variant_options[2] + '</div>' +             
+            '</div>';
+          
+          
+               if(item_prop!=null && item_prop!="{}")
+          {
+            
+           if (item_prop.indexOf("shipping_interval_unit_type") > 0)
+           {
+             
+             
+           }
+            else
+            {
+            
+            
+        //  if (item_prop.indexOf("shipping_interval_unit_type") == 0)
+
+        //  {
+         var myStr = item_prop.replace(/"/g, "");
+            
+       var myStr1=myStr.replace(/[{}]/g, '');
+            var myStr2=myStr1.replace(/:/g, "");
+            var myStr3= myStr2 * item.quantity;
+            
+            
+            if(myStr2!="" && myStr2!="null")
+            {
+             
+            
+            cart_items_html += '<div class="compare_price">'+ Shopify.formatMoney(myStr3, $cart.data('money-format')) +'</div>';
+            }
+       //   }
+          }
+          }
+            
+            
+            
+    		cart_items_html += '<div class="price">' + Shopify.formatMoney(item.final_line_price, $cart.data('money-format')) + '</div>' +
+			 '<div class="mm-counter">' +
+             '<span class="quantity-count minus ss-icon minus">&#x002D;</span>' +
+             '<input type="input" class="quantity" name="updates[]" id="updates_' + item.id + '" value="' + item.quantity +'" />' +
+             '<span class="quantity-count plus ss-icon plus">&#x002B;</span>' +
+             '</div>' +
+            '<div class="removelink">' +
+			 '<a href="javascript:void(0)" class="removelink_del lt lt-close" onclick="remove_item(' + item.variant_id + '); return false;">remove</a>' +
+			 '</div>' +
+			 '</div>' +
+            
+			 '</li>' ; 
+		
+        });
+		
+		
+		cart_items_html += '<div class="total_fix hide"><div class="subtotal subtotal_2">Subtotal<span>' + Shopify.formatMoney(cart.total_price, $cart.data('money-format')) + '</span></div>' +
+          '<p class="cart_note">{{ settings.delivery_msg }} </p>'+
+			 '<div class="input_submit"><i></i><span><input type="submit" name="checkout" value="secure checkout" class="btn_input">{% if settings.d_msg_enable != blank %}<div class="btn_i"></div>{% endif %}</span></div>'+
+          	//'<a href="/collections/all" class="btn right continues white_btn">continue shopping</a>'+
+        		
+        		'</div>';
+        
+           
+  
+        
+        
+		
+        $(".cart-button").addClass('itemincart');
+        
+        $(".cart-button").html('<a href="javascript:void(0);" id="cart-number" class="cart-button itemincart">' +cart.item_count+ '</a>');
+          
+        $('.new-total-price').html(Shopify.formatMoney(cart.total_price, $cart.data('money-format')));  
+
+        $cart.html(cart_items_html);
+        //$cart.append(cart_items_html);
+        $cart.find('li.cart_item:last').addClass('last_cart_item');
+     
+          if($('.currencies:visible option:selected').val()) {
+            Currency.convertAll($cart.data('shop-currency'), $('.currencies:visible option:selected').val()); 
+          }
+		
+		$("#PageContainer").addClass('slideleft_body');
+        $(".site-header").addClass('slideleft_header');
+        $(".cart-page-link").addClass("activebag");
+        $(".top_msg").addClass("slideleft_msg");
+        $("body").addClass('no_scroll');
+		
+		$("#added-box-wrapper").addClass('showcart');  
+        $(".white_trans").fadeIn('fast');
+        $(".white_trans").addClass('activefast');
+		
+		$("#Prod_added_suc").html('Product added to cart');  
+        
+        $("#Prod_added_suc").fadeIn(6000);
+		
+        $("#Prod_added_suc").fadeOut(6000);
+        
+        $(".addbag_count").show();    
+        $("#cart_addpro").show();
+        $(".total_fix, .additional-checkout-buttons").show();
+        
+         $("#work").addClass("intro");
+       
+        setTimeout(function(){
+  $("#added-box-wrapper").toggleClass("topboder_active");
+    }, 350);
+        
+        $('.money').text(function () {
+   // return $(this).text().replace(/.00/g, '');
+});
+        
+        $('.addslider').slick('refresh');
+      
+    $("div.Size_sec:contains(Default)").hide();
+    $("div.Color_sec:contains(undefined)").hide();
+        
+$("#CartCount").removeClass('count_0');
+$("#added-box").removeClass('count_no');   
+      $('.progress').remove();
+   $('#added-box .progress2').hide();    
+        
+        
+        var subt =  $('.subtotal_2 .money').html();   
+        $('.subtotal_3 .money').html(subt);   
+        
+        
+        
+
+   $( '<div class="progress"><div class="Bar" data-value=""></div></div>' ).insertAfter( "#added-box-wrapper h5" );
+        
+var delivery_cost= "{{ settings.prog_price }}";
+var s1=  $('.subtotal .money').html();
+var order_total = s1.substring(1);
+       var new_tot= delivery_cost - order_total;
+console.log(order_total);
+console.log(delivery_cost); 
+if(Number(delivery_cost) > Number(order_total))
+{
+//  alert("yes");
+
+var val1 = order_total * 100;
+var val2 = val1/delivery_cost;
+$('.Bar').animate({width: val2+'%' }, 1000);
+$('.Bar').css('width', val2+'%' );
+$('.Bar').attr('data-value', val2);
+//alert("<h5>$ <i>{{ settings.prog_price }}</i> {{ settings.prog_text }}</h5>");
+  // $('#added-box h5').html("");
+   
+$('#added-box h5').html("$<i>"+ new_tot.toFixed(2) +"</i> {{ settings.prog_text }}");
+ // $('#added-box h5').html("");
+//$('#added-box h5 i').html(delivery_cost - order_total);
+ // $ 40.01 away from free standard delivery
+ //$('#added-box h5').html('away from free standard delivery');
+$('.cart_note').show();
+ 
+}
+else
+{
+  //  alert("no");
+$('.Bar').animate({width: '100%'}, 1000);
+$('.Bar').css('width', '100%' );
+$('.Bar').attr('data-value', '100');
+ //  $('#added-box h5 i').html(delivery_cost - order_total);
+   $('#added-box h5').html('{{ settings.congrats_text }}');
+   $('.cart_note').hide();
+  
+  
+ /* if(Number(delivery_cost) != 1 ){    
+    $('#added-box h5').html('Congrats! You get free standard shipping.');
+  } */
+  
+}     
+        
+        
+        
+      }
+    }
+  }  
+function htmlEncode(value){ 
+    if (value) {
+        return $('<div/>').text(value).html(); 
+    } else {
+        return '';
+    }}  
+	
+	
+function remove_item(id) {
+      document.getElementById('updates_'+id).value = 0;
+      ajaxSubmitCart();
+  }	
+	
+ {% if settings.d_msg_enable != blank %}
+  $('.agree_msg input:checkbox').change(function(){
+    if($(this).is(":checked")) {
+      $('.btn_input3').prop("disabled",false);
+    } else {
+      $('.btn_input3').prop("disabled","true");
+    }
+  }); 
+  
+   {% endif %}  
+  
+  
+  /*  $('.btn_i').on('click',function(){
+ 
+if( $('.btn_input3').hasClass('disabled') ){
+   
+    alert('Please accept the terms of service checkbox');
+}
+});
+  */
+
+  
+$(document).on("change", ".mm-counter input", function() { 
+    ajaxSubmitCart();
+  });  
+  
+$(document).on("click", ".mm-counter .minus", function() { 
+    var quantity = parseInt($(this).next("input").val()); 
+    var qty = quantity ;
+    
+    quantity -= 1;
+    $(this).next("input").attr("value", quantity);
+    
+    if (qty <= 0) {
+
+
+
+      $(this).closest('li.cart_item').addClass('animated fadeOutUp')
+      setTimeout(ajaxSubmitCart, 500);
+    } else {
+      ajaxSubmitCart();
+    }
+
+  
+  
+  });  
+
+$(document).on("click", ".mm-counter .plus", function() { 
+    var quantity = parseInt($(this).prev("input").val()); 
+    quantity += 1;
+    $(this).prev("input").attr("value", quantity);
+    ajaxSubmitCart();
+  
+
+  
+  });
+  
+
+$(document).on("submit",".product_form", function(e) { 
+      e.preventDefault();
+      var $addToCartForm = $(this);  
+      var $addToCartBtn = $addToCartForm.find('.singleaddcart');
+
+      $.ajax({
+        url: '/cart/add.js',
+        dataType: 'json',
+        type: 'post',
+        data: $addToCartForm.serialize(),
+        success: function(itemData) { 
+    	  $.getJSON("/cart.js", function(cart) { 
+            refreshCart(cart);
+            window.setTimeout(function(){ $('.cart-button').click(); }, 500);
+          });    
+        },
+        error: function(XMLHttpRequest) {
+          var response = eval('(' + XMLHttpRequest.responseText + ')');
+          response = response.description;
+          $('.warning').remove();
+
+          //var warning = '<p class="warning animated bounceIn">' + response.replace('All 1 ', 'All ') + '</p>';
+          var warning = '<p class="warning animated bounceIn">' + response.replace('All 1 ', 'All ') + '</p>';
+          $addToCartBtn.after(warning);
+          $addToCartBtn.removeAttr('disabled').removeClass('disabled');
+          $addToCartBtn.find('span').text("Add to Basket").removeClass('zoomOut').addClass('zoomIn');
+        }
+      });
+
+      return false;
+    });
+/*
+$(document).on("click", ".slideleft_body", function(){
+	$("#added-box-wrapper").removeClass('showcart');
+	$("#PageContainer").removeClass('slideleft_body'); 
+  $(".cart-page-link").removeClass("activebag");
+   $("#added-box-wrapper").removeClass("topboder_active");
+  $(".site-header").removeClass('slideleft_header');
+  $(".top_msg").removeClass("slideleft_msg");
+  $(".white_trans").fadeOut();
+  $(".white_trans").removeClass("activefast");
+  $("body").removeClass('no_scroll');
+});
+*/
+  $(document).on("click", "#close_bag", function(){
+	$("#added-box-wrapper").removeClass('showcart');
+	$("#PageContainer").removeClass('slideleft_body'); 
+  $(".cart-page-link").removeClass("activebag");
+   $("#added-box-wrapper").removeClass("topboder_active");
+    $(".site-header").removeClass('slideleft_header');
+    $(".top_msg").removeClass("slideleft_msg");
+    $(".white_trans").fadeOut();
+    $("body").removeClass('no_scroll');
+});
+  
+  $(document).on("click", ".white_trans", function(){
+	$("#added-box-wrapper").removeClass('showcart');
+	$("#PageContainer").removeClass('slideleft_body'); 
+  $(".cart-page-link").removeClass("activebag");
+   $("#added-box-wrapper").removeClass("topboder_active");
+    $(".site-header").removeClass('slideleft_header');
+    $(".top_msg").removeClass("slideleft_msg");
+    $(this).fadeOut();
+    $("body").removeClass('no_scroll');
+});
+  
+  $(document).on("click", ".btn_input3", function(){ 
+    $(".btn_input2").trigger("click");  
+  });
+  
+   $(window).on('load resize', function () {
+ var ajaxheight = $(window).height();
+     
+  
+     $("#added-box ul").css({'height': ajaxheight - 610});
+  
+  });
+  
+  
+  $(document).ready(function(){
+  
+var delivery_cost= "{{ settings.prog_price }}";
+var s1=  $('.subtotal .money').html();
+var order_total = s1.substring(1);
+console.log(order_total);
+console.log(delivery_cost); 
+ if(Number(delivery_cost) > Number(order_total))
+{
+
+var val1 = order_total * 100;
+var val2 = val1/delivery_cost;
+$('.Bar').animate({width: val2+'%' }, 1000);
+$('.Bar').css('width', val2+'%' );
+$('.Bar').attr('data-value', val2);
+  console.log(val2);
+//$('#added-box h5 i').html(delivery_cost - order_total);
+  	var vall= delivery_cost - order_total;
+	$('#added-box h5 i').html(vall.toFixed(2));
+}
+else
+{
+$('.Bar').animate({width: '100%'}, 1000);
+$('.Bar').css('width', '100%' );
+$('.Bar').attr('data-value', '100');
+  $('#added-box h5 i').html(delivery_cost - order_total); 
+  
+  if(Number(delivery_cost) != 1 ){    
+    $('#added-box h5').html('{{ settings.congrats_text }}');
+     $('.cart_note').hide();
+  } else {
+    $('#added-box h5').html('tyrtyrty');
+    $('.cart_note').show();	
+  }
+  
+}     
+ 
+    
+if ($(window).width() < 767) {
+$('.addslider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+   responsive: [
+    
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow:3,
+        slidesToScroll: 1
+      }
+    },
+     {
+      breakpoint: 350,
+      settings: {
+        slidesToShow:3,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+}); 
+} else {
+  $('.addslider').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+   responsive: [
+    
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow:3,
+        slidesToScroll: 1
+      }
+    },
+     {
+      breakpoint: 350,
+      settings: {
+        slidesToShow:3,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+}); 
+  
+}
+ 
+$('.money').text(function () {
+  //  return $(this).text().replace(/.00/g, '');
+});
+
+    setTimeout(function(){
+$('.bold-ro__one-time-price').text(function () {
+    return $(this).text().replace(/.00/g, '');
+}); 
+      
+  $('.bold-ro__initial-discount-price').text(function () {
+    return $(this).text().replace(/.00/g, '');
+});     
+      
+}, 500);
+  
+});
+  
+ $(window).on('load resize', function () {
+  // topheight3 = $(window).height(); 
+ //  $('.aj_box').css('height', topheight3 - 150);
+   
+// topheight2 = $('.aj_box').height(); 
+//  $('#cart_addpro').css('top', topheight2 - 300);
+}); 
+  
+  
+  {% if settings.d_msg_enable != blank %}
+$(document).ready(function(){  
+  $('.agree_msg input:checkbox').change(function(){
+  
+    if($(this).is(":checked")) {
+    
+       $('.btn_input3').prop("disabled",false);
+       $('.btn_input3').removeClass("disabled");
+
+    } else {
+    $('.btn_input3').prop("disabled","true");
+       $('.btn_input3').addClass("disabled");
+    }
+});  
+  
+    if($('.agree_msg input:checkbox').is(":checked")) {
+        $('.btn_input3').prop("disabled",false);
+        $('.btn_input3').removeClass("disabled");
+    } else {
+        $('.btn_input3').prop("disabled","true");
+        $('.btn_input3').addClass("disabled");
+     
+    }
+  
+  
+  
+  $('.btn_i').on('click',function(){
+ 
+if($('.btn_input3').hasClass('disabled') ){
+   
+    alert('Please accept the terms of service checkbox');
+}
+});
+}); 
+{% endif %}  
+</script>
+

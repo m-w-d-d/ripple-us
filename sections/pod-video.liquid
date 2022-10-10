@@ -1,0 +1,307 @@
+<div class="pod home_merch merch--{{ section.id }}">
+  
+  
+  <div class="home_merch_desk small--hide">
+  {%- assign merch = section.settings.ho_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {% include 'image-style' with image: section.settings.ho_image %}
+  <img id=""
+                 class="lazyload"
+                 src="{{ section.settings.ho_image | img_url: '1600x' }}"
+                 data-src="{{ merch }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.ho_image.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.ho_image.alt | escape }}">
+  </div>
+
+  <div class="home_merchinfo">
+  <div class="page-width p-0 w_1053">
+    <div class="home_merch_wrap merch_{{ section.settings.merch_align }}">
+      
+           
+ <h3 class="small--hide pod-response"style=" font-size:30px!important;padding-bottom: 15px;">{{ section.settings.ho_title | replace: "+", "<sup>+</sup>"  }}</h3>
+            <h3 class="large--hide pod-response"style=" font-size:23px!important;padding-bottom: 20px;">{{ section.settings.ho_title | replace: "+", "<sup>+</sup>"  }}</h3>
+       
+
+      <br>
+       {% if section.settings.ho_info != blank %}
+      <div class="home_merchrte">
+        {{ section.settings.ho_info | replace: "+", "<sup>+</sup>" }}
+      </div>
+        {% endif %}  
+      {% if section.settings.ho_button != blank %}
+       <a href="{{ section.settings.ho_button_link }}" class="btn" tabindex="0">
+        <i></i>
+        <span>{{ section.settings.ho_button }}</span>
+      </a>
+      {% endif %}  
+      
+    </div>
+  </div>
+  </div>
+  
+    <div class="home_merchinfo">
+  <div class="page-width p-0 w_1053">
+    <div class="home_merch_wrap merch_right">
+      
+      
+<div style="padding:69.86% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/722621022?h=c3bd6e3a54&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ripple POD.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+  .main-content{padding-top:0!important;}
+  .home_merch_wrap h3{
+  font-size:32px!important;
+  }
+  div.page-container {
+
+    margin-top: -85px;
+}
+
+.home_merch_wrap h3
+{
+    color:{{ section.settings.ho_text_color}};
+  text-align:center;
+  }
+.merch--{{ section.id }}  .home_merch_wrap p{
+  font-size: 17px;
+    color:#ffffffcf;
+  text-align:center;
+  }
+  /*
+  div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background }}, {{ section.settings.ho_background }} 50%, {{ section.settings.ho_background }});
+  }*/
+  div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background }};
+    color:{{ section.settings.ho_background_text }};
+  }
+  div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background_first }}, {{ section.settings.ho_background_second }} 50%, {{ section.settings.ho_background_third }});
+  }
+
+  div.home_merch_wrap .btn:hover{    
+    color:{{ section.settings.ho_background_text_hover}};
+     background-color: {{ section.settings.ho_background_text }}!important;
+  }
+  
+ @media(max-width:767px){
+  /* .home_merch{
+   background-image:none!important;
+ } 
+   div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background_text }};
+    color:{{ section.settings.ho_background }};
+  }*/
+   
+ }
+ @media(max-width:767px){  
+   
+   .pod.home_merch {
+       background-image: url({{ section.settings.ho_image_mo2 | img_url: '1000x' }});
+     min-height:700px!important;    margin-bottom: -50px;
+ 
+         }
+.pod.home_merch .home_merch_wrap h3{
+    color: {{ section.settings.mo_text_info }}!important;
+    text-align:center;
+       padding-top: 50px!important;
+}
+   .home_merch_wrap p {
+   color:#ffffffcf!important;
+   }
+   .index-section {
+    padding-bottom: 0px!important;
+}
+ } 
+.w_1053 {
+    max-width: 1332px!important;
+}  
+</style>
+
+{% schema %}
+  {
+    "name": "Pod video",
+    "settings": [
+        {
+        "type": "image_picker",
+        "id": "ho_image",
+        "label": "Image",
+        "info":"Size 1600 x 568px"
+        },
+        {
+        "type": "image_picker",
+        "id": "ho_image_mo2",
+        "label": "Mobile image",
+        "info":"Size 800 x 568px"
+        },
+
+{
+        "type": "image_picker",
+        "id": "merch_image_title",
+        "label": "Merch image title",
+        "info":"Size 200 x 200px"
+        },
+{
+        "type": "image_picker",
+        "id": "merch_image_title_mo2",
+        "label": "Merch image title mobile",
+        "info":"Size 200 x 200px"
+        },
+
+        {
+        "type": "text",
+        "id": "ho_title",
+        "label": "Heading"
+        },
+        {
+        "type": "select",
+        "id": "font_chnage",
+        "label": "Heading Font",
+        "default": "black_extended",
+        "options": [
+        {
+        "label": "Bold",
+        "value": "bold-font"
+        },
+        {
+        "label": "Heavy Weight",
+        "value": "heavy-font"
+        },
+        {
+        "label": "Black Extended",
+        "value": "black_extended"
+        }
+        ]
+        },
+        {
+        "type": "richtext",
+        "id": "ho_info",
+        "label": "Info"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_text_color",
+        "label": "Text color"
+        },
+        {
+        "type": "header",
+        "content": "button section"
+        },
+        {
+        "type": "text",
+        "id": "ho_button",
+        "label": "Button label"
+        },
+        {
+        "type": "url",
+        "id": "ho_button_link",
+        "label": "Button link"
+        },
+
+
+        {
+        "type": "header",
+        "content": "Button color"
+        },
+        {
+        "type": "color",
+        "id": "ho_background",
+        "label": "Button Background color",
+        "default":"#fff"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text",
+        "label": "Button text color",
+        "default":"#516791"
+        },
+        {
+        "type": "header",
+        "content": "Button Hover color"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_background_first",
+        "label": "Background gradient color first",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_second",
+        "label": "Background gradient color second",
+        "default":"#758bb5"
+        }, 
+        {
+        "type": "color",
+        "id": "ho_background_third",
+        "label": "Background gradient color third",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text_hover",
+        "label": "Hover button text color",
+        "default":"#fff"
+        },
+        {
+        "type": "select",
+        "id": "merch_align",
+        "label": "Text align",
+        "default": "right",
+        "options": [
+        {
+        "label": "Left",
+        "value": "left"
+        },
+        {
+        "label": "Center",
+        "value": "center"
+        },
+        {
+        "label": "Right",
+        "value": "right"
+        }
+
+        ]
+        },
+        {
+        "type": "header",
+        "content": "Mobile info background color"
+        },
+        {
+        "type": "color",
+        "id": "mo_background_info",
+        "label": "Background color",
+        "default":"#f0f0f0"
+        },
+        {
+        "type": "color",
+        "id": "mo_text_info",
+        "label": "Text color",
+        "default":"#516791"
+        }
+
+		
+],
+ "presets": [
+    {
+      "name": "Pod-video",
+      "category": "Image"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

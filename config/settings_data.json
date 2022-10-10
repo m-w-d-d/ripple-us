@@ -1,0 +1,2268 @@
+{
+  "current": {
+    "color_text": "#3d4246",
+    "color_body_text": "#69727b",
+    "color_sale_text": "#557b97",
+    "color_button": "#373736",
+    "color_button_text": "#ffffff",
+    "color_small_button_text_border": "#3d4246",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#949494",
+    "color_text_field": "#fff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#fff",
+    "type_header_font": "work_sans_n6",
+    "type_header_base_size": 26,
+    "type_base_font": "work_sans_n4",
+    "type_base_size": 15,
+    "type_bold_product_titles": false,
+    "share_image": "shopify:\/\/shop_images\/fv_img.png",
+    "share_facebook": false,
+    "share_twitter": false,
+    "share_pinterest": false,
+    "social_twitter_link": "https:\/\/twitter.com\/therippleco?lang=en",
+    "social_facebook_link": "https:\/\/www.facebook.com\/ripple.co",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/therippleco\/",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@therippleco?lang=en",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/fv_320x320_4b666dab-8af9-4dbc-b065-f61253aa99ca.png",
+    "black_friday_enable": false,
+    "black_friday_text": "30% off",
+    "m_logo_pro": "shopify:\/\/shop_images\/logo-pro.png",
+    "m_logo_msg": "<p>We donate all merch profits to Phoenix Futures, to help support people in our local community recovering from addiction.<\/p>",
+    "delivery_msg_enable": true,
+    "delivery_msg": "Delivery is calculated during checkout",
+    "d_msg_enable": true,
+    "age_msg": "<p>I certify that I read and agree to your <a href=\"\/pages\/terms-conditions\" target=\"_blank\" title=\"terms &amp; conditions\">terms of service<\/a>, <a href=\"#\" target=\"_blank\" title=\"#\">disclaimer<\/a> and am 21+ years of age<\/p>",
+    "background_cb": "#346d6b",
+    "background_first_cb": "#346d6b",
+    "background_second_cb": "#5c9795",
+    "background_third_cb": "#346d6b",
+    "background_ub": "#346d6b",
+    "background_first_ub": "#346d6b",
+    "background_second_ub": "#5c9795",
+    "background_third_ub": "#346d6b",
+    "prog_price": "30",
+    "prog_text": "away from free domestic shipping",
+    "congrats_text": "Congrats! You get free domestic shipping.",
+    "show_multiple_currencies": true,
+    "currency_format": "money_with_currency_format",
+    "supported_currencies": "GBP USD EUR",
+    "default_currency": "GBP",
+    "lable_sign_in": "Don’t have a Ripple account yet?",
+    "unsubscribe": "Sign up for emails on products, events, and goings-on in the Ripple universe. Unsubscribe anytime.",
+    "lable_create": "Already have an account with us?",
+    "login_sub_title": "",
+    "register_sub_title": "",
+    "background_ac": "#654489",
+    "background_first_ac": "#825aa4",
+    "background_second_ac": "#9c7dbe",
+    "background_third_ac": "#825aa4",
+    "age": false,
+    "age_verification_title": "Age verification required",
+    "age_verification_info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt eiusmod tempor incididunt eiusmod tempor",
+    "recurring-orders-loading": "Loading subscription info...",
+    "recurring-orders-inherit-classes": false,
+    "recurring-orders-additional-button-classes": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Ripple_logo_black_png.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "small",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#373736",
+    "checkout_button_color": "#373736",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "head_color": "white",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_max_width": 80,
+          "main_linklist": "new-main-menu",
+          "message": true,
+          "home_page_only": true,
+          "message_text": "LIVE + LIMITED: HAPPY IS BACK 🌞",
+          "message_link": "shopify:\/\/products\/happy-pods",
+          "color_bg": "#ffffff",
+          "color_text": "#3d4246"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1557811750420": {
+            "type": "link_list",
+            "settings": {
+              "title": "shop",
+              "menu": "footer-shop"
+            }
+          },
+          "beb2d464-2d03-45d8-a42c-20e2b2767b09": {
+            "type": "link_list",
+            "settings": {
+              "title": "info",
+              "menu": "footer-info"
+            }
+          },
+          "693c5e0b-601f-464f-938c-c90377d250b6": {
+            "type": "link_list",
+            "settings": {
+              "title": "about",
+              "menu": "footer-about"
+            }
+          },
+          "1581429604864": {
+            "type": "social",
+            "settings": {
+            }
+          }
+        },
+        "block_order": [
+          "1557811750420",
+          "beb2d464-2d03-45d8-a42c-20e2b2767b09",
+          "693c5e0b-601f-464f-938c-c90377d250b6",
+          "1581429604864"
+        ],
+        "settings": {
+          "show_popup": false,
+          "second": 3,
+          "n_title": "join the ripple<sup>+<\/sup> fam",
+          "n_info": "<p>sign up for member-only perks<\/p>",
+          "n_footer": "<p>By clicking sign up, you agree to receive marketing messages from Ripple+ at the number\/ email provided, including messages sent by autodialer. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. View our <a href=\"\/pages\/privacy-policy-cookie-policy\" target=\"_blank\" title=\"Privacy Policy & Cookie Policy\">Privacy Policy <\/a>and <a href=\"\/pages\/terms-conditions\" target=\"_blank\" title=\"terms & conditions\">Terms of Service<\/a>.<\/p>",
+          "bg_n_text": "#000000",
+          "color_n_text": "#ffffff",
+          "show_payment_icons": false,
+          "color_footer_bg": "#000000",
+          "color_footer_text": "#373737",
+          "freedelivery_show": false,
+          "freedelivery": "Free delivery on all orders over $30.00",
+          "footer_note": "<p>These statements have not been evaluated by the Food and Drug Administration, MHRA, EMEA, or other medicinal products evaluation agency. Ripple+ expressly makes no health or medical claims for this product. This product is not intended to diagnose, treat, cure or prevent any disease. This product should be used only as directed on the label. Sale to minors is prohibited. <a href=\"https:\/\/www.therippleco.co.uk\/pages\/riptip\" title=\"RipTip\">How to use? <\/a>View our <a href=\"\/pages\/privacy-policy-cookie-policy\" target=\"_blank\" title=\"Privacy Policy & Cookie Policy\">Privacy Policy <\/a>and <a href=\"\/pages\/terms-conditions\" target=\"_blank\" title=\"terms & conditions\">Terms of Service<\/a>.<\/p>"
+        }
+      },
+      "1557401261980": {
+        "type": "collection",
+        "settings": {
+          "collection": "new-shop"
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "font_chnage": "bold-font",
+          "blog_show_author": false,
+          "blog_show_date": true
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": false,
+          "font_chnage": "bold-font",
+          "show_vendor": false,
+          "bg_color": "#ffffff",
+          "col_title": "<p>small ripples make big waves<\/p>",
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#ffffff",
+          "title_second": "#ffffff",
+          "text_color": "#ffffff",
+          "image": "shopify:\/\/shop_images\/ripple_-the-sampler-3d-zest-01.png",
+          "layout_two": "left",
+          "title": "have it all",
+          "text": "Fancy trying all six ripple<sup>+<\/sup> formulas? Of course you do. And with our sampler pack, you can.",
+          "tag_title": "Save $15 + free shipping",
+          "button_label": "SHOP NOW",
+          "button_link": "shopify:\/\/products\/the-sampler",
+          "background_c": "#654489",
+          "background_first_c": "#825aa4",
+          "background_second_c": "#9c7dbe",
+          "background_third_c": "#825aa4"
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/POWER-CLEANER-DESK_2048x_1829ce58-9363-4c58-937f-13cf569238ad.webp",
+          "ho_image_mo": "shopify:\/\/shop_images\/CLEANER_GREENER-17_720x_e99623a4-92c6-46b2-b00a-ff49a6808c50.webp",
+          "ho_title": "CLEANER AND GREENER FORMULAS",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>London-founded, LA-made.<br\/><br\/>All POD formulas are produced in state-of-the-art labs<br\/>in Los Angeles, California, using rigorously <br\/>lab-tested ingredients to deliver our cleanest-ever aromas.<br\/><\/p>",
+          "ho_text_color": "#000000",
+          "ho_button": "Learn more",
+          "ho_button_link": "",
+          "ho_background": "#000000",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#000000",
+          "ho_background_second": "#000000",
+          "ho_background_third": "#000000",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "left",
+          "mo_background_info": "#f0f0f0",
+          "mo_text_info": "#000000",
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": false,
+          "show_vendor": true,
+          "enable_zoom": false,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#ffffff",
+          "title_second": "#ffffff",
+          "text_color": "#ffffff",
+          "image": "shopify:\/\/shop_images\/ripple_-the-sampler-3d-zest-01.png",
+          "layout_two": "left",
+          "title": "have it all",
+          "text": "Fancy trying all six ripple formulas? Of course you do. And with our sampler pack, you can.",
+          "tag_title": "Save $15",
+          "button_label": "Shop Now",
+          "button_link": "shopify:\/\/products\/the-sampler",
+          "background_p": "#654489",
+          "background_first_p": "#825aa4",
+          "background_second_p": "#9c7dbe",
+          "background_third_p": "#825aa4",
+          "reviews-title": "customer reviews"
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": false,
+          "font_chnage": "bold-font",
+          "blog_show_date": false,
+          "show_share_buttons": false
+        }
+      },
+      "contact-template": {
+        "type": "contact-template",
+        "settings": {
+          "enquiries_title_one": "Online enquiries",
+          "enquiries_info_one": "<p>Monday to Friday, 9am to 6pm <a href=\"mailto:info@therippleco.com\" title=\"mailto:info@therippleco.com\">info@therippleco.com<\/a><br><br><\/p>",
+          "enquiries_title_two": "Press enquiries",
+          "enquiries_info_two": "<p><a href=\"mailto:press@therippleco.com\" title=\"mailto:press@therippleco.com\">press@therippleco.com <\/a><br><br><\/p>",
+          "enquiries_title_three": "Wholesale enquiries",
+          "enquiries_info_three": "<p><a href=\"mailto:wholesale@therippleco.com\" title=\"mailto:wholesale@therippleco.com\">wholesale@therippleco.com<\/a> <br><br><\/p>"
+        }
+      },
+      "about-template": {
+        "type": "about-template",
+        "blocks": {
+          "1581505025769": {
+            "type": "about",
+            "settings": {
+              "font_chnage": "heavy-font",
+              "title": "about",
+              "collection_info": "<p>Our botanical blends and zero-nicotine formulas are a non-addictive and plant-powered alternative. Ripples come in six formulas: POWER, DREAM, BOOST, RELAX, REVIVE, FOCUS and are filled with functional ingredients and natural aromas.<\/p>"
+            }
+          },
+          "1581505058974": {
+            "type": "about",
+            "settings": {
+              "font_chnage": "heavy-font",
+              "title": "the device",
+              "collection_info": "<p>The ripple device is designed to heat each of our six original formulas to a specific temperature for optimum experience and control. The device heats the botanical blends turning them to vapour which can be inhaled by the body.<\/p><p><\/p><p>Ripples are all one size and are super simple to use, once you’ve removed the protective caps just inhale your chosen blend for three seconds and enjoy.<\/p>"
+            }
+          },
+          "1581505211129": {
+            "type": "about",
+            "settings": {
+              "font_chnage": "heavy-font",
+              "title": "formulations",
+              "collection_info": "<p>Ripple comes in six formulas: Power, Relax, Boost, Dream, Revive + Focus. Each blend is a combination of functional plant extracts infused with natural aromas for the purest flavour. None of our formulas contain any nicotine and all our custom botanical blends are formulated in state-of-the-art labs in the U.K. They’re non-GMO, free of pesticides and natural.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1581505025769",
+          "1581505058974",
+          "1581505211129"
+        ],
+        "settings": {
+          "image-two": "shopify:\/\/shop_images\/about-1.jpg",
+          "collection": "new-shop",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae"
+        }
+      },
+      "stockists-template": {
+        "type": "stockists-template",
+        "blocks": {
+          "1558424786551": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Hyatt Pharmacy",
+              "shop_one_address": "187 Brompton Rd, Knightsbridge London, SW3 1NE",
+              "phone": "020 7589 0192",
+              "website": ""
+            }
+          },
+          "1558424457592": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Life Pharmacy",
+              "shop_one_address": "213 Brompton Rd, Chelsea \nLondon, SW3 2EJ",
+              "phone": "020 7590 9995",
+              "website": ""
+            }
+          },
+          "1558424978436": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Dillons Pharmacy",
+              "shop_one_address": "17 Church Street\nLondon, W3 8PU",
+              "phone": "020 8993 0190",
+              "website": ""
+            }
+          },
+          "1558449113637": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Offord News",
+              "shop_one_address": "20 Avery Row, Mayfair \nLondon, W1K 4AT",
+              "phone": "020 7629 0571",
+              "website": ""
+            }
+          },
+          "1558449220411": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Madesil Pharmacy",
+              "shop_one_address": "20 Marylebone High Street \nLondon, W1U 4PB",
+              "phone": "020 7935 3078",
+              "website": ""
+            }
+          },
+          "1565787008356": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Selva Food & Wine",
+              "shop_one_address": "68 Old Compton, Soho\n London, W1D 4UJ",
+              "phone": "020 7437 2847",
+              "website": ""
+            }
+          },
+          "1565787103965": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Instant Karma Retail",
+              "shop_one_address": "43 Broadwick Street, Soho London, W1F 9QN",
+              "phone": "",
+              "website": ""
+            }
+          },
+          "1565787254024": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "The Eagle Vape Shop",
+              "shop_one_address": "234 Shaftesbury Ave, Holborn London, WC2H 8EG",
+              "phone": "020 7240 6320",
+              "website": ""
+            }
+          },
+          "1565787319646": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Zen Pharmacy",
+              "shop_one_address": "3 Baker Street, Marylebone London, W1U 8ED",
+              "phone": "020 3609 0080",
+              "website": ""
+            }
+          },
+          "1565787547577": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Sherlock Holmes Chemist",
+              "shop_one_address": "82a Baker Street, Marylebone, London, W1U 6AA",
+              "phone": "020 7935 9667",
+              "website": ""
+            }
+          },
+          "1565787679327": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Shreeji News",
+              "shop_one_address": "6 Chiltern Street, Marylebone\nLondon, W1U 7PT",
+              "phone": "020 7935 5055",
+              "website": ""
+            }
+          },
+          "1565787902110": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Magnum News",
+              "shop_one_address": "10 Thayer St, Marylebone\nLondon, W1U 3JN",
+              "phone": "020 7487 3141",
+              "website": ""
+            }
+          },
+          "1565788118358": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Moffatts Mayfair",
+              "shop_one_address": "1 Lansdowne Row, Mayfair\nLondon, W1J 6DP",
+              "phone": "020 7499 3022",
+              "website": ""
+            }
+          },
+          "1565787623642": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "COCO",
+              "shop_one_address": "70 Old Brompton Street, Kensington\nLondon, SW7 3LQ",
+              "phone": "",
+              "website": ""
+            }
+          },
+          "1565787780693": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Allchin Pharmacy",
+              "shop_one_address": "28 England's Lane\nLondon, NW3 4UE",
+              "phone": "020 7586 4683",
+              "website": ""
+            }
+          },
+          "1565787847238": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "The Chocolate Box",
+              "shop_one_address": "7 Picton Place, Marylebone\nLondon, W1U 1BN",
+              "phone": "020 7935 1249",
+              "website": ""
+            }
+          },
+          "1565791264396": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Mayfair Post Office",
+              "shop_one_address": "32A Grosvenor Street, Mayfair\nLondon, W1K 4QS",
+              "phone": "020 7491 0922",
+              "website": ""
+            }
+          },
+          "1565788053154": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Hillcrest Pharmacy",
+              "shop_one_address": "106 Holland Park  Avenue, Notting Hill, London, W11 4UA",
+              "phone": "020 7487 3141",
+              "website": ""
+            }
+          },
+          "1565788222610": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Bliss Pharmacy",
+              "shop_one_address": "107-109 Gloucester Road, South Kensington \nLondon, SW7 4SS",
+              "phone": "020 7373 4445",
+              "website": ""
+            }
+          },
+          "1565788330912": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Warwick Pharmacy",
+              "shop_one_address": "34-36 Warwick Way, London, SW1V 1RY",
+              "phone": "",
+              "website": ""
+            }
+          },
+          "1565788479525": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Nanotech",
+              "shop_one_address": "93 Praed Street, Paddington\nLondon, W2 1NT",
+              "phone": "020 7402 3418",
+              "website": ""
+            }
+          },
+          "1565788571580": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "The Smoking Jacket",
+              "shop_one_address": "205 Earls Ct Rd, Kensington London, SW5 9AN",
+              "phone": "020 7373 8966",
+              "website": ""
+            }
+          },
+          "1565788854226": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Ministry of Health",
+              "shop_one_address": "15-17 S End Rd, Hampstead, London, NW3 2PT",
+              "phone": "020 7794 0848",
+              "website": ""
+            }
+          },
+          "1565791018087": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Charles of Belgravia",
+              "shop_one_address": "27 Lower Belgrave St, Belgravia, London, SW1W 0LS",
+              "phone": "020 7730 7193",
+              "website": ""
+            }
+          },
+          "1565791188607": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "CBDandyou",
+              "shop_one_address": "87 Heath Street, Hampstead\nLondon, NW3 6UG",
+              "phone": "020 7693 7279",
+              "website": ""
+            }
+          },
+          "1565791369864": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Crispins",
+              "shop_one_address": "11 Kensington Church Street, Kensington, London, W8 4LF",
+              "phone": "020 7937 1739",
+              "website": ""
+            }
+          },
+          "1565791444616": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Londis",
+              "shop_one_address": "237 King’s Road, Chelsea\nLondon, SW3 5EJ",
+              "phone": "020 7352 7188",
+              "website": ""
+            }
+          },
+          "1565791490145": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Queensway Food & Wine",
+              "shop_one_address": "37 Queensway, Bayswater\nLondon, W2 4QJ",
+              "phone": "020 7792 2139",
+              "website": ""
+            }
+          },
+          "1565792337808": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Baghdad",
+              "shop_one_address": "410 Edgware Road, Paddington\nLondon, W2 1ED",
+              "phone": "",
+              "website": ""
+            }
+          },
+          "1565792407245": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Best Wines",
+              "shop_one_address": "154 Shepherds Bush Rd, Hammersmith, London W6 7PB",
+              "phone": "020 7371 2311",
+              "website": ""
+            }
+          },
+          "1565792523041": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Kentish Town News",
+              "shop_one_address": "283 Kentish Town Rd, Kentish Town, London NW5 2JS",
+              "phone": "07447 646663",
+              "website": ""
+            }
+          },
+          "1565792555334": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Diamond Supermarket",
+              "shop_one_address": "87 Haverstock Hill, Belsize Park\nNW3 4RL, London",
+              "phone": "",
+              "website": ""
+            }
+          },
+          "1565793288230": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "DH Roberts Pharmacy",
+              "shop_one_address": "165 Fortess Rd, Kentish Town, London, NW5 2HR",
+              "phone": "020 7485 4028",
+              "website": ""
+            }
+          },
+          "1565793330888": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Temple Kiosk",
+              "shop_one_address": "92 Fleet Street, London, EC4Y 1PB",
+              "phone": "07917 285922",
+              "website": ""
+            }
+          },
+          "1565793452691": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "AD Food & Wine",
+              "shop_one_address": "29 Paddington St, Marylebone, London W1U 4HA",
+              "phone": "020 7935 5302",
+              "website": ""
+            }
+          },
+          "1565793478893": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Ziba Ltd",
+              "shop_one_address": "97 Notting Hill Gate, London, W11 3JZ",
+              "phone": "020 7727 3237",
+              "website": ""
+            }
+          },
+          "1565793636328": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Primrose Hill Newsagent",
+              "shop_one_address": "91 Regent's Park Rd, Primrose Hill, London NW1 8UT",
+              "phone": "020 7722 0402",
+              "website": ""
+            }
+          },
+          "1565793742795": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "The Shoreditch Stop",
+              "shop_one_address": "53 Great Eastern St, Hackney, London, EC2A 3HP",
+              "phone": "07939 642281",
+              "website": ""
+            }
+          },
+          "1565793902767": {
+            "type": "logo_image",
+            "settings": {
+              "shop_one_title": "Jai Ambika News",
+              "shop_one_address": "3 Great Eastern Street, London EC2A 3EJ",
+              "phone": "020 7247 3080",
+              "website": ""
+            }
+          }
+        },
+        "block_order": [
+          "1558424786551",
+          "1558424457592",
+          "1558424978436",
+          "1558449113637",
+          "1558449220411",
+          "1565787008356",
+          "1565787103965",
+          "1565787254024",
+          "1565787319646",
+          "1565787547577",
+          "1565787679327",
+          "1565787902110",
+          "1565788118358",
+          "1565787623642",
+          "1565787780693",
+          "1565787847238",
+          "1565791264396",
+          "1565788053154",
+          "1565788222610",
+          "1565788330912",
+          "1565788479525",
+          "1565788571580",
+          "1565788854226",
+          "1565791018087",
+          "1565791188607",
+          "1565791369864",
+          "1565791444616",
+          "1565791490145",
+          "1565792337808",
+          "1565792407245",
+          "1565792523041",
+          "1565792555334",
+          "1565793288230",
+          "1565793330888",
+          "1565793452691",
+          "1565793478893",
+          "1565793636328",
+          "1565793742795",
+          "1565793902767"
+        ],
+        "settings": {
+        }
+      },
+      "related-products": {
+        "type": "related-products",
+        "settings": {
+          "show_related_products": true,
+          "related_grid_num": "4",
+          "related_grid_row": "1"
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "",
+          "logo_max_width": 100,
+          "header": "Coming Soon"
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Be the first to know when we launch.",
+          "newsletter_form_subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Notify me"
+        }
+      },
+      "password-footer": {
+        "type": "password-footer",
+        "settings": {
+          "show_share_buttons": true,
+          "social_message": "Spread the word"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "1581339328285": {
+        "type": "home-keypoint",
+        "blocks": {
+          "1581339328285-0": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon1.png",
+              "title": "zero nicotine"
+            }
+          },
+          "1581339328285-1": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon2.png",
+              "title": "plant based ingredients"
+            }
+          },
+          "1581339328285-2": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon3.png",
+              "title": "vegan friendly"
+            }
+          },
+          "1581339328285-3": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon4.png",
+              "title": "NO artificial additives"
+            }
+          },
+          "f61eae3d-ea32-4455-9732-f2ba3bded148": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon6.png",
+              "title": "formulated in California"
+            }
+          },
+          "d27034a3-dae1-40e2-99da-d011b85a6567": {
+            "type": "icon_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/icon5.png",
+              "title": "born in the UK"
+            }
+          }
+        },
+        "block_order": [
+          "1581339328285-0",
+          "1581339328285-1",
+          "1581339328285-2",
+          "1581339328285-3",
+          "f61eae3d-ea32-4455-9732-f2ba3bded148",
+          "d27034a3-dae1-40e2-99da-d011b85a6567"
+        ],
+        "settings": {
+          "background_first": "#ffffff",
+          "background_second": "#ffffff",
+          "text_info": "#373736"
+        }
+      },
+      "1581428726409": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "background_first": "#ecf7fc",
+          "background_second": "#ecf7fc",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "image": "shopify:\/\/shop_images\/ripple_-the-sampler-3d-zest-01.png",
+          "layout": "right",
+          "title": "have it all",
+          "font_chnage": "heavy-font",
+          "text": "Fancy trying all six ripple+ formulas? Of course you do. And with our sampler pack, you can.",
+          "tag_title": "Bestseller",
+          "button_label": "SHOP NOW",
+          "button_link": "shopify:\/\/products\/the-sampler",
+          "background_h": "#654489",
+          "background_first_h": "#825aa4",
+          "background_second_h": "#9c7dbe",
+          "background_third_h": "#825aa4"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": false
+        }
+      },
+      "mission_header-logo": {
+        "type": "mission_header-logo",
+        "settings": {
+          "logo_1": "shopify:\/\/shop_images\/l1.png",
+          "logo_2": "shopify:\/\/shop_images\/l2.png",
+          "logo_3": "shopify:\/\/shop_images\/l3.png",
+          "logo_4": "shopify:\/\/shop_images\/l4.png",
+          "logo_5": "shopify:\/\/shop_images\/l5.png",
+          "logo_6": "shopify:\/\/shop_images\/l6.png",
+          "logo_7": "shopify:\/\/shop_images\/l7.png"
+        }
+      },
+      "our_mission-template": {
+        "type": "our_mission-template",
+        "settings": {
+          "m_head_text": "<p>small ripples make big waves <\/p>",
+          "foundertext": "",
+          "f_head_color": "",
+          "f_text_color": "#394c6d",
+          "background_first": "#ffffff",
+          "background_second": "#eef7fb",
+          "f_collection": "merch"
+        }
+      },
+      "story_header-logo": {
+        "type": "story_header-logo",
+        "settings": {
+          "logo_1": "shopify:\/\/shop_images\/Asset_5.png",
+          "logo_2": "shopify:\/\/shop_images\/Asset_8.png",
+          "logo_3": "shopify:\/\/shop_images\/Asset_6.png",
+          "logo_4": "shopify:\/\/shop_images\/Asset_2.png",
+          "logo_5": "shopify:\/\/shop_images\/Asset_7.png",
+          "logo_6": "shopify:\/\/shop_images\/Asset_3.png",
+          "logo_7": "shopify:\/\/shop_images\/Asset_4.png"
+        }
+      },
+      "our_story-template": {
+        "type": "our_story-template",
+        "settings": {
+          "m_head_text": "<p>family-owned,<br\/>operated & argued over.<\/p>",
+          "foundertext": "ripple founders",
+          "founderimg": "shopify:\/\/shop_images\/sig_img.png",
+          "f_head_color": "#039bdb",
+          "f_text_color": "#000000",
+          "background_first": "#ffffff",
+          "background_second": "#9dd0e6",
+          "f_collection": "pods"
+        }
+      },
+      "collection_merch-template": {
+        "type": "collection_merch-template",
+        "settings": {
+          "show_collection_image": true,
+          "merch_header": "shopify:\/\/shop_images\/Desktop_blu.jpg",
+          "merch_header_mo": "shopify:\/\/shop_images\/Mobile_blue.jpg",
+          "font_chnage": "heavy-font",
+          "grid": 4,
+          "rows": 2
+        }
+      },
+      "product_merch-template": {
+        "type": "product_merch-template",
+        "settings": {
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true,
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "layout_two": "left",
+          "title": "",
+          "text": "",
+          "button_label": "",
+          "background_p": "#654489",
+          "background_first_p": "#825aa4",
+          "background_second_p": "#9c7dbe",
+          "background_third_p": "#825aa4",
+          "reviews-title": ""
+        }
+      },
+      "161829835854ea55f6": {
+        "type": "home-merch",
+        "disabled": true,
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/HOMEPAGE-POD.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/POD-FLOW-ADDITIONS-2.jpg",
+          "ho_title": "welcome to<br>the POD era",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Discover ripple+ 2.0 and join the<br\/>biggest reward program to date.<\/p>",
+          "ho_text_color": "#ffffff",
+          "h3_text_color": "#039bdb",
+          "ho_button": "SIGN ME UP",
+          "ho_button_link": "https:\/\/www.therippleco.com\/pages\/pod-era",
+          "ho_background": "#039bdb",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#039bdb",
+          "ho_background_second": "#039bdb",
+          "ho_background_third": "#039bdb",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "right",
+          "mo_background_info": "#ffffff",
+          "mo_text_info": "#000000"
+        }
+      },
+      "162635913114ae59bc": {
+        "type": "customer-reviews",
+        "blocks": {
+          "162635913114ae59bc-0": {
+            "type": "review",
+            "settings": {
+              "title": "Paola V.",
+              "country": "London, UK 🇬🇧",
+              "info": "<p>\"Ripple really change my life; it helps me feel calmer and I don't have to worry or feel bad because it's nicotine-free! And all the aromas are amazing, but my favorite so far is Power - I really love that minty cooling sensation\".<\/p>",
+              "star_rat": "5",
+              "stars_first": "#373736"
+            }
+          },
+          "162635913114ae59bc-1": {
+            "type": "review",
+            "settings": {
+              "title": "Eli W.",
+              "country": "Paris, France 🇫🇷",
+              "info": "<p>\"The packaging is SO high quality - each step of the unboxing experience wowed me with the sleek and sophisticated design. You cannot go wrong with this purchase. Very, very, very satisfied ripplenaut over here!\"<\/p>",
+              "star_rat": "5",
+              "stars_first": "#373736"
+            }
+          },
+          "162635913114ae59bc-2": {
+            "type": "review",
+            "settings": {
+              "title": "Nyx N.",
+              "country": "L.A, USA 🇺🇸",
+              "info": "<p>\"15 minutes in and I'm loving the experience. The pods are super easy to switch out and I love that they're magnetic, and the feel of the device is really sleek!\"<\/p>",
+              "star_rat": "5",
+              "stars_first": "#373736"
+            }
+          },
+          "58fa8020-c2ed-4b27-a7d7-df03cf50bbcf": {
+            "type": "review",
+            "settings": {
+              "title": "Anna A.",
+              "country": "Milan, Italy 🇮🇹",
+              "info": "<p>\"Got this at the event (which was so lovely) and I have to say this beats all other pod devices I’ve had in the past. Everything from the unboxing experience to the feel of the product and amazing aromas is just the best of all worlds. Recommend 100 times!\" <\/p>",
+              "star_rat": "5",
+              "stars_first": "#373736"
+            }
+          },
+          "262ebc45-e7aa-4388-8d9c-13e9361c1f33": {
+            "type": "review",
+            "settings": {
+              "title": "Tiarna W.",
+              "country": "London, UK 🇬🇧",
+              "info": "<p>“This has helped me a bunch, especially when it comes to taking a break from my fast-paced lifestyle of mine and slowing down with some smooth plant-powered puffs of aromatherapy - so peaceful! Get yourself one right now!”<\/p>",
+              "star_rat": "5",
+              "stars_first": "#373736"
+            }
+          },
+          "8903365b-16db-4773-894b-d249825878aa": {
+            "type": "review",
+            "settings": {
+              "title": "Sarah K.",
+              "country": "NYC, USA 🇺🇸",
+              "info": "<p>“The new rechargeable diffuser is amazing! The flavours hit even harder than those of single diffusers and, of course, it's less wasteful. Great innovation!”<\/p>",
+              "star_rat": "5",
+              "stars_first": "#373736"
+            }
+          },
+          "eed4440a-6000-4a9b-abda-7b7d7e9dc535": {
+            "type": "review",
+            "settings": {
+              "title": "Brandon K.",
+              "country": "London, UK 🇬🇧",
+              "info": "<p>\"Really nice and smooth to use, you can clearly tell it's natural unlike those filthy chemicals found in other products. Ripple considered their customers and provided an amazing puffing experience!\"<\/p>",
+              "star_rat": "5",
+              "stars_first": "#373736"
+            }
+          }
+        },
+        "block_order": [
+          "162635913114ae59bc-0",
+          "162635913114ae59bc-1",
+          "162635913114ae59bc-2",
+          "58fa8020-c2ed-4b27-a7d7-df03cf50bbcf",
+          "262ebc45-e7aa-4388-8d9c-13e9361c1f33",
+          "8903365b-16db-4773-894b-d249825878aa",
+          "eed4440a-6000-4a9b-abda-7b7d7e9dc535"
+        ],
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/press_section.webp",
+          "background_first": "#ffffff"
+        }
+      },
+      "162636227106b9a339": {
+        "type": "press-section",
+        "blocks": {
+          "162636227106b9a339-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PRESS-27_aeb14e14-3cf9-4580-a0ca-b432a4b5bcbf.png",
+              "info": "“In an age of busier-than-ever-lifestyles, ripple+ has gotten aromatherapy right. Their plant-powered aromatic diffusers have become an on-the-go wellness staple.”"
+            }
+          },
+          "162636227106b9a339-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PRESS-26_13d8e74b-11e1-4ffe-9de5-ce35edad3092.png",
+              "info": "“The brand’s nicotine-free, plant powered diffusers feature unique combinations of natural ingredients and are created with every mood in mind”"
+            }
+          },
+          "162636227106b9a339-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PRESS-28_1ed74feb-df60-4af6-b4b7-18994a1e6e01.png",
+              "info": "“ripple+ has revolutionised aromatherapy for good, with custom combinations of ingredients such as peppermint, tropical mango and jasmine.“"
+            }
+          }
+        },
+        "block_order": [
+          "162636227106b9a339-0",
+          "162636227106b9a339-2",
+          "162636227106b9a339-1"
+        ],
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/presspress.webp",
+          "logo_opacity": "1",
+          "logo_bg": "#000000",
+          "logo_slider_info": "#ffffff"
+        }
+      },
+      "1628243456e0a3148f": {
+        "type": "home-slider",
+        "blocks": {
+          "1628243456e0a3148f-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/HOMEPAGE-DESK.jpg",
+              "font_chnage": "heavy-font",
+              "text_alignment_new": "right-center",
+              "selectslide": "text",
+              "image_png": "shopify:\/\/shop_images\/HOMEPAGE-03_4191b79a-5eca-443e-a82b-0870e535128e.png",
+              "slide_th_text": "ZERO NICOTINE \nPLANT-POWERED",
+              "vid_info": "<p>You've now entered a plant powered utopia. <\/p><p>Your puff-able escape awaits. <\/p>",
+              "slide_text_color": "#039bdb",
+              "button_label": "shop now",
+              "button_link": "shopify:\/\/collections\/shop-all"
+            }
+          }
+        },
+        "block_order": [
+          "1628243456e0a3148f-0"
+        ],
+        "settings": {
+          "slideshow_height": "adapt",
+          "font_chnage": "heavy-font",
+          "autorotate_speed": 5,
+          "button-text": "#ffffff",
+          "background": "#039bdb",
+          "background_first": "#039bdb",
+          "background_second": "#039bdb",
+          "background_third": "#039bdb",
+          "image-mobile-img": "shopify:\/\/shop_images\/POD-WEB-ASSETS-mob.jpg",
+          "slide_text_color": "#039bdb",
+          "slide_text_color2": "#ffffff",
+          "selectslide": "text",
+          "image_png": "shopify:\/\/shop_images\/HOMEPAGE-03_4191b79a-5eca-443e-a82b-0870e535128e.png",
+          "subtitle_mo": "ZERO NICOTINE\nPLANT-POWERED",
+          "subinfo_mo": "<p>You've now entered a plant powered utopia. <\/p><p>Your puff-able escape awaits. <\/p>",
+          "text_alignment_new": "top",
+          "button_label_mo": "shop now",
+          "button_link_mo": "shopify:\/\/collections\/shop-all"
+        }
+      },
+      "collection-template-black-friday": {
+        "type": "collection-template-black-friday",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "font_chnage": "bold-font",
+          "show_vendor": false,
+          "bg_color": "#f2eeea",
+          "header_text": "<br>price💧  <br> 30% off everything",
+          "header_sub_text": "<p>Sure to sell out. Deals start at just $10. Discount automatically applied at checkout.<\/p>",
+          "col_title": "",
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "layout_two": "left",
+          "title": "",
+          "text": "",
+          "tag_title": "",
+          "button_label": "",
+          "button_link": "",
+          "background_c": "#654489",
+          "background_first_c": "#825aa4",
+          "background_second_c": "#9c7dbe",
+          "background_third_c": "#825aa4"
+        }
+      },
+      "store-locator": {
+        "type": "store-locator",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Artboard_1.jpg"
+        }
+      },
+      "1651057586f1516398": {
+        "type": "Instagram-New-feed",
+        "blocks": {
+          "4e4b3906-675b-438f-9ef2-250651953a18": {
+            "type": "insta_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig2.jpg",
+              "link": ""
+            }
+          },
+          "5f84510d-814f-466e-9af5-befc75901169": {
+            "type": "insta_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig3.jpg",
+              "link": ""
+            }
+          },
+          "9bf56cf2-766f-4738-8ab7-a6bf8881754a": {
+            "type": "insta_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig6.jpg",
+              "link": ""
+            }
+          },
+          "6620f2c4-3b3d-48a3-b740-f4740a16c379": {
+            "type": "insta_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig5.jpg",
+              "link": ""
+            }
+          },
+          "683ecd9b-60b8-4767-aa6c-138d259ade16": {
+            "type": "insta_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig1.jpg",
+              "link": ""
+            }
+          },
+          "0e81e810-f179-45ac-8981-09bf013bdbc1": {
+            "type": "insta_image",
+            "disabled": true,
+            "settings": {
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "4e4b3906-675b-438f-9ef2-250651953a18",
+          "5f84510d-814f-466e-9af5-befc75901169",
+          "9bf56cf2-766f-4738-8ab7-a6bf8881754a",
+          "6620f2c4-3b3d-48a3-b740-f4740a16c379",
+          "683ecd9b-60b8-4767-aa6c-138d259ade16",
+          "0e81e810-f179-45ac-8981-09bf013bdbc1"
+        ],
+        "settings": {
+          "font_chnage": "heavy-font",
+          "title_first": "#000000",
+          "title_second": "#000000",
+          "title": "@therippleco"
+        }
+      },
+      "1651057593b7519d3c": {
+        "type": "home-merch",
+        "disabled": true,
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/recycle.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/recycle-mobile.jpg",
+          "merch_image_title": "shopify:\/\/shop_images\/ripple_x_andre-03.png",
+          "merch_image_title_mo": "shopify:\/\/shop_images\/ripple_x_andre_RED-07.png",
+          "ho_title": "recycle your ripple<sup>+<\/sup>",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Recycle your ripple+ & receive 10% off your next online order. <\/p>",
+          "ho_text_color": "#373736",
+          "h3_text_color": "#373736",
+          "ho_button": "get 10% off",
+          "ho_button_link": "shopify:\/\/pages\/new-recycle",
+          "ho_background": "#373736",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#373736",
+          "ho_background_second": "#69727b",
+          "ho_background_third": "#3d4246",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "left",
+          "mo_background_info": "#ffffff",
+          "mo_text_info": "#3d4246"
+        }
+      },
+      "collection_andre-template": {
+        "type": "collection_andre-template",
+        "settings": {
+          "show_collection_image": true,
+          "merch_header": "shopify:\/\/shop_images\/merch-collection-page-desktop_23cdb0d6-a02e-4586-8e5a-af3260faa869.jpg",
+          "merch_header_mo": "shopify:\/\/shop_images\/homepahe-have-it-all-mobile-2.jpg",
+          "andre_title": "shopify:\/\/shop_images\/MERCH_COLLECTION_PAGE-07_200x200_23117f76-c22c-4a3c-be2a-2c1bb07ec973.webp",
+          "font_chnage": "black_extended",
+          "grid": 4,
+          "rows": 2
+        }
+      },
+      "pod-hero1": {
+        "type": "pod-hero1",
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/OUTLINED_DEVICE-20-21.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/BACKGROUND-05.png",
+          "merch_image_title": "shopify:\/\/shop_images\/VIRAL_LOOPS_-_POD_REFERRAL-new_text-11_3b6db571-7400-40a9-8063-99236ac47d3a.png",
+          "merch_image_title_mo": "shopify:\/\/shop_images\/VIRAL_LOOPS_-_POD_REFERRAL-new_text-11.png",
+          "merch_image_pod_mo": "shopify:\/\/shop_images\/OUTLINED_DEVICE-20.png",
+          "ho_title": "MAKE WAY FOR RIPPLE 2.0",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Sign up to unlock your prizes<\/p>",
+          "ho_text_color": "#4ba9ef",
+          "ho_button": "",
+          "ho_button_link": "",
+          "ho_background": "#ffffff",
+          "ho_background_text": "#516791",
+          "ho_background_first": "#516791",
+          "ho_background_second": "#758bb5",
+          "ho_background_third": "#516791",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "right",
+          "mo_background_info": "rgba(0,0,0,0)",
+          "mo_text_info": "#4ba9ef"
+        }
+      },
+      "pod-hero2": {
+        "type": "pod-hero2",
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/VIRAL_LOOPS_-_POD_REFERRAL_-_BACKGROUNDS-11.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/BACKGROUND-05_581d0aae-8635-4ce4-8122-476d8a676cbd.png",
+          "merch_image_title": "shopify:\/\/shop_images\/VIRAL_LOOPS_-_POD_REFERRAL-new_text-10.png",
+          "merch_image_title_mo": "shopify:\/\/shop_images\/VIRAL_LOOPS_-_POD_REFERRAL-new_text-10_f83bb793-a56b-401b-87c2-1045745e838f.png",
+          "merch_image_pod_mo": "shopify:\/\/shop_images\/blue_sticker-03.png",
+          "ho_title": "INVITE FRIENDS",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Share your unique link via email, facebook or twitter and earn ripple goods for each friend who signs up<\/p>",
+          "ho_text_color": "#4ba9ef",
+          "ho_button": "",
+          "ho_button_link": "",
+          "ho_background": "#ffffff",
+          "ho_background_text": "#516791",
+          "ho_background_first": "#516791",
+          "ho_background_second": "#758bb5",
+          "ho_background_third": "#516791",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "right",
+          "mo_background_info": "rgba(0,0,0,0)",
+          "mo_text_info": "#4ba9ef"
+        }
+      },
+      "pod-richtext": {
+        "type": "pod-richtext",
+        "settings": {
+          "full_width": false,
+          "bg-pod": "shopify:\/\/shop_images\/PAPER_BACKGROUND-05.jpg",
+          "pod_image_title": "shopify:\/\/shop_images\/SUB_HEADING-05.png",
+          "pod_image_title_mo": "shopify:\/\/shop_images\/SUB_HEADING-05_466229ef-37b8-4b86-a738-92c848956828.png",
+          "section_title": "",
+          "text": "<p>The more you refer, the bigger the prizes. Recruit ripplenauts to sign up, and unlock five levels of POD era greatness:<\/p>",
+          "text_size": "large"
+        }
+      },
+      "pod-video": {
+        "type": "pod-video",
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/NEW_SECTION_BACKGROUNDS-10.jpg",
+          "ho_image_mo2": "shopify:\/\/shop_images\/NEW_SECTION_BACKGROUNDS-11.jpg",
+          "ho_title": "TWO YEARS <br>IN THE MAKING",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Infinitely yours to puff.<br\/>The Pod era is upon us<\/p>",
+          "ho_text_color": "",
+          "ho_button": "",
+          "ho_button_link": "",
+          "ho_background": "#ffffff",
+          "ho_background_text": "#516791",
+          "ho_background_first": "#516791",
+          "ho_background_second": "#758bb5",
+          "ho_background_third": "#516791",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "left",
+          "mo_background_info": "rgba(0,0,0,0)",
+          "mo_text_info": "#4ba9ef"
+        }
+      },
+      "product-template-starter": {
+        "type": "product-template-starter",
+        "settings": {
+          "font_change": "heavy-font",
+          "title_first-tape": "#000000",
+          "title_second-tape": "#000000",
+          "ho_image1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-TAPE.jpg",
+          "ho_image_mo1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-MOBILE_91d3b21d-b036-432d-b2de-880bb7ef05e8.jpg",
+          "font_chnage1": "bold-font",
+          "title_first1": "#000000",
+          "title_second1": "#000000",
+          "title1": "RIPPLED AND RATED BY THE FAM",
+          "ho_title": "",
+          "font_chnage": "heavy-font",
+          "ho_info": "",
+          "ho_text_color": "",
+          "ho_button": "",
+          "ho_button_link": "",
+          "ho_background": "#ffffff",
+          "ho_background_text": "#516791",
+          "ho_background_first": "#516791",
+          "ho_background_second": "#758bb5",
+          "ho_background_third": "#516791",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "right",
+          "mo_background_info": "#f0f0f0",
+          "mo_text_info": "#ffffff",
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": true,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "layout_two": "left",
+          "title": "",
+          "text": "",
+          "tag_title": "",
+          "button_label": "",
+          "button_link": "",
+          "background_p": "#654489",
+          "background_first_p": "#825aa4",
+          "background_second_p": "#9c7dbe",
+          "background_third_p": "#825aa4",
+          "reviews-title": ""
+        }
+      },
+      "starter-focus1": {
+        "type": "starter-focus1",
+        "settings": {
+          "ho_image1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-TAPE_d0462882-f4b4-45f5-81a7-399c8176e007.jpg",
+          "ho_image_mo1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-MOBILE_91d3b21d-b036-432d-b2de-880bb7ef05e8.jpg",
+          "ho_image": "shopify:\/\/shop_images\/POD_WEB_ASSsETS-27.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/POD_WEB_ASSsETS-27-32.jpg",
+          "ho_image_0": "shopify:\/\/shop_images\/BRAND_USP_ICONS-09.png",
+          "ho_image_1": "shopify:\/\/shop_images\/BRAND_USP_ICONS-08.png",
+          "ho_image_2": "shopify:\/\/shop_images\/BRAND_USP_ICONS-10.png",
+          "ho_title": "A FORMULA FOR EVERY MOOD",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Rediscover our six flagship flavours, now available in POD packs for our cleanest puffing experience yet<\/p>",
+          "ho_info1": "<p>Produced in state-of-the-art labs in Los Angeles, California, using rigorously<br\/>lab-tested ingredients<\/p>",
+          "ho_info2": "<p>Powered by plant extracts and natural flavours, each formula is accredited vegan and organic – and as ever, is completely free from nicotine<\/p>",
+          "ho_text_color": "#ffffff",
+          "h3_text_color": "#ffffff",
+          "ho_button": "shop now",
+          "ho_button_link": "shopify:\/\/products\/the-starter-kit",
+          "ho_background": "#ffffff",
+          "ho_background_text": "#000000",
+          "ho_background_first": "#ffffff",
+          "ho_background_second": "#ffffff",
+          "ho_background_third": "#ffffff",
+          "ho_background_text_hover": "#000000",
+          "merch_align": "left",
+          "mo_background_info": "#000000",
+          "mo_text_info": "#ffffff"
+        }
+      },
+      "starter-vid": {
+        "type": "starter-vid",
+        "settings": {
+        }
+      },
+      "starter-focus2": {
+        "type": "starter-focus2",
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/STARTER-KIT-RECYCLE-60.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/STARTER_KIT_recycle-40.jpg",
+          "ho_image_0": "shopify:\/\/shop_images\/BRAND_USP_ICONS-09.png",
+          "ho_image_1": "shopify:\/\/shop_images\/BRAND_USP_ICONS-08.png",
+          "ho_image_2": "shopify:\/\/shop_images\/BRAND_USP_ICONS-10.png",
+          "ho_title": "RECYCLE YOUR <br>POD PACKS",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Recycle your used POD packs at your nearest retail location<\/p>",
+          "ho_info1": "<p>Alternatively, print out a free shipping<br\/>label to send them back to us<\/p>",
+          "ho_info2": "<p>We’ll send you a reward, so you can stock up on plant-powered goodness for less, next time<\/p>",
+          "ho_text_color": "#000000",
+          "h3_text_color": "#000000",
+          "ho_button": "LEARN MORE",
+          "ho_button_link": "https:\/\/www.therippleco.com\/pages\/new-recycle",
+          "ho_background": "#000000",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#000000",
+          "ho_background_second": "#000000",
+          "ho_background_third": "#000000",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "left",
+          "mo_background_info": "#000000",
+          "mo_text_info": "#000000"
+        }
+      },
+      "related-products-stars": {
+        "type": "related-products-stars",
+        "settings": {
+          "show_related_products": true,
+          "related_grid_num": "6",
+          "related_grid_row": "1"
+        }
+      },
+      "16584790312ca8af9a": {
+        "type": "home-merch-icons",
+        "disabled": true,
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/have-it-all-desk.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/have-it-all-mobile.jpg",
+          "ho_image_0": "shopify:\/\/shop_images\/ICONS-01.png",
+          "ho_image_1": "shopify:\/\/shop_images\/ICONS-04.png",
+          "ho_image_2": "shopify:\/\/shop_images\/ICONS-03.png",
+          "ho_title": "HEAVEN IS A\nPUFF ON EARTH",
+          "font_chnage": "bold-font",
+          "ho_info": "<p>Our formulas are produced in state-of-the-art labs in Los Angeles, California, using rigorously lab-tested ingredients to deliver our cleanest-ever aromas.<\/p>",
+          "ho_info1": "<p>Every plant-powered ingredient is accredited vegan + organic – plus completely free from nicotine.<\/p>",
+          "ho_info2": "<p>We’re committed to reducing our environmental impact. All ripples are recyclable, so you can help us help the planet.<\/p>",
+          "ho_text_color": "#ffffff",
+          "h3_text_color": "#ffffff",
+          "ho_button": "Perfect puffs",
+          "ho_button_link": "shopify:\/\/products\/the-starter-kit",
+          "ho_background": "#ffffff",
+          "ho_background_text": "#000000",
+          "ho_background_first": "#ffffff",
+          "ho_background_second": "#ffffff",
+          "ho_background_third": "#ffffff",
+          "ho_background_text_hover": "#000000",
+          "merch_align": "left",
+          "mo_background_info": "#ffffff",
+          "mo_text_info": "#000000"
+        }
+      },
+      "165848109806b16763": {
+        "type": "vimeo-embed",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "1658481272186d40a6": {
+        "type": "pod-home-richtext",
+        "settings": {
+          "ho_title": "INFINITE PUFFS",
+          "ho_info": "<p>Rediscover your favourite nicotine-free<br\/>flavours, now in rechargeable form.<\/p>",
+          "ho_text_color": "#000000",
+          "ho_button": "",
+          "ho_button_link": "",
+          "ho_background": "#000000",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#000000",
+          "ho_background_second": "#000000",
+          "ho_background_third": "#000000",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "center",
+          "mo_background_info": "#ffffff",
+          "mo_text_info": "#000000"
+        }
+      },
+      "165848135530bc2a17": {
+        "type": "pod-home-richtext",
+        "settings": {
+          "ho_title": "THE OG RIPPLE+",
+          "ho_info": "<p>Try our single-use diffuser, complete<br\/>with 400 puffs and available<br\/>in all six formulas.<\/p>",
+          "ho_text_color": "#000000",
+          "ho_button": "",
+          "ho_button_link": "",
+          "ho_background": "#000000",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#000000",
+          "ho_background_second": "#000000",
+          "ho_background_third": "#000000",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "center",
+          "mo_background_info": "#ffffff",
+          "mo_text_info": "#000000"
+        }
+      },
+      "16584814602be0e71c": {
+        "type": "pod-collection",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/product_carousel.webp",
+          "collection": "pods"
+        }
+      },
+      "1658481625c8e05a5b": {
+        "type": "sticker-tape",
+        "disabled": true,
+        "settings": {
+          "font_chnage": "bold-font",
+          "title_first": "#000000",
+          "title_second": "#000000",
+          "title": "THE POD WILL BE WITH YOU, ALWAYS..."
+        }
+      },
+      "1658481724aa9a8b6a": {
+        "type": "sticker-tape",
+        "disabled": true,
+        "settings": {
+          "font_chnage": "bold-font",
+          "title_first": "#000000",
+          "title_second": "#000000",
+          "title": "PLANT-POWERED PARADISE"
+        }
+      },
+      "16584819742d80f94a": {
+        "type": "home-merch2",
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/HAPPY-WEB-ASSETS-HP-SECTION-DESK.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/HAPPY-WEB-ASSETS-HP-SECTION-MOBILE.jpg",
+          "ho_title": "HAPPY DAYS ARE HERE",
+          "font_chnage": "bold-font",
+          "ho_info": "<p>Our limited-edition passion fruit puffs are now available in rechargeable form.<\/p>",
+          "ho_text_color": "#ffffff",
+          "h3_text_color": "#ffffff",
+          "ho_button": "shop now",
+          "ho_button_link": "shopify:\/\/products\/happy-pods",
+          "ho_background": "#ff7a23",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#ff7a23",
+          "ho_background_second": "#ff8f46",
+          "ho_background_third": "#ffa468",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "right",
+          "mo_background_info": "#ffffff",
+          "mo_text_info": "#ffffff"
+        }
+      },
+      "1658482074bb218893": {
+        "type": "home-faq",
+        "settings": {
+          "logo_slider_info": "#54678e"
+        }
+      },
+      "product-template-pod": {
+        "type": "product-template-pod",
+        "settings": {
+          "ho_image1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-TAPE_d0462882-f4b4-45f5-81a7-399c8176e007.jpg",
+          "ho_image_mo1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-MOBILE_91d3b21d-b036-432d-b2de-880bb7ef05e8.jpg",
+          "ho_title": "CLEANER AND GREENER FORMULAS",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>London-founded, LA-made.<br\/><br\/>All POD formulas are produced in state-of-the-art labs in Los Angeles, California, using rigorously lab-tested ingredients to deliver our cleanest-ever aromas.<br\/><\/p>",
+          "ho_text_color": "#000000",
+          "ho_button": "shop pod",
+          "ho_button_link": "shopify:\/\/products\/the-starter-kit",
+          "ho_background": "#000000",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#000000",
+          "ho_background_second": "#000000",
+          "ho_background_third": "#000000",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "left",
+          "mo_background_info": "#f0f0f0",
+          "mo_text_info": "#000000",
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_zoom": false,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "background_first": "#000000",
+          "background_second": "#000000",
+          "title_first": "#ffffff",
+          "title_second": "#ffffff",
+          "text_color": "#ffffff",
+          "image": "shopify:\/\/shop_images\/our-all-new_fb1eb540-b924-4ddd-a795-838d52a12f88.png",
+          "layout_two": "left",
+          "title": "OUR ALL-NEW POD DEVICE",
+          "text": "Experience the POD system in full, with the ultimate starter kit containing one infinitely rechargeable POD device, plus four* POD packs to get you going.\n\n*POWER, RELAX, DREAM and BOOST. Device is also compatible with FOCUS and ZEST, sold seperately.",
+          "tag_title": "",
+          "button_label": "Beam me up",
+          "button_link": "shopify:\/\/products\/the-starter-kit",
+          "background_p": "#000000",
+          "background_first_p": "#000000",
+          "background_second_p": "#000000",
+          "background_third_p": "#000000",
+          "reviews-title": "customer reviews"
+        }
+      },
+      "pods-collection-template": {
+        "type": "pods-collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 2,
+          "rows": 5,
+          "show_collection_image": false,
+          "font_chnage": "bold-font",
+          "show_vendor": false,
+          "bg_color": "rgba(0,0,0,0)",
+          "col_title": "<p>THE POD WILL BE WITH YOU, ALWAYS<\/p>",
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "layout_two": "left",
+          "title": "",
+          "text": "",
+          "tag_title": "",
+          "button_label": "",
+          "button_link": "",
+          "background_c": "#654489",
+          "background_first_c": "#825aa4",
+          "background_second_c": "#9c7dbe",
+          "background_third_c": "#825aa4"
+        }
+      },
+      "shopall-collection-template1": {
+        "type": "shopall-collection-template1",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": false,
+          "font_chnage": "bold-font",
+          "show_vendor": false,
+          "bg_color": "#ffffff",
+          "col_title": "<p>PLANT-POWERED PUFFS<\/p>",
+          "first_title": "RECHARGEABLE",
+          "first_info": "<p>Meet the POD system: one infinitely rechargeable device. Six signature nicotine-free formulas. The most advanced take on nicotine-free tech has landed.<\/p>",
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "image": "shopify:\/\/shop_images\/SHOP-ALL-COLLECTION-POD-IMAGE-MOBILE.jpg",
+          "layout_two": "left",
+          "title": "",
+          "text": "",
+          "tag_title": "",
+          "button_label": "",
+          "button_link": "",
+          "background_c": "#654489",
+          "background_first_c": "#825aa4",
+          "background_second_c": "#9c7dbe",
+          "background_third_c": "#825aa4"
+        }
+      },
+      "shopall-collection-template2": {
+        "type": "shopall-collection-template2",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": false,
+          "font_chnage": "bold-font",
+          "show_vendor": false,
+          "bg_color": "#ffffff",
+          "col_title": "",
+          "first_title": "SINGLE USE",
+          "first_info": "<p>Our single-use puffs are the perfect ripple+ taste testing experience: each device delivers 400 puffs so you can unlock a plant-powered utopia.<\/p>",
+          "background_first": "#ad99c3",
+          "background_second": "#f7dddd",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "image": "shopify:\/\/shop_images\/SHOP-ALL-COLLECTION-OG-IMAGE-MOBILE.jpg",
+          "layout_two": "left",
+          "title": "",
+          "text": "",
+          "tag_title": "",
+          "button_label": "",
+          "button_link": "",
+          "background_c": "#654489",
+          "background_first_c": "#825aa4",
+          "background_second_c": "#9c7dbe",
+          "background_third_c": "#825aa4"
+        }
+      },
+      "shopall-collection-template3": {
+        "type": "shopall-collection-template3",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": false,
+          "font_chnage": "bold-font",
+          "show_vendor": false,
+          "bg_color": "#ffffff",
+          "first_title": "BUNDLES",
+          "first_info": "<p>Meet our saving sets: custom combinations of fan-favourite formulas so you can ripple+ for less + unlock free shipping.<\/p>",
+          "col_title": "",
+          "background_first": "#ffffff",
+          "background_second": "#ffffff",
+          "title_first": "#000000",
+          "title_second": "#000000",
+          "text_color": "#373736",
+          "image": "shopify:\/\/shop_images\/new-shop-all_720x_e58039d0-2b6d-40e5-bd70-21d5c87f79cc.webp",
+          "layout_two": "left",
+          "title": "RIPPLE EXPERIENCE",
+          "text": "The total ripple+ experience: now available in\none easy bundle because hey, you’ve got better\nthings to be doing than adding items to cart.\n\nWelcome to the F**k Nicotine club.",
+          "tag_title": "",
+          "button_label": "Shop Now",
+          "button_link": "shopify:\/\/products\/ripple-experience",
+          "background_c": "#000000",
+          "background_first_c": "#000000",
+          "background_second_c": "#000000",
+          "background_third_c": "#ffffff"
+        }
+      },
+      "pod-collection": {
+        "type": "pod-collection",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/press_section.webp",
+          "collection": "pods"
+        }
+      },
+      "product-template-happy": {
+        "type": "product-template-happy",
+        "settings": {
+          "ho_image1": "shopify:\/\/shop_images\/HAPPY_WEB_ASzSETS-18.png",
+          "ho_image_mo1": "shopify:\/\/shop_images\/HAPPY_WEB_ASzSETS-34.png",
+          "ho_title": "CLEANER AND GREENER FORMULAS",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>London-founded, LA-made.<br\/><br\/>All POD formulas are produced in state-of-the-art labs in Los Angeles, California, using rigorously lab-tested ingredients to deliver our cleanest-ever aromas.<\/p>",
+          "ho_text_color": "#ffffff",
+          "ho_button": "shop pod",
+          "ho_button_link": "shopify:\/\/products\/the-starter-kit",
+          "ho_background": "#f56c2c",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#f56c2c",
+          "ho_background_second": "#f56c2c",
+          "ho_background_third": "#f56c2c",
+          "ho_background_text_hover": "#ffffff",
+          "merch_align": "left",
+          "mo_background_info": "#f0f0f0",
+          "mo_text_info": "#000000",
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": true,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "background_first": "#000000",
+          "background_second": "#000000",
+          "title_first": "#ffffff",
+          "title_second": "#ffffff",
+          "text_color": "#ffffff",
+          "image": "shopify:\/\/shop_images\/POWER_ASSETS-25_2.png",
+          "layout_two": "left",
+          "title": "OUR ALL-NEW<br> POD DEVICE",
+          "text": "Experience the POD system in full, with the ultimate starter kit containing one infinitely rechargeable POD device, plus four* POD packs to get you going. *POWER, RELAX, DREAM and BOOST. The ripple+ device is also compatible with FOCUS, ZEST and HAPPY sold separately.",
+          "tag_title": "",
+          "button_label": "SHOP NOW",
+          "button_link": "shopify:\/\/products\/the-starter-kit",
+          "background_p": "#ffffff",
+          "background_first_p": "#ffffff",
+          "background_second_p": "#ffffff",
+          "background_third_p": "#000000",
+          "reviews-title": ""
+        }
+      },
+      "1663177729e7f28468": {
+        "type": "feature-row",
+        "settings": {
+          "background_first": "#fafafa",
+          "background_second": "#fafafa",
+          "title_first": "#445e83",
+          "title_second": "#f8aeae",
+          "text_color": "#373736",
+          "image": "shopify:\/\/shop_images\/ripple_-the-sampler-3d-zest-01_e34d4a11-1568-42fe-a3dd-b539b4d6ef11.png",
+          "layout": "left",
+          "title": "have it all",
+          "font_chnage": "heavy-font",
+          "text": "Fancy trying all six ripple+ formulas? Of course you do. And with our sampler pack, you can!",
+          "tag_title": "Bestseller",
+          "button_label": "SHOP NOW",
+          "button_link": "shopify:\/\/products\/the-sampler",
+          "background_h": "#654489",
+          "background_first_h": "#825aa4",
+          "background_second_h": "#9c7dbe",
+          "background_third_h": "#825aa4"
+        }
+      },
+      "learn-hero": {
+        "type": "learn-hero",
+        "settings": {
+          "ho_image1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-TAPE_d0462882-f4b4-45f5-81a7-399c8176e007.jpg",
+          "ho_image_mo1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-MOBILE_91d3b21d-b036-432d-b2de-880bb7ef05e8.jpg",
+          "ho_image": "shopify:\/\/shop_images\/LEARN-MORE-HERO-DESKTOP.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/LEARN-MORE-HERO-MOBILE.jpg",
+          "ho_title": "INTRODUCING THE RIPPLE+ POD SYSTEM",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>One infinitely rechargeable device. Six flagship flavours. Our cleanest inhalation experience yet. The POD system is a new innovation from ripple+ featuring advanced tech that takes nicotine-free puffs to the next level in sustainability and satisfaction.<br\/><br\/>With fast-charging USB-C capabilities and a seamless magnetic connection between device and flavour pack, this is the key to unlocking eternal<br\/>plant-powered utopia.<\/p>",
+          "ho_text_color": "#ffffff",
+          "ho_button": "",
+          "ho_button_link": "",
+          "ho_background": "#fff",
+          "ho_background_text": "#516791",
+          "ho_background_first": "#516791",
+          "ho_background_second": "#758bb5",
+          "ho_background_third": "#516791",
+          "ho_background_text_hover": "#fff",
+          "merch_align": "right",
+          "mo_background_info": "rgba(0,0,0,0)",
+          "mo_text_info": "#ffffff"
+        }
+      },
+      "learn-focus1": {
+        "type": "learn-focus1",
+        "settings": {
+          "ho_image": "shopify:\/\/shop_images\/LEARN-MORE-HEAVEN-DESKTOP.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/LEARN-MORE-HEAVEN-MOBILE.jpg",
+          "ho_image_0": "shopify:\/\/shop_images\/ICONS-01.png",
+          "ho_image_1": "shopify:\/\/shop_images\/ICONS-02.png",
+          "ho_image_2": "shopify:\/\/shop_images\/ICONS-03.png",
+          "ho_title": "HEAVEN IS A PUFF ON EARTH",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Our formulas are produced in state-of-the-art labs in Los Angeles, California, using rigorously lab-tested ingredients to deliver our cleanest-ever aromas.<\/p>",
+          "ho_info1": "<p>Every plant-powered puff is accredited vegan and organic – plus completely free from nicotine.<\/p>",
+          "ho_info2": "<p>We’re committed to reducing our environmental impact. All ripples are recyclable, so you can help us help the planet.<\/p>",
+          "ho_text_color": "#000",
+          "h3_text_color": "#000",
+          "ho_button": "Discover Ripple+",
+          "ho_button_link": "shopify:\/\/collections\/pods",
+          "ho_background": "#000",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#000",
+          "ho_background_second": "#000",
+          "ho_background_third": "#000",
+          "ho_background_text_hover": "#fff",
+          "merch_align": "left",
+          "mo_background_info": "#f0f0f0",
+          "mo_text_info": "#000"
+        }
+      },
+      "learn-focus2": {
+        "type": "learn-focus2",
+        "settings": {
+          "ho_image1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-TAPE_d0462882-f4b4-45f5-81a7-399c8176e007.jpg",
+          "ho_image_mo1": "shopify:\/\/shop_images\/STARTER_KIT-RIPPLE2-MOBILE_91d3b21d-b036-432d-b2de-880bb7ef05e8.jpg",
+          "ho_image": "shopify:\/\/shop_images\/LEARN-MORE-RECYCLE-DESKTOP.jpg",
+          "ho_image_mo": "shopify:\/\/shop_images\/Screen_Shot_2022-09-01_at_10.27.51_AM_900x_e3469d58-53d6-43fc-827f-b2443405f855.webp",
+          "ho_image_0": "shopify:\/\/shop_images\/ICONS-03.png",
+          "ho_image_1": "shopify:\/\/shop_images\/BRAND_USP_ICONS-08.png",
+          "ho_image_2": "shopify:\/\/shop_images\/BRAND_USP_ICONS-10.png",
+          "ho_title": "RECYCLE YOUR POD PACKS",
+          "font_chnage": "heavy-font",
+          "ho_info": "<p>Recycle your used POD packs<br\/>at your nearest retail location<\/p>",
+          "ho_info1": "<p>Alternatively, print out a free shipping<br\/>label to send them back to us<\/p>",
+          "ho_info2": "<p>We’ll send you a reward, so you can stock up on plant-powered goodness for less, next time<\/p>",
+          "ho_text_color": "#000",
+          "h3_text_color": "#000",
+          "ho_button": "Learn more",
+          "ho_button_link": "shopify:\/\/pages\/recycling-scheme",
+          "ho_background": "#000",
+          "ho_background_text": "#ffffff",
+          "ho_background_first": "#000",
+          "ho_background_second": "#000",
+          "ho_background_third": "#000",
+          "ho_background_text_hover": "#fff",
+          "merch_align": "left",
+          "mo_background_info": "#f0f0f0",
+          "mo_text_info": "#000"
+        }
+      }
+    },
+    "content_for_index": [
+      "1628243456e0a3148f",
+      "1581339328285",
+      "165848109806b16763",
+      "1658481272186d40a6",
+      "16584814602be0e71c",
+      "162636227106b9a339",
+      "162635913114ae59bc",
+      "1658481625c8e05a5b",
+      "16584819742d80f94a",
+      "1658481724aa9a8b6a",
+      "1581428726409",
+      "161829835854ea55f6",
+      "16584790312ca8af9a",
+      "1651057593b7519d3c",
+      "165848135530bc2a17",
+      "1557401261980",
+      "1663177729e7f28468",
+      "1658482074bb218893",
+      "1651057586f1516398"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": ""
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": ""
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "medium",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_zoom": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {
+          }
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {
+          }
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

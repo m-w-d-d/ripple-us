@@ -1,0 +1,243 @@
+	@media (max-width:1499px){
+.wholesale_home_merch img {
+    top: 56px;
+}
+}
+
+@media (max-width: 991px){
+.wholesale_home_merch .home_merch_desk img {
+    left: -22%;
+}
+.recycle_ripple_wrapper {
+    flex-direction: column;
+}
+.recycle_ripple {
+    padding-top: 0;
+}
+.section_info_wrapper {
+    padding-top: 30px;
+} 
+.section_info_inner_wrapper {
+    padding: 0 15px;
+}
+.what_ripple_is h3.bold-font {
+    width: 100%;
+}
+.store-locator-pages #stockist-widget .stockist-map {
+  left: 40%;
+}
+.store-locator-pages #stockist-widget .stockist-horizontal .stockist-side-panel {
+  width: 40%;
+}
+.store-locator-pages #stockist-widget .stockist-search-form {
+  padding: 0 20px;
+  clear:both;
+}
+.store-locator-pages #stockist-widget .stockist-horizontal .stockist-result-list {
+  padding-left: 20px;
+}  
+.store-locator-pages #stockist-widget .stockist-result-list ul {
+  margin-right: 20px;
+}  
+.store-locator-pages #stockist-widget.stockist-responsive .stockist-map {
+  position: absolute;
+  height: auto;
+} 
+.store-locator-pages #stockist-widget.stockist-responsive .stockist-map {
+  margin-bottom: 0;
+}  
+}
+
+/* max-width:991 */
+
+
+@media(max-width:797px){
+.form_flex_title {
+    column-gap: 30px;
+}
+}
+
+@media(max-width:767px){
+.wholesale_home_merch {
+    flex-direction: column;
+}
+.stand-out .home_merch_wrap {
+    max-width: 100%;
+}
+.stand-out-info_btn {
+    float: left;
+    width: 100%;
+}
+.wholesale_home_merch .home_merchrte {
+    padding: 15px 50px 25px;
+}
+.wholesale_home_merch .home_merchrte br{
+  display:none;
+}
+#wholesale_body .main-content {
+    padding-top: 0;
+}
+.stand-out .home_merch_wrap {
+    padding: 30px 15px;
+}
+.wholesale_logo_wrapper ul.wholesale_logo li {
+    width: 40%;
+}
+.wholesale_logo_sec {;
+    padding: 70px 0 35px;
+}
+.what_ripple_is_info {
+    max-width: 100%;
+}
+.what_ripple_is .full__width {
+    padding-bottom:21px;
+}
+.wholesale_text_slider_sec {
+  padding-top: 42px;
+  padding-bottom: 50px;
+}
+.wholesale_text_slider_sec .slick-dots {
+    margin:20px 0 0;
+}
+.wholesale_text_slider_wrapper p {
+    font-size: 20px;
+    line-height: 28px;
+}
+.wholesale_single_image {
+    padding-bottom: 44px;
+}
+.wholesale_form {
+    padding-top: 45px;
+}
+.how_to_recycle {
+  padding-bottom: 37px;
+  padding-top:21px;
+}
+.how_to_recycle_wrapper p {
+    font-size: 32px;
+    line-height: 42px;
+}
+.recycle_ripple {
+    padding-bottom: 21px;
+}
+.recycle_image_text_wrapper {
+    flex-direction: column;
+}
+.section_info_wrapper {
+    padding-bottom: 30px;
+}
+.cool_recycle .how_to_recycle_info {
+    margin-bottom: 25px;
+}
+.recycle_review {
+    padding-top: 20px;
+}
+.recycle_review_wrapper .review_box {
+    margin: 15px 20px 100px;
+}
+.store-locator-pages #stockist-widget .stockist-horizontal .stockist-side-panel {
+  width: 100%;
+}  
+.page-width.store-locator-pages {
+  max-width: 100%;
+  padding: 0;
+}
+.section-header.text-center.store-locator-left {
+  width: 100%;
+  float: left;
+  margin-bottom: 0;
+}
+.store-locator-pages #stockist-widget .stockist-horizontal .stockist-result-list {
+  height: 300px !important;
+  margin-bottom: 20px;
+}
+.store-locator-pages #stockist-widget.stockist-responsive .stockist-map {
+  margin-bottom: 0;
+}  
+.what_ripple_is .feature-row__item.feature-row__item_text.feature-row__text {
+    padding-left: 0;
+    padding-right: 0;
+}
+.what_ripple_is h3.bold-font {
+    font-size: 32px;
+    line-height: 36px;
+}
+.what_ripple_is .page-width.feature-row {
+    padding: 0;
+}
+.recycle_image_text_wrapper .section_info_inner_wrapper {
+    text-align: left;
+}
+.store-locator-pages #stockist-widget.stockist-responsive {
+  margin-bottom: 30px;
+}  
+.store-locator-pages #stockist-widget.stockist-responsive .stockist-map {
+  position: static;
+  height: 300px;
+}
+.wholesale_text_slider_sec .slick-dots li button::before, .wholesale_text_slider_sec .slick-dots li a::before {  
+  font-size: 36px;
+}  
+}
+
+/* max-width:767 */
+
+@media(max-width:600px){
+ul.wholesale_logo {
+    column-gap: 50px;
+}
+.how_to_recycle_wrapper p {
+    font-size: 24px;
+    line-height: normal;
+}
+.recycle_ripple {
+    padding-bottom: 0;
+}
+.size35 {
+    font-size: 26px;
+}
+.section_info_wrapper h2 {
+    margin: 0 0 22px;
+}
+.how_to_recycle_wrapper p {
+  font-size: 22px;
+  line-height: 26px;
+  padding-bottom: 0;
+}
+.recycle_ripple_wrapper .section_info_wrapper {
+    padding-bottom: 20px;
+}
+.form_flex_title {
+    flex-direction: column;
+}
+.form_flex_title .wholesale_form_field:nth-child(2) {
+    display: none;
+}
+.wholesale_form_wrapper iframe {
+    height:670px!important;
+}
+.size_38 {
+    font-size: 30px;
+}
+.recycle_review_wrapper .how_to_recycle_info {
+    margin-bottom: 33px;
+}
+h2.size_25 {
+  font-size: 18px;
+} 
+.how_to_recycle_info h6 {
+  margin: 0;
+}  
+
+
+}
+
+/* max-width:600 */
+
+@media(max-width:480px){
+.wholesale_home_merch .home_merchrte {
+    padding: 15px 20px 25px;
+}
+}
+
+/* max-width:480 */

@@ -1,0 +1,74 @@
+<div class="recycle_image_text" style="background-color:{{ section.settings.recycle_ripple_bg }};">
+  <div class="recycle_image_text_wrapper sec_align_{{ section.settings.align_option }}">
+    <div class="half_grid">
+      {% if section.settings.recycle_img != blank %}
+      {{ section.settings.recycle_img | img_url: '1400x836', scale: 2 | img_tag: block.settings.recycle_img.alt, '' }}
+      {% endif %}
+    </div>
+    <div class="half_grid">
+      <div class="section_info_wrapper">
+        <div class="section_info_inner_wrapper">
+        {% if section.settings.image_text_title != blank %}
+        <h2 class="size_25">{{ section.settings.image_text_title }}</h2>
+        {% endif %}
+        {% if section.settings.image_text_info != blank %}
+        {{ section.settings.image_text_info }}
+        {% endif %}
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Recycle Image With Text",
+    "settings": [
+
+	{
+      "type": "select",
+      "id": "align_option",
+      "label": "Align option",
+      "default": "left",
+      "options": [
+	
+        {
+          "label": "Image Left",
+          "value": "left"
+    	},    
+       {
+          "label": "Image Right",
+          "value": "right"
+        }
+      ]
+    },
+	{
+      "type": "image_picker",
+      "id": "recycle_img",
+      "label": "Image",
+	  "info": "SIze 792 X 473"
+    },
+	{
+      "type": "text",
+      "id": "image_text_title",
+      "label": "Title"
+    },
+	{
+      "type": "richtext",
+      "id": "image_text_info",
+      "label": "Info"
+    }
+
+],	"presets": [
+    {
+      "name": "Recycle Image With Text"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

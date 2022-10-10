@@ -1,0 +1,248 @@
+<div class="about-row__item">
+      {% if section.settings.image-two != blank %}
+        {% capture img_id %}FeatureRowImage-{{ section.id }}{% endcapture %}
+        {% capture wrapper_id %}FeatureRowImageWrapper-{{ section.id }}{% endcapture %}
+        {%- assign img_url = section.settings.image-two | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        {% include 'image-style' with image: section.settings.image, width: 665, height: 519, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+        <div id="" class="feature-row__image-wrapper js">
+          <div style="padding-top:{{ 1 | divided_by: section.settings.image-two.aspect_ratio | times: 100}}%;">
+            <img id=""
+                 class="feature-row__image lazyload"
+                 src="{{ section.settings.image-two | img_url: '200x200' }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.image-two.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ section.settings.image.alt | escape }}">
+          </div>
+        </div>
+
+        <noscript>
+          {{ section.settings.image-two | img_url: '600x600', scale: 2 | img_tag: section.settings.image.alt, 'feature-row__image' }}
+        </noscript>
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+
+
+<div class="about_contant">
+
+   {% for block in section.blocks %}
+  <div class="about_info">
+    
+    {%- if forloop.first -%}
+    <h1 class="h3 {{ block.settings.font_chnage }}">{{ block.settings.title }}</h1>
+    {%- else -%}
+    <h2 class="h3 {{ block.settings.font_chnage }}">{{ block.settings.title }}</h2>
+    {% endif %}
+    
+    {{ block.settings.collection_info }}
+  </div>
+  {% endfor %}	
+  
+  
+</div>
+
+
+
+ {%- assign collection = collections[section.settings.collection] -%}
+<div class="about-section-three">
+  <div class="product-slider">
+  
+    <div id="home-sliders"> 
+  <div class="grid grid--uniform home_proslider">
+    {% for product in collection.products %}
+      <div class="grid__item grid__item--{{section.id}} {{ grid_item_width }} pro_box" data-color="background--{{ product.handle }}">
+        {% include 'product-card-grid', max_height: max_height %}
+         {% include 'quick-view' %}
+      </div>
+    {% endfor %}
+  </div>
+      <div class="paginator-center text-color text-center" id="slide_arrow">
+          <ul>
+            <li class="prev">{% include 'prev-arrow' %}</li>
+            <li class="next">{% include 'next-arrow' %}</li>
+          </ul>
+        </div>
+</div>
+</div>
+</div>
+  <style>
+  .about_info:hover h2.h3, 
+    h2.h3:hover{
+      background-image:linear-gradient(90deg, {{ section.settings.title_first }} 0%,{{ section.settings.title_second }} 70%);
+  	
+}
+.about_info:hover h1.h3, 
+    h1.h3:hover{
+      background-image:linear-gradient(90deg, {{ section.settings.title_first }} 0%,{{ section.settings.title_second }} 70%);
+  	
+}
+    
+  </style>
+  
+{% schema %}
+  {
+    "name": "About page",
+    "settings": [
+	{
+      "type": "image_picker",
+      "id": "image-two",
+      "label": {
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fr": "Image",
+        "it": "Immagine",
+        "ja": "画像",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+	"info":"Size 900x700"
+    },	
+	{
+        "type": "header",
+        "content": "About Collection"
+      },
+  
+	{
+      "id": "collection",
+      "type": "collection",
+      "label": {
+        "de": "Kategorie",
+        "en": "Collection",
+        "es": "Colección",
+        "fr": "Collection",
+        "it": "Collezione",
+        "ja": "コレクション",
+        "nl": "Collectie",
+        "pt-BR": "Coleção",
+        "zh-CN": "收藏",
+        "zh-TW": "商品系列"
+      }
+    },
+  	{
+       "type": "header",
+       "content": "Title Color"
+    },
+    {
+          "type": "color",
+          "id": "title_first",
+          "label": "Title gradient color first",
+		  "default":"#445e83"
+     },
+	 {
+          "type": "color",
+          "id": "title_second",
+          "label": "Title gradient color second",
+		  "default":"#f8aeae"
+     }
+	],
+	 "blocks": [
+    {
+      "type": "about",
+      "name": "About Info",
+      "settings": [
+     {
+      "type": "select",
+      "id": "font_chnage",
+      "label": "Text Font",
+      "default": "heavy-font",
+      "options": [
+        {
+          "label": "Bold",
+          "value": "bold-font"
+        },
+        {
+          "label": "Heavy Weight",
+          "value": "heavy-font"
+        }
+      ]
+    },	   
+	{
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+     {
+        "type": "richtext",
+        "id": "collection_info",
+        "label": "Collection Info"
+      }
+      ]
+    }
+  ]
+
+  }
+{% endschema %}
+
+
+{% comment %}
+{{ 'slick.js' | asset_url | script_tag }}
+{% endcomment %}
+<script>
+$(document).ready(function() { 
+
+  $('.home_proslider').slick({
+  dots: false,
+  infinite: true,
+  arrows: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),  
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll:1,
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '25%',
+        focusOnSelect: true
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+  
+  var current_slide_class=($('.pro_box.slick-center').attr("data-color"));
+  $("#home-sliders").addClass(current_slide_class);
+  
+  $('.home_proslider').on('afterChange', function(event, slick, currentSlide, nextSlide){   
+    var current_slide_class=($('.pro_box.slick-center').attr("data-color"));
+    //alert(current_slide_class);
+   $("#home-sliders").removeClass();
+   $("#home-sliders").addClass(current_slide_class);
+  //alert(currentSlide);
+});
+
+});  
+</script>

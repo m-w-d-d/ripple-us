@@ -1,0 +1,42 @@
+<div class="wholesale_single_image" style="background-color:{{ section.settings.single_image_bg }};">
+  <div class="wholesale_single_image_wrapper">
+    {% if section.settings.wholesale_single_image != blank %}
+    {{ section.settings.wholesale_single_image | img_url: '1300x815', scale: 2 | img_tag: block.settings.wholesale_single_image.alt, 'logo-wholesale_single_image' }}
+    {% endif %}
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Wholesale Single Image",
+    "settings": [
+	{
+        "type": "color",
+        "id": "single_image_bg",
+        "label": "Background color",
+	    "default": "#000"
+        },
+        {
+        "type": "image_picker",
+        "id": "wholesale_single_image",
+        "label": "Image",
+        "info":"Size 1300 x 815px"
+        }
+
+],
+	"presets": [
+    {
+      "name": "Wholesale Single Image"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

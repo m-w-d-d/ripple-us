@@ -1,0 +1,136 @@
+
+
+<div class="grid-view-item{% unless products.available %} grid-view-item--sold-out{% endunless %} product-card {{ products.handle }}_new_color">
+  
+  <div class="grid-view-item__link grid-view-item__image-container fullwidth-link">
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{{ products.id }}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ products.id }}{% endcapture %}
+  {%- assign img_url = products.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    {%- assign img_url_2 = products.image[1] | img_url_2: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless products.featured_image == blank %}
+    {% include 'image-style' with image: products.featured_image, width: 305, height: 460, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+
+    
+    
+    
+  <div id="" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+    
+    <div style="padding-top:{% unless products.featured_image == blank %}{{ 1 | divided_by: products.featured_image.aspect_ratio | times: 100}}%{% else %}100%{% endunless %};">
+      <img id=""
+            class="grid-view-item__image lazyload {% unless collection.title != "Bundles" %}product_img--first{% endunless %}"
+            src="{{ products.images[0]  | img_url: '400x400' }}"
+            data-src="{{ img_url }}"
+            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+            data-aspectratio="{{ products.featured_image.aspect_ratio }}"
+            data-sizes="auto"
+            alt="{{ products.featured_image.alt }}">      
+     
+      
+    </div>
+  </div>
+
+  <noscript>
+    {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+    <img class="grid-view-item__image" src="{{ products.featured_image.src | img_url: image_size, scale: 2 }}" alt="{{ products.featured_image.alt }}" style="max-width: {{ max_height | times: products.featured_image.aspect_ratio }}px;">
+  </noscript>
+
+    <div class="product-packs-info">
+  <div class="title_price">
+  <div class="full-product-table">
+   
+    
+    <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">{{ products.title }}</div>
+   {% if products.vendor != blank %}  
+    <div class="productvendor">
+          {{ products.vendor }}
+        </div>
+    {% endif %}
+   
+    </div>
+  </div>
+    
+    <form action="/cart/add" data-productid="{{ product.id }}" method="post" id="add-to-cart" class="product_form {% unless products.available %}sold-out-pro{% else %} {% endunless %}">
+<select name="id" data-productid="{{ product.id }}" class="quick-variants" style="display:none;">
+{% for variant in products.variants %}
+{% if variant.available == true %}
+<option value="{{variant.id}}"> {{ variant.title }} for {{ variant.price | money_with_currency }}</option>
+{% else %}
+<option disabled="disabled"> {{ variant.title }} - sold out!</option>
+{% endif %}
+{% endfor %}
+</select>
+  
+  {% if products.variants.size > 1 %}
+  <a class="single_btn_link" href="{{ products.url | within: collection }}">Select Shade</a>
+  {% for option in products.options_with_values %}
+  <div class="single_btn">Select {{ option.name }}</div>
+  {% endfor %}
+  
+  
+  
+  
+{% else %}
+  {% unless products.available %}
+
+  
+  <button disabled type="submit" class="formAdd pro_{{products.id}} shopnow_btn btn singleaddcart product-form__cart-submit btn--secondary-accent cartbutton  {% if hide_default_title %} btn-full{% endif %}" id="add-{{ products.id}}" name="add" >
+    <i></i>
+    
+    <strong>Sold out </strong>
+   
+  </button>
+  
+  {% else %}
+  
+  
+     {% if products.compare_at_price_max > 0 %}
+              <input type="hidden" id="compare_price" name="properties[{{ products.compare_at_price }}]" /> 
+          {% endif %}
+  
+  <button type="submit" class="formAdd pro_{{products.id}} shopnow_btn btn singleaddcart product-form__cart-submit btn--secondary-accent cartbutton {% if hide_default_title %} btn-full{% endif %}" id="add-{{ products.id}}" name="add" >
+    <i></i>
+  <strong>Add to Bag &nbsp;|&nbsp;{% if products.compare_at_price_max > 0 %} <del>{{ products.compare_at_price_max | money }}</del> {{ products.price | money }} {% else %} {{ products.price | money }} {% endif %}</strong>
+    </button> 
+  
+  
+  
+  {% endunless %}
+{% endif %}
+  
+
+  
+</form> 
+    </div>
+    </div>
+  
+
+
+  {% if settings.black_friday_enable != blank %}
+    
+<div class="black_fridat_tag newpro_tag" >
+{{ settings.black_friday_text }}
+</div>
+    
+ {% else %} 
+  
+  {% if products.metafields.accentuate.black_friday_label_text != blank %}
+<div class="black_fridat_tag newpro_tag">
+{{ products.metafields.accentuate.black_friday_label_text }}
+</div>
+  
+   {%else%} 
+ 
+  {% if products.metafields.label_text.label_text != blank %}
+  <div class="newpro_tag">
+    {{ products.metafields.label_text.label_text }}
+  </div>
+  {% endif %}
+  
+{% endif %}
+ {% endif %} 
+
+
+
+</div>

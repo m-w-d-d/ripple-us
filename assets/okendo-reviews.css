@@ -1,0 +1,470 @@
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-ratingDistribution {
+    display: none
+}
+
+.okeReviews.okeReviews--theme .okeReviews-badge--rating {
+    background-color: #3d4246
+}
+
+.okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url('data:image/svg+xml;charset=UTF-8, %3Csvg%20width%3D%2280%22%20height%3D%2214%22%20viewBox%3D%220%200%2080%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%233D4246%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M71.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM55.996%2011.368l-3.94%202.42c-.474.292-.756.096-.628-.443l1.074-4.53-3.507-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.78%204.3%204.602.37c.552.046.666.37.237.74l-3.507%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM40.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53-3.508-3.022c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422zM24.076%2011.368l-3.94%202.42c-.475.292-.757.096-.63-.443l1.076-4.53-3.507-3.022c-.422-.363-.324-.693.238-.74l4.603-.37%201.78-4.3c.21-.51.55-.512.76%200l1.78%204.3%204.602.37c.554.046.667.37.24.74l-3.508%203.02%201.074%204.532c.127.536-.146.74-.628.444l-3.94-2.422zM8.123%2011.368l-3.94%202.42c-.475.292-.756.096-.63-.443l1.076-4.53L1.12%205.792c-.422-.363-.324-.693.24-.74l4.602-.37%201.778-4.3c.21-.51.55-.512.762%200l1.778%204.3%204.603.37c.554.046.667.37.24.74l-3.508%203.02%201.075%204.532c.127.536-.147.74-.628.444l-3.94-2.422z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+}
+
+.okeReviews.okeReviews--theme .okeReviews-badge--recommended {
+    background-color: #3d4246
+}
+
+.okeReviews.okeReviews--theme .okeReviews-review-recommendation--yes::before {
+    color: #373736
+}
+
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-profile-status--verified {
+    color: #373736
+}
+
+.okeReviews.okeReviews--theme .okeReviews-avatar {
+    color: #3d4246
+}
+
+.okeReviews.okeReviews--theme .okeReviews-barGraph-layer--foreground {
+    background: #3d4246
+}
+
+.okeReviews.okeReviews--theme .or-rg-bar-mrk,.okeReviews.okeReviews--theme .or-crg-bar-mrk {
+    background-color: #3d4246
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-medium .okeReviews-reviewsAggregate-side,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-medium .okeReviews-reviewsAggregate-primary,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-medium .okeReviews-review-side,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-medium .okeReviews-review-primary,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-large .okeReviews-reviewsAggregate-side,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-large .okeReviews-reviewsAggregate-primary,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-large .okeReviews-review-side,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget.is-okeReviews-reviewsWidget-large .okeReviews-review-primary {
+    border-color: #e3e3e3
+}
+
+.okeReviews.okeReviews--theme .okeReviews-select,.okeReviews.okeReviews--theme .okeReviews-select::before,.okeReviews.okeReviews--theme .okeReviews-button,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget-emptyMessage,.okeReviews.okeReviews--theme .okeReviews-qandaWidget-emptyMessage,.okeReviews.okeReviews--theme .okeReviews-review-reviewer-profile,.okeReviews.okeReviews--theme .okeReviews-reviewsWidget-loadingMessage,.okeReviews.okeReviews--theme .okeReviews-questions,.okeReviews.okeReviews--theme .okeReviews-question,.okeReviews.okeReviews--theme .okeReviews-reviews-showMore,.okeReviews.okeReviews--theme .okeReviews-showMore,.okeReviews.okeReviews--theme .okeReviews-review-response,.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-side,.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-primary,.okeReviews.okeReviews--theme .okeReviews-review-side,.okeReviews.okeReviews--theme .okeReviews-review-primary {
+    border-color: #e3e3e3
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviews-footer::before {
+    background-color: #e3e3e3
+}
+
+.okeReviews.okeReviews--theme .okeReviews-widgetNavBar-count {
+    background-color: #3d4246
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsTab {
+    background-color: #3d4246
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-mod-itm--attRtgAv {
+    display: none !important
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-mod-itm--medAgg {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    max-width: 196px !important
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal .okeReviews-reviewsAggregate-mod-itm--medAgg {
+    max-width: none !important
+}
+
+.okeReviews.okeReviews--theme .okeReviews-review-attributeRatings {
+    display: none
+}
+
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-profile-avatar {
+    display: none
+}
+
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-profile-details {
+    padding-left: 0;
+    padding-top: 0
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-mod-itm--medAgg {
+    display: none !important
+}
+
+.okeReviews.okeReviews--theme .okeReviews-review-media {
+    display: none
+}
+
+.okeReviews.okeReviews--theme .okeReviews-starRating.okeReviews-starRating--small {
+    height: 15px;
+    width: 75px
+}
+
+.okeReviews.okeReviews--theme .okeReviews-starRating--small .okeReviews-starRating-indicator-layer {
+    background-size: 75px 15px
+}
+
+.okeReviews.okeReviews--theme .okeReviews-starRating {
+    height: 20px;
+    width: 100px
+}
+
+.okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-size: 100px 20px
+}
+
+.okeReviews.okeReviews--theme .okeReviews-ratingsBadge .okeReviews-starRating-indicator-layer {
+    background-size: 90px 18px
+}
+
+.okeReviews.okeReviews--theme .okeReviews-ratingsBadge .okeReviews-starRating {
+    width: 90px;
+    height: 18px
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget-poweredBy,.okeReviews.okeReviews--theme .okeReviews-qandaWidget-poweredBy,.okeReviews.okeReviews--theme .okeReviews-ratingsBadge-logo {
+    display: none
+}
+
+/* REMOVE CSS ABOVE UP TO THIS POINT UPON TRANSFERING TO OKENDO ADMIN */
+
+/* Star Rating - Default*/
+.okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%233D4246' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%233D4246' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%233D4246' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%233D4246' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%233D4246' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+.okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%233D4246'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%233D4246'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%233D4246'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%233D4246'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%233D4246'/%3E%3C/svg%3E%0A");
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    text-transform: uppercase;
+}
+
+/* Product Card > Star Rating */
+.full-product-table [data-oke-reviews-product-listing-rating] {
+    text-align: center;
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+}
+
+.grid__item--collection-template:hover [data-oke-reviews-product-listing-rating],
+.grid__item--related-products:hover [data-oke-reviews-product-listing-rating],
+.grid__item--:hover [data-oke-reviews-product-listing-rating] {
+    opacity: 0;
+}
+
+/* PDP > Star Rating - POWER */
+#ripple-power-peppermint-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.POWER_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.power_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%23346D6B' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%23346D6B' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%23346D6B' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%23346D6B' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%23346D6B' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-power-peppermint-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.POWER_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.power_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%23346D6B'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%23346D6B'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%23346D6B'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%23346D6B'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%23346D6B'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-power-peppermint-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.POWER_grid .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.power_color .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #346d6b;
+}
+
+/* PDP > Star Rating - BOOST */
+#ripple-boost-lychee-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.BOOST_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.boost_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%23E04264' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%23E04264' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%23E04264' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%23E04264' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%23E04264' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-boost-lychee-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.BOOST_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.boost_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%23E04264'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%23E04264'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%23E04264'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%23E04264'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%23E04264'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-boost-lychee-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.BOOST_grid .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.boost_color .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #e04264;
+}
+
+/* PDP > Star Rating - RELAX */
+#ripple-relax-devised-to-chill-you-out-with-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.RELAX_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.relax_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%233A557C' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%233A557C' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%233A557C' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%233A557C' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%233A557C' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-relax-devised-to-chill-you-out-with-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.RELAX_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.relax_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%233A557C'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%233A557C'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%233A557C'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%233A557C'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%233A557C'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-relax-devised-to-chill-you-out-with-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.RELAX_grid .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.relax_color .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #3a557c;
+}
+
+/* PDP > Star Rating - FOCUS */
+#focus_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.FOCUS_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.focus_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%23F56C2C' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%23F56C2C' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%23F56C2C' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%23F56C2C' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%23F56C2C' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+#focus_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.FOCUS_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.focus_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%23F56C2C'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%23F56C2C'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%23F56C2C'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%23F56C2C'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%23F56C2C'/%3E%3C/svg%3E%0A");
+}
+
+#focus_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.FOCUS_grid .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.focus_color .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #f56c2c;
+}
+
+/* PDP > Star Rating - DREAM */
+#ripple-dream-lavender-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.DREAM_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.dream_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%23654489' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%23654489' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%23654489' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%23654489' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%23654489' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-dream-lavender-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.DREAM_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.dream_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='75' height='15' viewBox='0 0 75 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.4282 0L24.374 4.76957L29.4246 5.18237L25.5766 8.54293L26.7523 13.5676L22.4282 10.875L18.1042 13.5676L19.2799 8.54293L15.4318 5.18237L20.4824 4.76957L22.4282 0Z' fill='%23654489'/%3E%3Cpath d='M37.5 0L39.4458 4.76957L44.4964 5.18237L40.6484 8.54293L41.824 13.5676L37.5 10.875L33.176 13.5676L34.3516 8.54293L30.5036 5.18237L35.5542 4.76957L37.5 0Z' fill='%23654489'/%3E%3Cpath d='M52.5718 0L54.5176 4.76957L59.5682 5.18237L55.7201 8.54293L56.8958 13.5676L52.5718 10.875L48.2477 13.5676L49.4234 8.54293L45.5754 5.18237L50.626 4.76957L52.5718 0Z' fill='%23654489'/%3E%3Cpath d='M67.6435 0L69.5893 4.76957L74.6399 5.18237L70.7919 8.54293L71.9676 13.5676L67.6435 10.875L63.3195 13.5676L64.4952 8.54293L60.6471 5.18237L65.6977 4.76957L67.6435 0Z' fill='%23654489'/%3E%3Cpath d='M7.35646 0L9.30227 4.76957L14.3529 5.18237L10.5048 8.54293L11.6805 13.5676L7.35646 10.875L3.03244 13.5676L4.20808 8.54293L0.360051 5.18237L5.41065 4.76957L7.35646 0Z' fill='%23654489'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-dream-lavender-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.DREAM_grid .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.dream_color .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #654489;
+}
+
+/* PDP > Star Rating - REVIVE */
+/*#ripple-revive-lemon-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.REVIVE_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.revive_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%23F29C07' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%23F29C07' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%23F29C07' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%23F29C07' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%23F29C07' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-revive-lemon-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.REVIVE_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.revive_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%23F29C07'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%23F29C07'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%23F29C07'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%23F29C07'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%23F29C07'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-revive-lemon-aroma-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.REVIVE_grid .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.revive_color .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #f29c07;
+}*/
+
+/* PDP > Star Rating - THE SAMPLER */
+#ripple-sampler-6-organic-flavours-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 3.971L57.1088 12.0136L57.457 12.8669L58.3755 12.942L66.9581 13.6435L60.3972 19.3732L59.7179 19.9665L59.9233 20.8448L61.9182 29.371L54.6207 24.8267L53.8278 24.3329L53.0349 24.8267L45.7373 29.371L47.7322 20.8448L47.9377 19.9665L47.2583 19.3732L40.6974 13.6435L49.28 12.942L50.1986 12.8669L50.5467 12.0136L53.8278 3.971Z' stroke='%235C6AC4' stroke-width='3'/%3E%3Cpath d='M90 3.971L93.2811 12.0136L93.6292 12.8669L94.5478 12.942L103.13 13.6435L96.5695 19.3732L95.8901 19.9665L96.0956 20.8448L98.0905 29.371L90.7929 24.8267L90 24.3329L89.2071 24.8267L81.9096 29.371L83.9045 20.8448L84.11 19.9665L83.4306 19.3732L76.8697 13.6435L85.4523 12.942L86.3708 12.8669L86.719 12.0136L90 3.971Z' stroke='%235C6AC4' stroke-width='3'/%3E%3Cpath d='M126.172 3.971L129.453 12.0136L129.801 12.8669L130.72 12.942L139.303 13.6435L132.742 19.3732L132.062 19.9665L132.268 20.8448L134.263 29.371L126.965 24.8267L126.172 24.3329L125.379 24.8267L118.082 29.371L120.077 20.8448L120.282 19.9665L119.603 19.3732L113.042 13.6435L121.624 12.942L122.543 12.8669L122.891 12.0136L126.172 3.971Z' stroke='%235C6AC4' stroke-width='3'/%3E%3Cpath d='M162.344 3.971L165.626 12.0136L165.974 12.8669L166.892 12.942L175.475 13.6435L168.914 19.3732L168.235 19.9665L168.44 20.8448L170.435 29.371L163.137 24.8267L162.344 24.3329L161.552 24.8267L154.254 29.371L156.249 20.8448L156.454 19.9665L155.775 19.3732L149.214 13.6435L157.797 12.942L158.715 12.8669L159.063 12.0136L162.344 3.971Z' stroke='%235C6AC4' stroke-width='3'/%3E%3Cpath d='M17.6555 3.971L20.9366 12.0136L21.2847 12.8669L22.2032 12.942L30.7858 13.6435L24.2249 19.3732L23.5456 19.9665L23.7511 20.8448L25.746 29.371L18.4484 24.8267L17.6555 24.3329L16.8626 24.8267L9.56505 29.371L11.5599 20.8448L11.7654 19.9665L11.0861 19.3732L4.52517 13.6435L13.1078 12.942L14.0263 12.8669L14.3744 12.0136L17.6555 3.971Z' stroke='%235C6AC4' stroke-width='3'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-sampler-6-organic-flavours-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%235C6AC4'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%235C6AC4'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%235C6AC4'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%235C6AC4'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%235C6AC4'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-sampler-6-organic-flavours-zero-nicotine_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #5c6ac4;
+}
+
+/* PDP > Star Rating - HAPPY */
+#ripple-happy_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.HAPPY_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer,
+.happy_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-happy_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.HAPPY_grid .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground,
+.happy_color .okeReviews.okeReviews--theme .okeReviews-starRating-indicator-layer--foreground {
+    background-image: url("data:image/svg+xml,%3Csvg width='180' height='36' viewBox='0 0 180 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M53.8278 0L58.4977 11.447L70.6192 12.4377L61.3839 20.503L64.2054 32.5623L53.8278 26.1L43.4501 32.5623L46.2717 20.503L37.0364 12.4377L49.1578 11.447L53.8278 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M90 0L94.67 11.447L106.791 12.4377L97.5561 20.503L100.378 32.5623L90 26.1L79.6224 32.5623L82.4439 20.503L73.2086 12.4377L85.3301 11.447L90 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M126.172 0L130.842 11.447L142.964 12.4377L133.728 20.503L136.55 32.5623L126.172 26.1L115.795 32.5623L118.616 20.503L109.381 12.4377L121.502 11.447L126.172 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M162.344 0L167.014 11.447L179.136 12.4377L169.901 20.503L172.722 32.5623L162.344 26.1L151.967 32.5623L154.788 20.503L145.553 12.4377L157.675 11.447L162.344 0Z' fill='%23FFFFFF'/%3E%3Cpath d='M17.6555 0L22.3254 11.447L34.4469 12.4377L25.2116 20.503L28.0331 32.5623L17.6555 26.1L7.27786 32.5623L10.0994 20.503L0.864122 12.4377L12.9856 11.447L17.6555 0Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+}
+
+#ripple-happy_body .product-single__meta .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.HAPPY_grid .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount,
+.happy_color .okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    color: #ffffff;
+}
+
+.okeReviews.okeReviews--theme,
+.okeReviews.okeReviews--theme p {
+    font-size: 14px;
+}
+
+/* PDP > Review Widget */
+/* PDP > Review Widget > Font Color */
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-summary-total,
+.okeReviews.okeReviews--theme .okeReviews-review-date,
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-profile-name,
+.okeReviews.okeReviews--theme .okeReviews-review-main-heading,
+.okeReviews.okeReviews--theme .okeReviews-review-main-content-body,
+.okeReviews.okeReviews--theme .okeReviews-review-helpful,
+.okeReviews .okeReviews-review-helpful-vote-button {
+    color: #373736;
+}
+
+/* PDP > Review Widget > Widget Aggregate */
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-large .okeReviews-reviewsAggregate-side,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-medium .okeReviews-reviewsAggregate-side,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-large .okeReviews-reviewsAggregate-primary,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-medium .okeReviews-reviewsAggregate-primary,
+.okeReviews .okeReviews-reviewsWidget--minimal .okeReviews-reviewsAggregate-side,
+.okeReviews .okeReviews-reviewsWidget--minimal .okeReviews-reviewsAggregate-primary {
+    border-width: 0;
+    padding: 0 0 1em;
+}
+
+/* PDP > Review Widget > Widget Aggregate > Hidden Elements*/
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-summary-rating-value,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal .okeReviews-reviewsAggregate-main,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal .okeReviews-reviewsAggregate-controls-item:last-child {
+    display: none;
+}
+
+/* PDP > Review Widget > Widget Aggregate > Star Rating */
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-summary-rating-starRating {
+    margin-left: 0;
+}
+
+/* PDP > Review Widget > Widget Aggregate > Star Rating & Value */
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-summary-rating,
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-summary-total {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* PDP > Review Widget > Widget Aggregate > WAR Button */
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-medium .okeReviews-reviewsAggregate-controls-item,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-large .okeReviews-reviewsAggregate-controls-item {
+    text-align: right;
+    margin: 0;
+}
+
+.okeReviews.okeReviews--theme .okeReviews-button {
+    font-size: 0.85714em;
+    background-color: #6a6c77;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+}
+
+.okeReviews.okeReviews--theme .okeReviews-button:hover {
+    background-color: #737373;
+}
+
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-medium .okeReviews-reviewsAggregate-controls-item .okeReviews-reviewsWidget-header-controls-writeReview,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-large .okeReviews-reviewsAggregate-controls-item .okeReviews-reviewsWidget-header-controls-writeReview {
+    width: 160px;
+}
+
+/* PDP > Reviews Widget > Individual Reviews */
+/* PDP > Reviews Widget > Individual Reviews > Profile Name*/
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-profile-name {
+    font-size: 1.0714em;
+    font-family: 'Swiss721BT-Bold';
+}
+
+/* PDP > Reviews Widget > Individual Reviews > Status */
+.okeReviews.okeReviews--theme .okeReviews-review--minimal .okeReviews-review-reviewer-profile-status {
+    font-size: 0.85714em;
+}
+
+/* PDP > Reviews Widget > Individual Reviews > Attributes */
+.okeReviews.okeReviews--theme .okeReviews-review--minimal .okeReviews-review-selectAttributes {
+    display: none;
+}
+
+/* PDP > Review Widget > Individual Reviews > Heading */
+.product-reviews.reviews__section .okeReviews.okeReviews--theme h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+    text-align: left;
+    margin-top: 0;
+}
+
+/* PDP > Reviews Widget > Individual Reviews > Star Rating Container */
+.okeReviews.okeReviews--theme .okeReviews-review-meta {
+    margin-bottom: 1em;
+}
+
+/* PDP > Media Queries */
+@media all and (max-width: 1024px) {
+    /* Product Slider */
+    .grid__item--related-products:hover [data-oke-reviews-product-listing-rating],
+    .grid__item--:hover [data-oke-reviews-product-listing-rating] {
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 767px) {
+    /* Collection > Star Rating */
+    .grid__item--collection-template [data-oke-reviews-product-listing-rating] {
+        display: none;
+    }
+}
+
+/* Dedicated Reviews Page */
+.dedicated-reviews-page .okeReviews.okeReviews--theme .okeReviews-reviewsWidget {
+    padding: 2em 0;
+}
+
+
+/* 5-12-2021 Styling Updates */
+/* Star Rating */
+.okeReviews-productRating-summary-pdp {
+    margin: 0 0 5px;
+}
+.okeReviews.okeReviews--theme .okeReviews-reviewsSummary-ratingCount {
+    font-family: 'Swiss721BT-Bold';
+}
+/* Reviews Widget > Aggregate Controls */
+.okeReviews.okeReviews--theme .okeReviews-reviewsAggregate-controls {
+    flex-flow: column;
+}
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal .okeReviews-reviewsAggregate-controls-item {
+    margin-right: 0;
+}
+/* Reviews Widget > Custom Ask A Question Button */
+.okeReviews-custom-controlItem {
+    display: none;
+}
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-large .okeReviews-custom-controlItem,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-medium .okeReviews-custom-controlItem {
+    width: unset;
+    display: block;
+    margin: 0.5em 0 0 auto;
+}
+.okeReviews.okeReviews--theme .okeReviews-custom-controlItem {
+    display: block;
+    margin: 0.5em 0 0 auto;
+    width: 100%;
+}
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-large .okeReviews-customButton-askAQuestion,
+.okeReviews.okeReviews--theme .okeReviews-reviewsWidget--minimal.is-okeReviews-reviewsWidget-medium .okeReviews-customButton-askAQuestion {
+    width: 160px;
+} 
+.okeReviews.okeReviews--theme .okeReviews-customButton-askAQuestion {
+    width: auto;
+    text-align: center;
+}
+
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-product {
+    margin-bottom: 0;
+}
+.okeReviews.okeReviews--theme .okeReviews-review-recommendation,
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-product {
+  	display: none;
+}
+
+/* Hide flags on individual reviews */
+.okeReviews.okeReviews--theme .okeReviews-review-reviewer-profile-country.okeReviews-flag {
+     display: none;
+}

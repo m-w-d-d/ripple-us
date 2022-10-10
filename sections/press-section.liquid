@@ -1,0 +1,191 @@
+<div class="page-width animation-element" data-aos="fade-up">
+  
+  <div class="logo_slider">
+    {% for block in section.blocks %}
+    <div class="section-header text-center">
+      {% if block.settings.info != blank %}    
+      <p>{{ block.settings.info | replace: "+", "<sup>+</sup>" }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if section.blocks.size > 0 %}
+  <div class="logo_thumbbox">
+    <ul class="logo_thumb logo-bar{% if section.settings.title_enable %} logo-bar--large{% endif %}">
+      {% for block in section.blocks %}
+        <li class="logo-bar__item{% if section.settings.title_enable %} logo-bar__item--large{% endif %}" {{ block.shopify_attributes }}>
+          <div class="logo_height">
+            <div class="middle_align">
+          {% if block.settings.link != blank %}
+            <a href="{{ block.settings.link }}" class="logo-bar__link">
+          {% endif %}
+          {% if block.settings.image != blank %}
+              
+              <img data-sizes="auto"data-src="{{ block.settings.image | img_url: '160x', scale: 2}}" alt="{{block.settings.image.alt}}" class="logo-bar__image lazyload">
+          {% else %}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+          {% if block.settings.link != blank %}
+            </a>
+              {% endif %}
+              <i> </i>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+      
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if section.blocks.size == 0 %}
+    {% include 'no-blocks' %}
+  {% endif %}
+</div>
+
+<style>
+div.logo_height{opacity:{{section.settings.logo_opacity}};}  
+ 
+  
+div.press_section{
+  
+   background-image: url('{{ section.settings.bg_image | img_url: '2000x' }}')
+}
+  
+.logo_slider p{
+  color:{{ section.settings.logo_slider_info }}!important;
+}
+  
+  .logo_height i{
+  background:{{ section.settings.logo_slider_info }}!important;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+  $('.logo_slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    adaptiveHeight: true,
+    centerMode: true,
+    infinite: false,
+    asNavFor: '.logo_thumb',
+    afterChange: function (slickSlider, i) {
+                        //remove all active class
+                        $('.logo_thumb .slick-slide').removeClass('slick-active');
+                        //set active class for current slide
+                        $('.logo_thumb .slick-slide').eq(i).addClass('slick-active');
+                    }
+    
+  });  
+  $('.logo_thumb').slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    asNavFor: '.logo_slider',
+    dots: false, 
+    centerMode: true,
+    arrows: false,
+    speed: 1500,    
+    infinite: true,
+    	
+    focusOnSelect: true
+  });
+  
+  $('.logo_thumb').on('mouseenter', '.slick-slide', function (e) {
+	var $currTarget = $(e.currentTarget), 
+    	index = $currTarget.data('slick-index'),
+        slickObj = $('.logo_slider').slick('getSlick');
+    
+    slickObj.slickGoTo(index);
+    
+});
+   
+
+   $('.logo_slider').slick('slickGoTo', 1);
+  
+  
+  
+});  
+  
+
+
+  
+  
+</script>
+
+{% schema %}
+{
+  "name": "Press list",
+
+  "class": "index-section press_section",
+  "max_blocks": 12,
+  "settings": [
+ {
+          "type": "image_picker",
+          "id": "bg_image",
+		  "label": "Image",
+			"info":"Size 1600x"
+        },
+{
+      "type": "text",
+      "id": "logo_opacity",
+      "label": "Logo opacity",
+      "default": "0.2",
+      "info" : "0.1 to 1"
+    },
+	{
+      "type": "color",
+      "id": "logo_bg",
+      "label": "Background color",
+      "default": "#f0f0f0"
+    },
+	{
+      "type": "color",
+      "id": "logo_slider_info",
+      "label": "Info color",
+      "default": "#54678e"
+    }
+ 
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Press logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+		"info": "size: 160 x auto"
+        },
+       
+		{
+      "type": "textarea",
+      "id": "info",
+      "label":"Content"
+    }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Press list",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

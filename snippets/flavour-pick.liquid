@@ -1,0 +1,201 @@
+<style>
+  .keypoint-bar__item {
+
+    position:relative;
+  }
+    .keypoint-bar__item span{
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: -30px;
+    text-align: center;
+    left: -16px;
+    display: none;
+    border-radius: 3px;
+    padding: 2px;
+    font-family: Swiss721 Md BT;
+    min-width: 100px;
+    
+}
+.keypoint-bar__item span:after{
+    content:'';
+    position:absolute;
+    bottom:-10px; 
+    width:10px;
+    height:10px;
+    border-bottom:5px solid {{ product.metafields.product_color.product_color }};
+    border-right:5px solid {{ product.metafields.product_color.product_color }};
+    background:{{ product.metafields.product_color.product_color }};
+    left:58%;
+  display:none;
+    margin-left:-10px;
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+
+.keypoint-bar__item:hover span{
+    display:block;
+}
+
+</style>    
+    <ul style="display: inline-flex;"class="keypoint-bar flavour-pick">
+      
+       <a href ="{{ product.metafields.accentuate.kit_1_url }}"> <li style="    "class=" keypoint-bar__item">
+          
+          <div class=" icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_1}}" alt="" class=" logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+      		
+          <span style="background:{{ product.metafields.accentuate.kit_1_color }}">{{ product.metafields.accentuate.kit_1_aroma }}</span>
+          
+              
+      </li></a>
+      
+     <a href ="{{ product.metafields.accentuate.kit_2_url }}">    <li style="    " class="keypoint-bar__item">
+          
+         <div class="flavour icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_2}}" alt="" class="logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+      		
+                    <span style="background:{{ product.metafields.accentuate.kit_2_color }}">{{ product.metafields.accentuate.kit_2_aroma }}</span>
+
+              
+      </li></a>
+      
+      <a href ="{{ product.metafields.accentuate.kit_3_url }}">   <li style="   "class="keypoint-bar__item">
+          
+    <div class="flavour icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_3}}" alt="" class="logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+      		
+                   <span style="background:{{ product.metafields.accentuate.kit_3_color }}">{{ product.metafields.accentuate.kit_3_aroma }}</span>
+
+          
+              
+      </li></a>
+      
+      <a href ="{{ product.metafields.accentuate.kit_4_url }}">   <li style="    " class="keypoint-bar__item">
+         <div class="flavour icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_4}}" alt="" class="logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+         
+                    <span style="background:{{ product.metafields.accentuate.kit_4_color }}">{{ product.metafields.accentuate.kit_4_aroma }}</span>
+
+              
+      </li></a>
+          <a href ="{{ product.metafields.accentuate.kit_5_url }}">     <li style="    " class="keypoint-bar__item">
+         <div class="flavour icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_5}}" alt="" class="logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+         
+                    <span style="background:{{ product.metafields.accentuate.kit_5_color }}">{{ product.metafields.accentuate.kit_5_aroma }}</span>
+
+              
+      </li></a>
+      
+             <a href ="{{ product.metafields.accentuate.kit_6_url }}">  <li style="    " class="keypoint-bar__item">
+         <div class="flavour icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_6}}" alt="" class="logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+         
+                    <span style="background:{{ product.metafields.accentuate.kit_6_color }}">{{ product.metafields.accentuate.kit_6_aroma }}</span>
+
+              
+      </li></a>
+            
+             <a href ="{{ product.metafields.accentuate.kit_7_url }}">  <li style="    " class="keypoint-bar__item">
+         <div class="flavour icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_7}}" alt="" class="logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+         
+                    <span style="background:{{ product.metafields.accentuate.kit_7_color }}">{{ product.metafields.accentuate.kit_7_aroma }}</span>
+
+              
+      </li></a>
+            
+             <a href ="{{ product.metafields.accentuate.kit_8_url }}">  <li style="    " class="keypoint-bar__item">
+         <div class="flavour icon_box">
+                          <img data-sizes="auto" 
+                               data-src="{{product.metafields.globals.product_kit_8}}" alt="" class="logo-bar__image lazyautosizes lazyload" 
+                               sizes="100px" 
+                               src="">
+
+          
+          </div>
+          
+         
+                    <span style="background:{{ product.metafields.accentuate.kit_8_color }}">{{ product.metafields.accentuate.kit_8_aroma }}</span>
+
+              
+      </li></a>
+      
+      
+    </ul>
+  
+
+  <style>
+    
+    .flavour .logo-bar__image{
+    
+    opacity:.5;
+    }
+    
+    .flavour .logo-bar__image:hover {
+    
+    opacity:1;
+    }
+    @media (max-width: 767px){
+.keypoint-bar {
+    margin: 0 2px!important;
+}
+    }   .flavour-pick li{
+    padding:15px 5px;
+    }
+</style>

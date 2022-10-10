@@ -1,0 +1,18 @@
+{% render 'shogun-products', content: collection %}
+{{collection.metafields.shogun.above}}
+{{ 'collection.css' | asset_url | stylesheet_tag }}
+{% comment %}
+  The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
+
+{% section 'shopall-collection-template1' %}
+{% section 'shopall-collection-template2' %}
+{% section 'shopall-collection-template3' %}
+<style>
+    .grid-view-item.product-card {
+ 
+    min-height:550px!important;
+  
+}
+</style>
+{{collection.metafields.shogun.below}}

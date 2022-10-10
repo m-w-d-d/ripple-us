@@ -1,0 +1,288 @@
+<div class="home-pod-rt home_merch merch--{{ section.id }}">
+  
+  
+ 
+  <div class="">
+  <div style="background-color:#Fff!important;" class=" page-width p-0 w_1053">
+    <div  style=" padding: 80px 0 80px; "class="home-pod home_merch_wrap merch_{{ section.settings.merch_align }}">
+      
+      
+      <h3 class="small--hide pod-response"style=" font-size:30px!important;">{{ section.settings.ho_title | replace: "+", "<sup>+</sup>"  }}</h3>
+            <h3 class="large--hide pod-response"style=" font-size:23px!important;">{{ section.settings.ho_title | replace: "+", "<sup>+</sup>"  }}</h3>
+{% if section.settings.ho_info != blank %}
+      <div style="    "class="home_merchrte">
+        {{ section.settings.ho_info  }}
+      </div>
+        {% endif %}
+      <br>  
+        
+      {% if section.settings.ho_button != blank %}
+       <a href="{{ section.settings.ho_button_link }}" class="btn" tabindex="0">
+        <i></i>
+        <span>{{ section.settings.ho_button }}</span>
+      </a>
+      {% endif %}  
+      
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+    @media (max-width: 767px){
+  
+.home-pod-rt.pod.home_merch_wrap {
+    padding: 40px 15px;
+   
+    position: absolute;
+    top: 100px;
+}
+.home-pod-rt  .pod-response .home_merch_wrap h3{
+  font-size:23px!important;
+  }  
+    
+  }
+  .main-content{padding-top:0!important;}
+
+  div.page-container {
+
+    margin-top: -85px;
+}
+.home-pod-rt.home_merchrte {
+    padding: 10px !important;
+}
+  
+ .home-pod-rt .home_merch_wrap {
+    float: right;
+    width: 100%;
+    
+    text-align: right;
+    padding: 96px 0 110px;
+}
+.home-pod-rt.home_merch_wrap h3
+{
+    color:{{ section.settings.ho_text_color}};
+  text-align:center; font-size:23px!important;
+  }
+.home-pod-rt.merch--{{ section.id }}  .home_merch_wrap p{
+  font-size: 17px;
+    color:#000;
+  text-align:center;
+      line-height: 1.2;
+  }
+    .site-header.nav-down , .currency-picker {
+    background: transparent!important;
+}
+  
+  .site-header__icons a, .menu_icon span{
+    
+    color: #fff!important;
+}
+  /*
+  div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background }}, {{ section.settings.ho_background }} 50%, {{ section.settings.ho_background }});
+  }*/
+  .home-pod-rt div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background }};
+    color:{{ section.settings.ho_background_text }};
+  }
+ .home-pod-rt div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background_first }}, {{ section.settings.ho_background_second }} 50%, {{ section.settings.ho_background_third }});
+  }
+
+ .home-pod-rt div.home_merch_wrap .btn:hover{    
+    color:{{ section.settings.ho_background_text_hover}};
+     background-color: {{ section.settings.ho_background_text }}!important;
+  }
+.home-pod-rt    .home_merch_wrap h3 {
+    font-size: 24px!important;
+    line-height: 1.1!important;
+    text-transform: normal;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: Swiss721BT-Bold!important;
+  color:{{ section.settings.ho_background }}!important;
+}
+ @media(max-width:767px){
+  /* .home_merch{
+   background-image:none!important;
+ } 
+   div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background_text }};
+    color:{{ section.settings.ho_background }};
+  }*/
+   
+ }  .site-header.nav-down {
+    background: transparent!important;
+}
+    .site-header__icons a ,.currency-picker{
+    
+    color: #fff!important;
+}
+  .site-header_cart-count.count_0,.menu_icon span  {
+  
+    background: #fff!important;
+    
+}
+ @media(max-width:767px){  
+.home-pod-rt .home_merch_wrap {
+  
+    padding: 55px 15px 55px !important;
+
+} 
+.home-pod-rt   .home_merch_wrap h3 {
+    color: {{ section.settings.mo_text_info }}!important;
+    text-align:center;
+}
+   
+.home-pod-rt   .home_merch_mo, .home_merch_mo img {
+    float: left;
+    width: 100%;
+    min-height: 700px;
+}
+ }
+.home-pod-rt .w_1053 {
+    max-width: 1332px!important;
+}  
+</style>
+
+{% schema %}
+  {
+    "name": "Home-richtext",
+    "settings": [
+
+        {
+        "type": "text",
+        "id": "ho_title",
+        "label": "Heading"
+        },
+       
+        {
+        "type": "richtext",
+        "id": "ho_info",
+        "label": "Info"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_text_color",
+        "label": "Text color"
+        },
+        {
+        "type": "header",
+        "content": "button section"
+        },
+        {
+        "type": "text",
+        "id": "ho_button",
+        "label": "Button label"
+        },
+        {
+        "type": "url",
+        "id": "ho_button_link",
+        "label": "Button link"
+        },
+
+
+        {
+        "type": "header",
+        "content": "Button color"
+        },
+        {
+        "type": "color",
+        "id": "ho_background",
+        "label": "Button Background color",
+        "default":"#fff"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text",
+        "label": "Button text color",
+        "default":"#516791"
+        },
+        {
+        "type": "header",
+        "content": "Button Hover color"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_background_first",
+        "label": "Background gradient color first",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_second",
+        "label": "Background gradient color second",
+        "default":"#758bb5"
+        }, 
+        {
+        "type": "color",
+        "id": "ho_background_third",
+        "label": "Background gradient color third",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text_hover",
+        "label": "Hover button text color",
+        "default":"#fff"
+        },
+        {
+        "type": "select",
+        "id": "merch_align",
+        "label": "Text align",
+        "default": "right",
+        "options": [
+        {
+        "label": "Left",
+        "value": "left"
+        },
+        {
+        "label": "Center",
+        "value": "center"
+        },
+        {
+        "label": "Right",
+        "value": "right"
+        }
+
+        ]
+        },
+        {
+        "type": "header",
+        "content": "Mobile info background color"
+        },
+        {
+        "type": "color",
+        "id": "mo_background_info",
+        "label": "Background color",
+        "default":"#f0f0f0"
+        },
+        {
+        "type": "color",
+        "id": "mo_text_info",
+        "label": "Text color",
+        "default":"#516791"
+        }
+
+		
+],
+ "presets": [
+    {
+      "name": "Home Pod-section rt",
+      "category": "Image"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

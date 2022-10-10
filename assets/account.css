@@ -1,0 +1,564 @@
+a{
+  outline:none!important;
+}
+.template-customers\/login, #create-account_body{
+  background-image: linear-gradient(180deg,#fff 0%, #d2e5ed 60%);
+}
+.site-footer div.page-width{
+  padding-left:0;
+}
+.template-customers\/login .page-width, .template-customers\/register .page-width{
+  padding-left:28px;
+}
+#account_body #MainContent, #create-account_body #MainContent, #addresses_body #MainContent{
+  padding-top:34px;
+}
+.account_wrapper{
+  max-width:565px;
+  width:100%;
+  margin:0 auto;
+  padding:0 15px;
+}
+input:focus, button:focus, select:focus{
+  outline:none;
+}
+.account_wrapper h1{
+  text-align:left!important;
+  float:left;
+  margin-bottom:31px;
+  font-size:45px;
+  line-height:normal;
+  color:#373736;
+}
+#customer_register_link, #customer_login_link{
+  font-family: 'Swiss721BT-Bold';
+  float:right;
+  font-size:20px;
+  line-height:65px;
+}
+#MainContent .account_wrapper p{
+  margin-bottom:30px;
+  font-weight:normal;
+  text-align:right;
+}
+#MainContent #customer_login p{
+  	 margin-bottom:35px;
+}
+.account_form #customer_login input[type="email"], 
+.account_form #customer_login input[type="password"], 
+.account_form #customer_login input[type="text"], 
+.account_form #customer_login input[type="tel"], 
+.account_form #customer_login select,
+.account_form #RegisterForm input[type="email"], 
+.account_form #RegisterForm input[type="password"], 
+.account_form #RegisterForm input[type="text"], 
+.account_form #RegisterForm input[type="tel"], 
+.account_form #RegisterForm select,
+.account_form #RecoverPasswordForm input[type="email"]{
+  border: 1px solid #fff;
+  }
+.account_form input[type="email"], 
+.account_form input[type="password"], 
+.account_form input[type="text"], 
+.account_form input[type="tel"], 
+.account_form select{
+  float: left;
+  width: 100%;
+  background:#fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 3px;
+  color:#373736;
+  padding: 18px 30px 18px 30px;
+  font-size: 16px;
+  font-family: 'Swiss721BT-Regular';
+  margin-bottom:10px;	
+}
+.account_form input[type="email"]{
+	border-bottom:none!important;
+}
+.form-vertical label{
+  	font-family: 'Swiss721BT-Regular';
+    font-size: 13px;
+    color: #373736;
+}
+#RecoverEmail{
+  margin-bottom:10px;	
+}
+.account_form .input--error{
+  border-bottom:1px solid #fff!important;
+}
+.account_form input[type="submit"]{
+  width:100%;
+  margin:0;
+}
+/*
+.account_form input[type="submit"]{
+  border: 1px solid #654489;
+  background: #654489;
+  color:#fff;
+  font-size: 16px;
+  font-family: 'Swiss721BT-Bold';
+  padding: 18px 48px;
+  border-radius:3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  	width:100%;
+  max-width: inherit;
+}
+.account_form input[type="submit"]:hover{
+  background:#373736;
+  color:#fff;
+}*/
+.account_form input::placeholder{
+  	color:#373736;
+  opacity:1;
+}
+.account_form p.sub_heading{
+  margin:0;
+  text-align:left!important;
+}
+.account_form p a{
+  color:#373736;
+  font-size:11px;
+  font-weight:normal;
+  text-decoration: underline;
+}
+#RegisterForm .half_field {
+    width: 50%;
+    float: left;
+}
+.account_form .half_field {
+    float: left;
+    width: 50%;
+}
+#RegisterForm-LastName{
+  border-left:none;
+  padding-left:0;
+}
+
+
+#RegisterForm #RegisterForm-email{
+  border-top:none;
+}
+.field {
+    padding: 0 15px;
+}
+.full_width{
+  padding-top:89px;
+  float:left;
+  width:100%;
+  min-height: 500px;
+}
+.container{
+  max-width:1170px;
+  width:100%;
+  margin:0 auto;
+}
+.account_sidebar {
+  float:left;
+  height:100%;
+  width:23.8%;
+}
+.account_content{
+  float:right;
+  width:75%;
+  padding-left:54px;
+}
+.white_bg {
+  position: fixed;
+  width: 69.5%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: #fff;
+  border-left:1px solid #373736;
+  z-index: -1;
+  display:none;
+}
+.template-customers/login, .template-customers/register{
+  	padding:0;
+}
+.template-customers\/account{
+  background:#fff;
+  position:relative;
+}
+.account_sidebar h5{
+  font-size:20px;
+  line-height:normal;
+  color:#373736;
+  margin:0 0 35px;
+}
+.account_sidebar li{
+  margin-bottom:7px;
+}
+.account_sidebar li a:hover, .account_sidebar li.active a{
+  border-bottom:1px solid #373736;
+}
+.myaccount .address{
+  text-align:left;
+}
+.myaccount .address h2{
+  font-family: 'Swiss721BT-Bold';
+  margin:0 0 31px;
+  font-size:20px;
+  line-height:normal;
+  text-transform:capitalize;
+  letter-spacing:normal;
+  text-align:left;
+}
+.myaccount .address p{
+  text-align:left;
+  margin:0 0 35px;
+  line-height:30px;
+}
+.myaccount .list--inline{
+  	text-align:left;
+}
+.myaccount .list--inline > li {
+    border-right: 1px solid #373736;
+    line-height: 10px;
+    height: 12px;
+  	padding:0 12px 0 11px;
+  width:auto;
+}
+.myaccount .list--inline > li:first-child{
+  padding-left:0;
+}
+.myaccount .list--inline > li:last-child{
+  border:none;
+}
+.myaccount .list--inline button{
+  padding:0;
+  border:0!important;
+  line-height:normal;
+  color:#373736;
+  text-transform:capitalize;
+  position: relative;
+  top: -2px;
+  background: transparent;
+  font-family: 'Swiss721BT-Regular';
+font-size: 13px;
+  letter-spacing: normal;
+}
+.myaccount .list--inline button:hover, .myaccount .list--inline button:focus{
+  background:none;
+  color:#373736;
+}
+.add_address {
+    width: 100%;
+    text-align: center;
+    position: static;
+    top: 75px;
+    right: 0;
+    padding-right: 0px;
+  border-top: 1px solid #ccc;
+padding: 50px 0 90px;
+}
+.add_address button {
+    text-align: center;
+}
+.address_column {
+    width: 100%;
+  text-align:center;
+}
+.address_column li {
+  float:left;
+    width:33.33%;
+   	display:inline-block;
+    padding: 0 15px;
+ 	margin-bottom: 30px;
+}
+.add_address button{
+  padding:0 0 3px;
+  border:none;
+  background:none;
+  border-bottom:1px solid #373736;
+  max-width:inherit;
+  width:auto;
+  float: none;
+display: table;
+margin: 0 auto;
+  color:#373736;
+  border-radius: 0;
+}
+.address_add button:hover{
+  border:none!important;
+  background:none!important;
+  color:#373736!important;
+}
+.address_add h2{
+  font-size: 17px;
+  line-height: normal;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  margin-top: 0px;
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+.address_add select, .address_add input[type="text"], .address_add input[type="email"], .address_add input[type="tel"]{
+  margin:0;
+  border-top:none;
+}
+.address_add .half_field{
+  border-top:1px solid #373736!important;
+}
+.address_add .half_field.last_name {
+  /* border-left: none !important;*/
+}
+.address_add {
+    margin-bottom: 30px;
+}
+.add_address .address-new-toggle:hover, .add_address .address-new-toggle:focus{
+  background:none;
+  border:none!important;
+  color:#373736;
+  border-bottom:1px solid transparent!important;
+}
+.order_history td a, .order_history td a:hover, .order_history td a:focus{
+  padding:0;
+  border:none!important;
+  font-size:15px;
+  color:#373736;
+  background:none;
+}
+.order_history th, #customer_orders strong{
+  border:none;
+  padding:0 0 30px;
+  font-family: 'Swiss721BT-Bold';
+  font-size:20px;
+  font-weight: normal;
+}
+.order_history td, .order-number p{
+  border:none;
+  padding:0 0;
+  font-size:15px;
+  color:#373736;
+}
+.myaccount__order-history h2{
+  	text-transform:capitalize;
+   letter-spacing:normal;
+}
+.myaccount__account-details h3{
+  	font-size:20px;
+}
+.myaccount__order-history th, .myaccount__order-history td{
+  border-color:#373736;
+  color:#373736;
+}
+.order-table{
+  border: none;
+}
+.form-vertical h2{
+  	text-transform:capitalize;
+  letter-spacing:normal;
+}
+.order-table th{
+  text-transform:capitalize!important;
+  padding: 0;
+}
+.grid__item.myaccount__order-history.order_history {
+    padding-left: 15px;
+}
+h1,h2,h3,h4,h5,h6{
+  outline:none;
+}
+.form-message--error {
+    border: none;
+    background: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+  	margin-bottom: 15px;
+}
+.form-message--error li{
+  	list-style:none;
+}
+
+@media(min-width:1601px){
+.white_bg {
+    width: 66.5%;
+}
+}
+
+@media(min-width:1899px){
+.white_bg {
+    width: 64.5%;
+}
+}
+
+@media(min-width:2399px){
+.white_bg {
+    width: 62.5%;
+}
+}
+
+@media(min-width:3199px){
+.white_bg {
+    width: 59.5%;
+}
+}
+
+@media(min-width:5299px){
+.white_bg {
+    width: 55.5%;
+}
+}
+
+@media(max-width:599px){
+.account_wrapper h1{
+  font-size:30px;
+}
+}
+
+.orders-bg .col-md-4 {
+    max-width: 33.333333%;
+  	float:left;
+  	width:100%;
+}
+.orders-bg .col-md-8 {
+    max-width: 66.666667%;
+  	float:left;
+  	width:100%;
+}
+.orders-bg p{
+  	margin-bottom:10px;
+}
+.order-number p {
+    float: left;
+    width: 100%;
+}
+#customer_orders strong {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+.orders-bg .col-md-5 {
+    max-width: 41.666667%;
+  	float: left;
+    width: 100%;
+}
+.orders-bg .col-md-2 {
+    max-width: 16.666667%;
+  		float: left;
+    width: 100%;
+}
+.form-vertical {
+  	display: table;
+	width: 100%;
+  	padding-bottom:125px;
+}
+.account_wrapper.account_form {
+    padding-top: 39px;
+}
+#activate_account input[type="submit"]{
+  margin: 0 0 10px;
+  font-size: 15px;
+  padding: 19.5px 15px;
+  margin: 0 0 0px;
+  width: 100%;
+  max-width:none;
+}
+.myaccount .address p br:nth-child(1) {
+    display: none;
+}
+.account_sidebar li a {
+    padding: 0 0 3px;
+    border-bottom: 1px solid transparent;
+}
+.address_add select, .address_add input[type="text"], .address_add input[type="email"], .address_add input[type="tel"] {
+    margin: 0;
+    border-top: none;
+    padding: 17px 15px;
+    border: 1px solid #ccc !important;
+    appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+    margin: 0 0 10px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+.address_add .account_form input[type="submit"] {
+    font-size: 15px;
+    padding: 18px 15px;
+}
+.text-link.address-edit-toggle {
+    float: left;
+    width: auto;
+    font-size: 13px;
+    border-bottom: 1px solid currentcolor;
+    margin: 5px 0 0;
+}
+.address_column li:nth-child(3n+1){
+  clear:both;
+}
+#address_form_new h2{
+  display:none;
+}
+.text-link.address-new-toggle {
+    font-size: 13px;
+    letter-spacing: normal;
+    border-bottom: 1px solid currentColor;
+    float: left;
+}
+.text-link.address-new-toggle:hover{
+  border-bottom: 1px solid transparent;
+}
+#AddressNewForm{
+  margin-top: -30px;
+}
+.grid__item.myaccount__account-details{
+  padding-left: 60px;
+}
+.template-customers\/order .grid.myaccount {
+    padding: 0 0 100px;
+}
+.input_submit.m-0 {
+    margin: 0;
+}
+#HideRecoverPasswordLink {
+    font-size: 13px;
+    text-decoration: underline;
+}
+#HideRecoverPasswordLink:hover {
+    text-decoration: none;
+}
+.decline_btn{
+  float:left;
+  width:100%;
+  margin:10px 0 0;
+}
+div#rc_login {
+    clear: both;
+    float: left;
+}
+.myaccount .list--inline.pagination{
+  text-align: center;
+  clear: both;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+.myaccount .pagination .icon {
+  display: block;
+  height: 10px;
+  vertical-align: middle;
+  position: static;
+  width: 20px;
+}
+.myaccount .pagination .btn:hover svg {
+  fill: #000;
+}
+.myaccount .pagination .btn.btn--tertiary.btn--narrow {
+  background: transparent;
+  color: #000;
+}
+.myaccount .list--inline.pagination button {
+  top: 0;
+}  

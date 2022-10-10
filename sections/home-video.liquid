@@ -1,0 +1,209 @@
+<div class="home_vid home_vid_{{ section.settings.vid_align }}"  style="background:{{ section.settings.vid_text_bgcolor }};">
+  
+  <div class="home_50">
+    <div class="filmcontainer video-width-50 image-height hero_video">
+          <video id="homevid" class="cz" preload autoplay muted loop playsinline>
+           <source src="{{ section.settings.vid_name }}" type="video/mp4">
+         </video>
+    
+       </div>
+    <button id="mute-video">Toggle Mute</button>
+      
+  </div>
+  
+  
+  <div class="home_50 vid_info">
+    <div class="home_vid_wrap">
+      {% if section.settings.vid_title != blank %}
+      <h3>{{ section.settings.vid_title  }}</h3>
+      {% endif %}  
+       {% if section.settings.vid_info != blank %}
+      <div class="home_vidhrte">
+        {{ section.settings.vid_info }}
+      </div>
+        {% endif %}  
+      {% if section.settings.vid_button != blank %}      
+      
+      <a href="{{ section.settings.vid_button_link }}" class="btn" tabindex="0">
+        <i></i>
+        <span>{{ section.settings.vid_button }}</span>
+      </a>
+      
+      
+      {% endif %}  
+    </div>
+  </div>
+</div>
+<script>
+
+ 
+  
+  $(document).ready(function(){
+
+ 
+    
+
+  
+    
+    
+ $("#homevid").prop('muted', true);
+
+$("#mute-video").click(function () {
+    if ($("#homevid").prop('muted')) {
+        $("#homevid").prop('muted', false);
+        $(this).addClass('unmute-video');
+
+    } else {
+        $("#homevid").prop('muted', true);
+        $(this).removeClass('unmute-video');
+    }
+    console.log($("#homevid").prop('muted'))
+});   
+
+    });
+  </script>
+
+
+
+<style>
+.home_vid_wrap h3,
+  .home_vid_wrap p{
+    color:{{ section.settings.vid_text_color}};
+  }
+  
+
+.home_vid_wrap .btn i{
+ 	background-image: linear-gradient(270deg, {{ section.settings.vid_background }}, {{ section.settings.vid_background }} 50%, {{ section.settings.vid_background }});
+  }
+.home_vid_wrap .btn{
+    background-color: {{ section.settings.vid_background }};
+  }
+.home_vid_wrap .btn:hover i{
+  	background-image: linear-gradient(270deg, {{ section.settings.vid_background_first }}, {{ section.settings.vid_background_second }} 50%, {{ section.settings.vid_background_third }});
+  }
+  
+</style>
+
+{% schema %}
+  {
+    "name": "Home video",
+    "settings": [
+	     
+    {
+          "type": "header",
+          "content": "Video section"
+     },
+	{
+          "type": "text",
+          "id": "vid_name",
+          "label": "Video url",
+          "info": "Size: 5-10mb[mp4]"
+     },
+
+   {
+          "type": "text",
+          "id": "vid_title",
+          "label": "Heading"
+     },
+	{
+          "type": "richtext",
+          "id": "vid_info",
+          "label": "Info"
+     },
+	
+{
+          "type": "color",
+          "id": "vid_text_color",
+          "label": "Text color"
+     },
+{
+          "type": "color",
+          "id": "vid_text_bgcolor",
+          "label": "Text background color"
+     },
+
+{
+          "type": "header",
+          "content": "button section"
+     },
+   {
+          "type": "text",
+          "id": "vid_button",
+          "label": "Button label"
+     },
+	{
+          "type": "url",
+          "id": "vid_button_link",
+          "label": "Button link"
+     },
+   
+{
+          "type": "header",
+          "content": "Video position"
+     },
+{
+  "type": "select",
+  "id": "vid_align",
+  "label": "Video align",
+  "default": "left",
+  "options": [
+    {
+      "label": "Left",
+      "value": "left"
+    },    
+   {
+      "label": "Right",
+      "value": "right"
+    }
+    
+  ]
+},
+{
+             "type": "header",
+             "content": "Button color"
+          },
+		  {
+                "type": "color",
+                "id": "vid_background",
+                "label": "Button Background color",
+                "default":"#516791"
+           },
+           {
+             "type": "header",
+             "content": "Button Hover color"
+          },
+
+          {
+                "type": "color",
+                "id": "vid_background_first",
+                "label": "Background gradient color first",
+                "default":"#516791"
+           },
+           {
+                "type": "color",
+                "id": "vid_background_second",
+                "label": "Background gradient color second",
+                "default":"#758bb5"
+           }, 
+			{
+                "type": "color",
+                "id": "vid_background_third",
+                "label": "Background gradient color third",
+                "default":"#516791"
+           }
+		
+],
+ "presets": [
+    {
+      "name": "Home video",
+      "category": "Video"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,391 @@
+<div class="home_merch merch--{{ section.id }}">
+  
+  
+  <div class="home_merch_desk small--hide">
+  {%- assign merch = section.settings.ho_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {% include 'image-style' with image: section.settings.ho_image %}
+  <img id=""
+                 class="lazyload"
+                 src="{{ section.settings.ho_image | img_url: '1600x' }}"
+                 data-src="{{ merch }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.ho_image.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.ho_image.alt | escape }}">
+  </div>
+  <div class="home_merch_mo large--hide">
+  {%- assign mo_merch = section.settings.ho_image_mo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {% include 'image-style' with image: section.settings.ho_image_mo %}
+  <img id=""
+                 class="lazyload"
+                 src="{{ section.settings.ho_image_mo | img_url: '200x200' }}"
+                 data-src="{{ mo_merch }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.ho_image_mo.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.ho_image_mo.alt | escape }}">
+    
+  </div>
+  <div class="home_merchinfo">
+  <div class="page-width p-0 w_1053">
+    <div class="pod home_merch_wrap merch_{{ section.settings.merch_align }}">
+      
+      
+      <h3 class="small--hide pod-response"style=" font-size:30px!important;padding-bottom: 15px;">{{ section.settings.ho_title | replace: "+", "<sup>+</sup>"  }}</h3>
+            <h3 class="large--hide pod-response"style=" font-size:23px!important;padding-bottom: 20px;">{{ section.settings.ho_title | replace: "+", "<sup>+</sup>"  }}</h3>
+
+      <img id=""style="margin: auto;width:100%;    padding: 0 50px;"
+                 class="lazyload small--hide"
+                 src="{{ section.settings.merch_image_title | img_url: '300x' }}"
+                 data-src="{{ merch_image_title }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.merch_image_title.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.merch_image_title.alt | escape }}"> 
+      
+      <img style="margin: auto;"id=""
+                 class="lazyload large--hide"
+                 src="{{ section.settings.merch_image_title_mo | img_url: '250x' }}"
+                 data-src="{{ merch_image_title_mo }}"
+                 data-widths="[200, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.merch_image_title.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.merch_image_title.alt | escape }}"> 
+      <br>
+            <img style="margin: auto;width: 60%;padding-bottom:10px;"id=""
+                 class="lazyload large--hide"
+                 src="{{ section.settings.merch_image_pod_mo | img_url: '600x' }}"
+                 data-src="{{ merch_image_pod_mo }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.merch_image_title.aspect_ratio }}"
+                 data-sizes="auto"data-expand="-20"
+                 alt="{{ section.settings.merch_image_title.alt | escape }}"> 
+       {% if section.settings.ho_info != blank %}
+      <div style="    margin-bottom: -19px;"class="home_merchrte">
+        {{ section.settings.ho_info | replace: "+", "<sup>+</sup>" }}
+      </div>
+        {% endif %} 
+      <div data-vl-widget="embedForm"></div>
+                 <div style="margin-top: -19px;font-size: 17px;color: #ffffffcf;text-align: center;line-height: 1.2;" class="home_merchrte">
+        <a style="outline: none;
+    font-size: 17px;
+    color: #ffffffcf;
+    text-align: center;
+    line-height: 1.2;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1px;
+    /* padding-bottom: 1px; */
+    text-underline-offset: 3px;
+    text-decoration-color: #e3e3e382;"href="https://theripplecousa.myshopify.com/pages/terms-conditions">terms + conditions</a>
+      </div>
+      {% if section.settings.ho_button != blank %}
+       <a href="{{ section.settings.ho_button_link }}" class="btn" tabindex="0">
+        <i></i>
+        <span>{{ section.settings.ho_button }}</span>
+      </a>
+      {% endif %}  
+      
+    </div>
+  </div>
+  </div>
+</div>
+
+<style>
+    @media (max-width: 767px){
+  
+.pod.home_merch_wrap {
+    padding: 40px 15px;
+    background: #f0f0f0;
+    position: absolute;
+    top: 100px;
+}
+  .pod-response .home_merch_wrap h3{
+  font-size:23px!important;
+  }  
+    
+  }
+  .main-content{padding-top:0!important;}
+
+  div.page-container {
+
+    margin-top: -85px;
+}
+.home_merchrte {
+    padding: 10px !important;
+}
+.home_merch_wrap h3
+{
+    color:{{ section.settings.ho_text_color}};
+  text-align:center; font-size:23px!important;
+  }
+.merch--{{ section.id }}  .home_merch_wrap p{
+  font-size: 17px;
+    color:#ffffffcf;
+  text-align:center;
+      line-height: 1.2;
+  }
+    .site-header.nav-down , .currency-picker {
+    background: transparent!important;
+}
+  
+  .site-header__icons a, .menu_icon span{
+    
+    color: #fff!important;
+}
+  /*
+  div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background }}, {{ section.settings.ho_background }} 50%, {{ section.settings.ho_background }});
+  }*/
+  div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background }};
+    color:{{ section.settings.ho_background_text }};
+  }
+  div.home_merch_wrap .btn i{
+    background-image: linear-gradient(270deg, {{ section.settings.ho_background_first }}, {{ section.settings.ho_background_second }} 50%, {{ section.settings.ho_background_third }});
+  }
+
+  div.home_merch_wrap .btn:hover{    
+    color:{{ section.settings.ho_background_text_hover}};
+     background-color: {{ section.settings.ho_background_text }}!important;
+  }
+    .home_merch_wrap h3 {
+    font-size: 24px!important;
+    line-height: 1.1!important;
+    text-transform: normal;
+    float: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: Swiss721BT-Bold!important;
+}
+ @media(max-width:767px){
+  /* .home_merch{
+   background-image:none!important;
+ } 
+   div.home_merch_wrap .btn{
+    background-color: {{ section.settings.ho_background_text }};
+    color:{{ section.settings.ho_background }};
+  }*/
+   
+ }  .site-header.nav-down {
+    background: transparent!important;
+}
+    .site-header__icons a ,.currency-picker{
+    
+    color: #fff!important;
+}
+  .site-header_cart-count.count_0,.menu_icon span  {
+  
+    background: #fff!important;
+    
+}
+ @media(max-width:767px){  
+ .home_merch_wrap {
+    background: {{ section.settings.mo_background_info }}!important;
+  
+    padding: 15px 15px 15px !important;
+
+} 
+   .home_merch_wrap h3 {
+    color: {{ section.settings.mo_text_info }}!important;
+    text-align:center;
+}
+   
+   .home_merch_mo, .home_merch_mo img {
+    float: left;
+    width: 100%;
+    min-height: 700px;
+}
+ }
+ .w_1053 {
+    max-width: 1332px!important;
+}  
+</style>
+
+{% schema %}
+  {
+    "name": "Pod Hero",
+    "settings": [
+        {
+        "type": "image_picker",
+        "id": "ho_image",
+        "label": "Image",
+        "info":"Size 1600 x 568px"
+        },
+        {
+        "type": "image_picker",
+        "id": "ho_image_mo",
+        "label": "Mobile image",
+        "info":"Size 800 x 568px"
+        },
+
+{
+        "type": "image_picker",
+        "id": "merch_image_title",
+        "label": "Merch image title",
+        "info":"Size 200 x 200px"
+        },
+{
+        "type": "image_picker",
+        "id": "merch_image_title_mo",
+        "label": "Merch image title mobile",
+        "info":"Size 200 x 200px"
+        },
+{
+        "type": "image_picker",
+        "id": "merch_image_pod_mo",
+        "label": "Merch image title mobile",
+        "info":"Size 200 x 200px"
+        },
+        {
+        "type": "text",
+        "id": "ho_title",
+        "label": "Heading"
+        },
+        {
+        "type": "select",
+        "id": "font_chnage",
+        "label": "Heading Font",
+        "default": "black_extended",
+        "options": [
+        {
+        "label": "Bold",
+        "value": "bold-font"
+        },
+        {
+        "label": "Heavy Weight",
+        "value": "heavy-font"
+        },
+        {
+        "label": "Black Extended",
+        "value": "black_extended"
+        }
+        ]
+        },
+        {
+        "type": "richtext",
+        "id": "ho_info",
+        "label": "Info"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_text_color",
+        "label": "Text color"
+        },
+        {
+        "type": "header",
+        "content": "button section"
+        },
+        {
+        "type": "text",
+        "id": "ho_button",
+        "label": "Button label"
+        },
+        {
+        "type": "url",
+        "id": "ho_button_link",
+        "label": "Button link"
+        },
+
+
+        {
+        "type": "header",
+        "content": "Button color"
+        },
+        {
+        "type": "color",
+        "id": "ho_background",
+        "label": "Button Background color",
+        "default":"#fff"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text",
+        "label": "Button text color",
+        "default":"#516791"
+        },
+        {
+        "type": "header",
+        "content": "Button Hover color"
+        },
+
+        {
+        "type": "color",
+        "id": "ho_background_first",
+        "label": "Background gradient color first",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_second",
+        "label": "Background gradient color second",
+        "default":"#758bb5"
+        }, 
+        {
+        "type": "color",
+        "id": "ho_background_third",
+        "label": "Background gradient color third",
+        "default":"#516791"
+        },
+        {
+        "type": "color",
+        "id": "ho_background_text_hover",
+        "label": "Hover button text color",
+        "default":"#fff"
+        },
+        {
+        "type": "select",
+        "id": "merch_align",
+        "label": "Text align",
+        "default": "right",
+        "options": [
+        {
+        "label": "Left",
+        "value": "left"
+        },
+        {
+        "label": "Center",
+        "value": "center"
+        },
+        {
+        "label": "Right",
+        "value": "right"
+        }
+
+        ]
+        },
+        {
+        "type": "header",
+        "content": "Mobile info background color"
+        },
+        {
+        "type": "color",
+        "id": "mo_background_info",
+        "label": "Background color",
+        "default":"#f0f0f0"
+        },
+        {
+        "type": "color",
+        "id": "mo_text_info",
+        "label": "Text color",
+        "default":"#516791"
+        }
+
+		
+],
+ "presets": [
+    {
+      "name": "Pod-hero",
+      "category": "Image"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

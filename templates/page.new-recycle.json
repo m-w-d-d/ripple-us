@@ -1,0 +1,237 @@
+{
+  "sections": {
+    "main": {
+      "type": "new-recycle-template",
+      "settings": {
+      }
+    },
+    "1647860712a97b7e05": {
+      "type": "recycle-your-ripple",
+      "settings": {
+        "recycle_bg_one": "#ffffff",
+        "recycle_bg_two": "#ffffff",
+        "text_color": "#000000",
+        "section_img": "shopify:\/\/shop_images\/Gif_grass_00000.gif",
+        "section_title": "RECYCLE YOUR RIPPLE<sup>+<\/sup>",
+        "section_sub_title": "Our puffs are planet friendly",
+        "section_info": "<p>That means you can either drop them off at your nearest retail locations, or print out a free shipping label to send your used devices back to us. You’ll even receive 10% off your next order as a thank you for helping us protect the planet.<br\/><br\/>To find your nearest IRL ripple+ recycling spot, check out our list of <a href=\"\/pages\/our-stockists\" title=\"Our stockists\">stockists<\/a>.<strong><br\/><br\/>For a free return label,<\/strong> simply fill in your details below: <\/p>"
+      }
+    },
+    "1647861086bc979de0": {
+      "type": "how-to-recycle",
+      "settings": {
+        "recycle_ripple_bg": "#ffffff",
+        "select_option": "text",
+        "text": "<p><a href=\"https:\/\/emojikeyboard.org\/copy\/Recycling_Symbol_Emoji_%E2%99%BB%EF%B8%8F?utm_source=extlink\">♻️<\/a> RECYCLE YOUR RIPPLE <a href=\"https:\/\/emojikeyboard.org\/copy\/Recycling_Symbol_Emoji_%E2%99%BB%EF%B8%8F?utm_source=extlink\">♻️<\/a> <\/p>",
+        "image": "shopify:\/\/shop_images\/img-04.png",
+        "recycle_info": "to receive instant rewards"
+      }
+    },
+    "1647861111f7708e13": {
+      "type": "recycle-image-text",
+      "settings": {
+        "align_option": "left",
+        "recycle_img": "shopify:\/\/shop_images\/Recycling-page-_1.gif",
+        "image_text_title": "Step 1: Enter your details",
+        "image_text_info": "<p>This will allow us to send you a brand new shipping label, completely free of charge.<\/p>"
+      }
+    },
+    "1647861120f588137c": {
+      "type": "recycle-image-text",
+      "settings": {
+        "align_option": "right",
+        "recycle_img": "shopify:\/\/shop_images\/Recycling-page-02_847fa546-c694-434a-9189-f9b261572139.gif",
+        "image_text_title": "Step 2: Print your label + send us your used ripples",
+        "image_text_info": "<p>Simply drop them into your nearest post box. You’re an eco legend!<\/p>"
+      }
+    },
+    "164786113163bf35ab": {
+      "type": "recycle-image-text",
+      "settings": {
+        "align_option": "left",
+        "recycle_img": "shopify:\/\/shop_images\/Recycling-page-03.gif",
+        "image_text_title": "Step 3: Receive 10% off your next order",
+        "image_text_info": "<p>So you can stock up on plant powered goodness for less <\/p>"
+      }
+    },
+    "16478611396624b70d": {
+      "type": "recycle-image-text",
+      "settings": {
+        "align_option": "right",
+        "recycle_img": "shopify:\/\/shop_images\/Recycling-page-04.gif",
+        "image_text_title": "Step 4: Fancy a stroll?",
+        "image_text_info": "<p>Head to your nearest ripple+ retailer if you’d rather drop your devices off. Going paperless gains you extra eco points!<\/p>"
+      }
+    },
+    "16478611523fdede2a": {
+      "type": "recycle-image-text",
+      "settings": {
+        "align_option": "left",
+        "recycle_img": "shopify:\/\/shop_images\/Recycling-page-05.gif",
+        "image_text_title": "Step 5: Sit back and relax",
+        "image_text_info": "<p>And let us work our recycling magic to ensure 99%* of the ripple+ components are correctly recycled.<\/p>"
+      }
+    },
+    "1647862073bb818898": {
+      "type": "recycle-its-cool",
+      "blocks": {
+        "c3a43a30-68b1-4a68-9167-b191efa97421": {
+          "type": "slide_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/RECYCYLE_REEL-02.png",
+            "username": ""
+          }
+        },
+        "e4e011b9-bd5b-47c0-b2b2-d1979e3da9da": {
+          "type": "slide_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/RECYCYLE_REEL-03.png",
+            "username": ""
+          }
+        },
+        "445c3281-871f-4624-bd10-4624552a8e4d": {
+          "type": "slide_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/RECYCYLE_REEL-05.png",
+            "username": ""
+          }
+        },
+        "b6a97fe7-2306-4feb-b802-ed6a22af192e": {
+          "type": "slide_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/RECYCYLE_REEL-01.png",
+            "username": ""
+          }
+        },
+        "1e5b319a-da67-4f0d-b48a-4c3882874293": {
+          "type": "slide_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/RECYCYLE_REEL-04.png",
+            "username": ""
+          }
+        },
+        "c7b6904a-220f-4120-8f67-134d7d8b4cbd": {
+          "type": "slide_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/RECYCYLE_REEL-01.png",
+            "username": ""
+          }
+        }
+      },
+      "block_order": [
+        "c3a43a30-68b1-4a68-9167-b191efa97421",
+        "e4e011b9-bd5b-47c0-b2b2-d1979e3da9da",
+        "445c3281-871f-4624-bd10-4624552a8e4d",
+        "b6a97fe7-2306-4feb-b802-ed6a22af192e",
+        "1e5b319a-da67-4f0d-b48a-4c3882874293",
+        "c7b6904a-220f-4120-8f67-134d7d8b4cbd"
+      ],
+      "settings": {
+        "recycle_ripple_bg": "#ffffff",
+        "select_option": "text",
+        "text": "<p>it's cool to be kind <a href=\"https:\/\/emojikeyboard.org\/copy\/Earth_Globe_Europe-Africa_Emoji_%F0%9F%8C%8D?utm_source=extlink\">🌍<\/a><\/p>"
+      }
+    },
+    "16478619154c0f1586": {
+      "type": "recycle-reviews",
+      "blocks": {
+        "16478619151a067033-0": {
+          "type": "review",
+          "settings": {
+            "title": "Mackenzie",
+            "country": "London, UK 🇬🇧",
+            "info": "<p>\"<strong>Not only did these change the game, but they're also recyclable?! This company really is on something, thank you for looking after us and the planet<\/strong>\"<\/p>",
+            "star_rat": "5",
+            "stars_first": "#373736"
+          }
+        },
+        "16478619151a067033-1": {
+          "type": "review",
+          "settings": {
+            "title": "Madison M.",
+            "country": "Paris, France 🇫🇷",
+            "info": "<p>\"<strong>The formulas are smooth af, and the device is really sleek and easy to send back to recycle. Will be back for more<\/strong>\"<\/p>",
+            "star_rat": "5",
+            "stars_first": "#373736"
+          }
+        },
+        "16478619151a067033-2": {
+          "type": "review",
+          "settings": {
+            "title": "Bria B.",
+            "country": "L.A, USA 🇺🇸",
+            "info": "<p>\"<strong>I contacted this company once and they were so nice and helpful, they also helped send my finished devices back to be recycled! Big up!<\/strong>\"<\/p>",
+            "star_rat": "5",
+            "stars_first": "#373736"
+          }
+        },
+        "1ed15905-aa80-43fb-a609-1ef30b5de0f0": {
+          "type": "review",
+          "settings": {
+            "title": "Katy D.",
+            "country": "Milan, Italy 🇮🇹",
+            "info": "<p>“<strong>I discovered ripple at the beginning of the year (really fit into my new year's resolutions) and the puffs have been A DREAM. I have recently sent them back to be recycled and they gave me a discount code so I can stock up again?! Thank you ripple!<\/strong>”<\/p>",
+            "star_rat": "5",
+            "stars_first": "#373736"
+          }
+        },
+        "4e42eed9-19e3-42c8-b7a9-0625584d35bf": {
+          "type": "review",
+          "settings": {
+            "title": "Shar",
+            "country": "London, UK 🇬🇧",
+            "info": "<p>“<strong>So excited to have come across this company, not only are the aromas divine, but they've also made their recycling program super user-friendly!<\/strong>”<\/p>",
+            "star_rat": "5",
+            "stars_first": "#373736"
+          }
+        },
+        "b79be9f4-876b-4c65-b5e6-1adc2fe89890": {
+          "type": "review",
+          "settings": {
+            "title": "Himexsama",
+            "country": "NYC, USA 🇺🇸",
+            "info": "<p>“<strong>I was so happy with how my ripples arrived, they give you stickers with each order and even a cute recycling envelope so you can recycle your devices! Will definitely be sending mine back!<\/strong>”<\/p>",
+            "star_rat": "5",
+            "stars_first": "#373736"
+          }
+        },
+        "a2a0fb62-1594-4cd1-9d80-1d2e6a4a3366": {
+          "type": "review",
+          "settings": {
+            "title": "Erin E.",
+            "country": "London, UK 🇬🇧",
+            "info": "<p>“Such a good replacement to soothe my oral fixation (ex smoker over here). The flavours are so smooth and they taste amazing!!<em><strong> <\/strong><\/em>”<\/p>",
+            "star_rat": "5",
+            "stars_first": "#373736"
+          }
+        }
+      },
+      "block_order": [
+        "16478619151a067033-0",
+        "16478619151a067033-1",
+        "16478619151a067033-2",
+        "1ed15905-aa80-43fb-a609-1ef30b5de0f0",
+        "4e42eed9-19e3-42c8-b7a9-0625584d35bf",
+        "b79be9f4-876b-4c65-b5e6-1adc2fe89890",
+        "a2a0fb62-1594-4cd1-9d80-1d2e6a4a3366"
+      ],
+      "settings": {
+        "recycle_ripple_bg": "rgba(0,0,0,0)",
+        "select_option": "text",
+        "text": "<p><strong>let's hear it from the eco-legends<\/strong><\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1647860712a97b7e05",
+    "1647861086bc979de0",
+    "1647861111f7708e13",
+    "1647861120f588137c",
+    "164786113163bf35ab",
+    "16478611396624b70d",
+    "16478611523fdede2a",
+    "1647862073bb818898",
+    "16478619154c0f1586"
+  ]
+}
