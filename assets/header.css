@@ -2,7 +2,7 @@ body{
   font-family: 'Swiss721BT-Regular';
   font-size:15px;
   padding: 82px 0 0;
-  opacity: 0;	
+  /* opacity: 0;	 */
 }
 body.template-index {
     padding:0;

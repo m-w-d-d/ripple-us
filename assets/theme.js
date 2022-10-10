@@ -4048,7 +4048,7 @@ $(theme.init);
 
 // body load
 $(window).load(function() {
-	$('body').animate({ opacity:1 },500);	
+	// $('body').animate({ opacity:1 },500);	
 });
 
 
