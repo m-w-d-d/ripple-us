@@ -2116,13 +2116,24 @@ div.rc_popup__block__content strong {
 }
 
 div.rc_popup {	
+  line-height: 0;	
+  position: absolute;
+  top: 44%!important;	
+  margin-left: 10px;	
+  padding: 0;	
+  right: 0 !important;	
+}
+
+@media (min-width: 768px) {
+  div.rc_popup {	
     line-height: 0;	
     position: absolute;
     top: 41%!important;	
     margin-left: 10px;	
     padding: 0;	
     right: 40% !important;	
-}
+  }
+} 
 a.rc_popup__hover, div.rc_popup__hover{	
 	height:auto;	
 }
