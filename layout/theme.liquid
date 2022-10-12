@@ -243,7 +243,7 @@ src="https://www.facebook.com/tr?id=378619844474439&ev=PageView&noscript=1"
     
   
     {%- if template == 'index' or template == 'product' or template == 'page.learn-more'  or template == 'product.starter'or template == 'product.happy'or template == 'product.pods'or template == 'product.merch' or template == 'page.mission' or template == 'page.story' or template == 'page.new-recycle' -%}
-  <script src="{{ 'slick.js' | asset_url }}" defer></script>
+  <script src="{{ 'slick.js' | asset_url }}"></script>
    {%- endif -%}
  
   {{ content_for_header }}
@@ -379,17 +379,16 @@ pintrk('page');
   
   
 
-  <script src="{{ 'vendor.js' | asset_url }}" ></script> 
+  <script src="{{ 'vendor.js' | asset_url }}"></script> 
   {{ 'theme.js' | asset_url | script_tag }}
   
   {%- if template == 'index' -%}
-    <script src="{{ 'aos.js' | asset_url }}" defer></script> 
+    <script src="{{ 'aos.js' | asset_url }}"></script> 
   
   
   <script>
 
-  // Deferring the loading of the AOS action until the page has loaded
-  document.addEventListener('DOMContentLoaded', function() {
+
     // You can also pass an optional settings object
   // below listed default settings
     AOS.init({
@@ -397,13 +396,13 @@ pintrk('page');
       once: true, // whether animation should happen only once - while scrolling down
       
     });
-  }); 
+
 </script>
   {% endif %}
   
   {{ 'option_selection.js' | shopify_asset_url | script_tag }}
   
-<script src="{{ 'jquery.ajaxchimp.min.js' | asset_url }}" defer></script>
+<script src="{{ 'jquery.ajaxchimp.min.js' | asset_url }}"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   
@@ -687,7 +686,7 @@ float:right;
   {% render 'back-in-stock-helper' %}
   <!-- End Back in Stock helper snippet -->
   
-  <script src="{{ 'fontfaceobserver.js' | asset_url }}" defer></script>
+  <script src="{{ 'fontfaceobserver.js' | asset_url }}"></script>
   
   <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=QgUiMG"></script>
  
