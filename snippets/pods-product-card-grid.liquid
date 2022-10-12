@@ -26,7 +26,7 @@
       {% unless product.images[0].alt == "pdp-only" %}
       <img id=""
         style="box-shadow: 0 0 20px {{ product.metafields.button_color.button_color }}"
-            class=" {{ product.handle }}_color grid-view-item__image lazyload {% unless collection.title != "Bundles" %}product_img--first{% endunless %}"
+            class=" {{ product.handle }}_color grid-view-item__image lazyload- {% unless collection.title != "Bundles" %}product_img--first{% endunless %}"
             src="{{ product.images[0]  | img_url: '400x' }}"
             data-src="{{ img_url }}"
             data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -37,7 +37,7 @@
             loading="lazy">      
       {% endunless %}
       {% unless collection.title != "Bundles" %}
-      <img class="grid-view-item__image lazyload product_img product_img--second" 
+      <img class="grid-view-item__image lazyload- product_img product_img--second" 
            data-src="{{ product.images[1] | product_img_url: '400x' }}"
             data-widths="[180, 300, 360, 400, 540, 720]"
             data-aspectratio="{{ product.featured_image.aspect_ratio }}"
