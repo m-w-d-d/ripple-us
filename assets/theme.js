@@ -4047,13 +4047,7 @@ $(theme.init);
 
 
 $(window).load(function() {
-	const loadingPanel = document.querySelector('.loading-panel');
-  // if loadingpanel not present return
-  if (!loadingPanel) return;
-  loadingPanel.style.opacity = 0;
-  setTimeout(function() {
-    loadingPanel.style.display = 'none';
-  }, 500);
+	$('body').animate({ opacity: 1 },500);	
 });
 
 

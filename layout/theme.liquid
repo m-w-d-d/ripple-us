@@ -323,11 +323,8 @@ pintrk('page');
   
 
 
-<body id="{{ page_title | handle }}_body" class="template-{{ template | split: '.' | first }}">
+<body {% unless template contains 'index' %}style="opacity:0;" {% endunless %}id="{{ page_title | handle }}_body" class="template-{{ template | split: '.' | first }}">
  
-  {% if collection.title != "Shop all" or collection.title != "shop all"  %}
-  {% render 'loading-panel' %}
-{% endif %}
   
   
 {% if settings.age != blank %}
