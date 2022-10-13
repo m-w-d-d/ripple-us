@@ -885,8 +885,8 @@
         "type": "collection_merch-template",
         "settings": {
           "show_collection_image": true,
-          "merch_header": "shopify:\/\/shop_images\/Desktop_blu.jpg",
-          "merch_header_mo": "shopify:\/\/shop_images\/Mobile_blue.jpg",
+          "merch_header": "shopify:\/\/shop_images\/MERCH-COLLECTION-DESK.jpg",
+          "merch_header_mo": "shopify:\/\/shop_images\/MERCH-COLLECTION-MOBILE.jpg",
           "font_chnage": "heavy-font",
           "grid": 4,
           "rows": 2
