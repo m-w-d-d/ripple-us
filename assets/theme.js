@@ -4046,10 +4046,15 @@ $(document).on('touchend', function() {
 $(theme.init);
 
 
-// body load
-// $(window).load(function() {
-// 	// $('body').animate({ opacity:1 },500);	
-// });
+$(window).load(function() {
+	const loadingPanel = document.querySelector('.loading-panel');
+  // if loadingpanel not present return
+  if (!loadingPanel) return;
+  loadingPanel.style.opacity = 0;
+  setTimeout(function() {
+    loadingPanel.style.display = 'none';
+  }, 500);
+});
 
 
 

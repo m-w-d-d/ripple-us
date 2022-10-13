@@ -68,16 +68,3 @@
     <div class="loading__text" style="text-transform: uppercase;">Loading</div>
   </div>
 </div> 
-
-
-<script>
-  // domcontentloaded
-document.addEventListener('DOMContentLoaded', function() {
-  // .loading-panel opacity 0 and then display nonw
-  const loadingPanel = document.querySelector('.loading-panel');
-  loadingPanel.style.opacity = 0;
-  setTimeout(function() {
-    loadingPanel.style.display = 'none';
-  }, 500);
-});
-</script>

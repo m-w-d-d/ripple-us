@@ -324,8 +324,13 @@ pintrk('page');
 
 
 <body id="{{ page_title | handle }}_body" class="template-{{ template | split: '.' | first }}">
+ 
+  {% if collection.title != "Shop all" or collection.title != "shop all"  %}
   {% render 'loading-panel' %}
-  {% if.settings.age != blank %}
+{% endif %}
+  
+  
+  {% if settings.age != blank %}
   {% include 'age-check' %}
  {% endif %}
   
