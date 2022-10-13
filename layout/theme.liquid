@@ -243,7 +243,7 @@ src="https://www.facebook.com/tr?id=378619844474439&ev=PageView&noscript=1"
     
   
     {%- if template == 'index' or template == 'product' or template == 'page.learn-more'  or template == 'product.starter'or template == 'product.happy'or template == 'product.pods'or template == 'product.merch' or template == 'page.mission' or template == 'page.story' or template == 'page.new-recycle' -%}
-  <script src="{{ 'slick.js' | asset_url }}"></script>
+  <script src="{{ 'slick.js' | asset_url }}" defer></script>
    {%- endif -%}
  
   {{ content_for_header }}
